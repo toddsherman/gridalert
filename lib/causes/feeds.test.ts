@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { afterEach, describe, it } from 'node:test';
-import { convectiveDayStart, parseFires, parseGusts, parseKp, parseQuakes, parseStormReports, parseWeatherAlerts, readGusts, readKp, within } from './feeds.ts';
+import { convectiveDayStart, parseFires, parseGusts, parseKp, parseQuakes, parseStormReports, parseWeatherAlerts, readGusts, readKp, readStormReports, within } from './feeds.ts';
 
 const feature = (properties: object) => ({ properties });
 
@@ -86,6 +86,21 @@ describe('the Kp feed', () => {
   });
 });
 
+describe('readStormReports', () => {
+  const realFetch = globalThis.fetch;
+  afterEach(() => {
+    globalThis.fetch = realFetch;
+  });
+  const empty = 'Time,F_Scale,Location,County,State,Lat,Lon,Comments\nTime,Speed,Location,County,State,Lat,Lon,Comments\nTime,Size,Location,County,State,Lat,Lon,Comments\n';
+
+  it('reads a file again if it arrives half written', async () => {
+    let calls = 0;
+    globalThis.fetch = (async () => new Response(++calls === 1 ? empty.slice(0, 60) : empty)) as typeof fetch;
+    assert.deepEqual(await readStormReports(new Date(Date.UTC(2026, 10, 3, 18))), []);
+    assert.equal(calls, 3);
+  });
+});
+
 describe('within', () => {
   // Started in each test, since one made when the file loads can finish before a busy run reaches it.
   const slow = () => new Promise((resolve) => setTimeout(() => resolve('late'), 40).unref());
@@ -157,6 +172,13 @@ describe('readGusts', () => {
   it('fails as a whole if a request fails, so a gap is never read as calm', async () => {
     globalThis.fetch = (async () => new Response('', { status: 503 })) as typeof fetch;
     await assert.rejects(readGusts(['KPIT']));
+  });
+
+  it('tries a failed request once more, since the feed times out several times a day', async () => {
+    let calls = 0;
+    globalThis.fetch = (async () => (++calls === 1 ? new Response('', { status: 502 }) : new Response(JSON.stringify([{ icaoId: 'KPIT', obsTime: 1000, rawOb: 'METAR KPIT 300151Z 27030G53KT' }])))) as typeof fetch;
+    assert.equal((await readGusts(['KPIT'])).length, 1);
+    assert.equal(calls, 2);
   });
 
   it('asks for nothing when there are no stations', async () => {

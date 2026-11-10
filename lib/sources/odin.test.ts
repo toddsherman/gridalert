@@ -7,8 +7,12 @@ afterEach(() => mock.restoreAll());
 const NOW = Date.UTC(2026, 10, 2, 4);
 const FRESH = '2026-11-02T03:30:00+00:00';
 
-function stubFeed(rows: unknown[]) {
-  mock.method(globalThis, 'fetch', async () => new Response(JSON.stringify(rows.map((r) => ({ reportedstarttime: FRESH, ...(r as object) }))), { status: 200 }));
+/** Serves the rows, and ODIN's own account of when it last rebuilt them if one is given. */
+function stubFeed(rows: unknown[], processed?: string) {
+  mock.method(globalThis, 'fetch', async (url: string) => {
+    if (!String(url).includes('/exports/')) return processed ? new Response(JSON.stringify({ metas: { default: { data_processed: processed } } })) : new Response('gone', { status: 500 });
+    return new Response(JSON.stringify(rows.map((r) => ({ reportedstarttime: FRESH, ...(r as object) }))), { status: 200 });
+  });
 }
 
 it('folds merged companies into their current EIA id so they are not double counted', async () => {
@@ -37,7 +41,19 @@ it('refuses an empty or frozen export, either of which would read as a quiet nig
   stubFeed([]);
   await assert.rejects(readOdin(NOW), /changed shape/);
   mock.restoreAll();
-  stubFeed([{ utility_id: '803', name: 'A,803', communitydescriptor: '4025', metersaffected: 2, reportedstarttime: '2026-11-01T18:00:00+00:00' }]);
+  stubFeed([{ utility_id: '803', name: 'A,803', communitydescriptor: '4025', metersaffected: 2, reportedstarttime: '2026-11-01T12:00:00+00:00' }]);
+  await assert.rejects(readOdin(NOW), /stopped updating/);
+});
+
+const OLD_OUTAGE = { utility_id: '803', name: 'A,803', communitydescriptor: '4025', metersaffected: 2, reportedstarttime: '2026-11-01T12:00:00+00:00' };
+
+it('goes by when ODIN last rebuilt its data, so a night with no new outage is not a stoppage', async () => {
+  stubFeed([OLD_OUTAGE], '2026-11-02T03:45:00+00:00');
+  assert.equal((await readOdin(NOW)).length, 1);
+});
+
+it('counts as stopped when ODIN has not rebuilt its data for hours, however new its outages look', async () => {
+  stubFeed([{ ...OLD_OUTAGE, reportedstarttime: FRESH }], '2026-11-02T01:30:00+00:00');
   await assert.rejects(readOdin(NOW), /stopped updating/);
 });
 

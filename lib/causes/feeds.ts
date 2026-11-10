@@ -37,6 +37,23 @@ const MAX_GUST_MPH = 130;
 const SOURCE_DEADLINE_MS = 10_000;
 /** The airport feed takes several seconds on a first read, and a check needs several reads. */
 const GUST_DEADLINE_MS = 25_000;
+/**
+ * The airport and storm report sites each fail a request now and then: about ten timeouts a day
+ * and a few half-written files a week. One more try, with a shorter wait on each, fits inside
+ * the deadline and saves the whole check.
+ */
+const FLAKY_TIMEOUT_MS = 8_000;
+const FLAKY_DEADLINE_MS = 20_000;
+const RETRY_PAUSE_MS = 500;
+
+async function twice<T>(read: () => Promise<T>): Promise<T> {
+  try {
+    return await read();
+  } catch {
+    await new Promise((resolve) => setTimeout(resolve, RETRY_PAUSE_MS));
+    return read();
+  }
+}
 
 export interface WeatherAlert {
   id: string;
@@ -207,11 +224,12 @@ export async function readWeatherAlerts(states: string[], now: Date, readThrough
 }
 
 /** Each file holds a table each of tornado, wind and hail reports, with or without rows in them. */
-const reportsFile = async (name: string) => {
-  const csv = await getText(`${SPC}/${name}`);
-  expectShape(csv.match(/^Time,/gm)?.length === 3, 'SPC storm reports');
-  return csv;
-};
+const reportsFile = (name: string) =>
+  twice(async () => {
+    const csv = await getText(`${SPC}/${name}`, { timeoutMs: FLAKY_TIMEOUT_MS });
+    expectShape(csv.match(/^Time,/gm)?.length === 3, 'SPC storm reports');
+    return csv;
+  });
 
 export async function readStormReports(now: Date): Promise<StormReport[]> {
   const today = convectiveDayStart(now);
@@ -246,14 +264,16 @@ export async function readKp(now: Date): Promise<KpReading[]> {
 export async function readGusts(stations: string[]): Promise<GustReading[]> {
   const groups: string[][] = [];
   for (let i = 0; i < stations.length; i += STATIONS_PER_REQUEST) groups.push(stations.slice(i, i + STATIONS_PER_REQUEST));
-  const pages = await pool(groups, GUST_CONCURRENCY, async (ids) => {
-    // The feed answers with an empty body when these stations have nothing to report.
-    const text = await getText(`${METAR}?ids=${ids.join(',')}&format=json&hours=${GUST_HOURS}`);
-    if (!text) return [];
-    const rows = JSON.parse(text);
-    expectShape(Array.isArray(rows) && (!rows.length || rows.some((r) => r?.rawOb)), 'METAR reports');
-    return parseGusts(rows);
-  });
+  const pages = await pool(groups, GUST_CONCURRENCY, (ids) =>
+    twice(async () => {
+      // The feed answers with an empty body when these stations have nothing to report.
+      const text = await getText(`${METAR}?ids=${ids.join(',')}&format=json&hours=${GUST_HOURS}`, { timeoutMs: FLAKY_TIMEOUT_MS });
+      if (!text) return [];
+      const rows = JSON.parse(text);
+      expectShape(Array.isArray(rows) && (!rows.length || rows.some((r) => r?.rawOb)), 'METAR reports');
+      return parseGusts(rows);
+    }),
+  );
   return pages.flat();
 }
 
@@ -273,7 +293,7 @@ export function within<T>(work: Promise<T>, name: string, limit = SOURCE_DEADLIN
 export async function gatherWorld(states: string[], stations: string[], operators: string[], now: Date, readThrough?: number): Promise<World> {
   const [weather, reports, gusts, fires, quakes, kp, notices] = await Promise.all([
     within(readWeatherAlerts(states, now, readThrough), 'weather'),
-    within(readStormReports(now), 'storm report'),
+    within(readStormReports(now), 'storm report', FLAKY_DEADLINE_MS),
     within(readGusts(stations), 'wind gust', GUST_DEADLINE_MS),
     within(readFires(), 'wildfire'),
     within(readQuakes(), 'earthquake'),

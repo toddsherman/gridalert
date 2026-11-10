@@ -275,6 +275,34 @@ describe('the dead-man\'s switch', () => {
   });
 });
 
+describe('ntfy refusing check-ins', () => {
+  const impaired = async (): Promise<string[]> => (await store.readDoc(store.PATHS.latest))!.value.impaired ?? [];
+
+  it('shows on the health check once it has lasted three polls, and clears when ntfy answers', async () => {
+    await poll(0);
+    heartbeatDown = true;
+    for (const minute of [15, 20, 25]) await poll(minute);
+    assert.deepEqual(await impaired(), []);
+    await poll(30);
+    assert.deepEqual(await impaired(), ["the owner's alert channel"]);
+    heartbeatDown = false;
+    await poll(35);
+    await poll(40);
+    assert.deepEqual(await impaired(), []);
+  });
+
+  it('says afterwards that the warning ntfy sent was false, not that polling stopped', async () => {
+    await poll(0);
+    heartbeatDown = true;
+    for (let minute = 15; minute <= 60; minute += 5) await poll(minute);
+    heartbeatDown = false;
+    await poll(65);
+    assert.deepEqual(titles(), ['GridAlert monitoring recovered']);
+    assert.match(sent[0].body, /ntfy refused GridAlert's check-ins for 65 minutes/);
+    assert.match(sent[0].body, /Polling never stopped/);
+  });
+});
+
 describe('large feeds stopping together', () => {
   const feed = (id: string, method = 'kubra') => ({ id, name: `${id} Power`, method, since: new Date(T0).toISOString() });
 

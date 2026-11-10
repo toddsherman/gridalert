@@ -10,3 +10,6 @@ npx tsc --noEmit -p .
 npx eslint lib scripts app components
 npm test --silent
 vercel deploy --prod --yes
+# The new version takes a moment to reach todd.sh.
+sleep 20
+node scripts/smoke.ts

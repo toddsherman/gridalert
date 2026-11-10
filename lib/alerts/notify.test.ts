@@ -137,6 +137,20 @@ describe('checkIn', () => {
     assert.equal(calls[0].headers.in, '40m');
   });
 
+  it('signs ntfy requests with an account token when one is set, so limits are counted on its own', async () => {
+    const calls = capture();
+    process.env.NTFY_TOKEN = 'tk_test';
+    try {
+      await checkIn({ ...DEFAULT_SETTINGS, webhookUrl: 'https://ntfy.sh/my-topic' });
+      assert.equal(calls[0].headers.authorization, 'Bearer tk_test');
+      assert.equal(webhookRequest('https://ntfy.sh/my-topic', { title: 't', body: 'b', url: 'https://x.test' }).headers.authorization, 'Bearer tk_test');
+      assert.equal(webhookRequest('https://hooks.slack.com/x', { title: 't', body: 'b', url: 'https://x.test' }).headers.authorization, undefined);
+    } finally {
+      delete process.env.NTFY_TOKEN;
+    }
+    assert.equal(webhookRequest('https://ntfy.sh/my-topic', { title: 't', body: 'b', url: 'https://x.test' }).headers.authorization, undefined);
+  });
+
   it('does nothing for a webhook that is not ntfy, or none at all', async () => {
     const calls = capture();
     assert.equal(await checkIn({ ...DEFAULT_SETTINGS, webhookUrl: 'https://hooks.slack.com/x' }), false);

@@ -103,7 +103,8 @@ node scripts/backtest-demand.ts                   # why grid demand isn't used a
 node scripts/backtest-internet.ts                 # test internet reachability against the same alerts
 node scripts/backtest-statements.ts               # test who-said-what reading, which spends API credits
 node scripts/backfill-blackouts.ts --write        # add records for alerts the list missed
-vercel deploy --prod
+zsh scripts/deploy.sh                             # types, lint and tests, then deploy, then check the live site
+node scripts/smoke.ts                             # check the live site on its own
 ```
 
 **Adding a utility:** add an entry to the right file in `data/sources/`, run the verifier
@@ -150,6 +151,7 @@ Vercel Firewall rate limit if traffic ever becomes a problem.
 |---|---|
 | `BLOB_READ_WRITE_TOKEN` | State storage, set by the Blob integration |
 | `CRON_SECRET` | Authorizes the collector route |
+| `NTFY_TOKEN` | Optional. An access token from a free ntfy account. Without one ntfy counts its limits by sender address, which Vercel shares, and can refuse GridAlert |
 | `ADMIN_TOKEN` | Signs in to `/settings` |
 | `VAPID_PRIVATE_KEY`, `NEXT_PUBLIC_VAPID_PUBLIC_KEY` | Browser push |
 | `RESEND_API_KEY`, `ALERT_EMAIL_FROM` | Optional email alerts |

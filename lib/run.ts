@@ -3,10 +3,10 @@ import { evaluate } from './alerts/engine.ts';
 import { checkIn, deliver, FEEDS_KEY, formatEvent } from './alerts/notify.ts';
 import { sendToSubscribers } from './alerts/push.ts';
 import { refreshBlackouts, refreshStatements, stormCheckFailed, takeNotices, trimBlackouts, withCause } from './blackouts.ts';
-import { eastern } from './format.ts';
+import { eastern, num } from './format.ts';
 import { collect, type LastGoodMap } from './collector.ts';
-import { type HealthDoc, ISSUE_POLLS, platformReadings, platformWrong } from './health.ts';
-import { watched } from './registry.ts';
+import { type HealthDoc, hugeFeedsOut, ISSUE_POLLS, platformReadings, platformWrong } from './health.ts';
+import { customersOf, sources, watched } from './registry.ts';
 import { findSimultaneous } from './simultaneous.ts';
 import { PATHS, readDoc, swapDoc, writeDoc } from './store.ts';
 import { type AlertEvent, type Blackout, DEFAULT_SETTINGS, EMPTY_ENGINE, type EngineState, type Settings, type SimultaneousOutage, type Snapshot } from './types.ts';
@@ -46,6 +46,7 @@ const UPKEEP = 'upkeep';
 const STORM_CHECK = 'storm-check';
 const ODIN = 'odin';
 const PROBES = 'probes';
+const HUGE_FEED = 'huge-feed';
 const platformIssue = (method: string) => `platform:${method}`;
 
 const URGENT_KINDS: ReadonlySet<string> = new Set(['unexplained', 'simultaneous', 'deliberate']);
@@ -71,6 +72,8 @@ interface RunState {
   degraded: boolean;
   feedsStuck?: boolean;
   checkedInAt?: number;
+  /** Check-ins in a row that ntfy has refused, which means alerts to the owner are likely refused too. */
+  checkInFails?: number;
   runs: number;
   /** The last settings read, because guessing at them would send alerts nowhere. */
   settings?: Settings;
@@ -263,6 +266,7 @@ function impairments(state: RunState, now: number): string[] {
   if (state.feedsStuck) out.push('large feeds stopped');
   for (const name of Object.keys(state.issues ?? {})) if (name.startsWith('platform:') && open(name)) out.push(`${name.replace('platform:', '')} feeds`);
   if (state.outbox.some((item) => isUrgent(item.event) && now - Date.parse(item.event.at) >= DELIVERY_LATE_MS)) out.push('alert delivery');
+  if ((state.checkInFails ?? 0) >= ISSUE_POLLS) out.push("the owner's alert channel");
   return out;
 }
 
@@ -338,6 +342,13 @@ export async function runOnce(now = new Date()): Promise<RunResult> {
   const issues = { ...saved.issues };
   const odin = trackIssue(issues, ODIN, Boolean(snapshot.odinDown));
   if (odin) events.push(systemEvent(`system:${ODIN}`, odin, 'ODIN feed', odin === 'opened' ? "DOE's ODIN feed can't be read, so outages at utilities only it covers, Houston's among them, can't be seen." : 'ODIN is being read again.', at));
+  const huge = hugeFeedsOut(snapshot, now.getTime());
+  const hugeFeed = trackIssue(issues, HUGE_FEED, huge.length > 0, 1);
+  if (hugeFeed) {
+    const served = (id: string) => num(customersOf(sources.find((s) => s.id === id)!));
+    const detail = hugeFeed === 'opened' ? `${huge.map((u) => `${u.name} (${served(u.id)} customers)`).join(' and ')} can't be read and ${huge.length === 1 ? 'has' : 'have'} been out for over an hour, so a blackout there would go unseen.` : 'The very large feeds that were out are being read again.';
+    events.push(systemEvent(`system:${HUGE_FEED}`, hugeFeed, 'A very large feed', detail, at));
+  }
   const platforms = platformReadings(snapshot);
   for (const p of platforms) {
     const name = platformIssue(p.method);
@@ -349,7 +360,7 @@ export async function runOnce(now = new Date()): Promise<RunResult> {
 
   const historyDue = now.getTime() - (saved.historyAt ?? 0) >= HISTORY_STEP_MS - 60_000;
   const outbox: OutboxItem[] = [...waiting, ...events.map((event) => ({ event, attempts: 0 }))];
-  const next: RunState = { engine, lastGood, outbox, degraded, feedsStuck, checkedInAt: saved.checkedInAt, runs: saved.runs + 1, settings, issues, historyAt: historyDue ? now.getTime() : saved.historyAt, leaseUntil };
+  const next: RunState = { engine, lastGood, outbox, degraded, feedsStuck, checkedInAt: saved.checkedInAt, checkInFails: saved.checkInFails, runs: saved.runs + 1, settings, issues, historyAt: historyDue ? now.getTime() : saved.historyAt, leaseUntil };
   snapshot.impaired = impairments(next, now.getTime());
 
   // Saved before anything is sent, so a crash from here on resends rather than loses.
@@ -412,15 +423,20 @@ export async function runOnce(now = new Date()): Promise<RunResult> {
   for (const r of sideWrites) if (r.status === 'rejected') console.error('side write failed:', r.reason);
 
   // Only a poll that got this far counts, so a run that dies partway leaves the switch armed.
-  const checkedIn = checkInDue && (await checkIn(settings).catch((err) => console.error('check-in failed:', err)));
+  const checkedIn = checkInDue && (await checkIn(settings).catch((err) => console.error('check-in failed:', (err as Error).message)));
+  // A refusal is counted, since it shows on the health check. A webhook that isn't ntfy has nothing to refuse.
+  const checkInFails = !checkInDue ? saved.checkInFails : checkedIn === undefined ? (saved.checkInFails ?? 0) + 1 : 0;
   // A check-in after a long silence means ntfy has already sent its warning.
   const silentFor = saved.checkedInAt ? now.getTime() - saved.checkedInAt : 0;
   if (checkedIn && silentFor > STOPPED_AFTER_MS) {
-    const back = systemEvent('system:heartbeat', 'resolved', 'GridAlert monitoring', `Polling is running again after ${Math.round(silentFor / 60_000)} minutes.`, at);
+    const minutes = Math.round(silentFor / 60_000);
+    // If it was ntfy refusing the check-ins, its warning was wrong, and saying polling is "back" would repeat the mistake.
+    const detail = saved.checkInFails ? `ntfy refused GridAlert's check-ins for ${minutes} minutes, so its "GridAlert has stopped" warning was false. Polling never stopped, but alerts sent to ntfy in that time may not have arrived.` : `Polling is running again after ${minutes} minutes.`;
+    const back = systemEvent('system:heartbeat', 'resolved', 'GridAlert monitoring', detail, at);
     await deliver(formatEvent(back), settings).catch((err) => console.error('delivery failed:', back.key, (err as Error).message));
   }
   // If this loses a race the outbox survives, and a resend beats a lost alert.
-  await swapDoc(PATHS.engine, { ...next, issues, outbox: remaining, checkedInAt: checkedIn ? now.getTime() : saved.checkedInAt, leaseUntil: undefined }, etag).catch((err) => console.error('outbox update failed:', err));
+  await swapDoc(PATHS.engine, { ...next, issues, outbox: remaining, checkedInAt: checkedIn ? now.getTime() : saved.checkedInAt, checkInFails, leaseUntil: undefined }, etag).catch((err) => console.error('outbox update failed:', err));
 
   if (Date.now() - started < STATEMENT_CUTOFF_MS) await refreshStatements(now).catch((err) => console.error('statement reading failed:', err));
 

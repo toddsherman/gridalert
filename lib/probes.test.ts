@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { feedNotes, type CheckHealth, platformReadings, platformWrong } from './health.ts';
+import { feedNotes, hugeFeedsOut, type CheckHealth, platformReadings, platformWrong } from './health.ts';
 import { digestLines, dueDigest, nextCheck, shapeChanges } from './probes.ts';
 import { sources, customersOf } from './registry.ts';
 import type { UtilityStatus } from './types.ts';
@@ -111,6 +111,12 @@ describe('feedNotes', () => {
     assert.match(notes(row(big.id, { health: 'down', lastOkAt: iso(7) }))[0], /has been out since/);
     assert.match(notes(row(big.id, { health: 'frozen', frozenSince: iso(7) }))[0], /has been out since/);
     assert.deepEqual(notes(row(big.id, { health: 'down', lastOkAt: iso(5) })), []);
+  });
+
+  it('picks out a feed of a million customers that has been out for an hour', () => {
+    const out = (...rows: UtilityStatus[]) => hugeFeedsOut({ utilities: rows }, NOOn).map((u) => u.id);
+    assert.deepEqual(out(row(big.id, { health: 'down', lastOkAt: iso(2) }), row(big.id, { health: 'frozen', frozenSince: iso(2) })), [big.id, big.id]);
+    assert.deepEqual(out(row(big.id, { health: 'down', lastOkAt: iso(0.5) }), row(mid.id, { health: 'down', lastOkAt: iso(9) }), row(big.id, { lastOkAt: iso(2) })), []);
   });
 
   it('holds zero runs to the size of the feed', () => {

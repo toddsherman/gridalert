@@ -69,6 +69,19 @@ function zeroTooLong(u: UtilityStatus, now: number): boolean {
   return !!limit && now - Date.parse(u.zeroSince) >= limit[1];
 }
 
+/** A feed this large going dark hides a state's worth of customers, so it gets its own notice, not a line in the digest. */
+const HUGE_FEED = 1_000_000;
+/** Feeds do drop out for a few polls. An hour is past any blip seen so far. */
+const HUGE_FEED_OUT_MS = HOUR;
+
+/** The very large feeds that have been failing or frozen for an hour or more. */
+export function hugeFeedsOut(snapshot: Pick<Snapshot, 'utilities'>, now: number): UtilityStatus[] {
+  return snapshot.utilities.filter((u) => {
+    const stopped = u.frozenSince ?? (u.health === 'down' ? u.lastOkAt : undefined);
+    return customersFor(u) >= HUGE_FEED && !!stopped && now - Date.parse(stopped) >= HUGE_FEED_OUT_MS;
+  });
+}
+
 /** One line for each feed that a person should look at, for the daily digest. */
 export function feedNotes(snapshot: Pick<Snapshot, 'utilities'>, now: number): string[] {
   return snapshot.utilities.flatMap((u): string[] => {

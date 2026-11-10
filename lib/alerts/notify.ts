@@ -76,7 +76,7 @@ export function webhookRequest(target: string, m: Message): { body: string; head
     // ntfy takes titles in a header, which must be ASCII.
     // The search is a button, which an encoded URL can't break: it has no commas or semicolons.
     const headers = { title: m.title.normalize('NFKD').replace(/[^\x20-\x7e]/g, ''), tags: m.urgent ? 'rotating_light' : 'zap', click: m.url, ...(m.search && { actions: `view, Search X, ${m.search}` }) };
-    return { body: `${m.body}\n${m.url}`, headers: m.urgent ? { ...headers, priority: 'high' } : headers };
+    return { body: `${m.body}\n${m.url}`, headers: { ...headers, ...(m.urgent && { priority: 'high' }), ...ntfyAuth() } };
   }
   return { body: JSON.stringify(m), headers: { 'content-type': 'application/json' } };
 }
@@ -91,6 +91,13 @@ const isNtfy = (target: string) => {
 };
 
 /**
+ * Without an account, ntfy counts its limits by the sender's address, which Vercel shares among
+ * its customers, so someone else's traffic can get GridAlert refused. A token from a free ntfy
+ * account, set as NTFY_TOKEN, has it counted on its own.
+ */
+const ntfyAuth = (): Record<string, string> => (process.env.NTFY_TOKEN ? { authorization: `Bearer ${process.env.NTFY_TOKEN}` } : {});
+
+/**
  * A dead-man's switch. Each call replaces a message scheduled on ntfy's own servers, so if
  * GridAlert or Vercel stops, ntfy delivers the warning without anything here running.
  * Resolves false if the webhook isn't ntfy, which has no such feature.
@@ -100,7 +107,7 @@ export async function checkIn(settings: Settings): Promise<boolean> {
   const res = await fetch(`${settings.webhookUrl.replace(/\/$/, '')}/${HEARTBEAT_SEQUENCE}`, {
     method: 'POST',
     body: `GridAlert hasn't finished a poll in over 40 minutes, so blackouts may be going unreported. Check ${siteUrl()}/api/health`,
-    headers: { in: HEARTBEAT_DELAY, title: 'GridAlert has stopped', priority: 'high', tags: 'rotating_light' },
+    headers: { in: HEARTBEAT_DELAY, title: 'GridAlert has stopped', priority: 'high', tags: 'rotating_light', ...ntfyAuth() },
     signal: AbortSignal.timeout(10_000),
   });
   if (!res.ok) throw new Error(`heartbeat HTTP ${res.status}`);

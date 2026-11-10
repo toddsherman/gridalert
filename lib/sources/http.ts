@@ -36,12 +36,12 @@ export async function readBody(res: Response, limit = MAX_RESPONSE_BYTES): Promi
   return Buffer.concat(chunks);
 }
 
-async function request(url: string, init: { headers?: Record<string, string>; body?: string } = {}) {
+async function request(url: string, init: { headers?: Record<string, string>; body?: string; timeoutMs?: number } = {}) {
   const res = await fetch(url, {
     method: init.body ? 'POST' : 'GET',
     body: init.body,
     headers: { 'user-agent': USER_AGENT, accept: 'application/json, text/plain, */*', ...init.headers },
-    signal: AbortSignal.timeout(TIMEOUT_MS),
+    signal: AbortSignal.timeout(init.timeoutMs ?? TIMEOUT_MS),
     redirect: 'follow',
     cache: 'no-store',
   });
@@ -61,7 +61,7 @@ export async function getJson<T = any>(url: string, init?: { headers?: Record<st
   }
 }
 
-export async function getText(url: string, init?: { headers?: Record<string, string> }): Promise<string> {
+export async function getText(url: string, init?: { headers?: Record<string, string>; timeoutMs?: number }): Promise<string> {
   return decoded(await readBody(await request(url, init)));
 }
 

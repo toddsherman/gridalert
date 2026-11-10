@@ -341,7 +341,10 @@ export async function runOnce(now = new Date()): Promise<RunResult> {
 
   const issues = { ...saved.issues };
   const odin = trackIssue(issues, ODIN, Boolean(snapshot.odinDown));
-  if (odin) events.push(systemEvent(`system:${ODIN}`, odin, 'ODIN feed', odin === 'opened' ? "DOE's ODIN feed can't be read, so outages at utilities only it covers, Houston's among them, can't be seen." : 'ODIN is being read again.', at));
+  // ODIN stops rebuilding its data for hours on most days, so this is logged for the site and
+  // left to the daily digest. Sending it meant two notices a day that nobody could act on.
+  const logOnly: AlertEvent[] = [];
+  if (odin) logOnly.push(systemEvent(`system:${ODIN}`, odin, 'ODIN feed', odin === 'opened' ? "DOE's ODIN feed has stopped updating, so outages at utilities only it covers, Houston's among them, can't be seen." : 'ODIN is updating again.', at));
   const huge = hugeFeedsOut(snapshot, now.getTime());
   const hugeFeed = trackIssue(issues, HUGE_FEED, huge.length > 0, 1);
   if (hugeFeed) {
@@ -418,7 +421,7 @@ export async function runOnce(now = new Date()): Promise<RunResult> {
   const remaining = deliveredFrom(sent);
   const delivered = [...outcomes.values()].filter((o) => o.sentAt).length;
 
-  const logged = [...ordinary.map((e) => ({ ...withCause(e, blackouts), siteOnly: true })), ...events, ...queued, ...raised];
+  const logged = [...ordinary.map((e) => ({ ...withCause(e, blackouts), siteOnly: true })), ...logOnly.map((e) => ({ ...e, siteOnly: true })), ...events, ...queued, ...raised];
   const sideWrites = await Promise.allSettled([historyDue ? updateHistory(snapshot, now) : null, archiveSample(snapshot, now), updateAlertLog(logged, outcomes)]);
   for (const r of sideWrites) if (r.status === 'rejected') console.error('side write failed:', r.reason);
 

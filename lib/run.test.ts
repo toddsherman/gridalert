@@ -27,6 +27,7 @@ let heartbeatDown = false;
 let collectFails = false;
 let checkIns: Array<Record<string, string>>;
 let stuckFeeds: Array<{ id: string; name: string; method: string; since: string }>;
+let odinDown: boolean;
 
 const quiet = (): World => ({ weather: [], reports: [], fires: [], quakes: [], kp: [], gusts: [] });
 
@@ -61,7 +62,7 @@ function collect(_prev: unknown, settings: typeof DEFAULT_SETTINGS, now: Date) {
   }));
   const total = metros.reduce((sum, m) => sum + m.customersOut, 0);
   return {
-    snapshot: { generatedAt: now.toISOString(), customersOut: total, estimatedPeople: total, customersTotal: 100, customersMonitored: 100, sourcesOk: 1, sourcesStale: 0, sourcesDown: 0, stuckFeeds, metros, utilities: [], counties: {}, unmatchedAreas: [], durationMs: 1 },
+    snapshot: { generatedAt: now.toISOString(), customersOut: total, estimatedPeople: total, customersTotal: 100, customersMonitored: 100, sourcesOk: 1, sourcesStale: 0, sourcesDown: 0, stuckFeeds, odinDown, metros, utilities: [], counties: {}, unmatchedAreas: [], durationMs: 1 },
     candidates: metros.map((m) => ({ key: `metro:${m.cbsa}`, scope: 'metro', label: m.name, people: m.estimatedPeople, customers: m.customersOut, detail: '', link: `/metros/${m.cbsa}`, states: ['TX'], complete: true })),
     lastGood: {},
   };
@@ -115,6 +116,7 @@ beforeEach(async () => {
   collectFails = false;
   checkIns = [];
   stuckFeeds = [];
+  odinDown = false;
   outages = {
     [CBSA]: { name: 'Houston, TX', county: FLOOR, customers: 0 },
     '33100': { name: 'Miami, FL', county: { fips: '12086', name: 'Miami-Dade' }, customers: 0 },
@@ -272,6 +274,16 @@ describe('the dead-man\'s switch', () => {
     heartbeatDown = false;
     await poll(20);
     assert.equal(checkIns.length, 1);
+  });
+});
+
+describe('ODIN stopping', () => {
+  it('is logged for the site but not sent, since it happens most days', async () => {
+    odinDown = true;
+    for (const minute of [0, 5, 10, 15]) await poll(minute);
+    assert.deepEqual(titles(), []);
+    const log = (await store.readDoc(store.PATHS.alerts))!.value as Array<{ key: string; siteOnly?: boolean }>;
+    assert.deepEqual(log.filter((e) => e.key === 'system:odin').map((e) => e.siteOnly), [true]);
   });
 });
 

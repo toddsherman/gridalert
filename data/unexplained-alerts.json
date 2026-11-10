@@ -1,0 +1,994 @@
+[
+ {
+  "n": 1,
+  "group": "weather",
+  "startedAt": "2024-01-09T21:00:00.000Z",
+  "firedAt": "2024-01-10T00:15",
+  "peakAt": "2024-01-10T03:15:00.000Z",
+  "area": "Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",
+  "counties": [
+   "42029",
+   "42045"
+  ],
+  "peakCustomers": 194702,
+  "riseMinutes": 225,
+  "doeReport": true,
+  "category": "wind",
+  "cause": "A major wind and rain storm on the evening of Jan 9 brought trees and limbs down on lines across the PECO and Delmarva Power areas, hitting Chester, Delaware and New Castle counties hardest.",
+  "confidence": "high",
+  "statedBy": "utility",
+  "firstCauseAt": "2024-01-10T03:30:00Z",
+  "hoursAfterStart": 6.5,
+  "reportedCustomers": 166000,
+  "measuredGustMph": 51,
+  "singleCause": false,
+  "sources": [
+   "https://www.coatesville.org/?p=37882",
+   "https://cbsnews.com/amp/philadelphia/news/how-much-rain-did-we-get-pennsylvania-new-jersey-delaware",
+   "https://www.wgmd.com/?p=5525749"
+  ],
+  "notes": "singleCause false means one storm but many separate faults. reportedCustomers is PECO about 136,000 at the height of the storm plus Delmarva nearly 30,000 at 10:30 p.m. EST, close to the alert peak at 10:15 p.m. EST; no Atlantic City Electric count found. PECO cumulative totals vary by source and date: 215,000 (Jan 10), 221,000, 230,000+ (Jan 11), and 194,662 in a PA PUC filing. That last figure sits near the alert's 194,702 by coincidence: it is one utility's cumulative count, not a metro peak. Gust is PHL 51 mph; 60-64 mph was recorded elsewhere in NJ, DE and PA and 72 mph at Island Beach NJ, so gusts ran well past advisory level although only a Wind Advisory was noted. firstCauseAt is the earliest time-stamped item found (WGMD night-of post) and is an upper bound. Alert start of 4 p.m. EST leads the storm; a PUC log puts first outages near 6:11 p.m. EST."
+ },
+ {
+  "n": 2,
+  "group": "weather",
+  "startedAt": "2024-01-12T19:45:00.000Z",
+  "firedAt": "2024-01-13T01:15",
+  "peakAt": "2024-01-13T17:00:00.000Z",
+  "area": "Detroit-Warren-Dearborn, MI",
+  "counties": [
+   "26163",
+   "26125",
+   "26099"
+  ],
+  "peakCustomers": 104200,
+  "riseMinutes": 930,
+  "doeReport": true,
+  "category": "winter",
+  "cause": "Heavy wet snow on Jan 12 brought tree limbs down on lines, then southwest gusts of 40-55 mph on the morning of Jan 13 added damage across Metro Detroit.",
+  "confidence": "high",
+  "statedBy": "official",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": 116000,
+  "measuredGustMph": 53,
+  "singleCause": false,
+  "sources": [
+   "https://www.weather.gov/dtx/2024-01-12-Winter-Storm",
+   "https://www.clickondetroit.com/news/local/2024/01/12/tracking-dte-energy-power-outages-in-metro-detroit-on-jan-12-2024",
+   "https://www.wnem.com/2024/01/13/thousands-without-power-across-mid-michigan-amid-storm"
+  ],
+  "notes": "singleCause false means one storm but many separate faults. reportedCustomers is DTE at 10:50 a.m. EST Jan 13 (15:50Z), about an hour before the alert peak, so it matches well. NWS says well over 100,000 at the storm's peak. Gust is Willow Run 53 mph at 6:01 a.m. EST Jan 13; Detroit Metro 52 mph at 9:36 a.m. EST. Wet snow vs wind is a mix, and the Saturday noon peak falls after the wind arrived. firstCauseAt left null: earliest metro-specific tie I can time is the 15:50Z DTE count, and a statewide item at 01:26Z Jan 13 (WNEM) named the storm for mid-Michigan outages. A DTE statement from Jan 12 was not found, and the web search cap stopped a further search for one. Several Detroit results that look like this storm are actually March 2023."
+ },
+ {
+  "n": 3,
+  "group": "weather",
+  "startedAt": "2024-03-11T06:15:00.000Z",
+  "firedAt": "2024-03-11T18:00",
+  "peakAt": "2024-03-11T18:00:00.000Z",
+  "area": "New York-Newark-Jersey City, NY-NJ",
+  "counties": [
+   "34027",
+   "34031"
+  ],
+  "peakCustomers": 50444,
+  "riseMinutes": 255,
+  "doeReport": false,
+  "category": "wind",
+  "cause": "High winds on Mar 11 toppled trees and wires across northern New Jersey, mostly in JCP&L territory.",
+  "confidence": "high",
+  "statedBy": "news",
+  "firstCauseAt": "2024-03-11T12:27:00Z",
+  "hoursAfterStart": 6.2,
+  "reportedCustomers": 46088,
+  "measuredGustMph": 59,
+  "singleCause": false,
+  "sources": [
+   "https://www.aol.com/thousands-lose-power-north-jersey-152116153.html",
+   "https://newjersey.news12.com/wind-gusts-of-50-mph-cause-damage-power-outages-across-new-jersey",
+   "https://njweather.org/articles/march-2024-recap"
+  ],
+  "notes": "singleCause false means one wind event but many separate faults. reportedCustomers is JCP&L 42,847 plus PSE&G 3,241 at 1:30 p.m. EDT (17:30Z), matching the alert peak at 18:00Z. The AOL page returned 404 when opened, so those figures come from the search result text. Gust is Newark ASOS 59 mph at 11:51Z (LaGuardia 58, Teterboro 56, High Point NJ 58, Vernon NJ 57), above High Wind Warning level although only a Wind Advisory was noted. Unresolved: Morris County raw peak is 29,000, but the only readable Morris count is about 10,049 at 4:15 p.m. EDT, and the AOL Morris figure of 224,648 looks like a typo. JCP&L fell fast, from 42,847 to roughly 30,000 by late afternoon and 9,570 by evening. That could mean a larger sub-transmission fault in Morris, but no report says so, and Daily Voice lists scattered towns (Denville, Harding, Parsippany, Rockaway Borough, Washington Township). Con Edison and PSEG Long Island counts not found."
+ },
+ {
+  "n": 4,
+  "group": "weather",
+  "startedAt": "2024-04-10T23:15:00.000Z",
+  "firedAt": "2024-04-11T02:45",
+  "peakAt": "2024-04-11T03:45:00.000Z",
+  "area": "Atlanta-Sandy Springs-Roswell, GA",
+  "counties": [
+   "13089",
+   "13121"
+  ],
+  "peakCustomers": 68606,
+  "riseMinutes": 105,
+  "doeReport": true,
+  "category": "wind",
+  "cause": "A line of heavy rain and strong wind on the night of Apr 10 brought trees and branches down on lines across metro Atlanta.",
+  "confidence": "high",
+  "statedBy": "news",
+  "firstCauseAt": "2024-04-11T02:48:00Z",
+  "hoursAfterStart": 3.55,
+  "reportedCustomers": 60000,
+  "measuredGustMph": 46,
+  "singleCause": false,
+  "sources": [
+   "https://www.atlantanewsfirst.com/2024/04/11/live-updates-storms-heavy-rain-approach-metro-atlanta",
+   "https://wsbradio.com/news/local/thousands-georgia-power-georgia-emc-customers-without-power-haralson-schools-closing/WKIJUO2CFJCGJGO3KAQPB4QEWA",
+   "https://www.spc.noaa.gov/climo/reports/240410_rpts.html"
+  ],
+  "notes": "singleCause false means one storm line but many separate faults. reportedCustomers is the undated figure of more than 60,000 in metro Atlanta, close to the alert. Later snapshots: Georgia Power 23,968 and Georgia EMC 8,932 near 6 a.m. EDT, then 15,493 and 7,769 near 9 a.m. EDT. Gust is Hartsfield ASOS 46 mph at 02:21Z (Peachtree-DeKalb 45 mph at 02:53Z), which is airport data, not news reporting; no news item gave a measured gust. SPC lists no wind or tornado reports in Fulton, DeKalb, Douglas, Cobb or Gwinnett, so this was sub-severe wind that still downed many trees, which fits why no severe warning matched. firstCauseAt is the live blog entry noting trees down and about 5,000 out in Douglas County; alert start at 7:15 p.m. EDT leads the worst wind."
+ },
+ {
+  "n": 5,
+  "group": "weather",
+  "startedAt": "2024-06-03T10:45:00.000Z",
+  "firedAt": "2024-06-03T12:15",
+  "peakAt": "2024-06-03T13:30:00.000Z",
+  "area": "Seattle-Tacoma-Bellevue, WA",
+  "counties": [
+   "53033",
+   "53053",
+   "53061"
+  ],
+  "peakCustomers": 79748,
+  "riseMinutes": 105,
+  "doeReport": false,
+  "category": "wind",
+  "cause": "A rare June atmospheric river brought overnight gusts that dropped trees on lines across the Puget Sound area, including a large fir on Tacoma Public Utilities transmission lines.",
+  "confidence": "high",
+  "statedBy": "news",
+  "firstCauseAt": "2024-06-03T13:26:00Z",
+  "hoursAfterStart": 2.68,
+  "reportedCustomers": 82000,
+  "measuredGustMph": 49,
+  "singleCause": false,
+  "sources": [
+   "https://mynorthwest.com/?p=3961660",
+   "https://www.kiro7.com/news/local/thousands-without-power-seattles-capitol-hill-neighborhood/JDGY6IS5AZHZJFHRPE6DK3WEKU/",
+   "https://watchers.news/2024/06/04/rare-june-back-to-back-atmospheric-rivers-hit-the-pacific-northwest"
+  ],
+  "notes": "singleCause false means one storm but several separate large outages: Tacoma Public Utilities about 25,000-29,000 near 6 a.m. PDT (largest single piece, tree on transmission lines; Graham area last, 5,600), Queen Anne/Interbay/Magnolia 9,000+, Capitol Hill about 7,000 (Seattle City Light said cause under investigation), North Bend 5,300. reportedCustomers is the regional count at 6:30 a.m. PDT, matching the alert peak at 13:30Z; watchers.news does not name its source for it. Gust is Paine Field ASOS 49 mph at 12:39Z; Sea-Tac 38, Tacoma Narrows 41. Airport data, not news; Cliff Mass cited over 45 mph near Puget Sound. Alert says nothing noted, but reporting mentions an NWS Wind Advisory that day, with gusts forecast to 40-45 mph. Worth checking whether it was in force for this zone at 3:45 a.m. PDT or only later, since the feed may have missed it. DOE lists a King County vandalism report at 1:44 p.m. the same day. Nothing links it to this outage, which began about ten hours earlier."
+ },
+ {
+  "n": 7,
+  "group": "weather",
+  "startedAt": "2024-08-08T06:15:00.000Z",
+  "firedAt": "2024-08-08T11:45",
+  "peakAt": "2024-08-08T12:00:00.000Z",
+  "area": "Charlotte-Concord-Gastonia, NC-SC",
+  "counties": [
+   "37071",
+   "37119"
+  ],
+  "peakCustomers": 64908,
+  "riseMinutes": 225,
+  "doeReport": true,
+  "category": "tropical",
+  "cause": "Tropical Storm Debby brought wind and rain that felled trees on lines across the Charlotte area on Aug 8.",
+  "confidence": "high",
+  "statedBy": "utility",
+  "firstCauseAt": "2024-08-08T08:41:00Z",
+  "hoursAfterStart": 2.43,
+  "reportedCustomers": 60000,
+  "measuredGustMph": 47,
+  "singleCause": false,
+  "sources": [
+   "https://www.wbtv.com/2024/08/08/tropical-storm-debby-causing-power-outages-flooding-across-charlotte-area/",
+   "https://www.wfae.org/charlotte-area/2024-08-08/132-000-without-power-as-debby-churns-across-north-carolina",
+   "https://prnewswire.com/news-releases/power-restored-to-more-than-510-000-carolinas-customers-impacted-by-debby-lineworkers-on-track-to-repair-remaining-outages-by-friday-night-302219053.html"
+  ],
+  "notes": "singleCause false means one storm but many separate faults. reportedCustomers is more than 60,000 in the Charlotte area at 10 a.m. EDT, near the alert's 64,908 at 8 a.m. EDT. Mecklenburg nearly 22,000 at 10:30 a.m. EDT matches raw 22,000. Gaston raw 23,000 is far above WCCB 6,000 and WCNC 4,500, but those are afternoon snapshots. Gust is Charlotte ASOS 47 mph at 08:49Z and Gastonia 46 mph at 11:46Z, airport data; WBTV reported 45-50 mph gusts across the Carolinas. firstCauseAt is the original WBTV outage story stamp at 4:41 a.m. EDT; the page was updated later. A named tropical storm was over the area, so the site should have tied this to Debby even though only Wind Advisory and Flash Flood Warning were noted."
+ },
+ {
+  "n": 8,
+  "group": "equipment",
+  "startedAt": "2024-08-13T01:30:00.000Z",
+  "firedAt": "2024-08-13T01:40",
+  "peakAt": "2024-08-13T01:30:00.000Z",
+  "area": "Anchorage, AK",
+  "counties": [
+   "02020",
+   "02170"
+  ],
+  "peakCustomers": 58396,
+  "riseMinutes": 45,
+  "doeReport": false,
+  "category": "equipment",
+  "cause": "A fault on the Northern Intertie transmission line north of Wasilla tripped two Chugach generators, and the Railbelt then automatically shed load to avoid a wider blackout.",
+  "confidence": "high",
+  "statedBy": "utility",
+  "firstCauseAt": "2024-08-13T03:03:00Z",
+  "hoursAfterStart": 1.55,
+  "reportedCustomers": 65000,
+  "measuredGustMph": null,
+  "singleCause": true,
+  "sources": [
+   "https://alaskapublic.org/news/2024-08-13/power-line-problem-triggered-brief-but-broad-outage-across-southcentral-alaska",
+   "https://adn.com/alaska-news/2024/08/12/widespread-outages-leave-thousands-without-power-in-anchorage-and-mat-su",
+   "https://www.alaskasnewssource.com/2024/08/13/widespread-power-outage-hits-anchorage-mat-su-electric-companies"
+  ],
+  "notes": "Event began near 5:30 p.m. AKDT, matching alert start. reportedCustomers is Chugach about 45,000 plus Matanuska Electric about 20,000; KTUU gave MEA as high as 24,000 and ADN 19,000. firstCauseAt is the KTUU update at 7:03 p.m. AKDT, with Chugach saying load shedding and a possible Railbelt problem. The line fault detail came through Chugach and MEA Facebook posts carried by ADN (time unknown), and was firm in Alaska Public at 19:47Z Aug 13. What caused the fault was not found: an aerial survey Tuesday found nothing obvious, and a tree was only offered as a possibility. No final report found. ASOS shows light wind (under 8 kt) at Anchorage, Merrill and Palmer. The quick fall in raw data fits automatic load shed and restoration. No sign of attack in any source."
+ },
+ {
+  "n": 9,
+  "group": "no-record",
+  "startedAt": "2024-09-01T04:45:00.000Z",
+  "firedAt": "2024-09-01T04:55",
+  "peakAt": "2024-09-01T04:45:00.000Z",
+  "area": "Chicago-Naperville-Elgin, IL-IN",
+  "counties": [
+   "18127",
+   "18089"
+  ],
+  "peakCustomers": 58957,
+  "riseMinutes": 15,
+  "doeReport": false,
+  "category": "none-found",
+  "cause": "No reporting found of any NIPSCO outage in Lake or Porter County on the night of Aug 31, 2024, and weather was calm.",
+  "confidence": "medium",
+  "statedBy": "none",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": null,
+  "measuredGustMph": null,
+  "singleCause": null,
+  "sources": [
+   "https://www.spc.noaa.gov/climo/reports/240831_rpts.html",
+   "https://www.nwitimes.com/news/local/news-local-power-outage-nipsco-chesterton/article_aab292c4-76e8-11ef-a27f-6fa826b0b0b1.html"
+  ],
+  "notes": "Utility is NIPSCO, not ComEd, per coordinator (Porter and Lake County IN, about 30,000 each). 11:45 p.m. CDT Saturday of Labor Day weekend. Standard and extended searches on NIPSCO, Valparaiso, Gary, Hammond, Portage and Chesterton found nothing. Gary and Valparaiso ASOS show top sustained wind 5-6 kt with no gusts and no thunder, and SPC lists no Indiana or Illinois reports for this period. Alert 10 is the same counties, about the same size and same clock time one week later, with start at or near peak and a flat level. My inference, not reported: that pattern looks more like a feed or reporting fault than a real outage. Caveat: nwitimes is paywalled for fetching, so its local coverage could only be seen through search results. The nearest NIPSCO event found is Sept 19, 2024 (about 8,000 in Chesterton and Valparaiso), a different date; the second source is listed only for that. DOE lists an Indiana transmission loss on 2024-08-31 with no customers out, about 20 hours earlier. Nothing links it to this reading."
+ },
+ {
+  "n": 10,
+  "group": "no-record",
+  "startedAt": "2024-09-08T04:30:00.000Z",
+  "firedAt": "2024-09-08T04:40",
+  "peakAt": "2024-09-08T05:15:00.000Z",
+  "area": "Chicago-Naperville-Elgin, IL-IN",
+  "counties": [
+   "18127",
+   "18089"
+  ],
+  "peakCustomers": 57541,
+  "riseMinutes": 15,
+  "doeReport": false,
+  "category": "none-found",
+  "cause": "No reporting found of any NIPSCO outage in Lake or Porter County on the night of Sep 7, 2024, and weather was calm.",
+  "confidence": "medium",
+  "statedBy": "none",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": null,
+  "measuredGustMph": null,
+  "singleCause": null,
+  "sources": [
+   "https://www.spc.noaa.gov/climo/reports/240907_rpts.html",
+   "https://www.nwitimes.com/news/local/news-local-power-outage-nipsco-chesterton/article_aab292c4-76e8-11ef-a27f-6fa826b0b0b1.html"
+  ],
+  "notes": "Utility is NIPSCO, not ComEd, per coordinator (Porter and Lake County IN, about 30,000 each). 11:30 p.m. CDT Saturday. Standard and extended searches found nothing. Gary and Valparaiso ASOS show top sustained wind 7-8 kt with no gusts and no thunder. SPC's only nearby entry is a landspout from a waterspout at Indiana Dunes State Park at 13:06Z Sep 7, about 15 hours before the alert with no tie to outages. Same pattern as alert 9, one week earlier. My inference, not reported: more likely a feed or reporting fault than a real outage. Caveat: nwitimes is paywalled for fetching. The second source is the only nearby NIPSCO event found (Sept 19, 2024), a different date."
+ },
+ {
+  "n": 11,
+  "group": "unknown",
+  "startedAt": "2024-09-11T23:15:00.000Z",
+  "firedAt": "2024-09-11T23:30",
+  "peakAt": "2024-09-11T23:30:00.000Z",
+  "area": "Seattle-Tacoma-Bellevue, WA",
+  "counties": [
+   "53033"
+  ],
+  "peakCustomers": 186684,
+  "riseMinutes": 15,
+  "doeReport": false,
+  "category": "real-unknown",
+  "cause": "A risk-alert service reported outages across the Seattle region on the evening of Sept. 11, 2024, and said the cause was unclear; no utility or local news account of the cause was found.",
+  "confidence": "low",
+  "statedBy": "none",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": 125000,
+  "measuredGustMph": null,
+  "singleCause": null,
+  "sources": [
+   "https://crisis24.garda.com/alerts/2024/09/us-power-outages-affecting-parts-of-seattle-wash-as-of-evening-of-sept-11",
+   "https://powerlines.seattle.gov/2024/09/"
+  ],
+  "notes": "Only evidence is one Crisis24 alert stamped 2024-09-12 00:13 UTC, about 1 hour after the start; it was read as a search snippet because the page now redirects to a landing page. Crisis24 may have taken its figure from an outage tracker, so it is weak proof the outage was real. About 125,000 against the alert's 186,684 peak. Coordinator's data shows King County 197,763, half gone in 45 minutes, about 2 hours total. No KING, KOMO, KIRO, Fox 13, West Seattle Blog or utility account was found despite about 10 searches, which is odd for an outage this size. Seattle City Light's September 2024 blog archive lists no outage post. A false reading is still possible. Other September outages found (Sept. 7 City Light equipment failure of about 11,000; Sept. 28 balloon of about 5,000) are different dates and do not explain this. Planned searches on PSE map errors, Eastside traffic signals and that day's weather were not run because the shared search budget ran out."
+ },
+ {
+  "n": 12,
+  "group": "no-record",
+  "startedAt": "2024-09-22T05:00:00.000Z",
+  "firedAt": "2024-09-22T05:10",
+  "peakAt": "2024-09-22T05:00:00.000Z",
+  "area": "Chicago-Naperville-Elgin, IL-IN",
+  "counties": [
+   "18127",
+   "18089"
+  ],
+  "peakCustomers": 102600,
+  "riseMinutes": 15,
+  "doeReport": false,
+  "category": "none-found",
+  "cause": "No reporting was found of any large NIPSCO or Northwest Indiana outage on the night of Sept. 21-22, 2024; this looks like a false reading in the data.",
+  "confidence": "medium",
+  "statedBy": "none",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": null,
+  "measuredGustMph": null,
+  "singleCause": null,
+  "sources": [
+   "https://www.weather.gov/lot/september2024"
+  ],
+  "notes": "Coordinator's correction: customers are Porter County 66,462 and Lake County 34,199, Indiana, so the utility is NIPSCO, not ComEd. Those exact numbers recur a week later in alert 13. Searches on NIPSCO, Porter, Lake, Valparaiso, Gary, Hammond, Chesterton and Portage returned only other events (July 2024 storms, the Aug. 2026 derecho). ComEd searches also found nothing. The NWS Chicago September 2024 summary lists no storm for Sept. 21-22 and says no daily records were set. Absence of local coverage is the evidence here, not a confirmed feed fault."
+ },
+ {
+  "n": 13,
+  "group": "no-record",
+  "startedAt": "2024-09-29T03:30:00.000Z",
+  "firedAt": "2024-09-29T03:40",
+  "peakAt": "2024-09-29T03:30:00.000Z",
+  "area": "Chicago-Naperville-Elgin, IL-IN",
+  "counties": [
+   "18127",
+   "18089"
+  ],
+  "peakCustomers": 102076,
+  "riseMinutes": 15,
+  "doeReport": false,
+  "category": "none-found",
+  "cause": "No reporting was found of any large NIPSCO or Northwest Indiana outage on the evening of Sept. 28, 2024; this looks like a false reading in the data.",
+  "confidence": "medium",
+  "statedBy": "none",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": null,
+  "measuredGustMph": null,
+  "singleCause": null,
+  "sources": [
+   "https://www.weather.gov/lot/september2024"
+  ],
+  "notes": "Same exact county figures as alert 12 a week earlier (Porter 66,462, Lake 34,199), and per the coordinator the reading flips between about 102,000 and about 30 on successive readings, which real outages do not do. NWS Chicago lists only gusty northeast winds and large waves from Helene's remnants on Sept. 27-28, with no gusts or outages given; reporting does not tie that to this. The NWS Northern Indiana Sept. 24 tornado event is a different date and area. Coverage of a Sept. 28 balloon outage in Seattle is unrelated."
+ },
+ {
+  "n": 14,
+  "group": "distorted",
+  "startedAt": "2024-10-11T09:45:00.000Z",
+  "firedAt": "2024-10-11T13:15",
+  "peakAt": "2024-10-11T13:15:00.000Z",
+  "area": "Asheville, NC",
+  "counties": [
+   "37021"
+  ],
+  "peakCustomers": 55773,
+  "riseMinutes": 30,
+  "doeReport": false,
+  "category": "tropical",
+  "cause": "These were Buncombe County customers still out from Hurricane Helene two weeks after the storm, not a new event, and the alert's start and swings look like noise in the feed.",
+  "confidence": "medium",
+  "statedBy": "news",
+  "firstCauseAt": "2024-10-11T12:21:00Z",
+  "hoursAfterStart": 2.6,
+  "reportedCustomers": 36000,
+  "measuredGustMph": null,
+  "singleCause": true,
+  "sources": [
+   "https://digital-release.cbs17.com/?p=2064734",
+   "https://mail.wnctimes.com/news/9451-buncombe-county-operations-local-school-updates-permits-inspections-guidelines"
+  ],
+  "notes": "CBS 17, citing Duke's map, put Buncombe at more than 36,000 customers out and 1,800 active outages on the afternoon of Oct. 10, tied to Helene, with Duke's restoration estimate showing disaster recovery in progress. That is about 65% of the alert's 55,773 peak and close to the 31,000 level in the feed. Nothing supports the 56,000 level, and the flips between about 1,500, 31,000 and 56,000 fit a feed fault on top of a real backlog. No report dated Oct. 11 was found. A county update on Oct. 17 had 1,048 still out. Nothing links Hurricane Milton to these outages. The timestamp is the first dated report found, not a new announcement; Helene was already the known cause."
+ },
+ {
+  "n": 15,
+  "group": "deliberate",
+  "startedAt": "2024-12-09T23:15:00.000Z",
+  "firedAt": "2024-12-10T13:30",
+  "peakAt": "2024-12-10T18:15:00.000Z",
+  "area": "San Diego-Chula Vista-Carlsbad, CA",
+  "counties": [
+   "06073"
+  ],
+  "peakCustomers": 51836,
+  "riseMinutes": 750,
+  "doeReport": true,
+  "category": "planned",
+  "cause": "SDG&E deliberately shut off power in its Public Safety Power Shutoff of Dec. 9-11, 2024, because of extreme Santa Ana winds and wildfire risk.",
+  "confidence": "high",
+  "statedBy": "utility",
+  "firstCauseAt": "2024-12-10T00:47:00Z",
+  "hoursAfterStart": 1.5,
+  "reportedCustomers": 51922,
+  "measuredGustMph": 95,
+  "singleCause": true,
+  "sources": [
+   "https://webproda.cpuc.ca.gov/-/media/cpuc-website/divisions/safety-and-enforcement-division/reports/psps-post-event-reports/2024/r1812005-sdge-psps-postevent-report-dec-911-2024--1-10-2025.pdf",
+   "https://www.nbcsandiego.com/news/local/santa-ana-winds-diminish-but-fire-threat-keeps-46000-in-san-diego-without-power/3698382/?amp=1",
+   "https://kpbs.org/news/environment/2024/12/09/sdg-e-shuts-off-power-to-east-county-communities-as-santa-ana-winds-pick-up"
+  ],
+  "notes": "SDG&E's post-event report gives 51,922 de-energized, almost exactly the alert's 51,836 peak and the county's 51,858; a later amendment relabels this as unique customers. NBC 7 reported 50,824 on Dec. 10. The 95 mph gust was at Sill Hill, on SDG&E's own weather network. The cause was public before the outage: advance warnings ran from Dec. 7 (Times of San Diego), and shutoffs began the afternoon of Dec. 9. The timestamp is the first dated report found of actual shutoffs (KPBS, 4:47 p.m. PST). This is the largest SDG&E shutoff since 2020 and included some Orange County area. The alert noted nothing, yet per SDG&E's report an NWS Red Flag Warning for San Diego County valleys and mountains ran from the morning of Dec. 9 to early Dec. 11, so the site's checks missed a warning that was in force."
+ },
+ {
+  "n": 16,
+  "group": "weather",
+  "startedAt": "2024-12-18T00:15:00.000Z",
+  "firedAt": "2024-12-18T13:30",
+  "peakAt": "2024-12-18T14:00:00.000Z",
+  "area": "Seattle-Tacoma-Bellevue, WA",
+  "counties": [
+   "53061",
+   "53053",
+   "53033"
+  ],
+  "peakCustomers": 132934,
+  "riseMinutes": 60,
+  "doeReport": true,
+  "category": "wind",
+  "cause": "A DOE report records 63,000 Washington customers out from weather on Dec. 18, 2024, during a Wind Advisory. No news account of the outage was found.",
+  "confidence": "medium",
+  "statedBy": "official",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": null,
+  "measuredGustMph": null,
+  "singleCause": null,
+  "sources": [
+   "https://doe417.pnnl.gov/summaries/2024_Annual_Summary.xlsx",
+   "https://b-townblog.com/weather-wind-advisory-issued-for-region-gusts-up-to-45-mph-possible-overnight/",
+   "https://westseattleblog.com/2024/12/west-seattle-weather-wind-advisory-alert-now-in-effect/"
+  ],
+  "notes": "Relabelled from none-found after the DOE summary turned up. Wind is the obvious candidate but is unconfirmed. The Wind Advisory ran from 8 p.m. Dec. 17, later extended to 7 a.m. Dec. 18, with gusts to 45 mph forecast and only a few outages expected. The only outage found was about 300 customers on Puget Ridge in West Seattle. The alert starts around 4:15 p.m. PST, before the advisory began. Results kept returning the Dec. 12 and Dec. 14, 2024 storms and the much larger Dec. 17, 2025 storm, which must not be confused with this. No measured gust was found for this night. Most uncertain label in this set: Snohomish PUD or Herald coverage may exist, and planned searches were cut off when the shared search budget ran out."
+ },
+ {
+  "n": 17,
+  "group": "weather",
+  "startedAt": "2024-12-30T00:15:00.000Z",
+  "firedAt": "2024-12-30T02:00",
+  "peakAt": "2024-12-30T05:00:00.000Z",
+  "area": "Pittsburgh, PA",
+  "counties": [
+   "42003"
+  ],
+  "peakCustomers": 75001,
+  "riseMinutes": 135,
+  "doeReport": false,
+  "category": "wind",
+  "cause": "Strong winds with a cold front on the evening of Dec. 29, 2024 brought down trees, poles and wires across the Duquesne Light and West Penn Power areas.",
+  "confidence": "high",
+  "statedBy": "utility",
+  "firstCauseAt": "2024-12-30T02:20:00Z",
+  "hoursAfterStart": 2.1,
+  "reportedCustomers": 68067,
+  "measuredGustMph": 61,
+  "singleCause": false,
+  "sources": [
+   "https://www.wpxi.com/news/local/over-50k-people-without-power-strong-winds-hit-western-pa/BIZJ44SFVJH45F7MAP6G5PBWCI/?outputType=amp",
+   "https://www.puc.pa.gov/pcdocs/1862542.pdf"
+  ],
+  "notes": "One wind storm, but many scattered faults, so singleCause is false: Duquesne Light counted 273 trees or limbs on wires, 160 broken poles and 93 downed wires. reportedCustomers is my sum of WPXI's 9:20 p.m. EST figures, Duquesne Light 56,367 plus about 11,700 West Penn Power, against the alert's 75,001 peak. Duquesne Light's PUC filing gives a lower 33,848 affected and its release says nearly 50,000 at peak, so its own counts differ. The 61 mph gust is the NWS figure quoted in that filing, with about 60 mph at Allegheny County Airport in the Post-Gazette. The storm reached the Duquesne Light area around 6:45 p.m. EST, 30 minutes before the alert; first outage report 6:57 p.m., PUC notified 9:19 p.m. The timestamp is the first dated report found; an earlier one may exist. A Wind Advisory was noted in the alert, and this is a clear case of the site's checks missing a real wind event."
+ },
+ {
+  "n": 20,
+  "group": "no-record",
+  "startedAt": "2025-01-08T23:15:00.000Z",
+  "firedAt": "2025-01-09T02:45",
+  "peakAt": "2025-01-09T02:45:00.000Z",
+  "area": "Bakersfield-Delano, CA",
+  "counties": [
+   "06029"
+  ],
+  "peakCustomers": 79326,
+  "riseMinutes": 225,
+  "doeReport": false,
+  "category": "none-found",
+  "cause": "No reporting was found of a 79,000-customer outage in Kern County on Jan. 8, 2025, and safety shutoffs do not explain it; the half-hour collapse suggests a false reading in the data.",
+  "confidence": "low",
+  "statedBy": "none",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": null,
+  "measuredGustMph": null,
+  "singleCause": null,
+  "sources": [
+   "https://cpuc.ca.gov/-/media/cpuc-website/divisions/safety-and-enforcement-division/reports/psps-post-event-reports/2025/20250104sce-psps-post-event-reportdeenergizedfinal.pdf",
+   "https://www.cbsnews.com/losangeles/news/santa-ana-windstorm-could-affect-power-for-409000-southern-california-residents/"
+  ],
+  "notes": "The brief's safety-shutoff idea does not hold up. SCE listed only 3,253 Kern County customers as possibly affected (CBS LA, Jan. 6), and its post-event report says the Tehachapi support center closed Jan. 9 with no de-energized customers there. PG&E's Kern shutoffs came later (Jan. 12-13 and Jan. 20 on) and covered about 600 customers. The Jan. 8 windstorm was real: SCE reported 413,639 customers out system-wide at 4 p.m. PST (183,186 from shutoffs, seen in results, page would not open), but with no Kern breakdown. Wind damage could explain some of the 22,000 base; reporting does not say. Nothing explains 79,000 falling to under 200 in 30 minutes, including the base, which points to a feed fault but could be a brief transmission trip. Local searches found only outages of a few thousand or fewer on other dates. Planned searches on eastern Kern and on Delano, Wasco and Shafter were not run because the shared search budget ran out."
+ },
+ {
+  "n": 21,
+  "group": "no-record",
+  "startedAt": "2025-02-25T16:30:00.000Z",
+  "firedAt": "2025-02-25T16:40",
+  "peakAt": "2025-02-25T16:30:00.000Z",
+  "area": "Memphis, TN-MS-AR",
+  "counties": [
+   "47157"
+  ],
+  "peakCustomers": 73363,
+  "riseMinutes": 15,
+  "doeReport": false,
+  "category": "none-found",
+  "cause": "No reporting found of any large outage in Memphis or Shelby County on February 25, 2025, so this may be a false reading in the data.",
+  "confidence": "medium",
+  "statedBy": "none",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": null,
+  "measuredGustMph": null,
+  "singleCause": null,
+  "sources": [
+   "https://www.fox13memphis.com/news/power-restored-after-widespread-outages-across-memphis/article_a1884808-e414-11ef-8b75-c3cf3d5e78d0.html"
+  ],
+  "notes": "Alert is 10:30 a.m. CST on a Tuesday; Shelby County 73,343, gone in 30 minutes. Searches of Fox13, WREG, Action News 5, Local Memphis and Daily Memphian found nothing for this date (Commercial Appeal could not be searched). Nearby MLGW items were small: about 700 customers in Raleigh on Feb 20 and about 2,000 in storms on Feb 15. The source listed is a different date but relevant: on Feb 5, 2025, Fox13 reported MLGW's map briefly showed over 15,000 outages that MLGW said never happened, blaming website maintenance. That shows this feed can produce false blocks, but nothing ties that fault to Feb 25. Seen in search results only; the page returned HTTP 429. Raw Shelby County: 33 at 16:15 UTC, 73,352 at 16:30, 73,343 at 16:45, 27 at 17:00. A flat two-sample block like this looks more like a bad reading than an outage and restoration, though that is an inference."
+ },
+ {
+  "n": 23,
+  "group": "equipment",
+  "startedAt": "2025-04-15T16:45:00.000Z",
+  "firedAt": "2025-04-15T17:00",
+  "peakAt": "2025-04-15T17:00:00.000Z",
+  "area": "Cape Coral-Fort Myers, FL",
+  "counties": [
+   "12071"
+  ],
+  "peakCustomers": 67259,
+  "riseMinutes": 30,
+  "doeReport": false,
+  "category": "equipment",
+  "cause": "A substation component failed and relayed out the transmission lines serving Cape Coral, Pine Island and Sanibel, according to LCEC board minutes that date the event a week earlier.",
+  "confidence": "medium",
+  "statedBy": "utility",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": null,
+  "measuredGustMph": null,
+  "singleCause": true,
+  "sources": [
+   "https://www.fox4now.com/cape-coral/thousands-in-cape-coral-sanibel-pine-island-without-power-reason-unknown",
+   "https://www.lcec.net/wp-content/uploads/Board-Minutes-25-04-17.pdf"
+  ],
+  "notes": "The date conflict is resolved with raw data, so treat this as an inference. LCEC's April 17, 2025 board minutes date the event to Tuesday, April 8 at 12:29 p.m., but raw EAGLE-I shows Lee County flat near 105 from 16:00 to 17:45 UTC that day. On Tuesday, April 15 it reads 219 at 16:30 UTC, then 42,089, 67,259, 70,665, 36,981, and 220 at 17:45, a rise that fits 12:29 p.m. EDT exactly. A Fox 4 story on the same three communities also dates to about April 15 (search showed it as about 565 days old; the page returned 404, so seen in search results only). So the minutes likely misdate it by a week, though a 3-minute outage could in principle fall between 15-minute samples on April 8. The minutes say service was back within 3 minutes and the web map lagged actual restoration, so the roughly one-hour trace probably overstates the real duration by a lot. At the time, LCEC said only that it was still finding the reason, so no cause was public then. firstCauseAt is null because the minutes' posting date is unknown; the April 17 meeting is the earliest possible. Fox 4 gives only 'thousands'. The May 2025 minutes do not mention it."
+ },
+ {
+  "n": 24,
+  "group": "equipment",
+  "startedAt": "2025-04-18T16:00:00.000Z",
+  "firedAt": "2025-04-18T16:15",
+  "peakAt": "2025-04-18T16:15:00.000Z",
+  "area": "Denver-Aurora-Centennial, CO",
+  "counties": [
+   "08001",
+   "08014"
+  ],
+  "peakCustomers": 57416,
+  "riseMinutes": 30,
+  "doeReport": false,
+  "category": "accident",
+  "cause": "Xcel Energy said construction work at a north Denver substation tripped the power to about 56,000 customers.",
+  "confidence": "high",
+  "statedBy": "utility",
+  "firstCauseAt": "2025-04-18T19:05:00Z",
+  "hoursAfterStart": 3.08,
+  "reportedCustomers": 56000,
+  "measuredGustMph": null,
+  "singleCause": true,
+  "sources": [
+   "https://www.denvergazette.com/?p=372325",
+   "https://www.9news.com/article/news/local/power-outage-xcel-thornton-northglenn-broomfield-westminster-snow-weather/73-1ec942be-f0f4-42e6-aa4f-d9c1451c926c",
+   "https://digital-release.kdvr.com/?p=3398576"
+  ],
+  "notes": "Real outage and close match: began about 9:45 a.m. MDT, map peak over 57,000 at 10:20 a.m. per KDVR, fully restored about 67 minutes after it began per Xcel spokesman Tyler Bryant. About 28,000 were back within 8 minutes. firstCauseAt is an upper bound (Denver Gazette, 1:05 p.m. MDT); 9NEWS ran the construction cause the same day, time unknown, and may have been earlier. Northglenn police first blamed weather, with rain and snow falling, and part of the 9NEWS text repeats that, but Xcel's statement is the better source. Category could arguably be equipment, since it happened at a substation; I used accident because construction work tripped it rather than a failure of the gear. The Gazette's restoration time of '10:53 p.m.' is a typo for a.m."
+ },
+ {
+  "n": 25,
+  "group": "no-record",
+  "startedAt": "2025-05-19T23:45:00.000Z",
+  "firedAt": "2025-05-20T00:00",
+  "peakAt": "2025-05-20T00:00:00.000Z",
+  "area": "Miami-Fort Lauderdale-West Palm Beach, FL",
+  "counties": [
+   "12086"
+  ],
+  "peakCustomers": 116285,
+  "riseMinutes": 30,
+  "doeReport": false,
+  "category": "none-found",
+  "cause": "No reporting found of any large outage in Miami-Dade or the wider South Florida metro on the evening of May 19, 2025, so this may be a false reading in the data.",
+  "confidence": "medium",
+  "statedBy": "none",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": null,
+  "measuredGustMph": null,
+  "singleCause": null,
+  "sources": [],
+  "notes": "Alert is 7:45 p.m. EDT on a Monday; Miami-Dade 139,758, up and gone in about 30 minutes. English and Spanish searches found nothing, including WSVN, Local 10, NBC 6, CBS Miami and Telemundo 51; the Miami Herald could not be searched. The nearest storm reporting is May 23-24 in Broward, a different date and county, and does not count. An outage this size in a major metro would normally draw coverage, so the silence points toward a bad reading, but that is an inference. Raw Miami-Dade from 23:30 UTC: 130, 34,857, 115,502, 139,758, 36,626, 108. This ramp is less block-like than alerts 21 and 27, so a short real event is not ruled out."
+ },
+ {
+  "n": 26,
+  "group": "deliberate",
+  "startedAt": "2025-05-25T21:45:00.000Z",
+  "firedAt": "2025-05-25T22:00",
+  "peakAt": "2025-05-25T22:30:00.000Z",
+  "area": "New Orleans-Metairie, LA",
+  "counties": [
+   "22071",
+   "22051"
+  ],
+  "peakCustomers": 101054,
+  "riseMinutes": 60,
+  "doeReport": true,
+  "category": "planned",
+  "cause": "MISO ordered Entergy to shed 500 MW in the New Orleans area as an emergency measure, after a study found that losing a key 500 kV line would breach a limit that risks cascading blackouts.",
+  "confidence": "high",
+  "statedBy": "utility",
+  "firstCauseAt": "2025-05-25T22:33:00Z",
+  "hoursAfterStart": 0.8,
+  "reportedCustomers": 101000,
+  "measuredGustMph": null,
+  "singleCause": true,
+  "sources": [
+   "https://www.yahoo.com/news/over-50-000-entergy-customers-223348749.html",
+   "https://www.fox8live.com/2025/06/19/power-grid-operator-blames-system-limits-may-outage/",
+   "https://www.lpsc.louisiana.gov/docs/news/Miso_load_shed.pdf"
+  ],
+  "notes": "Customer count matches almost exactly: outage map at 5:30 p.m. CDT showed Orleans 52,267, Jefferson 36,201, Plaquemines 6,511 and St. Bernard 6,011, which sum to about 101,000. Entergy New Orleans alone cited about 52,000. Timeline: MISO declared a Transmission System Emergency at 4:02 p.m. CDT, ordered 500 MW from Entergy at 4:21 and 100 MW from Cleco (St. Tammany) at 4:30; outages began just after 4:30 and ended at 7:36 p.m. The Franklin-McKnight line was a studied contingency in the regulator's slides, not a line reported lost. Background: heat, planned and unplanned generator outages, and the Nelson-Richard 500 kV line still out from a March tornado. firstCauseAt is the Yahoo-carried story's timestamp; Fox 8's story is stamped 5:09 p.m. CDT and may have carried it earlier, while one smaller site says 6 p.m. Either way, the cause was public in under about 1.5 hours. Entergy and MISO dispute how much each was at fault."
+ },
+ {
+  "n": 27,
+  "group": "no-record",
+  "startedAt": "2025-05-28T08:15:00.000Z",
+  "firedAt": "2025-05-28T08:25",
+  "peakAt": "2025-05-28T08:15:00.000Z",
+  "area": "Clarksville, TN-KY",
+  "counties": [
+   "47125"
+  ],
+  "peakCustomers": 52778,
+  "riseMinutes": 15,
+  "doeReport": false,
+  "category": "none-found",
+  "cause": "No reporting found of any large outage in Clarksville or Montgomery County on May 28, 2025, so this may be a false reading in the data.",
+  "confidence": "medium",
+  "statedBy": "none",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": null,
+  "measuredGustMph": null,
+  "singleCause": null,
+  "sources": [],
+  "notes": "Alert is 3:15 a.m. CDT on a Wednesday. Montgomery County jumps from 17 to 83,206 and back to 17 within 30 minutes. That is about the size of CDE Lightband's whole customer base (an older article gave 79,500), which looks more like a bad feed value than a real blackout, though this is an inference. Searches of ClarksvilleNow, Clarksville Online, WKRN, WSMV and NewsChannel 5 found nothing, and I found no storm report for that night. The Leaf-Chronicle could not be searched. Nearest real events are a 1,200-customer outage on May 12 and EF0 tornadoes on May 20, neither relevant. Raw county readings: 4 at 08:00 UTC, 83,206 at 08:15, 52,765 at 08:30, 4 at 08:45. The alert's stored peak of 52,778 matches the second sample, not the first, which is worth checking in the replay."
+ },
+ {
+  "n": 28,
+  "group": "unknown",
+  "startedAt": "2025-06-13T04:15:00.000Z",
+  "firedAt": "2025-06-13T04:25",
+  "peakAt": "2025-06-13T04:15:00.000Z",
+  "area": "Chattanooga, TN-GA",
+  "counties": [
+   "47065"
+  ],
+  "peakCustomers": 76614,
+  "riseMinutes": 15,
+  "doeReport": false,
+  "category": "real-unknown",
+  "cause": "EPB customers lost power in waves that night, but EPB's explanations cover an outage at about 3 a.m. and no source explains this 12:15 a.m. spike.",
+  "confidence": "medium",
+  "statedBy": "none",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": 60000,
+  "measuredGustMph": null,
+  "singleCause": null,
+  "sources": [
+   "https://www.timesfreepress.com/news/2025/jun/18/snakes-caused-two-chattanooga-power-outages-epb/",
+   "https://newschannel9.com/news/local/power-restores-after-thousands-sporadically-lost-power-overnight"
+  ],
+  "notes": "Raw EAGLE-I for Hamilton County shows two separate clusters. The alert spike: 1,845 at 04:00 UTC, 114,753 at 04:15, 76,610, 37,947, then 1,114 at 05:00 (12:15 to 1 a.m. EDT). Then near zero until a second cluster from 07:15 to 09:00 UTC, peaking at 26,004 at 08:15 (3:15 to 5 a.m. EDT). The second cluster matches the reporting: about 3 a.m., largely over by 5:30. EPB's explanations belong to it. First, complications during scheduled maintenance on a failed substation part, about 20,000 customers for 5 to 20 minutes (NewsChannel 9 update, 8:43 a.m. EDT, 2025-06-13T12:43Z). Later, a snake touching energized equipment at a large substation serving Hixson and Soddy-Daisy (EPB's Ryan Keel, by June 18). Neither mentions a midnight event. Leads, not findings: the earlier equipment failure could be this spike, and NewsChannel 9's undated overnight high of about 60,000 on EPB's map may be too. If you treat the whole night as one event, it would be accident, stated by utility, first public at 12:43Z, 8.47 hours after the alert. reportedCustomers is that map high; EPB's own figure was 20,000. The spike falls by about 38,000 per sample, which looks mechanical and may be a data artifact. EPB's second snake outage, about 22:40 UTC June 17, barely shows in raw data, so brief events can go unseen. NewsChannel 9 says counts fluctuated overnight and reached upward of 60,000, and EPB blamed complications during substation maintenance, so that explanation may cover this spike too."
+ },
+ {
+  "n": 29,
+  "group": "deliberate",
+  "startedAt": "2025-06-19T22:45:00.000Z",
+  "firedAt": "2025-06-20T02:15",
+  "peakAt": "2025-06-20T02:45:00.000Z",
+  "area": "Stockton-Lodi, CA",
+  "counties": [
+   "06077"
+  ],
+  "peakCustomers": 61217,
+  "riseMinutes": 210,
+  "doeReport": false,
+  "category": "planned",
+  "cause": "PG&E deliberately cut power to Tracy, Manteca, Lathrop and part of Stockton to rebalance the grid during a grid emergency caused by higher demand and a simultaneous loss of supply.",
+  "confidence": "high",
+  "statedBy": "utility",
+  "firstCauseAt": "2025-06-20T05:20:00Z",
+  "hoursAfterStart": 6.58,
+  "reportedCustomers": 61000,
+  "measuredGustMph": 45,
+  "singleCause": true,
+  "sources": [
+   "https://www.mantecabulletin.com/news/local-news/61000-pge-customers-lose-power-in-manteca-tracy-and-lathrop",
+   "https://www.cbsnews.com/sacramento/news/pge-san-joaquin-county-power-outages-unrelated-to-safety-shutoffs",
+   "https://www.pge.com/assets/pge/docs/outages-and-safety/outage-preparedness-and-support/06-19-2025-psps-post-event-report.pdf"
+  ],
+  "notes": "NOT the wildfire shutoffs: only 948 of the 61,000+ were PSPS customers, and PG&E's PSPS post-event report says the grid emergency hit a separate set of customers, with no overlap. That report says PG&E acted to avoid breaching system operating limits that could lead to cascading outages. Neither it nor the press names what supply was lost, and a Manteca Bulletin column called PG&E's explanation vague. Filed as planned because it was a deliberate load shed, though PG&E called it unplanned. Counts: over 61,000 at 7:30 p.m. PDT, 44,464 at 8:30, 52,650 at 9:30, about 57,000 at 10:20. PG&E's estimate was 90 to 120 minutes, but it ran overnight, up to about 12 hours for some. PG&E gives about 4:30 p.m. as the start; one resident said about 3 p.m., closer to the alert's 3:45 p.m. firstCauseAt is an upper bound, the 10:20 p.m. PDT figure in CBS's story; neither CBS nor the Bulletin shows an original publish time, and it may have been public sooner. Gust is the San Joaquin County maximum for June 19-22 (I-580 at Hansen Road); Altamont in Alameda County hit 61 mph. Wind was not the stated cause of this outage."
+ },
+ {
+  "n": 30,
+  "group": "weather",
+  "startedAt": "2025-06-23T00:30:00.000Z",
+  "firedAt": "2025-06-23T23:30",
+  "peakAt": "2025-06-23T23:30:00.000Z",
+  "area": "New York-Newark-Jersey City, NY-NJ",
+  "counties": [
+   "34039",
+   "36085",
+   "36005",
+   "34013",
+   "34003"
+  ],
+  "peakCustomers": 51250,
+  "riseMinutes": 570,
+  "doeReport": true,
+  "category": "other-weather",
+  "cause": "A record heat wave caused scattered equipment and circuit failures across the New York area, with Con Edison saying its underground network was vulnerable to overheating and cutting voltage 8% in parts of Queens, Staten Island and Brooklyn.",
+  "confidence": "high",
+  "statedBy": "utility",
+  "firstCauseAt": "2025-06-23T14:30:00Z",
+  "hoursAfterStart": 14,
+  "reportedCustomers": 34852,
+  "measuredGustMph": null,
+  "singleCause": false,
+  "sources": [
+   "https://ny1.com/nyc/all-boroughs/news/2025/06/23/heat-wave-knocks-out-power-to-thousands-of-queens-customers",
+   "https://www.cbsnews.com/newyork/news/extreme-heat-causing-power-outages",
+   "https://patch.com/new-jersey/westfield/power-outages-linger-westfield-tuesday-dangerously-hot-temps-rise"
+  ],
+  "notes": "No source gives a metro total near 51,250. reportedCustomers is the sum of the only all-utility snapshot, CBS New York at 7:40 p.m. Tue June 24 (Con Ed 6,386, PSEG LI 4,429, PSE&G 9,664, JCP&L 14,373), a day after the alert peak. Monday figures are partial: Con Ed peaked above 12,000 citywide. Staten Island's 8,300+ at 8:30 p.m. Mon closely matches raw Richmond NY 8,000. Union County reporting is lower than raw 9,000 (2,200+ Mon, almost 5,000 at 4 p.m. Tue). I found no Essex County count for this period. PSE&G gave no cause I could find for Union; Westfield's mayor blamed network stress and circuit failures. firstCauseAt is the NY1 story's first-published time; the page was later updated, so the heat attribution at that time is inferred from its dated headline. The alert start (8:30 p.m. EDT Sun June 22) may include Sunday storm outages in New Jersey (Daily Voice snippet: 8,000+ statewide, some in Monmouth County); I could not open that article. Newark hit 101F on June 23."
+ },
+ {
+  "n": 31,
+  "group": "distorted",
+  "startedAt": "2025-07-04T12:15:00.000Z",
+  "firedAt": "2025-07-04T12:25",
+  "peakAt": "2025-07-04T12:15:00.000Z",
+  "area": "Providence-Warwick, RI-MA",
+  "counties": [
+   "44007",
+   "44003",
+   "44001"
+  ],
+  "peakCustomers": 50361,
+  "riseMinutes": 15,
+  "doeReport": true,
+  "category": "wind",
+  "cause": "Severe thunderstorms on the evening of July 3 downed trees and wires and cut power to up to about 65,000 Rhode Island Energy customers; the 8:15 a.m. July 4 alert reflects the utility's failing outage map, not a new event.",
+  "confidence": "high",
+  "statedBy": "utility",
+  "firstCauseAt": "2025-07-04T03:03:00Z",
+  "hoursAfterStart": -9.2,
+  "reportedCustomers": 65000,
+  "measuredGustMph": 64,
+  "singleCause": true,
+  "sources": [
+   "https://turnto10.com/news/local/damaging-storm-leaves-many-southern-new-englanders-in-the-dark-july-4-2025",
+   "https://wx1box.org/wp-content/uploads/2025/07/LSR_7_3_25.pdf",
+   "https://www.wpri.com/weather/severe-weather/ri-energy-40000-customers-without-power/amp/"
+  ],
+  "notes": "The outage was real but the raw timing and number are a feed artifact. NBC 10 reported the map showed no outages early Friday because of a technical issue (matches raw 2), then 50,359 at 8:45 a.m., which RI Energy said was not reliable (matches the flat raw 50,361 almost exactly). The same report had 37,380 at about 7 a.m.; about 20,000 were out around 1 p.m. Friday. RI Energy said the map was pulling incorrect information; Gov. McKee called the map failure unacceptable. So the true start was about 13 hours before the alert, which explains the missed weather match. NWS storm reports: 64 mph ASOS gust at T.F. Green at 7:12 p.m. EDT (23:12 UTC July 3), 62 mph at Warwick at 7:15 p.m., dozens of trees down in Providence, damage in Barrington at 7:25 p.m. firstCauseAt is the issue time of that NWS report, an upper bound; hoursAfterStart is negative because the cause was public before the alert began."
+ },
+ {
+  "n": 32,
+  "group": "distorted",
+  "startedAt": "2025-08-05T13:15:00.000Z",
+  "firedAt": "2025-08-05T14:30",
+  "peakAt": "2025-08-05T16:30:00.000Z",
+  "area": "Riverside-San Bernardino-Ontario, CA",
+  "counties": [
+   "06071"
+  ],
+  "peakCustomers": 99256,
+  "riseMinutes": 15,
+  "doeReport": false,
+  "category": "accident",
+  "cause": "A locomotive struck Southern California Edison grid equipment in San Bernardino shortly after 5 a.m. PDT, cutting power to about 17,000 customers across four outages, closing 14 schools.",
+  "confidence": "medium",
+  "statedBy": "utility",
+  "firstCauseAt": "2025-08-05T19:01:00Z",
+  "hoursAfterStart": 5.8,
+  "reportedCustomers": 17000,
+  "measuredGustMph": null,
+  "singleCause": null,
+  "sources": [
+   "https://www.cbsnews.com/losangeles/news/san-bernardino-city-unified-school-district-cancels-class-at-14-campuses-due-to-widespread-power-outage",
+   "https://abc7.com/post/widespread-power-outage-forces-school-closures-san-bernardino-leaves-thousands/17442946/",
+   "https://www.nbclosangeles.com/news/local/san-bernardino-power-outage/3759669/"
+  ],
+  "notes": "Big mismatch: the only reported event is 17,000 customers against a raw peak of 99,256, roughly one sixth. SCE's Jeff Monford gave the cause and count; San Bernardino County Fire described a downed line on train tracks. I found no reporting of anything else in San Bernardino or Riverside counties that morning, so the remaining 80,000 is unexplained and may be feed noise, given the on-off raw pattern and the reading of 34 just before the peak. singleCause is null because this event explains only a fraction of the raw number. The railroad is not named. The train strike (about 12:00 UTC) came about an hour before the alert start; power was back by about noon PDT. firstCauseAt is an upper bound, the CBS LA last-updated time of 12:01 p.m. PDT; the cause was probably public earlier."
+ },
+ {
+  "n": 33,
+  "group": "no-record",
+  "startedAt": "2025-10-21T22:45:00.000Z",
+  "firedAt": "2025-10-21T22:55",
+  "peakAt": "2025-10-21T23:15:00.000Z",
+  "area": "Omaha, NE-IA",
+  "counties": [
+   "31055",
+   "31153"
+  ],
+  "peakCustomers": 50234,
+  "riseMinutes": 15,
+  "doeReport": false,
+  "category": "none-found",
+  "cause": "No public reporting of any large Omaha-area outage on October 21, 2025 was found, so no cause can be assigned.",
+  "confidence": "medium",
+  "statedBy": "none",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": null,
+  "measuredGustMph": null,
+  "singleCause": null,
+  "sources": [
+   "https://www.wowt.com/2025/11/11/oppd-promoting-reliability-new-app-following-recent-power-outage/",
+   "https://oppd.com/media/321183/2025-11-nov-advanced-metering-infrastructure-ami-program-update.pdf",
+   "https://oppdthewire.com/find-rolling-updates-on-outages-on-the-wire/"
+  ],
+  "notes": "Likely a false reading, but that is unconfirmed. A real outage of 50,000 OPPD customers would far exceed the largest non-storm OPPD event I found (18,000 from a La Vista substation fault in 2022), yet searches across WOWT, KMTV, KPTM and the World-Herald and date-specific queries found nothing, while those outlets covered much smaller OPPD outages that fall (about 1,600 on Nov 6, about 1,500 and 636 on Nov 18). I could not search KETV's site directly. I also found no storm reported for that evening. The raw shape (92 to exactly 50,234, flat 90 minutes, then 19) fits a data fault. Context only, with no source linking it to this date: OPPD's new outage system went live Sept 7, 2025, the MyOPPD platform launched in September, its first smart-meter outage report came Oct 20, and OPPD acknowledged app and website problems around a Nov 6 outage. I found no OPPD statement about a map or feed error on Oct 21."
+ },
+ {
+  "n": 34,
+  "group": "weather",
+  "startedAt": "2025-10-25T20:45:00.000Z",
+  "firedAt": "2025-10-26T00:30",
+  "peakAt": "2025-10-26T07:45:00.000Z",
+  "area": "Seattle-Tacoma-Bellevue, WA",
+  "counties": [
+   "53033",
+   "53053"
+  ],
+  "peakCustomers": 164445,
+  "riseMinutes": 360,
+  "doeReport": true,
+  "category": "wind",
+  "cause": "A windstorm on Saturday October 25 brought down trees onto distribution and transmission lines across the Puget Sound region, with damage heaviest in Pierce and Thurston counties.",
+  "confidence": "high",
+  "statedBy": "utility",
+  "firstCauseAt": "2025-10-26T03:07:00Z",
+  "hoursAfterStart": 6.4,
+  "reportedCustomers": 165000,
+  "measuredGustMph": 60,
+  "singleCause": true,
+  "sources": [
+   "https://www.spokesman.com/stories/2025/oct/26/gusts-up-to-77-mph-knock-out-power-for-250k-around",
+   "https://www.fox13seattle.com/news/wind-rain-power-outages-puget",
+   "https://cliffmass.blogspot.com/2025/10/the-storm-has-arrived.html"
+  ],
+  "notes": "Reported count fits the raw peak. PSE had over 165,000 out at 11 p.m. (Spokesman-Review; Fox 13 says about 148,000), but that includes Thurston County, outside this metro. Seattle City Light had nearly 34,000 more, and the Spokesman-Review's total across all utilities it listed was over 254,000. 60 mph is the Tacoma Narrows Bridge gust, the highest I found in this metro; Sea-Tac recorded 43 mph, and Hoquiam 77 mph on the coast. So a Wind Advisory understated it locally. A man was killed by a falling tree near Roy. firstCauseAt is an upper bound from a Cliff Mass post with an 8:07 p.m. PDT screenshot; Fox 13's story was first posted at 11:14 a.m. PDT, before the alert, but I could not see its original text. Many outages from one storm, so singleCause is true."
+ },
+ {
+  "n": 35,
+  "group": "unknown",
+  "startedAt": "2025-11-08T21:15:00.000Z",
+  "firedAt": "2025-11-08T21:25",
+  "peakAt": "2025-11-08T21:30:00.000Z",
+  "area": "Los Angeles-Long Beach-Anaheim, CA",
+  "counties": [
+   "06037"
+  ],
+  "peakCustomers": 164933,
+  "riseMinutes": 30,
+  "doeReport": false,
+  "category": "real-unknown",
+  "cause": "A sudden LADWP outage hit Mid-Wilshire, Koreatown, Palms, Leimert Park and nearby areas at about 12:55 p.m. PST and was restored within about two hours, but LADWP said only that the cause was under investigation.",
+  "confidence": "medium",
+  "statedBy": "none",
+  "firstCauseAt": null,
+  "hoursAfterStart": null,
+  "reportedCustomers": 100818,
+  "measuredGustMph": null,
+  "singleCause": null,
+  "sources": [
+   "https://www.cbsnews.com/losangeles/news/ladwp-widespread-power-outage",
+   "https://www.yahoo.com/news/articles/power-restored-over-100-000-215010742.html",
+   "https://www.yahoo.com/news/articles/widespread-power-outage-temporarily-impacts-004640208.html"
+  ],
+  "notes": "Definitely real: KTLA, CBS LA, NBC LA, the LA Times and La Opinion all covered it. Numbers conflict: LADWP told outlets about 31,000, its own map showed 100,818 at the peak, and raw is 164,933, about 1.6 times the map figure. I found no SCE count. Timing fits the raw spike: more than 100,000 at 1:30 p.m., about 1,500 an hour later, and LADWP said all restored by 2:40 to 2:42 p.m. (the LA Times and La Opinion say 4 p.m.; NBC says 1:30 p.m.). KTLA said the map showed dozens of clusters above 2,500 customers. The sudden simultaneous loss suggests one event, but no source says so, so singleCause is null. I found no later cause from LADWP in follow-up searches of news and LADWP pages; board minutes were not checked. Residents' shutdown theories were speculation only. This is the most interesting open case in this batch."
+ },
+ {
+  "n": 36,
+  "group": "weather",
+  "startedAt": "2025-12-17T08:45:00.000Z",
+  "firedAt": "2025-12-17T10:00",
+  "peakAt": "2025-12-17T11:45:00.000Z",
+  "area": "Portland-Vancouver-Hillsboro, OR-WA",
+  "counties": [
+   "53011",
+   "41005",
+   "41067"
+  ],
+  "peakCustomers": 174267,
+  "riseMinutes": 120,
+  "doeReport": true,
+  "category": "wind",
+  "cause": "An overnight frontal windstorm on December 16-17 downed trees and lines across the Portland metro and Clark County, Washington, in a regional event that left hundreds of thousands out across the Northwest.",
+  "confidence": "high",
+  "statedBy": "utility",
+  "firstCauseAt": "2025-12-17T13:48:00Z",
+  "hoursAfterStart": 5.1,
+  "reportedCustomers": 200000,
+  "measuredGustMph": 55,
+  "singleCause": true,
+  "sources": [
+   "https://www.columbian.com/news/2025/dec/17/clark-county-wakes-up-to-downed-trees-lost-power/",
+   "https://www.yahoo.com/news/articles/mass-power-outages-around-pacific-134851859.html",
+   "https://www.itiger.com/news/2592191812"
+  ],
+  "notes": "Same event as alert 37. The largest piece was Clark Public Utilities, not PGE or Pacific Power: at least 90,000 out by about 1:30 a.m. PST (The Columbian), up to 98,000 (KGW) or over 100,000 (Clark County Today), which matches raw Clark County 94,000. PGE had about 112,300 in a Reuters snapshot, spread from Portland to Salem. reportedCustomers is the 200,000+ for northern Oregon and southern Washington, a wider area than this metro. Gusts: 55 mph at PDX at 1:27 a.m., 41 mph at Pearson Field in Vancouver at 1:20 a.m. Clark PUD said larger infrastructure was also hit. firstCauseAt is an upper bound, the Yahoo posting time of KOIN's story quoting PGE on high winds; KOIN's original likely ran earlier. I did not confirm whether any warning stronger than the noted Wind Advisory applied to the metro on Dec 17."
+ },
+ {
+  "n": 37,
+  "group": "weather",
+  "startedAt": "2025-12-17T09:15:00.000Z",
+  "firedAt": "2025-12-17T10:15",
+  "peakAt": "2025-12-17T11:15:00.000Z",
+  "area": "Salem, OR",
+  "counties": [
+   "41047",
+   "41053"
+  ],
+  "peakCustomers": 53864,
+  "riseMinutes": 135,
+  "doeReport": true,
+  "category": "wind",
+  "cause": "The same December 16-17 windstorm downed trees and power lines in the Salem area, causing outages on PGE, Pacific Power and Salem Electric.",
+  "confidence": "high",
+  "statedBy": "utility",
+  "firstCauseAt": "2025-12-17T13:48:00Z",
+  "hoursAfterStart": 4.6,
+  "reportedCustomers": null,
+  "measuredGustMph": null,
+  "singleCause": true,
+  "sources": [
+   "https://www.salemreporter.com/2025/12/17/winter-storm-power-out-early-wednesday-in-much-of-salem-keizer/",
+   "https://www.aol.com/articles/thousands-without-power-salem-area-150826812.html",
+   "https://www.yahoo.com/news/articles/mass-power-outages-around-pacific-134851859.html"
+  ],
+  "notes": "Same event as alert 36. I found no Salem-only customer count, so reportedCustomers is null. At 7 a.m. Dec 17 PGE reported at least 97,341 customers and Pacific Power 48,855, both wider than Salem, with outages named in Woodburn, Salem, Silverton, Aumsville, Mill City and Dallas (Statesman Journal, seen in search results; the page returned 404 when opened). Salem Electric called it a major outage event in Salem and Keizer and had restored all but 50 customers by 7:08 a.m. Salem-Keizer schools started an hour late, with possible downed trees or lines cited. I found no measured Salem gust. firstCauseAt is an upper bound: KOIN's story placed PGE's wind outages from Portland to Salem. Salem Reporter's 5:15 a.m. update exists but its text was cut off."
+ },
+ {
+  "n": 38,
+  "group": "equipment",
+  "startedAt": "2025-12-20T21:15:00.000Z",
+  "firedAt": "2025-12-20T22:45",
+  "peakAt": "2025-12-21T01:45:00.000Z",
+  "area": "San Francisco-Oakland-Fremont, CA",
+  "counties": [
+   "06075"
+  ],
+  "peakCustomers": 132287,
+  "riseMinutes": 120,
+  "doeReport": false,
+  "category": "equipment",
+  "cause": "A fire at PG&E's Mission substation at 8th and Mission streets knocked out power to about 130,000 San Francisco customers; an Exponent analysis later found moisture most likely degraded an insulating board and sparked it.",
+  "confidence": "high",
+  "statedBy": "official",
+  "firstCauseAt": "2025-12-20T23:15:00Z",
+  "hoursAfterStart": 2,
+  "reportedCustomers": 130000,
+  "measuredGustMph": null,
+  "singleCause": true,
+  "sources": [
+   "https://www.pge.com/en/featured/mission-substation-outage.html",
+   "https://www.cbsnews.com/amp/news/san-francisco-power-outage-dec-20-2025",
+   "https://www.kqed.org/news/12083011/humidity-at-pge-substation-likely-cause-of-massive-december-san-francisco-blackout"
+  ],
+  "notes": "Reported 130,000 matches raw San Francisco County 131,898. firstCauseAt is the San Francisco Fire Department's public post about the fire at about 3:15 p.m. PST; it reported the fire but did not itself call it the cause. Mission Local (5:03 p.m.) said the outage appeared related, and PG&E tied substation fire damage to the repairs on Sunday morning Dec 21. Root cause came much later: Exponent, reported May 8, 2026, with some outlets framing it as an arc flash event. Fire timing conflicts: PG&E dates the outage from 1:09 p.m., matching the 1:15 p.m. alert, while ABC7 and Mission Local put the fire report after 2 p.m. Smaller outages began about 9:40 a.m. (14,700 to 25,000 customers per ABC7), before the alert. Peak was about two hours after 1:09 p.m., partly because crews de-energized more of the system for firefighting safety. Full restoration was 4:31 a.m. Dec 23."
+ }
+]

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://www.cisa.gov/">
+  <channel>
+    <title>CISA News</title>
+    <link>https://www.cisa.gov/</link>
+    <description/>
+    <language>en</language>
+    
+    <item>
+  <title>CISA Unveils New Strategy to Strengthen National Cyber Defense and Critical Infrastructure Security</title>
+  <link>https://www.cisa.gov/news-events/news/cisa-unveils-new-strategy-strengthen-national-cyber-defense-and-critical-infrastructure-security</link>
+  <description/>
+  <pubDate>Mon, 26 Oct 26 12:00:00 +0000</pubDate>
+    <dc:creator>CISA</dc:creator>
+    <guid isPermaLink="false">/node/25712</guid>
+    </item></channel></rss>

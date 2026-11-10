@@ -1,0 +1,852 @@
+[
+  {
+    "id": "alabama-power",
+    "name": "Alabama Power",
+    "eiaIds": [
+      195
+    ],
+    "mapUrl": "https://outagemap.alabamapower.com/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "7636a60f-7b81-4fb0-a30d-ed79a8e271e7",
+      "viewId": "c3471c92-6e1b-494b-a884-391139a2cc18"
+    },
+    "granularity": "county"
+  },
+  {
+    "id": "mississippi-power",
+    "name": "Mississippi Power",
+    "eiaIds": [
+      12686
+    ],
+    "mapUrl": "https://outagemap.mississippipower.com/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "32c5f878-d103-49e1-8a8a-ad0e2bdb4507",
+      "viewId": "1521bb54-d36b-4d36-a64d-48a454ee39a0"
+    },
+    "granularity": "county"
+  },
+  {
+    "id": "entergy-louisiana",
+    "name": "Entergy Louisiana",
+    "eiaIds": [
+      11241
+    ],
+    "mapUrl": "https://www.etrviewoutage.com/map?state=LA",
+    "method": "json",
+    "config": {
+      "url": "https://entergy.datacapable.com/datacapable/v2/p/entergy/r/la/map/events/count?types=COUNTY",
+      "listPath": "",
+      "outField": "customersAffected",
+      "servedField": "customersServed",
+      "areaField": "name",
+      "areaKind": "county",
+      "state": "LA",
+      "excludeAreas": [
+        "ORLEANS"
+      ]
+    },
+    "granularity": "county",
+    "notes": "Statewide DataCapable region includes Orleans Parish which is Entergy New Orleans; excluded here (reported by entergy-new-orleans). Areas are parishes."
+  },
+  {
+    "id": "entergy-arkansas",
+    "name": "Entergy Arkansas",
+    "eiaIds": [
+      814
+    ],
+    "mapUrl": "https://www.etrviewoutage.com/map?state=AR",
+    "method": "json",
+    "config": {
+      "url": "https://entergy.datacapable.com/datacapable/v2/p/entergy/r/ar/map/events/count?types=COUNTY",
+      "listPath": "",
+      "outField": "customersAffected",
+      "servedField": "customersServed",
+      "areaField": "name",
+      "areaKind": "county",
+      "state": "AR"
+    },
+    "granularity": "county",
+    "notes": "DataCapable AR region; EIA lists a small TN service area that is not separately published."
+  },
+  {
+    "id": "entergy-mississippi",
+    "name": "Entergy Mississippi",
+    "eiaIds": [
+      12685
+    ],
+    "mapUrl": "https://www.etrviewoutage.com/map?state=MS",
+    "method": "json",
+    "config": {
+      "url": "https://entergy.datacapable.com/datacapable/v2/p/entergy/r/ms/map/events/count?types=COUNTY",
+      "listPath": "",
+      "outField": "customersAffected",
+      "servedField": "customersServed",
+      "areaField": "name",
+      "areaKind": "county",
+      "state": "MS"
+    },
+    "granularity": "county"
+  },
+  {
+    "id": "entergy-new-orleans",
+    "name": "Entergy New Orleans",
+    "eiaIds": [
+      13478
+    ],
+    "mapUrl": "https://www.etrviewoutage.com/map?state=NOLA",
+    "method": "json",
+    "config": {
+      "url": "https://entergy.datacapable.com/datacapable/v2/p/entergy/r/nola/map/events/count?types=COUNTY",
+      "listPath": "",
+      "outField": "customersAffected",
+      "servedField": "customersServed",
+      "areaField": "name",
+      "areaKind": "county",
+      "state": "LA"
+    },
+    "granularity": "county",
+    "notes": "Orleans Parish only."
+  },
+  {
+    "id": "mtemc",
+    "name": "Middle Tennessee Electric",
+    "eiaIds": [
+      12470
+    ],
+    "mapUrl": "https://mtemc.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/mtemc/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county",
+      "state": "TN",
+      "asOfPath": "lastUpdate"
+    },
+    "granularity": "county",
+    "notes": "outagemap.coop / cloud.coop hosted platform; summary.json has county regions."
+  },
+  {
+    "id": "huntsville-utilities",
+    "name": "Huntsville Utilities",
+    "eiaIds": [
+      9094
+    ],
+    "mapUrl": "https://hsvutil.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/hsvutil/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "asOfPath": "lastUpdate"
+    },
+    "granularity": "utility",
+    "notes": "outagemap.coop hosted platform; single service-area region only."
+  },
+  {
+    "id": "nes-nashville",
+    "name": "Nashville Electric Service",
+    "eiaIds": [
+      13216
+    ],
+    "mapUrl": "https://www.nespower.com/outages/",
+    "method": "json",
+    "config": {
+      "url": "https://utilisocial.io/datacapable/v2/p/NES/map/events/count?types=COUNTY",
+      "listPath": "",
+      "outField": "customersAffected",
+      "areaField": "name",
+      "areaKind": "county",
+      "state": "TN"
+    },
+    "granularity": "county",
+    "notes": "DataCapable provider NES; county counts (customersServed not published)."
+  },
+  {
+    "id": "mlgw",
+    "name": "Memphis Light, Gas and Water",
+    "eiaIds": [
+      12293
+    ],
+    "mapUrl": "https://outagemap.mlgw.org/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap.mlgw.org/geojson.php",
+      "listPath": "features",
+      "outField": "properties.CUR_CUST_AFF",
+      "causeField": "properties.OUT_CAUSE"
+    },
+    "granularity": "incident",
+    "notes": "GeoJSON point per outage with CUR_CUST_AFF; Shelby County service area, no area field."
+  },
+  {
+    "id": "kub-knoxville",
+    "name": "Knoxville Utilities Board",
+    "eiaIds": [
+      10421
+    ],
+    "mapUrl": "https://www.kub.org/outage/map",
+    "method": "json",
+    "config": {
+      "url": "https://www.kub.org/outage-data/data.json",
+      "totalPath": "electricOutageInfo.electricCustomersWithoutPower",
+      "servedPath": "electricOutageInfo.totalElectricCustomers",
+      "asOfPath": "electricOutageInfo.lastUpdated"
+    },
+    "granularity": "utility",
+    "notes": "Utility-wide total only (electricOutageDetails list empty when no outages; layout when populated not seen)."
+  },
+  {
+    "id": "kentucky-power",
+    "name": "Kentucky Power",
+    "eiaIds": [
+      22053
+    ],
+    "mapUrl": "https://outagemap.kentuckypower.com/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "23dcd38e-2573-4e20-a463-959b11cae011",
+      "viewId": "60f31606-5702-4a1e-a74c-08d866b7a6fa"
+    },
+    "granularity": "county"
+  },
+  {
+    "id": "lge-ku",
+    "name": "LG&E and KU",
+    "eiaIds": [
+      11249,
+      10171
+    ],
+    "mapUrl": "https://stormcenter.lge-ku.com/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "877fd1e9-4162-473f-b782-d8a53a85326b",
+      "viewId": "a6cee9e4-312b-4b77-9913-2ae371eb860d"
+    },
+    "granularity": "county",
+    "notes": "One combined map for LG&E, KU and Old Dominion Power (KU Virginia); a single total (about 1.04M served) so LG&E and KU cannot be split."
+  },
+  {
+    "id": "cleco",
+    "name": "Cleco Power",
+    "eiaIds": [
+      3265
+    ],
+    "mapUrl": "https://www.cleco.com/outages",
+    "method": "json",
+    "config": {
+      "url": "https://cleco-prod.azure-api.net/outage/api/1/outage/get/count/2",
+      "listPath": "data",
+      "outField": "accountsAffected",
+      "servedField": "accountsServed",
+      "areaField": "locationName",
+      "areaKind": "county",
+      "state": "LA"
+    },
+    "granularity": "county",
+    "notes": "Found via the pre-login outage view of the Cleco customer portal (myaccount.cleco.com/portal, #/previewoutage): its script calls this Azure API Management endpoint with no key, login or cookie; per-parish counts (locationType 2). One row has blank locationName. cleco.com itself sits behind Cloudflare but this API does not. Flagged for lead review because it was discovered through the portal rather than a public map page."
+  },
+  {
+    "id": "duke-energy-kentucky",
+    "name": "Duke Energy Kentucky",
+    "eiaIds": [
+      19446
+    ],
+    "mapUrl": "https://outagemap.duke-energy.com/#/current-outages/ohio-kentucky",
+    "method": "custom",
+    "granularity": "county",
+    "notes": "embedded-key: Authorization (Basic) header on https://prod.apigee.duke-energy.app/outage-maps/v1/ ; unauthenticated call returns 500 Unresolved variable request.header.Authorization. Same API serves all Duke jurisdictions (DEC, DEF, DEI, OHKY).",
+    "custom": {
+      "request": "GET https://prod.apigee.duke-energy.app/outage-maps/v1/counties?jurisdiction=OHKY",
+      "also": [
+        "outages?jurisdiction=OHKY",
+        "outages/outage?jurisdiction=OHKY&sourceEventNumber=<n>"
+      ],
+      "auth": "Authorization: Basic <token> header copied from the map JS bundle (main.*.js); not recorded here",
+      "response": "not seen (needs the header)"
+    }
+  },
+  {
+    "id": "dremc",
+    "name": "Duck River Electric Membership Corp",
+    "eiaIds": [
+      5399
+    ],
+    "mapUrl": "https://outagemap.dremc.com:8182/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap.dremc.com:8182/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county)."
+  },
+  {
+    "id": "first-electric",
+    "name": "First Electric Cooperative",
+    "eiaIds": [
+      6342
+    ],
+    "mapUrl": "https://outage.fecc.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outage.fecc.coop/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county)."
+  },
+  {
+    "id": "owen-electric",
+    "name": "Owen Electric Cooperative",
+    "eiaIds": [
+      14251
+    ],
+    "mapUrl": "https://outage.owenelectric.com/",
+    "method": "json",
+    "config": {
+      "url": "https://outage.owenelectric.com/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county)."
+  },
+  {
+    "id": "riviera-utilities",
+    "name": "Riviera Utilities (Foley)",
+    "eiaIds": [
+      6491
+    ],
+    "mapUrl": "https://outage.rivierautilities.com/",
+    "method": "json",
+    "config": {
+      "url": "https://outage.rivierautilities.com/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county)."
+  },
+  {
+    "id": "singing-river",
+    "name": "Singing River Electric",
+    "eiaIds": [
+      17252
+    ],
+    "mapUrl": "https://outageviewer.singingriver.com/",
+    "method": "json",
+    "config": {
+      "url": "https://outageviewer.singingriver.com/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county). Serves MS Gulf Coast and AL; one combined total."
+  },
+  {
+    "id": "southern-pine",
+    "name": "Southern Pine Electric",
+    "eiaIds": [
+      17647
+    ],
+    "mapUrl": "http://outages.southernpine.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outages.southernpine.coop/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county)."
+  },
+  {
+    "id": "slemco",
+    "name": "Southwest Louisiana EMC (SLEMCO)",
+    "eiaIds": [
+      17684
+    ],
+    "mapUrl": "https://slemco.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/slemco/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county",
+      "state": "LA",
+      "asOfPath": "lastUpdate"
+    },
+    "granularity": "county",
+    "notes": "outagemap.coop hosted platform; parish regions."
+  },
+  {
+    "id": "ozarks-electric",
+    "name": "Ozarks Electric Cooperative",
+    "eiaIds": [
+      14289
+    ],
+    "mapUrl": "https://ozarksecc.outagemap.coop/?config=Embedded_Outage_Map",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/ozarksecc/Embedded_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county",
+      "asOfPath": "lastUpdate"
+    },
+    "granularity": "county",
+    "notes": "outagemap.coop hosted platform; county regions span AR and OK so no single state set (Adair/Cherokee/Delaware/Sequoyah are OK; Benton/Crawford/Franklin/Madison/Washington are AR)."
+  },
+  {
+    "id": "blue-grass-energy",
+    "name": "Blue Grass Energy",
+    "eiaIds": [
+      1886
+    ],
+    "mapUrl": "https://outage.bgenergy.com/",
+    "method": "json",
+    "config": {
+      "url": "https://outage.bgenergy.com/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county)."
+  },
+  {
+    "id": "central-alabama-electric",
+    "name": "Central Alabama Electric Cooperative",
+    "eiaIds": [
+      3222
+    ],
+    "mapUrl": "https://outage.caec.com/",
+    "method": "json",
+    "config": {
+      "url": "https://outage.caec.com/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county)."
+  },
+  {
+    "id": "salt-river-electric",
+    "name": "Salt River Electric",
+    "eiaIds": [
+      16587
+    ],
+    "mapUrl": "https://outage.srelectric.com/",
+    "method": "json",
+    "config": {
+      "url": "https://outage.srelectric.com/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county)."
+  },
+  {
+    "id": "pennyrile-rural-electric",
+    "name": "Pennyrile Rural Electric",
+    "eiaIds": [
+      14724
+    ],
+    "mapUrl": "https://outage.precc.com/",
+    "method": "json",
+    "config": {
+      "url": "https://outage.precc.com/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county)."
+  },
+  {
+    "id": "stemc",
+    "name": "Southwest Tennessee EMC",
+    "eiaIds": [
+      17694
+    ],
+    "mapUrl": "https://map.stemc.com/",
+    "method": "json",
+    "config": {
+      "url": "https://map.stemc.com/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county)."
+  },
+  {
+    "id": "lcub-lenoir-city",
+    "name": "Lenoir City Utilities Board",
+    "eiaIds": [
+      10906
+    ],
+    "mapUrl": "https://www.lcub.com/view-live-map/",
+    "method": "custom",
+    "granularity": "incident",
+    "notes": "tls-chain: public JSON feed works in curl but the server omits its intermediate certificate, so Node fetch fails UNABLE_TO_VERIFY_LEAF_SIGNATURE. Needs the production adapter to trust the GlobalSign GCC R46 intermediate (not disabled here).",
+    "custom": {
+      "request": "GET https://portal.lcub.com:8052/POP/model/PopOutage?ServiceType=Electric",
+      "response": "[{\"id\":\"...\",\"serviceType\":\"Electric\",\"currentAffected\":1,\"fieldValues\":{\"totalAffected\":\"1\"},\"lat\":null,\"lon\":null}]",
+      "mapping": "json listPath \"\" outField currentAffected (one row per open outage; no county, no served total)"
+    }
+  },
+  {
+    "id": "lus-lafayette",
+    "name": "Lafayette Utilities System",
+    "eiaIds": [
+      9096
+    ],
+    "mapUrl": "https://map.lus.org/",
+    "method": "json",
+    "config": {
+      "url": "https://utilisocial.io/datacapable/v2/p/lus/map/events",
+      "listPath": "",
+      "outField": "numPeople"
+    },
+    "granularity": "incident",
+    "notes": "DataCapable provider lus; events list also carries MAINTENANCE and TREE_TRIMMING rows (numPeople 0 when seen), only incident-level, no county counts (events/count returns []). Check that planned rows never carry numPeople."
+  },
+  {
+    "id": "wste",
+    "name": "Washington-St. Tammany Electric Cooperative",
+    "eiaIds": [
+      21567
+    ],
+    "mapUrl": "https://wste.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/wste/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county",
+      "state": "LA",
+      "asOfPath": "lastUpdate"
+    },
+    "granularity": "county",
+    "notes": "outagemap.coop hosted platform; parish regions (names published with a Parish suffix)."
+  },
+  {
+    "id": "appalachian-electric",
+    "name": "Appalachian Electric Cooperative",
+    "eiaIds": [
+      727
+    ],
+    "mapUrl": "https://aec.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/aec/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "asOfPath": "lastUpdate"
+    },
+    "granularity": "utility",
+    "notes": "outagemap.coop hosted platform; single service-territory region only."
+  },
+  {
+    "id": "volunteer-energy",
+    "name": "Volunteer Energy Cooperative",
+    "eiaIds": [
+      19898
+    ],
+    "mapUrl": "https://volunteer.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/volunteer/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "zip",
+      "state": "TN",
+      "asOfPath": "lastUpdate"
+    },
+    "granularity": "zip",
+    "notes": "outagemap.coop hosted platform; ZIP regions (first dataset). Some ZIPs are outside TN-only footprint edge cases; state set to TN."
+  },
+  {
+    "id": "cde-lightband",
+    "name": "CDE Lightband (Clarksville)",
+    "eiaIds": [
+      3704
+    ],
+    "mapUrl": "https://cdelightband.com/outage-center/",
+    "method": "json",
+    "config": {
+      "url": "https://www.outageentry.com/Outage/ajax/ajaxShellOut.php",
+      "headers": {
+        "content-type": "multipart/form-data; boundary=GridAlertBoundary"
+      },
+      "body": "--GridAlertBoundary\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nget\r\n--GridAlertBoundary\r\nContent-Disposition: form-data; name=\"client\"\r\n\r\nCDE\r\n--GridAlertBoundary\r\nContent-Disposition: form-data; name=\"target\"\r\n\r\ncfa_device_markers\r\n--GridAlertBoundary\r\nContent-Disposition: form-data; name=\"serviceIndex\"\r\n\r\n1\r\n--GridAlertBoundary--\r\n",
+      "totalPath": "0.customersAffected",
+      "servedPath": "0.stats.NumConsumers"
+    },
+    "granularity": "utility",
+    "notes": "outageentry.com hosted outage app; public multipart POST the map itself sends (action=get target=cfa_device_markers), utility-wide total only."
+  },
+  {
+    "id": "carroll-electric",
+    "name": "Carroll Electric Cooperative (AR)",
+    "eiaIds": [
+      3093
+    ],
+    "mapUrl": "https://www.outageentry.com/Outages/outage.php?Client=CECAR",
+    "method": "json",
+    "config": {
+      "url": "https://www.outageentry.com/Outage/ajax/ajaxShellOut.php",
+      "headers": {
+        "content-type": "multipart/form-data; boundary=GridAlertBoundary"
+      },
+      "body": "--GridAlertBoundary\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nget\r\n--GridAlertBoundary\r\nContent-Disposition: form-data; name=\"client\"\r\n\r\nCECAR\r\n--GridAlertBoundary\r\nContent-Disposition: form-data; name=\"target\"\r\n\r\ncfa_device_markers\r\n--GridAlertBoundary\r\nContent-Disposition: form-data; name=\"serviceIndex\"\r\n\r\n1\r\n--GridAlertBoundary--\r\n",
+      "totalPath": "0.customersAffected",
+      "servedPath": "0.stats.NumConsumers"
+    },
+    "granularity": "utility",
+    "notes": "outageentry.com hosted outage app; public multipart POST the map itself sends (action=get target=cfa_device_markers), utility-wide total only."
+  },
+  {
+    "id": "pearl-river-valley",
+    "name": "Pearl River Valley Electric Power Association",
+    "eiaIds": [
+      14563
+    ],
+    "mapUrl": "https://www.outageentry.com/CustomerFacingAppJQM/outage.php?clientid=PRVEPA",
+    "method": "json",
+    "config": {
+      "url": "https://www.outageentry.com/Outage/ajax/ajaxShellOut.php",
+      "headers": {
+        "content-type": "multipart/form-data; boundary=GridAlertBoundary"
+      },
+      "body": "--GridAlertBoundary\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nget\r\n--GridAlertBoundary\r\nContent-Disposition: form-data; name=\"client\"\r\n\r\nPRVEPA\r\n--GridAlertBoundary\r\nContent-Disposition: form-data; name=\"target\"\r\n\r\ncfa_device_markers\r\n--GridAlertBoundary\r\nContent-Disposition: form-data; name=\"serviceIndex\"\r\n\r\n1\r\n--GridAlertBoundary--\r\n",
+      "totalPath": "0.customersAffected",
+      "servedPath": "0.stats.NumConsumers"
+    },
+    "granularity": "utility",
+    "notes": "outageentry.com hosted outage app; public multipart POST the map itself sends (action=get target=cfa_device_markers), utility-wide total only."
+  },
+  {
+    "id": "north-little-rock-electric",
+    "name": "North Little Rock Electric",
+    "eiaIds": [
+      13718
+    ],
+    "mapUrl": "https://outagemap.nlrelectric.com/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap.nlrelectric.com/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county)."
+  },
+  {
+    "id": "tri-county-emc-tn",
+    "name": "Tri-County Electric Membership Corp (TN)",
+    "eiaIds": [
+      19162
+    ],
+    "mapUrl": "https://outages.tcemc.org/",
+    "method": "json",
+    "config": {
+      "url": "https://outages.tcemc.org/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county). Serves TN and a small KY area; one combined total."
+  },
+  {
+    "id": "upper-cumberland-emc",
+    "name": "Upper Cumberland EMC",
+    "eiaIds": [
+      19574
+    ],
+    "mapUrl": "https://outagemap.ucemc.com/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap.ucemc.com/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county)."
+  },
+  {
+    "id": "brightridge",
+    "name": "BrightRidge (Johnson City Power Board)",
+    "eiaIds": [
+      9777
+    ],
+    "mapUrl": "https://brightridge.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/brightridge/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "other",
+      "state": "TN",
+      "asOfPath": "lastUpdate"
+    },
+    "granularity": "region",
+    "notes": "outagemap.coop hosted platform; Community regions (Johnson City quadrants and nearby communities), not counties."
+  },
+  {
+    "id": "baldwin-emc",
+    "name": "Baldwin EMC",
+    "eiaIds": [
+      1149
+    ],
+    "mapUrl": "https://oms.baldwinemc.com:82/",
+    "method": "json",
+    "config": {
+      "url": "https://oms.baldwinemc.com:82/data/outageSummary.json?v=2",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Milsoft Web Outage Viewer; utility-wide total only (outages.json lists points with lat/lng, no county)."
+  },
+  {
+    "id": "avec-arkansas-valley",
+    "name": "Arkansas Valley Electric Cooperative",
+    "eiaIds": [
+      817
+    ],
+    "mapUrl": "https://avecc.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/avecc/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county",
+      "asOfPath": "lastUpdate"
+    },
+    "granularity": "county",
+    "notes": "outagemap.coop hosted platform; county regions span AR and OK so no single state set (Le Flore/Sequoyah/Adair are OK; Johnson/Logan/Scott/Sebastian etc. are AR; Washington and Madison exist in both)."
+  },
+  {
+    "id": "demco-dixie-emc",
+    "name": "Dixie Electric Membership Corp (DEMCO)",
+    "eiaIds": [
+      5202
+    ],
+    "mapUrl": "https://demco.maps.sienatech.com/",
+    "method": "custom",
+    "granularity": "county",
+    "notes": "token-gated: Siena Tech web map (client=demco); outage data is only requested after a per-page token call to cache.sienatech.com/apex/siena_ords/webmaps/ctk which answered HTTP 420 to the headless harness, so no unauthenticated data call was seen. Not replayed.",
+    "custom": {
+      "platform": "Siena Tech webmaps",
+      "seen": [
+        "GET https://cache.sienatech.com/apex/siena_ords/webmaps/tileDef?client=demco",
+        "GET https://cache.sienatech.com/apex/siena_ords/webmaps/ctk?token=<page-generated> -> 420"
+      ],
+      "needed": "identify the outage/summary call that follows ctk and whether it needs the token"
+    }
+  },
+  {
+    "id": "coast-electric",
+    "name": "Coast Electric Power Association",
+    "eiaIds": [
+      3841
+    ],
+    "mapUrl": "https://outages.coastelectric.coop/",
+    "method": "custom",
+    "granularity": "county",
+    "notes": "token-gated: Siena Tech web map (client=coast); outage data is only requested after a per-page token call to cache.sienatech.com/apex/siena_ords/webmaps/ctk which answered HTTP 420 to the headless harness, so no unauthenticated data call was seen. Not replayed.",
+    "custom": {
+      "platform": "Siena Tech webmaps",
+      "seen": [
+        "GET https://cache.sienatech.com/apex/siena_ords/webmaps/tileDef?client=coast",
+        "GET https://cache.sienatech.com/apex/siena_ords/webmaps/ctk?token=<page-generated> -> 420"
+      ],
+      "needed": "identify the outage/summary call that follows ctk and whether it needs the token"
+    }
+  },
+  {
+    "id": "cumberland-emc",
+    "name": "Cumberland Electric Membership Corp (TN)",
+    "eiaIds": [
+      4624
+    ],
+    "mapUrl": "https://outagemap.cemc.org/",
+    "method": "custom",
+    "granularity": "county",
+    "notes": "token-gated: Siena Tech web map (client=cemc); outage data is only requested after a per-page token call to cache.sienatech.com/apex/siena_ords/webmaps/ctk which answered HTTP 420 to the headless harness, so no unauthenticated data call was seen. Not replayed.",
+    "custom": {
+      "platform": "Siena Tech webmaps",
+      "seen": [
+        "GET https://cache.sienatech.com/apex/siena_ords/webmaps/tileDef?client=cemc",
+        "GET https://cache.sienatech.com/apex/siena_ords/webmaps/ctk?token=<page-generated> -> 420"
+      ],
+      "needed": "identify the outage/summary call that follows ctk and whether it needs the token"
+    }
+  },
+  {
+    "id": "athens-utilities-al",
+    "name": "Athens Utilities (City of Athens, AL)",
+    "eiaIds": [
+      944
+    ],
+    "mapUrl": "https://www.athensalabama.us/496/Athens-Utilites",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "City page has no outage map link; two attempts (city site, athens-utilities.com redirect) found no feed."
+  },
+  {
+    "id": "sevier-county-electric",
+    "name": "Sevier County Electric System",
+    "eiaIds": [
+      16949
+    ],
+    "method": "none",
+    "granularity": "utility",
+    "notes": "Official site/domain not located (guessed domains do not resolve; scesys.com is an empty page); a web outage map viewer exists per local news but no URL found."
+  },
+  {
+    "id": "black-warrior-emc",
+    "name": "Black Warrior EMC",
+    "eiaIds": [
+      1780
+    ],
+    "mapUrl": "https://blackwarrioremc.com/outage",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "Outage page is report-only; no map or feed found, not an ODIN reporter seen today."
+  }
+]

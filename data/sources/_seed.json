@@ -1,0 +1,107 @@
+[
+ {
+  "id": "dominion-seed",
+  "name": "Dominion",
+  "eiaIds": [
+   19876
+  ],
+  "mapUrl": "https://outagemap.dominionenergy.com/",
+  "method": "kubra",
+  "config": {
+   "instanceId": "9c691bb6-767e-4532-b00e-286ac9adc223",
+   "viewId": "38b5394c-8bca-4dfd-ac59-b321615446bd"
+  },
+  "granularity": "county"
+ },
+ {
+  "id": "georgia-seed",
+  "name": "Georgia Power",
+  "eiaIds": [
+   7140
+  ],
+  "mapUrl": "https://outagemap.georgiapower.com/",
+  "method": "kubra",
+  "config": {
+   "instanceId": "7b38c047-7950-444b-a25c-9b3e5ab986eb",
+   "viewId": "67b44af5-3847-4ca3-9f4e-9190aac343d6"
+  },
+  "granularity": "county"
+ },
+ {
+  "id": "oncor-seed",
+  "name": "Oncor",
+  "eiaIds": [
+   44372
+  ],
+  "mapUrl": "https://stormcenter.oncor.com/",
+  "method": "kubra",
+  "config": {
+   "instanceId": "560abba3-7881-4741-b538-ca416b58ba1e",
+   "viewId": "ca124b24-9a06-4b19-aeb3-1841a9c962e1"
+  },
+  "granularity": "county"
+ },
+ {
+  "id": "dte-seed",
+  "name": "DTE",
+  "eiaIds": [
+   5109
+  ],
+  "mapUrl": "https://outage.dteenergy.com/map",
+  "method": "kubra",
+  "config": {
+   "instanceId": "4fbb3ad3-e01d-4d71-9575-d453769c1171",
+   "viewId": "8ed2824a-bd92-474e-a7c4-848b812b7f9b"
+  },
+  "granularity": "county"
+ },
+ {
+  "id": "coned-seed",
+  "name": "ConEd",
+  "eiaIds": [
+   4226
+  ],
+  "mapUrl": "https://outagemap.coned.com/",
+  "method": "kubra-legacy",
+  "config": {
+   "baseUrl": "https://outagemap.coned.com/resources/data/external/interval_generation_data"
+  },
+  "granularity": "utility"
+ },
+ {
+  "id": "fpl-seed",
+  "name": "FPL",
+  "eiaIds": [
+   6452
+  ],
+  "mapUrl": "https://www.fplmaps.com/",
+  "method": "json",
+  "config": {
+   "url": "https://www.fplmaps.com/customer/outage/CountyOutages.json",
+   "listPath": "outages",
+   "outField": "Customers Out",
+   "servedField": "Customers Served",
+   "areaField": "County Name",
+   "areaKind": "county",
+   "state": "FL"
+  },
+  "granularity": "county"
+ },
+ {
+  "id": "sce-seed",
+  "name": "SCE",
+  "eiaIds": [
+   17609
+  ],
+  "mapUrl": "https://www.sce.com/outages-safety/outage-center/check-outage-status",
+  "method": "arcgis",
+  "config": {
+   "layerUrl": "https://sce-outage-ags.esriemcs.com/arcgis/rest/services/43/outage/MapServer/0",
+   "outField": "NoOfAffectedCust_Inci",
+   "areaField": "CountyName",
+   "areaKind": "county",
+   "state": "CA"
+  },
+  "granularity": "county"
+ }
+]

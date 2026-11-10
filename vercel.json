@@ -1,0 +1,6 @@
+{
+  "crons": [
+    { "path": "/gridalert/api/cron/collect", "schedule": "*/5 * * * *" },
+    { "path": "/gridalert/api/cron/probes", "schedule": "7 * * * *" }
+  ]
+}

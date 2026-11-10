@@ -1,0 +1,852 @@
+[
+  {
+    "id": "oncor",
+    "name": "Oncor",
+    "eiaIds": [
+      44372
+    ],
+    "mapUrl": "https://stormcenter.oncor.com/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "560abba3-7881-4741-b538-ca416b58ba1e",
+      "viewId": "ca124b24-9a06-4b19-aeb3-1841a9c962e1"
+    },
+    "granularity": "county",
+    "notes": "Reused from _seed.json; re-verified."
+  },
+  {
+    "id": "cps-energy",
+    "name": "CPS Energy",
+    "eiaIds": [
+      16604
+    ],
+    "mapUrl": "https://outagemap.cpsenergy.com/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "912c6202-c3f4-491c-a8c1-726157725e92",
+      "viewId": "812092c0-153f-4a7f-8c58-e1af1cb740b7"
+    },
+    "granularity": "city",
+    "notes": "Area report is by city (47 areas), not county."
+  },
+  {
+    "id": "aep-texas",
+    "name": "AEP Texas",
+    "eiaIds": [
+      3278
+    ],
+    "mapUrl": "https://outagemap.aeptexas.com/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "3ff6812b-90d8-40cd-97a6-76633226f27b",
+      "viewId": "6022fe09-5259-4763-892f-5f57463fa6a5"
+    },
+    "granularity": "county",
+    "notes": "Map covers AEP Texas Central and North combined (~1.1M served vs 929k for EIA 3278 alone)."
+  },
+  {
+    "id": "oge",
+    "name": "OG&E",
+    "eiaIds": [
+      14063
+    ],
+    "mapUrl": "https://www.oge.com/web/portal/label_ord/outages/report-outage/outage-center/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "dc85f79f-59f9-4e9e-9557-b3a9bee7e0ce",
+      "viewId": "8fe9d356-96bc-41f1-b353-6720eb408936"
+    },
+    "granularity": "county",
+    "notes": "Hosted at kubra.io/stormcenter/views/8fe9d356-...; areas include Oklahoma and Arkansas counties."
+  },
+  {
+    "id": "pso",
+    "name": "Public Service Co of Oklahoma",
+    "eiaIds": [
+      15474
+    ],
+    "mapUrl": "https://outagemap.psoklahoma.com/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "4bb3b3bc-e1c4-448b-b806-e4fc85c3b640",
+      "viewId": "e2356e43-c76f-4772-bf85-31240a2cc504"
+    },
+    "granularity": "county"
+  },
+  {
+    "id": "austin-energy",
+    "name": "Austin Energy",
+    "eiaIds": [
+      1015
+    ],
+    "mapUrl": "https://outagemap.austinenergy.com/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "dd9c446f-f6b8-43f9-8f80-83f5245c60a1",
+      "viewId": "76446308-a901-4fa3-849c-3dd569933a51"
+    },
+    "granularity": "zip",
+    "notes": "Instance and view IDs from the brief re-verified; area report is by ZIP (51 areas)."
+  },
+  {
+    "id": "swepco",
+    "name": "Southwestern Electric Power Co",
+    "eiaIds": [
+      17698
+    ],
+    "mapUrl": "https://outagemap.swepco.com/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "9632df6e-a385-400a-b822-b68d268e8e7c",
+      "viewId": "e51304d0-7052-458d-a5ac-0e1980cca976"
+    },
+    "granularity": "county",
+    "notes": "SWEPCO covers LA, AR and TX; county report spans all three states."
+  },
+  {
+    "id": "entergy-texas",
+    "name": "Entergy Texas",
+    "eiaIds": [
+      55937
+    ],
+    "mapUrl": "https://www.etrviewoutage.com/map?state=TX",
+    "method": "json",
+    "config": {
+      "url": "https://entergy.datacapable.com/datacapable/v2/p/entergy/r/tx/map/events/count?types=COUNTY",
+      "listPath": "",
+      "outField": "customersAffected",
+      "servedField": "customersServed",
+      "areaField": "name",
+      "areaKind": "county",
+      "state": "TX"
+    },
+    "granularity": "county",
+    "notes": "DataCapable per-state count endpoint, types=COUNTY only (ZIP,COUNTY together would double count). Same pattern likely works for Entergy LA/MS/AR (/r/la, /r/ms, /r/ar)."
+  },
+  {
+    "id": "pec",
+    "name": "Pedernales Electric Coop",
+    "eiaIds": [
+      14626
+    ],
+    "mapUrl": "https://map.mypec.com/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "bac8eaf4-d343-4760-9a76-9c7beb6456a0",
+      "viewId": "a6e670a6-58f1-40e9-9e67-64f7ac846cef"
+    },
+    "granularity": "county",
+    "notes": "Instance/view IDs read from BOOTSTRAP_CONFIG in the map.mypec.com page source."
+  },
+  {
+    "id": "tnmp",
+    "name": "Texas-New Mexico Power",
+    "eiaIds": [
+      40051
+    ],
+    "mapUrl": "https://outagemap.tnmp.com/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "6f00c909-0ab9-46c1-94c5-c07435d5baf6",
+      "viewId": "5bb75bf1-56fa-4d46-ac74-dd9b2106611a"
+    },
+    "granularity": "county",
+    "notes": "Kubra view wrapped in an iframe on outagemap.tnmp.com; IDs read from the wrapper's inline script. Covers TX and NM territory."
+  },
+  {
+    "id": "coserv",
+    "name": "CoServ Electric",
+    "eiaIds": [
+      5078
+    ],
+    "mapUrl": "https://coserv.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/coserv/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "region",
+      "state": "TX"
+    },
+    "granularity": "utility",
+    "notes": "EIA 'Denton County Elec Coop' is CoServ. outagemap.coop / outagemap-data.cloud.coop/<slug>/Hosted_Outage_Map/summary.json is a shared co-op platform; CoServ publishes one service-territory region only."
+  },
+  {
+    "id": "sam-houston-ec",
+    "name": "Sam Houston Electric Coop",
+    "eiaIds": [
+      16613
+    ],
+    "mapUrl": "https://samhouston.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/samhouston/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county",
+      "state": "TX"
+    },
+    "granularity": "county",
+    "notes": "outagemap.coop shared platform (county region set)."
+  },
+  {
+    "id": "bluebonnet",
+    "name": "Bluebonnet Electric Coop",
+    "eiaIds": [
+      1892
+    ],
+    "mapUrl": "https://outage.bluebonnetelectric.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outage.bluebonnetelectric.coop/data/boundaries.json",
+      "listPath": "0.boundaries",
+      "outField": "customersAffected",
+      "servedField": "customersServed",
+      "areaField": "name",
+      "areaKind": "county",
+      "state": "TX"
+    },
+    "granularity": "county",
+    "notes": "'Web Outage Viewer' platform (same /data/boundaries.json + /data/outageSummary.json layout at outage.bpu.com and outage.kwh.com)."
+  },
+  {
+    "id": "kc-bpu",
+    "name": "Kansas City BPU",
+    "eiaIds": [
+      9996
+    ],
+    "mapUrl": "https://outage.bpu.com/",
+    "method": "json",
+    "config": {
+      "url": "https://outage.bpu.com/data/outageSummary.json",
+      "totalPath": "customersAffected",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Web Outage Viewer platform; boundaries.json is empty so only a utility total is available."
+  },
+  {
+    "id": "cass-county-electric",
+    "name": "Cass County Electric Coop",
+    "eiaIds": [
+      24949
+    ],
+    "mapUrl": "https://outage.kwh.com/",
+    "method": "json",
+    "config": {
+      "url": "https://outage.kwh.com/data/boundaries.json",
+      "listPath": "0.boundaries",
+      "outField": "customersAffected",
+      "servedField": "customersServed",
+      "areaField": "name",
+      "areaKind": "county"
+    },
+    "granularity": "county",
+    "notes": "Web Outage Viewer platform; ND and MN counties, no state set because counties span two states."
+  },
+  {
+    "id": "tvec",
+    "name": "Trinity Valley Electric Coop",
+    "eiaIds": [
+      18976
+    ],
+    "mapUrl": "https://outages.tvec.net/",
+    "method": "json",
+    "config": {
+      "url": "https://outages.tvec.net/data/boundaries.json",
+      "listPath": "0.boundaries",
+      "outField": "customersAffected",
+      "servedField": "customersServed",
+      "areaField": "name",
+      "areaKind": "county",
+      "state": "TX"
+    },
+    "granularity": "county",
+    "notes": ""
+  },
+  {
+    "id": "farmers-ec-tx",
+    "name": "Farmers Electric Coop (TX)",
+    "eiaIds": [
+      6182
+    ],
+    "mapUrl": "https://outageviewer.farmerselectric.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outageviewer.farmerselectric.coop/data/boundaries.json",
+      "listPath": "0.boundaries",
+      "outField": "customersAffected",
+      "servedField": "customersServed",
+      "areaField": "name",
+      "areaKind": "county",
+      "state": "TX"
+    },
+    "granularity": "county",
+    "notes": ""
+  },
+  {
+    "id": "bryan-texas-utilities",
+    "name": "Bryan Texas Utilities",
+    "eiaIds": [
+      2442
+    ],
+    "mapUrl": "https://outages.btutilities.com/",
+    "method": "json",
+    "config": {
+      "url": "https://outages.btutilities.com/data/boundaries.json",
+      "listPath": "0.boundaries",
+      "outField": "customersAffected",
+      "servedField": "customersServed",
+      "areaField": "name",
+      "areaKind": "county",
+      "state": "TX"
+    },
+    "granularity": "county",
+    "notes": ""
+  },
+  {
+    "id": "gvec",
+    "name": "Guadalupe Valley Electric Coop",
+    "eiaIds": [
+      7752
+    ],
+    "mapUrl": "https://outages.gvec.org/",
+    "method": "json",
+    "config": {
+      "url": "https://outages.gvec.org/data/boundaries.json",
+      "listPath": "0.boundaries",
+      "outField": "customersAffected",
+      "servedField": "customersServed",
+      "areaField": "name",
+      "areaKind": "county",
+      "state": "TX"
+    },
+    "granularity": "county",
+    "notes": ""
+  },
+  {
+    "id": "south-plains-ec",
+    "name": "South Plains Electric Coop",
+    "eiaIds": [
+      17561
+    ],
+    "mapUrl": "https://outage.spec.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outage.spec.coop/data/outageSummary.json",
+      "totalPath": "customersAffected",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Web Outage Viewer; boundaries.json is empty, utility total only."
+  },
+  {
+    "id": "wood-county-ec",
+    "name": "Wood County Electric Coop",
+    "eiaIds": [
+      20927
+    ],
+    "mapUrl": "https://outagemap.wcec.org/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap.wcec.org/data/outageSummary.json",
+      "totalPath": "customersAffected",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Web Outage Viewer; boundaries.json is empty, utility total only."
+  },
+  {
+    "id": "new-braunfels-utilities",
+    "name": "New Braunfels Utilities",
+    "eiaIds": [
+      13418
+    ],
+    "mapUrl": "https://oms.nbutexas.com/",
+    "method": "json",
+    "config": {
+      "url": "https://oms.nbutexas.com/data/outageSummary.json",
+      "totalPath": "customersAffected",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Web Outage Viewer; single service-area boundary, utility total only."
+  },
+  {
+    "id": "college-station-utilities",
+    "name": "College Station Utilities",
+    "eiaIds": [
+      3940
+    ],
+    "mapUrl": "https://outages.cstx.gov/",
+    "method": "json",
+    "config": {
+      "url": "https://outages.cstx.gov/data/outageSummary.json",
+      "totalPath": "customersAffected",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Web Outage Viewer; boundaries.json is empty, utility total only."
+  },
+  {
+    "id": "mid-south-ec",
+    "name": "MidSouth Electric Coop (Navasota)",
+    "eiaIds": [
+      12452
+    ],
+    "mapUrl": "https://outage.midsouthelectric.com/",
+    "method": "json",
+    "config": {
+      "url": "https://outage.midsouthelectric.com/data/outageSummary.json",
+      "totalPath": "customersAffected",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Web Outage Viewer. boundaries.json has one single-boundary set per county (Brazos, Grimes, Madison...), which the json adapter cannot flatten, so only the utility total is read."
+  },
+  {
+    "id": "grayson-collin-ec",
+    "name": "Grayson-Collin Electric Coop",
+    "eiaIds": [
+      7559
+    ],
+    "mapUrl": "https://graysoncollin.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/graysoncollin/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "zip",
+      "state": "TX"
+    },
+    "granularity": "zip",
+    "notes": "Region set 'OutByZip' (ZIP-level)."
+  },
+  {
+    "id": "urec",
+    "name": "Upshur Rural Electric Coop",
+    "eiaIds": [
+      19579
+    ],
+    "mapUrl": "https://urecc.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/urecc/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.1.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "zip",
+      "state": "TX"
+    },
+    "granularity": "zip",
+    "notes": "Region set 1 = ZIP codes (set 0 = substations)."
+  },
+  {
+    "id": "medina-ec",
+    "name": "Medina Electric Coop",
+    "eiaIds": [
+      12268
+    ],
+    "mapUrl": "https://www.medinaec.org/outages",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/medinaec/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.2.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county",
+      "state": "TX"
+    },
+    "granularity": "county",
+    "notes": "Region set 2 = counties (0 = ZIP, 1 = substations)."
+  },
+  {
+    "id": "ctec",
+    "name": "Central Texas Electric Coop",
+    "eiaIds": [
+      3282
+    ],
+    "mapUrl": "https://ctec.outagemap.cloud.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/ctec/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county",
+      "state": "TX"
+    },
+    "granularity": "county",
+    "notes": "County names are 3-letter codes (BLA=Blanco, MAS=Mason, MEN=Menard, MCC=McCulloch, KER=Kerr, LLA=Llano, GIL=Gillespie, SAN/San Saba, KEN=Kendall, REA=Real, KIM=Kimble)."
+  },
+  {
+    "id": "bandera-ec",
+    "name": "Bandera Electric Coop",
+    "eiaIds": [
+      1175
+    ],
+    "mapUrl": "https://bandera.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/bandera/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county",
+      "state": "TX"
+    },
+    "granularity": "county",
+    "notes": ""
+  },
+  {
+    "id": "rio-grande-ec",
+    "name": "Rio Grande Electric Coop",
+    "eiaIds": [
+      16057
+    ],
+    "mapUrl": "https://rgec.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/rgec/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county"
+    },
+    "granularity": "county",
+    "notes": "Texas counties only; EIA id also lists NM."
+  },
+  {
+    "id": "nueces-ec",
+    "name": "Nueces Electric Coop",
+    "eiaIds": [
+      13830
+    ],
+    "mapUrl": "https://nueceselectric.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/nueceselectric/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county",
+      "state": "TX"
+    },
+    "granularity": "county",
+    "notes": ""
+  },
+  {
+    "id": "oklahoma-ec",
+    "name": "Oklahoma Electric Coop",
+    "eiaIds": [
+      14062
+    ],
+    "mapUrl": "https://okcoop.org/outage-center/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/okcoop/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county",
+      "state": "OK"
+    },
+    "granularity": "county",
+    "notes": ""
+  },
+  {
+    "id": "farmers-ec-nm",
+    "name": "Farmers Electric Coop (NM)",
+    "eiaIds": [
+      6198
+    ],
+    "mapUrl": "https://fecnm.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/fecnm/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "region",
+      "state": "NM"
+    },
+    "granularity": "region",
+    "notes": "Region set 'SRV_AREAS' (6 service areas such as San Jon, Melrose), not counties."
+  },
+  {
+    "id": "les",
+    "name": "Lincoln Electric System",
+    "eiaIds": [
+      11018
+    ],
+    "mapUrl": "https://www.les.com/outage-center",
+    "method": "arcgis",
+    "config": {
+      "layerUrl": "https://services2.arcgis.com/knPkBS6PAixcYX73/arcgis/rest/services/ResponderOutages57_view/FeatureServer/1",
+      "outField": "CUSTOMER_COUNT",
+      "areaField": "LES_AREA",
+      "areaKind": "region",
+      "state": "NE",
+      "causeField": "CAUSE"
+    },
+    "granularity": "region",
+    "notes": "Incident layer behind the LES outage dashboard; zero active incidents when verified (field names from layer schema). No customers-served field."
+  },
+  {
+    "id": "garland-pl",
+    "name": "Garland Power & Light",
+    "eiaIds": [
+      6958
+    ],
+    "mapUrl": "https://www.gpltexas.org/outage-center/gp-l-power-outage-map",
+    "method": "json",
+    "config": {
+      "url": "https://gplmap.gpltexas.org/outage/rest/services/Public/OutageIncidents/MapServer/0/query?where=1%3D1&outFields=CUSTOMER_COUNT&returnGeometry=false&f=json",
+      "listPath": "features",
+      "outField": "attributes.CUSTOMER_COUNT",
+      "state": "TX"
+    },
+    "granularity": "incident",
+    "notes": "ArcGIS MapServer 'Customer Count' layer queried as plain JSON because the server rejects outStatistics (HTTP 400), so the arcgis adapter fails. Zero active incidents when verified; field name from layer schema. Incident rows may repeat per device."
+  },
+  {
+    "id": "denton-municipal-electric",
+    "name": "Denton Municipal Electric",
+    "eiaIds": [
+      5063
+    ],
+    "mapUrl": "https://www.cityofdenton.com/378/Utility-Outages",
+    "method": "json",
+    "config": {
+      "url": "https://dmegis.cityofdenton.com/arcgis/rest/services/OMS/Outages/MapServer/0/query?where=1%3D1&outFields=CUSTOMER_COUNT&returnGeometry=false&f=json",
+      "listPath": "features",
+      "outField": "attributes.CUSTOMER_COUNT",
+      "state": "TX"
+    },
+    "granularity": "incident",
+    "notes": "Same ACS/Clevest layer layout as Garland; outStatistics fails so queried as plain JSON. Zero active incidents when verified; field name from layer schema."
+  },
+  {
+    "id": "brownsville-pub",
+    "name": "Brownsville Public Utilities Board",
+    "eiaIds": [
+      2409
+    ],
+    "mapUrl": "https://www.bpub.com/",
+    "method": "json",
+    "config": {
+      "url": "https://www.bpub.com/api/outages",
+      "listPath": "outages",
+      "outField": "meterCount",
+      "asOfPath": "generatedAt",
+      "causeField": "reasonCode"
+    },
+    "granularity": "incident",
+    "notes": "Site API behind the BPUB outage map; incident list (meters per outage), no customers-served. Response has a 'stale' flag not checked by the adapter."
+  },
+  {
+    "id": "united-cooperative-services",
+    "name": "United Cooperative Services",
+    "eiaIds": [
+      19490
+    ],
+    "mapUrl": "http://outage.united-cs.com:7576/",
+    "method": "json",
+    "config": {
+      "url": "http://outage.united-cs.com:7576/api/weboutageviewer/get_live_data?Start=&End=&Duration=0&CustomerResponsible=false&Historical=false",
+      "listPath": "Outages",
+      "outField": "CustomersOutNow",
+      "causeField": "VerifiedCause"
+    },
+    "granularity": "incident",
+    "notes": "Plain-http Outage Viewer on port 7576. Outages list was empty at verification; field name CustomersOutNow taken from the map's popup template, not from a live row."
+  },
+  {
+    "id": "centerpoint-houston",
+    "name": "CenterPoint Energy (Houston Electric)",
+    "eiaIds": [
+      8901
+    ],
+    "mapUrl": "https://tracker.centerpointenergy.com/map/texas",
+    "method": "odin-only",
+    "granularity": "county",
+    "notes": "Reports to ODIN. Public tracker (tracker.centerpointenergy.com, DataCapable) is live as a page but its feeds only update during major events: S3 cache file last-modified 2026-01-21, uncached events newest 2026-09-22 with 15.5k customers still shown out in Montgomery County. Not safe to alert on; use ODIN. Re-check during a storm.",
+    "custom": {
+      "request": "GET https://centerpoint.datacapable.com/datacapable/v2/p/centerpoint/map/events/count?types=COUNTY",
+      "response": "[{name:'MONTGOMERY',type:'COUNTY',customersAffected:14008,customersServed:82738},...] 21 rows, no state field; list also includes Indiana counties (Posey, Gibson) since CenterPoint Indiana shares the feed",
+      "also": "GET .../map/events (131 events, numPeople, lastUpdatedTime max 2026-09-22), GET .../cache/p/centerpoint/map/events (S3, last-modified 2026-01-21), .../map/stats (lastUploadedTimeEvent 2026-01-20). Territory links: texas, indiana.",
+      "needs": "Confirm feed goes live during outages; if so it fits method json with listPath '' outField customersAffected servedField customersServed areaField name, but needs a state filter for TX vs IN."
+    }
+  },
+  {
+    "id": "northwestern-sd",
+    "name": "NorthWestern Energy (South Dakota)",
+    "eiaIds": [
+      13809
+    ],
+    "mapUrl": "https://www.northwesternenergy.com/outages/outage-map",
+    "method": "custom",
+    "granularity": "incident",
+    "notes": "Feed exists but the body is double-encoded JSON and has no state field, only DISPATCHGROUP (HELENA, GREAT FALLS...), so the json adapter cannot read it. Covers MT, SD and NE.",
+    "custom": {
+      "request": "GET https://www.northwesternenergy.com/get-outage-map-data (no auth)",
+      "response": "{\"d\":\"[{\\\"EVENTID\\\":\\\"167933\\\",\\\"DISPATCHGROUP\\\":\\\"HELENA\\\",\\\"NUM_CUST\\\":3,\\\"planned_yn\\\":\\\"Y\\\",\\\"XCOORD\\\":-111.6,\\\"YCOORD\\\":46.6,...}]\"}",
+      "needs": "JSON.parse the string in d, drop planned_yn='Y', sum NUM_CUST; derive SD rows from coordinates or dispatch group."
+    }
+  },
+  {
+    "id": "oppd",
+    "name": "Omaha Public Power District",
+    "eiaIds": [
+      14127
+    ],
+    "mapUrl": "https://www.myoppd.com/portal/PreOutageMap",
+    "method": "custom",
+    "granularity": "incident",
+    "notes": "blocked: the map's data service myoppd-svc.cxlive.ai answers plain server requests with a Cloudflare 403 challenge (works in a browser). Not bypassed.",
+    "custom": {
+      "request": "GET https://myoppd-svc.cxlive.ai/ServiceAPI/api/1/outage/alloutages/2/1/false and /AllOutagesListView/2/1/false",
+      "response": "403 Cloudflare 'Attention Required' for non-browser clients"
+    }
+  },
+  {
+    "id": "nppd",
+    "name": "Nebraska Public Power District",
+    "eiaIds": [
+      13337
+    ],
+    "mapUrl": "https://onlineaccount.nppd.com/Portal/PreOutages",
+    "method": "custom",
+    "granularity": "incident",
+    "notes": "Portal (cxlive.ai) publishes an outage CSV whose name is announced by a POST; the download URL was not found and the alloutages endpoint is address-specific. Likely the same Cloudflare-fronted platform as OPPD.",
+    "custom": {
+      "request": "POST https://nppd-svc.cxlive.ai/CustomAPI/api/V1/Outage/OutageFileDetails",
+      "response": "{data:{outageFileName:'Outage_103120261825.csv',outageLastUpdated:'10/31/2026 06:25 PM Central Time'}}",
+      "needs": "Location of the CSV download and its columns."
+    }
+  },
+  {
+    "id": "el-paso-electric",
+    "name": "El Paso Electric",
+    "eiaIds": [
+      5701
+    ],
+    "mapUrl": "https://outagemap.epelectric.com/",
+    "method": "custom",
+    "granularity": "incident",
+    "notes": "embedded-key: the outage map POSTs to starlit.epelectric.com/OmsApi/GetOutages with an x-api-key header copied from the page's JS (401 without it) and the response body is an encrypted hex payload. Not attempted.",
+    "custom": {
+      "request": "POST https://starlit.epelectric.com/OmsApi/GetOutages with header x-api-key (value not recorded)",
+      "response": "{\"data\":\"5C9E24F165B5...\"} encrypted hex string"
+    }
+  },
+  {
+    "id": "tri-county-ec-tx",
+    "name": "Tri-County Electric Coop (TX)",
+    "eiaIds": [
+      19159
+    ],
+    "mapUrl": "https://oms.tcectexas.com/",
+    "method": "custom",
+    "granularity": "unknown",
+    "notes": "embedded-key: Siena Tech web map; the page requests cache.sienatech.com/apex/siena_ords/webmaps/ctk with a per-load token query parameter and gets HTTP 420. Same vendor as Magic Valley.",
+    "custom": {
+      "request": "GET https://cache.sienatech.com/apex/siena_ords/webmaps/ctk?token=<per-load token>",
+      "response": "420 with no body"
+    }
+  },
+  {
+    "id": "magic-valley-ec",
+    "name": "Magic Valley Electric Coop",
+    "eiaIds": [
+      11501
+    ],
+    "mapUrl": "https://oms.magicvalley.coop/",
+    "method": "custom",
+    "granularity": "unknown",
+    "notes": "embedded-key: Siena Tech web map (cache.sienatech.com .../webmaps/ctk?token=...) returns HTTP 420; same vendor as Tri-County EC (TX). Nothing else public found.",
+    "custom": {
+      "request": "GET https://cache.sienatech.com/apex/siena_ords/webmaps/ctk?token=<per-load token>",
+      "response": "420 with no body"
+    }
+  },
+  {
+    "id": "lubbock-power-light",
+    "name": "Lubbock Power & Light",
+    "eiaIds": [
+      11292
+    ],
+    "mapUrl": "https://electricoutage.ci.lubbock.tx.us/gridvu/",
+    "method": "custom",
+    "granularity": "incident",
+    "notes": "GridVu public endpoint works without auth but returns an event history, not just active outages: 36 rows from 2022 onward, several stale 'On-site' rows, so summing custAffected would overcount. Needs a filter on status (exclude Restored/Closed) and recency.",
+    "custom": {
+      "request": "GET https://electricoutage.ci.lubbock.tx.us/GridVuServer/Public/getAllOutages",
+      "response": "{outageLst:[{status:'Restored'|'On-site'|'Assigned Outage'|'Unassigned'|'Closed',custAffected:731,updTime:'2022-10-21 03:16:24',planned:false,subst:'PLANTERS'},...]}",
+      "needs": "Filter outageLst on status and updTime before summing custAffected."
+    }
+  },
+  {
+    "id": "deep-east-texas-ec",
+    "name": "Deep East Texas Electric Coop",
+    "eiaIds": [
+      4975
+    ],
+    "mapUrl": "https://detec.org/",
+    "method": "none",
+    "granularity": "unknown",
+    "notes": "No public outage map found in two attempts (site returned an empty page; no cloud.coop or Outage Viewer instance under likely names)."
+  },
+  {
+    "id": "edmond-electric",
+    "name": "Edmond Electric",
+    "eiaIds": [
+      5661
+    ],
+    "mapUrl": "https://www.outageentry.com/Outage/outage.php?Client=edmond",
+    "method": "json",
+    "config": {
+      "url": "https://www.outageentry.com/Outage/ajax/ajaxShellOut.php",
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      "body": "action=get&client=edmond&target=cfa_device_markers",
+      "totalPath": "0.customersAffected",
+      "servedPath": "0.stats.NumConsumers",
+      "state": "OK"
+    },
+    "granularity": "utility",
+    "notes": "outageentry.com customer app (public, no login); form-encoded POST returns the electric service totals. Substation breakdown is available with target=cfa_substation_data (rows.subs[].SubTotalConsumersOut) but substations are not geographic areas. Same vendor hosts Magic Valley's report form."
+  },
+  {
+    "id": "northeast-oklahoma-ec",
+    "name": "Northeast Oklahoma Electric Coop",
+    "eiaIds": [
+      13734
+    ],
+    "mapUrl": "",
+    "method": "none",
+    "granularity": "unknown",
+    "notes": "Guessed domain neoec.net is parked; real site and outage map not found in two attempts."
+  }
+]

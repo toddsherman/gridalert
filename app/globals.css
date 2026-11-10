@@ -1,0 +1,321 @@
+@import "tailwindcss";
+
+/* Shared todd.sh palette: Paper surfaces, Ink structure, and meaningful accents. */
+:root {
+  color-scheme: light;
+  --page: #f4f1ea;
+  --surface: #f4f1ea;
+  --paper-deep: #e9e4d9;
+  --ink: #1d1c19;
+  --ink-2: #56534c;
+  --muted: #686359;
+  --stone: #8d887e;
+  --line: #d4cec2;
+  --axis: #8d887e;
+  --land: #e9e4d9;
+  --land-line: #d4cec2;
+  --series: #31566b;
+  --accent: #b64832;
+  --accent-ink: #b64832;
+  --on-accent: #f4f1ea;
+  --wire: #8d887e;
+  --good: #31566b;
+  --good-ink: #31566b;
+  --warn: #b58a43;
+  --serious: #b64832;
+  --critical: #b64832;
+  --heat-1: #f4f1ea;
+  --heat-2: #8d887e;
+  --heat-3: #b58a43;
+  --heat-4: #b64832;
+  --heat-5: #1d1c19;
+  --cell: #fcfbf8;
+  --switch-off: #ddd8cd;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-axis: var(--axis);
+  --color-good: var(--good);
+  --color-good-ink: var(--good-ink);
+  --color-warn: var(--warn);
+  --color-serious: var(--serious);
+  --color-critical: var(--critical);
+  --color-series: var(--series);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-on-accent: var(--on-accent);
+  --color-wire: var(--wire);
+  --color-cell: var(--cell);
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+/* A short pulse travelling along a wire. Still for anyone who asks for less motion. */
+.current {
+  stroke: var(--accent);
+  stroke-dasharray: 6 94;
+  stroke-linecap: round;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .current {
+    animation: current 3.2s linear infinite;
+  }
+  .current-slow {
+    animation-duration: 5.5s;
+  }
+  @keyframes current {
+    from { stroke-dashoffset: 100; }
+    to { stroke-dashoffset: 0; }
+  }
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@layer components {
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+}
+
+/* Map classes follow the bins in lib/format.ts */
+.h1 { fill: var(--heat-1); }
+.h2 { fill: var(--heat-2); }
+.h3 { fill: var(--heat-3); }
+.h4 { fill: var(--heat-4); }
+.h5 { fill: var(--heat-5); }
+
+.swatch-1 { background: var(--heat-1); }
+.swatch-2 { background: var(--heat-2); }
+.swatch-3 { background: var(--heat-3); }
+.swatch-4 { background: var(--heat-4); }
+.swatch-5 { background: var(--heat-5); }
+
+.county {
+  stroke: var(--surface);
+  stroke-width: 0.25;
+  outline: none;
+}
+
+.county:hover,
+.county:focus-visible {
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+
+.metro-dot {
+  fill: var(--critical);
+  stroke: var(--surface);
+  stroke-width: 2;
+  cursor: pointer;
+  outline: none;
+}
+
+.metro-dot:hover,
+.metro-dot:focus-visible {
+  stroke: var(--ink);
+}
+
+.metro-label {
+  fill: var(--ink);
+  stroke: var(--surface);
+  stroke-width: 3;
+  paint-order: stroke;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* The map scales down on phones, so labels grow to stay readable and thin out to fit. */
+@media (max-width: 640px) {
+  .metro-label {
+    font-size: 30px;
+    stroke-width: 6px;
+  }
+  .metro-label-extra {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pulse {
+    animation: pulse 2.4s ease-out infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--good) 45%, transparent); }
+    70% { box-shadow: 0 0 0 7px transparent; }
+    100% { box-shadow: 0 0 0 0 transparent; }
+  }
+}
+
+/* The shared project shell stays the same size on desktop and mobile. */
+.todd-return {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  flex-shrink: 0;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--line);
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.todd-return a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+}
+
+.todd-return a:hover {
+  color: var(--accent);
+}
+
+.explanation-copy {
+  font-family: var(--font-serif);
+  line-height: 1.65;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--ink);
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.primary-button {
+  background: var(--ink);
+  color: var(--page);
+}
+
+.primary-button:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.secondary-button {
+  background: var(--paper-deep);
+  color: var(--ink);
+}
+
+.secondary-button:hover:not(:disabled) {
+  background: var(--line);
+}
+
+:where(button, input:not([type="checkbox"]):not([type="radio"]), select, textarea) {
+  min-height: 44px;
+}
+
+:where(button, summary, input[type="checkbox"], input[type="radio"]) {
+  cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--series);
+}
+
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+:where(button, input, select, textarea):disabled {
+  cursor: not-allowed;
+}
+
+/* A switch like the ones in iPhone Settings. The button stays a full 44px tap target around the smaller track. */
+.switch {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 51px;
+}
+
+.switch-track {
+  position: relative;
+  width: 51px;
+  height: 31px;
+  border-radius: 999px;
+  background: var(--switch-off);
+  transition: background-color 0.2s ease;
+}
+
+.switch-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 27px;
+  height: 27px;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.15), 0 3px 1px rgb(0 0 0 / 0.06);
+  transition: transform 0.2s ease;
+}
+
+.switch[aria-checked="true"] .switch-track {
+  background: var(--good);
+}
+
+.switch[aria-checked="true"] .switch-knob {
+  transform: translateX(20px);
+}
+
+/* While it's turning on or off it keeps its colour, and only looks dimmed when it can't be used. */
+.switch:disabled:not([aria-busy="true"]) .switch-track {
+  opacity: 0.45;
+}
+
+.switch:disabled[aria-busy="true"] {
+  cursor: progress;
+}
+
+.switch:focus-visible {
+  outline: none;
+}
+
+.switch:focus-visible .switch-track {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .switch-track,
+  .switch-knob {
+    transition: none;
+  }
+}

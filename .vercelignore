@@ -1,0 +1,5 @@
+# Never upload research data to Vercel.
+datasets/
+.cache/
+# Secrets belong in Vercel's environment settings, never in an upload.
+.env*

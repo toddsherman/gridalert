@@ -1,0 +1,1145 @@
+[
+  {
+    "id": "sce",
+    "name": "Southern California Edison",
+    "eiaIds": [
+      17609
+    ],
+    "mapUrl": "https://www.sce.com/outages-safety/outage-center/check-outage-status",
+    "method": "arcgis",
+    "config": {
+      "layerUrl": "https://sce-outage-ags.esriemcs.com/arcgis/rest/services/43/outage/MapServer/0",
+      "outField": "NoOfAffectedCust_Inci",
+      "areaField": "CountyName",
+      "areaKind": "county",
+      "state": "CA",
+      "causeField": "MemoCauseCdDesc"
+    },
+    "granularity": "county",
+    "notes": "Reused from _seed.json."
+  },
+  {
+    "id": "pge",
+    "name": "Pacific Gas & Electric",
+    "eiaIds": [
+      14328
+    ],
+    "mapUrl": "https://pgealerts.alerts.pge.com/outage-tools/outage-map/",
+    "method": "arcgis",
+    "config": {
+      "layerUrl": "https://services.arcgis.com/BLN4oKB0N1YSgvY8/arcgis/rest/services/Power_Outages_(View)/FeatureServer/0",
+      "outField": "ImpactedCustomers",
+      "where": "UtilityCompany='PGE' AND OutageType='Not Planned'",
+      "areaField": "County",
+      "areaKind": "county",
+      "state": "CA",
+      "causeField": "Cause"
+    },
+    "granularity": "county",
+    "notes": "County-level via Cal OES statewide layer (filtered to PGE, unplanned), refreshed about every 15 min. PG&E native ArcGIS MapServer ags.pge.esriemcs.com/arcgis/rest/services/43/outages/MapServer: layer 4 (outages with polygons) and layer 5 (without polygons) are disjoint sets, so the full total is L4+L5 (plus PSPS layers 2+3 during PSPS events); layer 4 has no county field, layer 5 has COUNTY, and the single-layer adapter cannot sum two layers. Today L4=34 outages/216 cust, L5=0, versus Cal OES 217 incl. 10 planned."
+  },
+  {
+    "id": "sdge",
+    "name": "San Diego Gas & Electric",
+    "eiaIds": [
+      16609
+    ],
+    "mapUrl": "https://outage.sdge.com/",
+    "method": "arcgis",
+    "config": {
+      "layerUrl": "https://services.arcgis.com/BLN4oKB0N1YSgvY8/arcgis/rest/services/Power_Outages_(View)/FeatureServer/0",
+      "outField": "ImpactedCustomers",
+      "where": "UtilityCompany='SDGE' AND OutageType='Not Planned'",
+      "areaField": "County",
+      "areaKind": "county",
+      "state": "CA",
+      "causeField": "Cause"
+    },
+    "granularity": "county",
+    "notes": "County level through the Cal OES statewide layer, filtered to SDG&E unplanned outages."
+  },
+  {
+    "id": "pacificorp-or",
+    "name": "PacifiCorp (Pacific Power) OR",
+    "eiaIds": [
+      14354
+    ],
+    "mapUrl": "https://www.pacificpower.net/outages-safety.html",
+    "method": "json",
+    "config": {
+      "url": "https://www.pacificpower.net/etc/pcorp/datafiles/outagemap/listOR.json",
+      "listPath": "counties",
+      "outField": "custOutUnplan",
+      "areaField": "countyName",
+      "areaKind": "county",
+      "state": "OR"
+    },
+    "granularity": "county",
+    "notes": "PacifiCorp state slice OR; same EIA id as the other five pacificorp-* entries, sum all six for the utility. Unplanned customers only."
+  },
+  {
+    "id": "pacificorp-wa",
+    "name": "PacifiCorp (Pacific Power) WA",
+    "eiaIds": [
+      14354
+    ],
+    "mapUrl": "https://www.pacificpower.net/outages-safety.html",
+    "method": "json",
+    "config": {
+      "url": "https://www.pacificpower.net/etc/pcorp/datafiles/outagemap/listWA.json",
+      "listPath": "counties",
+      "outField": "custOutUnplan",
+      "areaField": "countyName",
+      "areaKind": "county",
+      "state": "WA"
+    },
+    "granularity": "county",
+    "notes": "PacifiCorp state slice WA; same EIA id as the other five pacificorp-* entries, sum all six for the utility. Unplanned customers only."
+  },
+  {
+    "id": "pacificorp-ca",
+    "name": "PacifiCorp (Pacific Power) CA",
+    "eiaIds": [
+      14354
+    ],
+    "mapUrl": "https://www.pacificpower.net/outages-safety.html",
+    "method": "json",
+    "config": {
+      "url": "https://www.pacificpower.net/etc/pcorp/datafiles/outagemap/listCA.json",
+      "listPath": "counties",
+      "outField": "custOutUnplan",
+      "areaField": "countyName",
+      "areaKind": "county",
+      "state": "CA"
+    },
+    "granularity": "county",
+    "notes": "PacifiCorp state slice CA; same EIA id as the other five pacificorp-* entries, sum all six for the utility. Unplanned customers only."
+  },
+  {
+    "id": "pacificorp-ut",
+    "name": "PacifiCorp (Rocky Mountain Power) UT",
+    "eiaIds": [
+      14354
+    ],
+    "mapUrl": "https://www.rockymountainpower.net/outages-safety.html",
+    "method": "json",
+    "config": {
+      "url": "https://www.rockymountainpower.net/etc/pcorp/datafiles/outagemap/listUT.json",
+      "listPath": "counties",
+      "outField": "custOutUnplan",
+      "areaField": "countyName",
+      "areaKind": "county",
+      "state": "UT"
+    },
+    "granularity": "county",
+    "notes": "PacifiCorp state slice UT; same EIA id as the other five pacificorp-* entries, sum all six for the utility. Unplanned customers only."
+  },
+  {
+    "id": "pacificorp-wy",
+    "name": "PacifiCorp (Rocky Mountain Power) WY",
+    "eiaIds": [
+      14354
+    ],
+    "mapUrl": "https://www.rockymountainpower.net/outages-safety.html",
+    "method": "json",
+    "config": {
+      "url": "https://www.rockymountainpower.net/etc/pcorp/datafiles/outagemap/listWY.json",
+      "listPath": "counties",
+      "outField": "custOutUnplan",
+      "areaField": "countyName",
+      "areaKind": "county",
+      "state": "WY"
+    },
+    "granularity": "county",
+    "notes": "PacifiCorp state slice WY; same EIA id as the other five pacificorp-* entries, sum all six for the utility. Unplanned customers only."
+  },
+  {
+    "id": "pacificorp-id",
+    "name": "PacifiCorp (Rocky Mountain Power) ID",
+    "eiaIds": [
+      14354
+    ],
+    "mapUrl": "https://www.rockymountainpower.net/outages-safety.html",
+    "method": "json",
+    "config": {
+      "url": "https://www.rockymountainpower.net/etc/pcorp/datafiles/outagemap/listID.json",
+      "listPath": "counties",
+      "outField": "custOutUnplan",
+      "areaField": "countyName",
+      "areaKind": "county",
+      "state": "ID"
+    },
+    "granularity": "county",
+    "notes": "PacifiCorp state slice ID; same EIA id as the other five pacificorp-* entries, sum all six for the utility. Unplanned customers only."
+  },
+  {
+    "id": "aps",
+    "name": "Arizona Public Service",
+    "eiaIds": [
+      803
+    ],
+    "mapUrl": "https://outagemap.aps.com/outageviewer/",
+    "method": "arcgis",
+    "config": {
+      "layerUrl": "https://aps-ags.esriemcs.com/arcgis/rest/services/APSOutageMap/MapServer/0",
+      "outField": "customers",
+      "areaField": "City",
+      "areaKind": "city",
+      "state": "AZ",
+      "causeField": "Cause"
+    },
+    "granularity": "city"
+  },
+  {
+    "id": "pse",
+    "name": "Puget Sound Energy",
+    "eiaIds": [
+      15500
+    ],
+    "mapUrl": "https://www.pse.com/en/outage/outage-map",
+    "method": "json",
+    "config": {
+      "url": "https://www.pse.com/api/sitecore/OutageMap/GetOutagesForAnonymousUser",
+      "headers": {
+        "accept-language": "en-US"
+      },
+      "listPath": "features",
+      "outField": "properties.CustomersAffected",
+      "areaField": "properties.AreaName",
+      "areaKind": "city",
+      "state": "WA",
+      "asOfPath": "LastUpdated"
+    },
+    "granularity": "city"
+  },
+  {
+    "id": "pge-oregon",
+    "name": "Portland General Electric",
+    "eiaIds": [
+      15248
+    ],
+    "mapUrl": "https://portlandgeneral.com/outages",
+    "method": "json",
+    "config": {
+      "url": "https://api.portlandgeneral.com/pge-graphql",
+      "headers": {
+        "content-type": "application/json"
+      },
+      "body": "{\"operationName\": \"getOutagesByCounty\", \"variables\": {}, \"query\": \"query getOutagesByCounty($params: OutageByCountyParams) {\\n  getOutagesByCounty(params: $params)\\n}\\n\"}",
+      "listPath": "data.getOutagesByCounty",
+      "outField": "totalCustomersImpacted",
+      "areaField": "county",
+      "areaKind": "county",
+      "state": "OR"
+    },
+    "granularity": "county"
+  },
+  {
+    "id": "smud",
+    "name": "Sacramento Municipal Utility District",
+    "eiaIds": [
+      16534
+    ],
+    "mapUrl": "https://myaccount.smud.org/manage/outage",
+    "method": "json",
+    "config": {
+      "url": "https://usage.smud.org/omkml/api/communitylist?api-version=2.0",
+      "listPath": "returndata",
+      "outField": "CustomersImpacted",
+      "areaField": "Title",
+      "areaKind": "other",
+      "state": "CA"
+    },
+    "granularity": "utility",
+    "notes": "Single community row (SMUD) with OutageCount and CustomersImpacted; usage.smud.org/omkml/api/OutageListV2 is the KML incident list. Cal OES layer may also carry SMUD rows."
+  },
+  {
+    "id": "idahopower",
+    "name": "Idaho Power",
+    "eiaIds": [
+      9191
+    ],
+    "mapUrl": "https://tools.idahopower.com/outage",
+    "method": "json",
+    "config": {
+      "url": "https://apiedge.idahopower.com/api/Outage/GetCurrentOutageInformation",
+      "listPath": "object.outages",
+      "outField": "omsCustomerCount",
+      "areaField": "outageCity.0.outageCityName",
+      "areaKind": "city",
+      "state": "ID",
+      "asOfPath": "object.timestamp",
+      "causeField": "probableCause"
+    },
+    "granularity": "city"
+  },
+  {
+    "id": "seattle-city-light",
+    "name": "Seattle City Light",
+    "eiaIds": [
+      16868
+    ],
+    "mapUrl": "https://www.seattle.gov/city-light/outages",
+    "method": "json",
+    "config": {
+      "url": "https://utilisocial.io/datacapable/v2/p/scl/map/events",
+      "listPath": "",
+      "outField": "numPeople",
+      "areaField": "city",
+      "areaKind": "city",
+      "state": "WA"
+    },
+    "granularity": "city"
+  },
+  {
+    "id": "nvenergy-south",
+    "name": "NV Energy (Nevada Power, southern Nevada)",
+    "eiaIds": [
+      13407
+    ],
+    "mapUrl": "https://www.nvenergy.com/outages/map-view",
+    "method": "json",
+    "config": {
+      "url": "https://services.nvenergy.com/GISSvc/1.0/retrieveMapInfo/arcgis/rest/services/Outage/CURRENTOUTAGES_2024/MapServer/0/query?outFields=EVENTID,NUMCUSTDEENERGIZED,LATITUDE&returnGeometry=false&f=json&where=LATITUDE%20%3C%2037.5",
+      "listPath": "features",
+      "outField": "attributes.NUMCUSTDEENERGIZED"
+    },
+    "granularity": "incident",
+    "notes": "One NV Energy ArcGIS layer (CURRENTOUTAGES_2024, unplanned only; planned are a separate layer) with no county field and no outStatistics support (HTTP 400), so read as plain JSON. Split by latitude: <37.5 = Nevada Power (Las Vegas), >=37.5 = Sierra Pacific. Approximate split."
+  },
+  {
+    "id": "nvenergy-north",
+    "name": "NV Energy (Sierra Pacific, northern Nevada)",
+    "eiaIds": [
+      17166
+    ],
+    "mapUrl": "https://www.nvenergy.com/outages/map-view",
+    "method": "json",
+    "config": {
+      "url": "https://services.nvenergy.com/GISSvc/1.0/retrieveMapInfo/arcgis/rest/services/Outage/CURRENTOUTAGES_2024/MapServer/0/query?outFields=EVENTID,NUMCUSTDEENERGIZED,LATITUDE&returnGeometry=false&f=json&where=LATITUDE%20%3E%3D%2037.5",
+      "listPath": "features",
+      "outField": "attributes.NUMCUSTDEENERGIZED"
+    },
+    "granularity": "incident",
+    "notes": "Same NV Energy layer as nvenergy-south, filtered to latitude >= 37.5 (Reno/Carson/northern NV). Approximate split."
+  },
+  {
+    "id": "avista",
+    "name": "Avista",
+    "eiaIds": [
+      20169
+    ],
+    "mapUrl": "https://outagemap.myavista.com/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "b9478e86-d9d9-45b2-9579-b2639f77f3fe",
+      "viewId": "00763684-dd19-4651-b33f-51aa17a491a6"
+    },
+    "granularity": "county",
+    "notes": "Covers WA, ID, OR territory."
+  },
+  {
+    "id": "pnm",
+    "name": "Public Service Co of New Mexico",
+    "eiaIds": [
+      15473
+    ],
+    "mapUrl": "https://outagemap.pnm.com/",
+    "method": "kubra",
+    "config": {
+      "instanceId": "b6fe87bc-3c82-4afe-b7f0-7eee93a32dfa",
+      "viewId": "92a8c818-17ed-401d-89be-73e5ae60ee5b"
+    },
+    "granularity": "county"
+  },
+  {
+    "id": "eweb",
+    "name": "Eugene Water & Electric Board",
+    "eiaIds": [
+      6022
+    ],
+    "mapUrl": "https://www.eweb.org/outages-and-safety/power-outages/power-outage-map",
+    "method": "arcgis",
+    "config": {
+      "layerUrl": "https://services7.arcgis.com/6AM8yPAeyXiPc9eF/arcgis/rest/services/PublicOutageMap_Public_View/FeatureServer/0",
+      "outField": "custcnt",
+      "causeField": "cause"
+    },
+    "granularity": "incident",
+    "notes": "Incident polygons; no area name field."
+  },
+  {
+    "id": "tacoma-power",
+    "name": "Tacoma Power",
+    "eiaIds": [
+      18429
+    ],
+    "mapUrl": "https://www.mytpu.org/outages-safety/power-outages/",
+    "method": "arcgis",
+    "config": {
+      "layerUrl": "https://services8.arcgis.com/WmwtIvhWFFy9A5go/arcgis/rest/services/Outage_Point/FeatureServer/2",
+      "outField": "CustAffected",
+      "causeField": "Cause"
+    },
+    "granularity": "incident",
+    "notes": "Point layer; Outage_Area_view/0 is the polygon duplicate of the same outages."
+  },
+  {
+    "id": "tid",
+    "name": "Turlock Irrigation District",
+    "eiaIds": [
+      19281
+    ],
+    "mapUrl": "https://www.tid.org/power/outages/",
+    "method": "json",
+    "config": {
+      "url": "https://outages.tid.org/POP/model/PopOutage?ServiceType=Electric",
+      "listPath": "",
+      "outField": "currentAffected",
+      "state": "CA"
+    },
+    "granularity": "incident"
+  },
+  {
+    "id": "trico",
+    "name": "Trico Electric Cooperative",
+    "eiaIds": [
+      19189
+    ],
+    "mapUrl": "https://trico.outagemap.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/trico/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "zip",
+      "state": "AZ"
+    },
+    "granularity": "zip",
+    "notes": "cloud.coop hosted outage map platform (summary.json)."
+  },
+  {
+    "id": "mohave-electric",
+    "name": "Mohave Electric Cooperative",
+    "eiaIds": [
+      21538
+    ],
+    "mapUrl": "https://www.mohaveelectric.com/outages",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/mohaveelectric/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "region",
+      "state": "AZ"
+    },
+    "granularity": "region",
+    "notes": "cloud.coop platform; two service areas only."
+  },
+  {
+    "id": "mvea",
+    "name": "Mountain View Electric Association",
+    "eiaIds": [
+      13058
+    ],
+    "mapUrl": "https://www.mvea.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/mvea/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county",
+      "state": "CO"
+    },
+    "granularity": "county",
+    "notes": "cloud.coop hosted outage map platform (summary.json)."
+  },
+  {
+    "id": "pvrea",
+    "name": "Poudre Valley REA",
+    "eiaIds": [
+      15257
+    ],
+    "mapUrl": "https://pvrea.coop/outages-safety/outages/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/pvrea/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.1.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "region",
+      "state": "CO"
+    },
+    "granularity": "utility",
+    "notes": "cloud.coop platform; dataset 1 is the whole service territory (dataset 0 is 96 townships)."
+  },
+  {
+    "id": "inland-power",
+    "name": "Inland Power & Light",
+    "eiaIds": [
+      8699
+    ],
+    "mapUrl": "https://www.inlandpower.com/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/inlandpower/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.1.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county"
+    },
+    "granularity": "county",
+    "notes": "cloud.coop platform; counties in WA and ID so no state set."
+  },
+  {
+    "id": "central-electric-or",
+    "name": "Central Electric Cooperative (OR)",
+    "eiaIds": [
+      3240
+    ],
+    "mapUrl": "https://www.cec.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/cec/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "region",
+      "state": "OR"
+    },
+    "granularity": "utility",
+    "notes": "cloud.coop platform; single service area. Slug 'cec' matched by served count (42.5k vs EIA 39.7k)."
+  },
+  {
+    "id": "surprise-valley",
+    "name": "Surprise Valley Electrification",
+    "eiaIds": [
+      18260
+    ],
+    "mapUrl": "https://svec.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/svec/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county"
+    },
+    "granularity": "county",
+    "notes": "cloud.coop platform; counties span CA/NV/OR so no state set. Slug 'svec' matched by served count (6.9k vs EIA 6.7k)."
+  },
+  {
+    "id": "mea-alaska",
+    "name": "Matanuska Electric Association",
+    "eiaIds": [
+      11824
+    ],
+    "mapUrl": "https://www.mea.coop/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/mea/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "region",
+      "state": "AK"
+    },
+    "granularity": "region",
+    "notes": "cloud.coop platform; 32 outage areas (not counties)."
+  },
+  {
+    "id": "hawaiian-electric",
+    "name": "Hawaiian Electric (Oahu)",
+    "eiaIds": [
+      19547
+    ],
+    "mapUrl": "https://www.hawaiianelectric.com/safety-and-outages/power-outages/oahu-outage-map",
+    "method": "json",
+    "granularity": "utility",
+    "notes": "Uses the anonymous token the map app gets from its own public endpoint. No credential involved. Oahu only.",
+    "config": {
+      "url": "https://outagemap-api-heco.azurewebsites.net/api/v1/outages?company=HECO",
+      "tokenUrl": "https://outagemap-api-heco.azurewebsites.net/api/v1/access-token",
+      "listPath": "outages",
+      "outField": "totalCustomersAffected"
+    }
+  },
+  {
+    "id": "tep",
+    "name": "Tucson Electric Power",
+    "eiaIds": [
+      24211
+    ],
+    "mapUrl": "https://www.tep.com/outages/",
+    "method": "custom",
+    "granularity": "incident",
+    "custom": {
+      "endpoint": "POST https://apps.tep.com/OutageApp/mapfeed",
+      "response": "JSON with a disclaimer field: 'Notice: 3rd party use of this API is not permitted.'"
+    },
+    "notes": "terms: the feed itself states third-party use is not permitted, so not configured as a runnable source. No ODIN entry seen. Lead decision."
+  },
+  {
+    "id": "snohomish-pud",
+    "name": "Snohomish County PUD",
+    "eiaIds": [
+      17470
+    ],
+    "mapUrl": "https://outagemap.snopud.com/",
+    "method": "pmtiles",
+    "granularity": "utility",
+    "notes": "Utility-wide total from the map archive metadata.",
+    "config": {
+      "url": "https://outagestprodpub.blob.core.windows.net/pmtiles/incidents.pmtiles",
+      "totalPath": "OverallData.TotalCustomersImpacted",
+      "incidentsPath": "OverallData.IncidentCount"
+    }
+  },
+  {
+    "id": "csu",
+    "name": "Colorado Springs Utilities",
+    "eiaIds": [
+      3989
+    ],
+    "mapUrl": "https://www.csu.org/storm-center",
+    "method": "kubra",
+    "config": {
+      "instanceId": "7679ce5f-19fa-4ff6-9502-683324ed3f3a",
+      "viewId": "b79da9e4-6406-41b7-8252-ad925d585a2f"
+    },
+    "granularity": "zip",
+    "notes": "Kubra view linked from the csu.org storm center page; the older stormcenter3.csu.org legacy feed has been frozen since May 2018."
+  },
+  {
+    "id": "ladwp",
+    "name": "Los Angeles Department of Water & Power",
+    "eiaIds": [
+      11208
+    ],
+    "mapUrl": "https://www.ladwp.com/outages/power-outage-map",
+    "method": "arcgis",
+    "config": {
+      "layerUrl": "https://services2.arcgis.com/v0bIBBLIiGigCimX/ArcGIS/rest/services/PowerOutages_Data/FeatureServer/0",
+      "outField": "COUNT_IN_RANK",
+      "areaField": "CITY_NAM",
+      "areaKind": "city",
+      "state": "CA"
+    },
+    "granularity": "city",
+    "notes": "ArcGIS Online layer behind the ArcGIS Experience embedded on ladwp.com/outages/power-outage-map (the www.ladwp.com/outages/power-outages page itself 403s to the harness; this layer is on services2.arcgis.com and works for plain requests). Layer was empty (0 features) when tested, so COUNT_IN_RANK is the field the public map reads for dot size but is not confirmed against a live non-zero outage."
+  },
+  {
+    "id": "anaheim",
+    "name": "Anaheim Public Utilities",
+    "eiaIds": [
+      590
+    ],
+    "mapUrl": "https://www.anaheim.net/2829/Electric-Outage-Map",
+    "method": "json",
+    "config": {
+      "url": "https://gis.anaheim.net/electricoutages/ActiveIncidents.cshtml",
+      "listPath": "features",
+      "state": "CA"
+    },
+    "granularity": "utility",
+    "notes": "GeoJSON where each feature is one affected customer point (the map's own script counts features per incident ID), so customersOut = number of features. Empty when tested, logic taken from the map's script. www.anaheim.net sits behind Cloudflare but gis.anaheim.net answers plain requests."
+  },
+  {
+    "id": "riverside",
+    "name": "Riverside Public Utilities",
+    "eiaIds": [
+      16088
+    ],
+    "mapUrl": "https://www.riversideca.gov/outages/v3/index.html",
+    "method": "arcgis",
+    "config": {
+      "layerUrl": "https://services.arcgis.com/Fu2oOWg1Aw7azh41/arcgis/rest/services/ElectricOutageAGOL1/FeatureServer/0",
+      "outField": "customers_out_of_power",
+      "where": "customers_out_of_power <> 0 AND outage_active_flag = 'True' AND outage_planned_flag = 'False'",
+      "causeField": "outage_cause"
+    },
+    "granularity": "incident",
+    "notes": "Layer is an all-time outage log (4,000+ rows); the where clause is the public map's own filter for active unplanned outages."
+  },
+  {
+    "id": "srp",
+    "name": "Salt River Project",
+    "eiaIds": [
+      16572
+    ],
+    "mapUrl": "https://myaccount.srpnet.com/power/outagemap",
+    "method": "custom",
+    "granularity": "incident",
+    "custom": {
+      "request": "GET https://myaccount.srpnet.com/power/outagemap and https://myaccount.srpnet.com/myaccountapi/public_config.json",
+      "response": "HTTP 403 'Access Denied' HTML page to plain requests with the honest GridAlert user agent; the page loads in a headless browser but the harness recorded no outage data call (only myaccountapi/api/login/profile, 401)"
+    },
+    "notes": "blocked: WAF denies plain server requests, outage data endpoint not identified. Not bypassed. Lead review."
+  },
+  {
+    "id": "iid",
+    "name": "Imperial Irrigation District",
+    "eiaIds": [
+      9216
+    ],
+    "mapUrl": "https://www.iid.com/customer-service/report-a-problem/power-outage",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "blocked: www.iid.com returns 403 to plain requests; the page loaded by the harness made no outage data call. Not bypassed."
+  },
+  {
+    "id": "clark-pud",
+    "name": "Clark Public Utilities",
+    "eiaIds": [
+      3660
+    ],
+    "mapUrl": "https://www.clarkpublicutilities.com/outages-safety/",
+    "method": "regex",
+    "config": {
+      "url": "https://www.clarkpublicutilities.com/outage-map/data.js",
+      "pattern": "\"totalAffectedCustomerCount\":\\s*(\\d+)"
+    },
+    "granularity": "utility",
+    "notes": "JSONP file (gksUpdateOutageData({...})) behind the utility's own Google map, so read with a regex; the file also lists openOutages[] with affectedCustomerCount per outage but no area names."
+  },
+  {
+    "id": "mason-pud3",
+    "name": "Mason County PUD No. 3",
+    "eiaIds": [
+      15419
+    ],
+    "mapUrl": "https://www.pud3.org/outages-safety/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/masonpud3/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "region",
+      "state": "WA"
+    },
+    "granularity": "region",
+    "notes": "cloud.coop platform; 86 named outage areas, not counties."
+  },
+  {
+    "id": "grays-harbor-pud",
+    "name": "Grays Harbor PUD",
+    "eiaIds": [
+      7548
+    ],
+    "mapUrl": "https://www.ghpud.org/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/ghpud/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "region",
+      "state": "WA"
+    },
+    "granularity": "region",
+    "notes": "cloud.coop platform; 6 service areas."
+  },
+  {
+    "id": "central-lincoln-pud",
+    "name": "Central Lincoln PUD",
+    "eiaIds": [
+      3264
+    ],
+    "mapUrl": "https://clpud.org/customer-information/outages/outage-map/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap-data.cloud.coop/clpud/Hosted_Outage_Map/summary.json",
+      "listPath": "regionDataSets.0.regions",
+      "outField": "numberOut",
+      "servedField": "numberServed",
+      "areaField": "id",
+      "areaKind": "county",
+      "state": "OR"
+    },
+    "granularity": "county",
+    "notes": "cloud.coop platform (clpud.outagemap.coop); dataset 0 is counties (Douglas, Lane, Lincoln, Coos)."
+  },
+  {
+    "id": "burbank-wp",
+    "name": "Burbank Water and Power",
+    "eiaIds": [
+      2507
+    ],
+    "mapUrl": "https://www.burbankwaterandpower.com/power-outage-page",
+    "method": "json",
+    "config": {
+      "url": "https://pop.burbankwaterandpower.com/POP/model/PopOutage?ServiceType=Electric",
+      "listPath": "",
+      "outField": "currentAffected",
+      "state": "CA"
+    },
+    "granularity": "incident",
+    "notes": "Same POP outage-portal JSON as TID. Empty list when tested, field name taken from the TID instance of the same platform."
+  },
+  {
+    "id": "modesto-id",
+    "name": "Modesto Irrigation District",
+    "eiaIds": [
+      12745
+    ],
+    "mapUrl": "https://outage.mid.org/",
+    "method": "json",
+    "config": {
+      "url": "https://outage.mid.org/data/outageSummary.json",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Web Outage Viewer app; /data/outages.json lists incidents (empty when tested, fields unknown) so only the summary is used."
+  },
+  {
+    "id": "united-power",
+    "name": "United Power",
+    "eiaIds": [
+      19499
+    ],
+    "mapUrl": "https://outages.unitedpower.com/outages/",
+    "method": "custom",
+    "granularity": "incident",
+    "custom": {
+      "request": "POST https://outages.unitedpower.com/Outages/Home/UpdatePushpin",
+      "response": "XML <NewDataSet /> (empty when tested), plus GET /Outages/Home/GetUpdateStatus returning <UpdateStatus><Message value=\"Updated: ...\"/></UpdateStatus>",
+      "needs": "XML parsing and a POST; row schema unknown because no outage was active"
+    },
+    "notes": "Feed exists but is XML over POST, which the json/regex adapters cannot read."
+  },
+  {
+    "id": "core-electric",
+    "name": "CORE Electric Cooperative",
+    "eiaIds": [
+      9336
+    ],
+    "mapUrl": "https://core.coop/outage-center/",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "Outage center page is a link hub; CORE uses NISC SmartHub (core.smarthub.coop) and no public unauthenticated outage feed was found in two attempts."
+  },
+  {
+    "id": "chugach-electric",
+    "name": "Chugach Electric Association",
+    "eiaIds": [
+      3522
+    ],
+    "mapUrl": "https://www.chugachelectric.com/outages",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "Outage map page makes no data request that the harness could capture and the old outage_map.html is blank; no public feed found in two attempts."
+  },
+  {
+    "id": "black-hills-co",
+    "name": "Black Hills Energy (Colorado Electric)",
+    "eiaIds": [
+      56146
+    ],
+    "mapUrl": "https://www.blackhillsenergy.com/outages",
+    "method": "custom",
+    "granularity": "incident",
+    "custom": {
+      "request": "GET https://www.blackhillsenergy.com/POP/model/PopOutage?ServiceType=Electric",
+      "response": "JSON list, [] when tested; same POP portal as TID (currentAffected per outage). Map extent in PopServiceTypeConfiguration spans WY/SD/NE/CO (lon -118..-91, lat 37..45.8) so the feed is company-wide",
+      "needs": "a state/area filter; geographicAorIDs per outage is the area label but no outage was active to confirm values"
+    },
+    "notes": "Company-wide Black Hills electric feed, so it would overcount Colorado Electric; not configured as runnable. Lead review."
+  },
+  {
+    "id": "pasadena-wp",
+    "name": "Pasadena Water and Power",
+    "eiaIds": [
+      14534
+    ],
+    "mapUrl": "https://pwp.cityofpasadena.net/outage-map/",
+    "method": "custom",
+    "granularity": "incident",
+    "custom": {
+      "request": "GET http://204.89.9.88/api/weboutageviewer/get_live_data/ (the map reaches it through a city-domain proxy get.php?url=...; plain GET, no auth)",
+      "response": "{\"Outages\":[],\"Trucks\":[],\"Areas\":null,\"CallSummary\":null} when tested",
+      "needs": "row schema for Outages[] unknown because none were active"
+    },
+    "notes": "Feed is reachable but its customer-count field could not be identified from an empty list. Not using the city's open proxy."
+  },
+  {
+    "id": "roseville-electric",
+    "name": "Roseville Electric Utility",
+    "eiaIds": [
+      16295
+    ],
+    "mapUrl": "https://www.roseville.ca.gov/electric_utility/safety/outages.php",
+    "method": "json",
+    "config": {
+      "url": "https://www.outageentry.com/Outage/ajax/ajaxShellOut.php",
+      "headers": {
+        "content-type": "multipart/form-data; boundary=----GridAlertBoundary"
+      },
+      "body": "------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nget\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"client\"\r\n\r\nroseville\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"target\"\r\n\r\ncfa_device_markers\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"serviceIndex\"\r\n\r\n1\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"port\"\r\n\r\n\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"includePrecictions\"\r\n\r\nfalse\r\n------GridAlertBoundary--\r\n",
+      "totalPath": "0.customersAffected",
+      "servedPath": "0.stats.NumConsumers"
+    },
+    "granularity": "utility",
+    "notes": "OutageEntry (outageentry.com) hosted map: plain multipart POST, no cookies. Entry 0 is the Electric service index; utility-wide totals only (markers[] holds per-outage points)."
+  },
+  {
+    "id": "glendale-wp",
+    "name": "Glendale Water and Power",
+    "eiaIds": [
+      7294
+    ],
+    "mapUrl": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/safety-security/power-outages",
+    "method": "json",
+    "config": {
+      "url": "https://www.outageentry.com/Outage/ajax/ajaxShellOut.php",
+      "headers": {
+        "content-type": "multipart/form-data; boundary=----GridAlertBoundary"
+      },
+      "body": "------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nget\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"client\"\r\n\r\nglendale\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"target\"\r\n\r\ncfa_device_markers\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"serviceIndex\"\r\n\r\n1\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"port\"\r\n\r\n\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"includePrecictions\"\r\n\r\nfalse\r\n------GridAlertBoundary--\r\n",
+      "totalPath": "0.customersAffected",
+      "servedPath": "0.stats.NumConsumers"
+    },
+    "granularity": "utility",
+    "notes": "OutageEntry (outageentry.com) hosted map: plain multipart POST, no cookies. Entry 0 is the Electric service index; utility-wide totals only (markers[] holds per-outage points)."
+  },
+  {
+    "id": "chelan-pud",
+    "name": "Chelan County PUD",
+    "eiaIds": [
+      3413
+    ],
+    "mapUrl": "https://outages.chelanpud.org/",
+    "method": "arcgis",
+    "config": {
+      "layerUrl": "https://services1.arcgis.com/3ymEnGydxeYILJzI/arcgis/rest/services/Outages_view/FeatureServer/0",
+      "outField": "AffectedCustomers",
+      "areaField": "CommunityName",
+      "areaKind": "city",
+      "state": "WA",
+      "causeField": "Cause"
+    },
+    "granularity": "city",
+    "notes": "Map only shows outages over 10 customers per the utility; layer 1 of the same service is the polygon copy."
+  },
+  {
+    "id": "provo-power",
+    "name": "Provo Power",
+    "eiaIds": [
+      15444
+    ],
+    "mapUrl": "https://www.provo.gov/1132/Outages",
+    "method": "arcgis",
+    "config": {
+      "layerUrl": "https://services6.arcgis.com/o3nujgln2bEpHwIe/arcgis/rest/services/MILSOFTOutages/FeatureServer/0",
+      "outField": "CustomersOutNow",
+      "causeField": "VerifiedCause"
+    },
+    "granularity": "incident",
+    "notes": "Milsoft CURRENT_OUTAGES layer behind provo.gov/1132/Outages. www.provo.gov itself 403s plain requests but the ArcGIS Online layer does not. Empty when tested."
+  },
+  {
+    "id": "loveland-wp",
+    "name": "Loveland Water and Power",
+    "eiaIds": [
+      11256
+    ],
+    "mapUrl": "https://www.lovelandwaterandpower.org/about-us/power/power-outage-information",
+    "method": "custom",
+    "granularity": "incident",
+    "custom": {
+      "request": "GET https://lwpgis.cityofloveland.org/arcgis/sharing/servers/a91c5d435e5147f5945d67e023338265/rest/services/WebSite/outagearea/MapServer/0/query?where=1%3D1&outFields=responder.dbo.RX_LOADPOINTS.CUSTOMER_COUNT&returnGeometry=false&f=json",
+      "response": "ArcGIS 10.91 layer of Responder load points (1 feature when tested); outStatistics is rejected (HTTP 400) and the field name contains dots, so the arcgis and json adapters cannot read it",
+      "needs": "sum attributes['responder.dbo.RX_LOADPOINTS.CUSTOMER_COUNT'] over features"
+    },
+    "notes": "Feed works but field name with dots defeats the adapters."
+  },
+  {
+    "id": "longmont-power",
+    "name": "Longmont Power & Communications",
+    "eiaIds": [
+      11187
+    ],
+    "mapUrl": "https://longmontcolorado.gov/longmont-power-communications/report-a-problem/electric-outage-status/",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "Map layer LPC_Outage_Grid_View (services1.arcgis.com/Sb0rgSd67ecLKIvl) has only OBJECTID and OutageStatus on hex cells, no customer counts. Utility posts only outages over 3% of customers or 2 hours."
+  },
+  {
+    "id": "fort-collins-utilities",
+    "name": "Fort Collins Utilities",
+    "eiaIds": [
+      6604
+    ],
+    "mapUrl": "https://www.fcgov.com/outages",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "Outage map host electricoutages.fcgov.com does not resolve and fortcollins.gov returns 403 to plain requests; no feed found. Not bypassed."
+  },
+  {
+    "id": "silicon-valley-power",
+    "name": "Silicon Valley Power (Santa Clara)",
+    "eiaIds": [
+      16655
+    ],
+    "mapUrl": "https://www.siliconvalleypower.com/svp-and-community/outages-and-alerts/outage-map-oms",
+    "method": "json",
+    "config": {
+      "url": "https://www.outageentry.com/Outage/ajax/ajaxShellOut.php",
+      "headers": {
+        "content-type": "multipart/form-data; boundary=----GridAlertBoundary"
+      },
+      "body": "------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nget\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"client\"\r\n\r\nsanta_clara\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"target\"\r\n\r\ncfa_device_markers\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"serviceIndex\"\r\n\r\n1\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"port\"\r\n\r\n\r\n------GridAlertBoundary\r\nContent-Disposition: form-data; name=\"includePrecictions\"\r\n\r\nfalse\r\n------GridAlertBoundary--\r\n",
+      "totalPath": "0.customersAffected",
+      "servedPath": "0.stats.NumConsumers"
+    },
+    "granularity": "utility",
+    "notes": "OutageEntry (outageentry.com) hosted map: plain multipart POST, no cookies. Entry 0 is the Electric service index; utility-wide totals only (markers[] holds per-outage points)."
+  },
+  {
+    "id": "benton-rea",
+    "name": "Benton Rural Electric Association",
+    "eiaIds": [
+      1625
+    ],
+    "mapUrl": "https://www.bentonrea.org/outage/",
+    "method": "json",
+    "config": {
+      "url": "https://outagemap.bentonrea.org:8443/data/outageSummary.json",
+      "totalPath": "customersOutNow",
+      "servedPath": "customersServed",
+      "asOfPath": "updateTime"
+    },
+    "granularity": "utility",
+    "notes": "Web Outage Viewer app on a non-standard port (8443); /data/outages.json lists incidents (empty when tested). Same app as Modesto ID."
+  },
+  {
+    "id": "murray-city-power",
+    "name": "Murray City Power",
+    "eiaIds": [
+      13137
+    ],
+    "mapUrl": "https://murrayutah.tracker.outifi.com/",
+    "method": "custom",
+    "granularity": "incident",
+    "custom": {
+      "request": "GET https://6z5q4vmesh.execute-api.us-west-2.amazonaws.com/1/incidents/murrayutah (no auth header)",
+      "response": "{status_code,return_object:{body:[{map_settings,custom_settings},{incidents:[]}]}}; incidents list was empty so the per-incident customer field is unknown",
+      "needs": "read return_object.body[1].incidents once a non-empty sample exists"
+    },
+    "notes": "Outifi tracker; feed reachable but row schema unconfirmed."
+  },
+  {
+    "id": "bountiful-light-power",
+    "name": "Bountiful City Light & Power",
+    "eiaIds": [
+      2010
+    ],
+    "mapUrl": "https://www.bountifulutah.gov/power",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "No outage map found in two attempts; city posts scheduled outages as documents only."
+  },
+  {
+    "id": "ssvec",
+    "name": "Sulphur Springs Valley Electric Cooperative",
+    "eiaIds": [
+      18280
+    ],
+    "mapUrl": "https://www.ssvec.org/outage/",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "Realtime outage map exists on the Outage Center page but no data call was captured in two attempts; SSVEC uses NISC SmartHub (ssvec.smarthub.coop) and the cloud.coop slugs tried returned nothing."
+  },
+  {
+    "id": "jemez-mountains-ec",
+    "name": "Jemez Mountains Electric Cooperative",
+    "eiaIds": [
+      9699
+    ],
+    "mapUrl": "https://www.jemezcoop.org/outage-center",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "Outage Center page embeds a map but the harness captured no data request in two attempts."
+  },
+  {
+    "id": "alameda-mp",
+    "name": "Alameda Municipal Power",
+    "eiaIds": [
+      207
+    ],
+    "mapUrl": "https://www.alamedamp.com/182/Outages",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "Outages page has no live map; only phone reporting and an alert center."
+  },
+  {
+    "id": "liberty-ca",
+    "name": "Liberty Utilities (California)",
+    "eiaIds": [
+      57483
+    ],
+    "mapUrl": "https://california.libertyutilities.com/south-lake-tahoe/residential/emergencies/electrical/outage-center.html",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "Outage map is reached through the My Account area; no public data call captured in two attempts."
+  },
+  {
+    "id": "benton-pud",
+    "name": "Benton PUD",
+    "eiaIds": [
+      1579
+    ],
+    "mapUrl": "https://www.bentonpud.org/",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "Site links only to NISC SmartHub (bentonpud.smarthub.coop); no public outage feed found. ODIN lists a 'BENTON COUNTY' reporter with id 1578, which may not be this utility."
+  },
+  {
+    "id": "raft-river-rec",
+    "name": "Raft River Rural Electric Cooperative",
+    "eiaIds": [
+      22814
+    ],
+    "mapUrl": "",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "Tiny multi-state co-op (ID/NV/UT); no outage map located."
+  },
+  {
+    "id": "wapa",
+    "name": "Western Area Power Administration",
+    "eiaIds": [
+      27000
+    ],
+    "mapUrl": "https://www.wapa.gov/",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "Federal power marketer with 233 retail customers; no public outage map applies."
+  },
+  {
+    "id": "ccce",
+    "name": "Central Coast Community Energy",
+    "eiaIds": [
+      61432
+    ],
+    "mapUrl": "https://3cenergy.org/",
+    "method": "none",
+    "granularity": "utility",
+    "notes": "Community choice aggregator (0 customers in EIA data); delivery and outages belong to PG&E, see the pge entry."
+  }
+]

@@ -1,0 +1,572 @@
+[
+ {
+  "id": "coned",
+  "name": "Con Edison",
+  "eiaIds": [
+   4226
+  ],
+  "mapUrl": "https://outagemap.coned.com/",
+  "method": "kubra-legacy",
+  "config": {
+   "baseUrl": "https://outagemap.coned.com/resources/data/external/interval_generation_data",
+   "reportFiles": [
+    "report_nyc.json",
+    "report_westchester.json"
+   ],
+   "reportDepth": 1,
+   "state": "NY"
+  },
+  "granularity": "county",
+  "notes": "Borough and Westchester breakdown from the NYC and Westchester reports."
+ },
+ {
+  "id": "oru-ny",
+  "name": "Orange & Rockland (NY)",
+  "eiaIds": [
+   14154
+  ],
+  "mapUrl": "https://outagemap.oru.com/",
+  "method": "json",
+  "config": {
+   "url": "https://outagemap.oru.com/resources/data/external/interval_generation_data/{index}/report_ny.json",
+   "indexUrl": "https://outagemap.oru.com/resources/data/external/interval_generation_data/metadata.json",
+   "indexPath": "directory",
+   "listPath": "file_data.areas.0.areas",
+   "outField": "cust_a",
+   "servedField": "cust_s",
+   "areaField": "area_name",
+   "areaKind": "county",
+   "state": "NY"
+  },
+  "granularity": "county",
+  "notes": "Kubra-legacy report_ny.json: Orange, Rockland, Sullivan, Ulster."
+ },
+ {
+  "id": "oru-nj",
+  "name": "Rockland Electric Co (NJ, O&R)",
+  "eiaIds": [
+   16213
+  ],
+  "mapUrl": "https://outagemap.oru.com/",
+  "method": "json",
+  "config": {
+   "url": "https://outagemap.oru.com/resources/data/external/interval_generation_data/{index}/report_nj.json",
+   "indexUrl": "https://outagemap.oru.com/resources/data/external/interval_generation_data/metadata.json",
+   "indexPath": "directory",
+   "listPath": "file_data.areas.0.areas",
+   "outField": "cust_a",
+   "servedField": "cust_s",
+   "areaField": "area_name",
+   "areaKind": "county",
+   "state": "NJ"
+  },
+  "granularity": "county",
+  "notes": "Kubra-legacy report_nj.json: Bergen, Passaic, Sussex. Same map as oru-ny."
+ },
+ {
+  "id": "pseg-nj",
+  "name": "PSE&G",
+  "eiaIds": [
+   15477
+  ],
+  "mapUrl": "https://outagecenter.pseg.com/",
+  "method": "kubra",
+  "config": {
+   "instanceId": "79d82478-c10a-4956-a045-89de3cda618c",
+   "viewId": "bdb7f5be-1c1a-46fa-862e-ebdf21851d2e"
+  },
+  "granularity": "county",
+  "notes": "Report is county > municipality; adapter flattens to municipality leaves."
+ },
+ {
+  "id": "firstenergy-pa",
+  "name": "FirstEnergy Pennsylvania",
+  "eiaIds": [
+   66101
+  ],
+  "mapUrl": "https://outages.firstenergycorp.com/pa.html",
+  "method": "kubra",
+  "config": {
+   "instanceId": "6c715f0e-bbec-465f-98cc-0b81623744be",
+   "viewId": "8587e451-e258-4692-b5e8-28010506d51a"
+  },
+  "granularity": "county",
+  "notes": "Report is state > county > township; adapter flattens to township leaves. Includes small NY section (EIA lists NY and PA)."
+ },
+ {
+  "id": "firstenergy-jcpl",
+  "name": "Jersey Central Power & Light (FirstEnergy NJ)",
+  "eiaIds": [
+   9726
+  ],
+  "mapUrl": "https://outages.firstenergycorp.com/nj.html",
+  "method": "kubra",
+  "config": {
+   "instanceId": "6c715f0e-bbec-465f-98cc-0b81623744be",
+   "viewId": "fcd7c23d-de37-4471-8ca3-37c3260f94fa"
+  },
+  "granularity": "county",
+  "notes": "Report is state > county > township; adapter flattens to township leaves."
+ },
+ {
+  "id": "natgrid-ny",
+  "name": "National Grid (Upstate NY, Niagara Mohawk)",
+  "eiaIds": [
+   13573
+  ],
+  "mapUrl": "https://outagemap.ny.nationalgridus.com/",
+  "method": "kubra",
+  "config": {
+   "instanceId": "9cb2e5b7-d321-4575-a552-4ae7078cbc31",
+   "viewId": "1b69b604-7588-4753-8591-9f135a962a2f"
+  },
+  "granularity": "county",
+  "notes": "Two reports (municipality list and county>town tree); adapter picks one."
+ },
+ {
+  "id": "natgrid-ma",
+  "name": "National Grid (Massachusetts Electric)",
+  "eiaIds": [
+   11804
+  ],
+  "mapUrl": "https://outagemap.ma.nationalgridus.com/",
+  "method": "kubra",
+  "config": {
+   "instanceId": "9cb2e5b7-d321-4575-a552-4ae7078cbc31",
+   "viewId": "ec79df5b-2c54-4fb9-a86a-b20775678236"
+  },
+  "granularity": "city",
+  "notes": "Same Kubra instance as natgrid-ny, MA view (~1.38M served, no RI)."
+ },
+ {
+  "id": "peco",
+  "name": "PECO",
+  "eiaIds": [
+   14940
+  ],
+  "mapUrl": "https://www.peco.com/outages/experiencing-an-outage/outage-map",
+  "method": "kubra",
+  "config": {
+   "instanceId": "39e6d9f3-fdea-4539-848f-b8631945da6f",
+   "viewId": "789577bd-d2c6-42b8-af4b-b51ae6f52b6c"
+  },
+  "granularity": "county",
+  "notes": "Report is county (Bucks, Chester, Delaware, Montgomery, Philadelphia, York) > municipality."
+ },
+ {
+  "id": "psegli",
+  "name": "PSEG Long Island (LIPA)",
+  "eiaIds": [
+   11171
+  ],
+  "mapUrl": "https://mypowermap.psegliny.com/external/default.html",
+  "method": "kubra",
+  "config": {
+   "instanceId": "48006d55-45bb-40a4-99a6-1289326f0d0d",
+   "viewId": "fb50e444-70e5-4b69-b868-28463b5dbd19"
+  },
+  "granularity": "county",
+  "notes": "Report is county (Suffolk, Nassau, Rockaway Peninsula) > town > village."
+ },
+ {
+  "id": "centralhudson",
+  "name": "Central Hudson Gas & Electric",
+  "eiaIds": [
+   3249
+  ],
+  "mapUrl": "https://outagemap.cenhud.com/",
+  "method": "kubra",
+  "config": {
+   "instanceId": "d19170d4-3357-4f67-bc30-e88f85fc85c8",
+   "viewId": "7e22d4b2-8c3d-4625-adc1-ffcdd2944de0"
+  },
+  "granularity": "county",
+  "notes": "Report is county (Putnam, Ulster, Dutchess, Sullivan, Orange) > town/village."
+ },
+ {
+  "id": "ppl",
+  "name": "PPL Electric Utilities",
+  "eiaIds": [
+   14715
+  ],
+  "mapUrl": "https://omap.prod.pplweb.com/OMAP",
+  "method": "json",
+  "config": {
+   "url": "https://omap.prod.pplweb.com/OMAP/api/Omap/Outage/Tabular?opco=PPL",
+   "listPath": "data",
+   "outField": "nc",
+   "areaField": "nm",
+   "areaKind": "county",
+   "state": "PA",
+   "totalPath": "nc"
+  },
+  "granularity": "county",
+  "notes": "OMAP platform (same as Rhode Island Energy). Public map host outagemap.pplelectric.com is a CNAME to omap.prod.pplweb.com and fails TLS name check in Chrome; the pplweb host serves the same API with a valid cert. Each county row also has a mun[] list of municipalities. Tabular list can omit counties with no outages, so no servedField is set; totalPath nc is the published total."
+ },
+ {
+  "id": "rhodeisland-energy",
+  "name": "Rhode Island Energy (Narragansett Electric)",
+  "eiaIds": [
+   13214
+  ],
+  "mapUrl": "https://outagemap.rienergy.com/OMAP",
+  "method": "json",
+  "config": {
+   "url": "https://outagemap.rienergy.com/OMAP/api/Omap/Outage/Tabular?opco=RI",
+   "listPath": "data",
+   "outField": "nc",
+   "areaField": "nm",
+   "areaKind": "county",
+   "state": "RI",
+   "totalPath": "nc"
+  },
+  "granularity": "county",
+  "notes": "Narragansett is now Rhode Island Energy (PPL). Same OMAP platform as PPL; counties Bristol, Kent, Newport, Providence, Washington. Tabular list can omit counties with no outages, so no servedField is set; totalPath nc is the published total."
+ },
+ {
+  "id": "eversource-ct",
+  "name": "Eversource (Connecticut Light & Power)",
+  "eiaIds": [
+   4176
+  ],
+  "mapUrl": "https://outagemap.eversource.com/external/default.html",
+  "method": "json",
+  "config": {
+   "url": "https://outagemap.eversource.com/resources/data/external/interval_generation_data/{index}/report_conn.json",
+   "indexUrl": "https://outagemap.eversource.com/resources/data/external/interval_generation_data/metadata.json",
+   "indexPath": "directory",
+   "listPath": "file_data.areas.0.areas.0.areas.0.areas",
+   "outField": "cust_a",
+   "servedField": "cust_s",
+   "areaField": "area_name",
+   "areaKind": "city",
+   "state": "CT"
+  },
+  "granularity": "city",
+  "notes": "Kubra-legacy report_conn.json, town level (no county). Eversource's overall total is data.json under the same baseUrl (kubra-legacy), which also covers WMECO.",
+  "alsoMetros": [
+   "49340"
+  ]
+ },
+ {
+  "id": "eversource-nh",
+  "name": "Eversource (Public Service of New Hampshire)",
+  "eiaIds": [
+   15472
+  ],
+  "mapUrl": "https://outagemap.eversource.com/external/default.html",
+  "method": "json",
+  "config": {
+   "url": "https://outagemap.eversource.com/resources/data/external/interval_generation_data/{index}/report_hampshire.json",
+   "indexUrl": "https://outagemap.eversource.com/resources/data/external/interval_generation_data/metadata.json",
+   "indexPath": "directory",
+   "listPath": "file_data.areas.0.areas.0.areas.0.areas",
+   "outField": "cust_a",
+   "servedField": "cust_s",
+   "areaField": "area_name",
+   "areaKind": "city",
+   "state": "NH"
+  },
+  "granularity": "city",
+  "notes": "Kubra-legacy report_hampshire.json, town level."
+ },
+ {
+  "id": "eversource-ma-east",
+  "name": "Eversource (NSTAR Electric, Eastern MA)",
+  "eiaIds": [
+   54913
+  ],
+  "mapUrl": "https://outagemap.eversource.com/external/default.html",
+  "method": "json",
+  "config": {
+   "url": "https://outagemap.eversource.com/resources/data/external/interval_generation_data/{index}/report_east.json",
+   "indexUrl": "https://outagemap.eversource.com/resources/data/external/interval_generation_data/metadata.json",
+   "indexPath": "directory",
+   "listPath": "file_data.areas.0.areas.0.areas.0.areas",
+   "outField": "cust_a",
+   "servedField": "cust_s",
+   "areaField": "area_name",
+   "areaKind": "city",
+   "state": "MA"
+  },
+  "granularity": "city",
+  "notes": "Kubra-legacy report_east.json, town level. Western MA (WMECO, not a target here) is report_west.json.",
+  "alsoMetros": [
+   "49340"
+  ]
+ },
+ {
+  "id": "duquesne",
+  "name": "Duquesne Light",
+  "eiaIds": [
+   5487
+  ],
+  "mapUrl": "https://www.duquesnelight.com/outages-safety/current-outages",
+  "method": "json",
+  "config": {
+   "url": "https://utilisocial.io/datacapable/v2/p/dlc/map/events/count?types=COUNTY",
+   "listPath": "",
+   "outField": "customersAffected",
+   "servedField": "customersServed",
+   "areaField": "name",
+   "areaKind": "county",
+   "state": "PA"
+  },
+  "granularity": "county",
+  "notes": "DataCapable (utilisocial.io), types=COUNTY. types=ZIP and MUNICIPALITY also exist but must not be summed together."
+ },
+ {
+  "id": "nhec",
+  "name": "New Hampshire Electric Co-op",
+  "eiaIds": [
+   13441
+  ],
+  "mapUrl": "https://nhec.outagemap.coop/",
+  "method": "json",
+  "config": {
+   "url": "https://outagemap-data.cloud.coop/nhec/Hosted_Outage_Map/summary.json",
+   "listPath": "regionDataSets.1.regions",
+   "outField": "numberOut",
+   "servedField": "numberServed",
+   "areaField": "id",
+   "areaKind": "city",
+   "state": "NH"
+  },
+  "granularity": "city",
+  "notes": "outagemap.coop platform (outagemap-data.cloud.coop/<coop>/Hosted_Outage_Map/summary.json). regionDataSets index 1 is townships (0 zip, 2 districts); position could change if the co-op reconfigures."
+ },
+ {
+  "id": "ace",
+  "name": "Atlantic City Electric",
+  "eiaIds": [
+   963
+  ],
+  "mapUrl": "https://www.atlanticcityelectric.com/outages/experiencing-an-outage/view-outage-map",
+  "method": "kubra",
+  "config": {
+   "instanceId": "4b4c1b8f-d2fe-4d2a-877d-a704f764db98",
+   "viewId": "f9accd4d-75d9-4e7a-ad5b-d81abd62b2ed"
+  },
+  "granularity": "county",
+  "notes": "Report is county (Camden, ...) > municipality; adapter flattens to municipality leaves."
+ },
+ {
+  "id": "northwestern-rec-pa",
+  "name": "Northwestern Rural Electric Cooperative Assn (PA)",
+  "eiaIds": [
+   40293
+  ],
+  "mapUrl": "https://northwesternrec.outagemap.coop/",
+  "method": "json",
+  "config": {
+   "url": "https://outagemap-data.cloud.coop/northwesternrec/Hosted_Outage_Map/summary.json",
+   "listPath": "regionDataSets.2.regions",
+   "outField": "numberOut",
+   "servedField": "numberServed",
+   "areaField": "id",
+   "areaKind": "county",
+   "state": "PA"
+  },
+  "granularity": "county",
+  "notes": "outagemap.coop platform, same as nhec. regionDataSets index 2 is Counties (0 townships, 1 ZIP). Note: nwrec.coop / nwrec.outagemap.coop is a different, Iowa utility."
+ },
+ {
+  "id": "nyseg",
+  "name": "NYSEG",
+  "eiaIds": [
+   13511
+  ],
+  "mapUrl": "https://portal.nyseg.com/outages/map",
+  "method": "custom",
+  "config": {},
+  "custom": {
+   "request": "GET https://apim.avangrid.com/nyseg/v1/public/outagedata?filter=county",
+   "requiresHeader": "Ocp-Apim-Subscription-Key (value is embedded in the portal JS; not recorded here)",
+   "responseSample": {
+    "lastUpdated": "2026-10-31 19:29:24",
+    "customers": 920074,
+    "outages": 1,
+    "incidents": 1,
+    "features": [
+     {
+      "type": "Feature",
+      "properties": {
+       "level": "county",
+       "opco": "NYSEG",
+       "county": "SULLIVAN",
+       "customers": 50281,
+       "Outages": 1,
+       "incidents": 1,
+       "EstRest": "10/31/2026 6:30:00 PM"
+      }
+     }
+    ]
+   },
+   "needed": "A json adapter with a header supplied by the lead, if approved. listPath features, areaField properties.county (filter by properties.level=county), outField properties.Outages, servedField properties.customers; totals at top level (customers, outages)."
+  },
+  "granularity": "county",
+  "notes": "embedded-key: Ocp-Apim-Subscription-Key header on apim.avangrid.com (also an Authorization Basic header on some portal calls). County-level feed exists. Avangrid is also an ODIN reporter (EIA 14349 AVANGRID)."
+ },
+ {
+  "id": "rge",
+  "name": "Rochester Gas & Electric",
+  "eiaIds": [
+   16183
+  ],
+  "mapUrl": "https://portal.rge.com/outages/map",
+  "method": "custom",
+  "config": {},
+  "custom": {
+   "request": "GET https://apim.avangrid.com/rge/v1/public/outagedata?filter=county",
+   "requiresHeader": "Ocp-Apim-Subscription-Key (embedded in portal JS; not recorded)",
+   "responseSample": {
+    "lastUpdated": "2026-10-31 19:26:04",
+    "customers": 391488,
+    "outages": 0,
+    "incidents": 0,
+    "features": []
+   },
+   "needed": "Same shape as nyseg."
+  },
+  "granularity": "county",
+  "notes": "embedded-key: Ocp-Apim-Subscription-Key header on apim.avangrid.com. Same platform as NYSEG/CMP."
+ },
+ {
+  "id": "cmp",
+  "name": "Central Maine Power",
+  "eiaIds": [
+   3266
+  ],
+  "mapUrl": "https://portal.cmpco.com/outages/map",
+  "method": "custom",
+  "config": {},
+  "custom": {
+   "request": "GET https://apim.avangrid.com/cmp/v1/public/outagedata?filter=county",
+   "requiresHeader": "Ocp-Apim-Subscription-Key (embedded in portal JS; not recorded)",
+   "responseSample": {
+    "lastUpdated": "2026-10-31 19:38:14",
+    "customers": 689802,
+    "outages": 7,
+    "incidents": 1,
+    "features": [
+     "..."
+    ]
+   },
+   "needed": "Same shape as nyseg."
+  },
+  "granularity": "county",
+  "notes": "embedded-key: Ocp-Apim-Subscription-Key header on apim.avangrid.com. The portal also lists listMapUrl portal.cmpco.com/outages/data/cmp_data.json.gz but a plain request returns the SPA HTML, not data."
+ },
+ {
+  "id": "ui",
+  "name": "United Illuminating",
+  "eiaIds": [
+   19497
+  ],
+  "mapUrl": "https://portal.uinet.com/outages/map/",
+  "method": "custom",
+  "config": {},
+  "custom": {
+   "request": "GET https://portal.uinet.com/outages/map/resource/GEMap1.js",
+   "responseSample": "~500 KB JS holding a FocalPoint (Ventyx) mapConfig with one overlay per town (Ansonia, Bridgeport, Derby, East Haven, Easton, Fairfield, Hamden, Milford, New Haven, North Branford, North Haven, Orange, Shelton, Stratford, Trumbull, West Haven, Woodbridge). Per-town status is an HTML label such as 'No current outages' plus a targetVal; no JSON endpoint.",
+   "needed": "A regex/parse adapter over GEMap1.js targetVal per overlay; unverified because every town showed No current outages when checked."
+  },
+  "granularity": "city",
+  "notes": "No JSON feed found: static FocalPoint map page. Avangrid is an ODIN reporter (EIA 14349) which may cover UI."
+ },
+ {
+  "id": "unitil",
+  "name": "Unitil (Unitil Energy Systems NH, Fitchburg Gas & Electric MA)",
+  "eiaIds": [
+   24590,
+   6374
+  ],
+  "mapUrl": "https://outage-map.unitil.com/",
+  "method": "custom",
+  "config": {},
+  "custom": {
+   "request": "GET https://cache.sienatech.com/apex/siena_ords/webmaps/ctk?token=<per-session token minted by the page>",
+   "response": "HTTP 420 with no body to the harness",
+   "needed": "Siena Technologies webmaps API; data endpoint not seen because the token request failed. Needs review."
+  },
+  "granularity": "utility",
+  "notes": "One Unitil map for both NH and MA (Fitchburg) territories. Vendor Siena Technologies; token flow not replayed."
+ },
+ {
+  "id": "ugi-electric",
+  "name": "UGI Utilities (electric)",
+  "eiaIds": [
+   19390
+  ],
+  "mapUrl": "https://www.ugi.com/outages/",
+  "method": "custom",
+  "config": {},
+  "custom": {
+   "request": "GET https://www.ugi.com/outages/",
+   "responseSample": "The page HTML embeds the outage list as an inline script variable: 'var outages = [];' (empty when checked), consumed by /wp-content/plugins/ugi-outages-map/public/js/outages.min.js together with a municipalities list.",
+   "needed": "A regex adapter over the inline outages array; unverifiable while it is empty."
+  },
+  "granularity": "city",
+  "notes": "Customers-affected counts are in the page-embedded array, updated every 15 minutes per the page."
+ },
+ {
+  "id": "liberty-nh",
+  "name": "Liberty Utilities (Granite State Electric)",
+  "eiaIds": [
+   26510
+  ],
+  "mapUrl": "https://libertyutilities.com/new-hampshire/residential/outages-safety/outage-map",
+  "method": "none",
+  "config": {},
+  "granularity": "utility",
+  "notes": "No data feed found in two attempts: outagemap.libertyutilities.com fails TLS/404 and the page loads no data calls. Not in ODIN list."
+ },
+ {
+  "id": "taunton-mlp",
+  "name": "Taunton Municipal Lighting Plant",
+  "eiaIds": [
+   18488
+  ],
+  "mapUrl": "https://www.tmlp.com/",
+  "method": "none",
+  "config": {},
+  "granularity": "utility",
+  "notes": "CivicPlus site with no outage map; plain requests to tmlp.com return 403 (Cloudflare challenge). No feed found."
+ },
+ {
+  "id": "norwich-npu",
+  "name": "Norwich Public Utilities (CT)",
+  "eiaIds": [
+   13831
+  ],
+  "mapUrl": "https://www.nwpu.org/",
+  "method": "none",
+  "config": {},
+  "granularity": "utility",
+  "notes": "No feed found; nwpu.org returns 403 to plain requests."
+ },
+ {
+  "id": "kennebunk-lpd",
+  "name": "Kennebunk Light & Power District",
+  "eiaIds": [
+   10144
+  ],
+  "mapUrl": "https://klpd.org/power-outages",
+  "method": "none",
+  "config": {},
+  "granularity": "utility",
+  "notes": "Uses NISC SmartHub for outages (kennebunkpld.smarthub.coop); no public JSON feed found."
+ },
+ {
+  "id": "farmington-river-power",
+  "name": "Farmington River Power Company",
+  "eiaIds": [
+   6207
+  ],
+  "mapUrl": "",
+  "method": "none",
+  "config": {},
+  "granularity": "utility",
+  "notes": "EIA lists 0 customers; no outage map."
+ }
+]

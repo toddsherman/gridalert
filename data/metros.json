@@ -1,0 +1,8343 @@
+[
+ {
+  "cbsa": "35620",
+  "name": "New York-Newark-Jersey City, NY-NJ",
+  "counties": [
+   {
+    "fips": "34023",
+    "name": "Middlesex County",
+    "state": "NJ",
+    "population": 883335
+   },
+   {
+    "fips": "34025",
+    "name": "Monmouth County",
+    "state": "NJ",
+    "population": 651035
+   },
+   {
+    "fips": "34029",
+    "name": "Ocean County",
+    "state": "NJ",
+    "population": 673746
+   },
+   {
+    "fips": "34035",
+    "name": "Somerset County",
+    "state": "NJ",
+    "population": 356486
+   },
+   {
+    "fips": "36059",
+    "name": "Nassau County",
+    "state": "NY",
+    "population": 1398939
+   },
+   {
+    "fips": "36103",
+    "name": "Suffolk County",
+    "state": "NY",
+    "population": 1546090
+   },
+   {
+    "fips": "34013",
+    "name": "Essex County",
+    "state": "NJ",
+    "population": 896379
+   },
+   {
+    "fips": "34019",
+    "name": "Hunterdon County",
+    "state": "NJ",
+    "population": 131781
+   },
+   {
+    "fips": "34027",
+    "name": "Morris County",
+    "state": "NJ",
+    "population": 524251
+   },
+   {
+    "fips": "34037",
+    "name": "Sussex County",
+    "state": "NJ",
+    "population": 148063
+   },
+   {
+    "fips": "34039",
+    "name": "Union County",
+    "state": "NJ",
+    "population": 601863
+   },
+   {
+    "fips": "34003",
+    "name": "Bergen County",
+    "state": "NJ",
+    "population": 977026
+   },
+   {
+    "fips": "34017",
+    "name": "Hudson County",
+    "state": "NJ",
+    "population": 735033
+   },
+   {
+    "fips": "34031",
+    "name": "Passaic County",
+    "state": "NJ",
+    "population": 531624
+   },
+   {
+    "fips": "36005",
+    "name": "Bronx County",
+    "state": "NY",
+    "population": 1406332
+   },
+   {
+    "fips": "36047",
+    "name": "Kings County",
+    "state": "NY",
+    "population": 2653963
+   },
+   {
+    "fips": "36061",
+    "name": "New York County",
+    "state": "NY",
+    "population": 1664862
+   },
+   {
+    "fips": "36079",
+    "name": "Putnam County",
+    "state": "NY",
+    "population": 99028
+   },
+   {
+    "fips": "36081",
+    "name": "Queens County",
+    "state": "NY",
+    "population": 2358182
+   },
+   {
+    "fips": "36085",
+    "name": "Richmond County",
+    "state": "NY",
+    "population": 501290
+   },
+   {
+    "fips": "36087",
+    "name": "Rockland County",
+    "state": "NY",
+    "population": 357397
+   },
+   {
+    "fips": "36119",
+    "name": "Westchester County",
+    "state": "NY",
+    "population": 1015743
+   }
+  ],
+  "population": 20112448,
+  "utilities": [
+   4226,
+   15477,
+   9726,
+   11171,
+   13511,
+   963,
+   3249,
+   14154,
+   16213,
+   6775,
+   6369,
+   2650,
+   7630,
+   10776,
+   11476,
+   12608,
+   13726,
+   14472,
+   16217,
+   16864,
+   17571,
+   40299
+  ]
+ },
+ {
+  "cbsa": "31080",
+  "name": "Los Angeles-Long Beach-Anaheim, CA",
+  "counties": [
+   {
+    "fips": "06059",
+    "name": "Orange County",
+    "state": "CA",
+    "population": 3149507
+   },
+   {
+    "fips": "06037",
+    "name": "Los Angeles County",
+    "state": "CA",
+    "population": 9694934
+   }
+  ],
+  "population": 12844441,
+  "utilities": [
+   17609,
+   16609,
+   11208,
+   590,
+   7294,
+   14534,
+   2507,
+   1050,
+   19798
+  ]
+ },
+ {
+  "cbsa": "16980",
+  "name": "Chicago-Naperville-Elgin, IL-IN",
+  "counties": [
+   {
+    "fips": "17031",
+    "name": "Cook County",
+    "state": "IL",
+    "population": 5194625
+   },
+   {
+    "fips": "17043",
+    "name": "DuPage County",
+    "state": "IL",
+    "population": 934298
+   },
+   {
+    "fips": "17063",
+    "name": "Grundy County",
+    "state": "IL",
+    "population": 54052
+   },
+   {
+    "fips": "17111",
+    "name": "McHenry County",
+    "state": "IL",
+    "population": 317751
+   },
+   {
+    "fips": "17197",
+    "name": "Will County",
+    "state": "IL",
+    "population": 712253
+   },
+   {
+    "fips": "17037",
+    "name": "DeKalb County",
+    "state": "IL",
+    "population": 101835
+   },
+   {
+    "fips": "17089",
+    "name": "Kane County",
+    "state": "IL",
+    "population": 525757
+   },
+   {
+    "fips": "17093",
+    "name": "Kendall County",
+    "state": "IL",
+    "population": 145470
+   },
+   {
+    "fips": "17097",
+    "name": "Lake County",
+    "state": "IL",
+    "population": 719339
+   },
+   {
+    "fips": "18073",
+    "name": "Jasper County",
+    "state": "IN",
+    "population": 33894
+   },
+   {
+    "fips": "18089",
+    "name": "Lake County",
+    "state": "IN",
+    "population": 504612
+   },
+   {
+    "fips": "18111",
+    "name": "Newton County",
+    "state": "IN",
+    "population": 14188
+   },
+   {
+    "fips": "18127",
+    "name": "Porter County",
+    "state": "IN",
+    "population": 176049
+   }
+  ],
+  "population": 9434123,
+  "utilities": [
+   4110,
+   56697,
+   13756,
+   13208,
+   4362,
+   9999,
+   16196,
+   17860,
+   27599,
+   1325,
+   7096,
+   9665,
+   13566,
+   15860,
+   19528,
+   20824
+  ]
+ },
+ {
+  "cbsa": "19100",
+  "name": "Dallas-Fort Worth-Arlington, TX",
+  "counties": [
+   {
+    "fips": "48085",
+    "name": "Collin County",
+    "state": "TX",
+    "population": 1297179
+   },
+   {
+    "fips": "48113",
+    "name": "Dallas County",
+    "state": "TX",
+    "population": 2661397
+   },
+   {
+    "fips": "48121",
+    "name": "Denton County",
+    "state": "TX",
+    "population": 1069346
+   },
+   {
+    "fips": "48139",
+    "name": "Ellis County",
+    "state": "TX",
+    "population": 240867
+   },
+   {
+    "fips": "48231",
+    "name": "Hunt County",
+    "state": "TX",
+    "population": 123336
+   },
+   {
+    "fips": "48257",
+    "name": "Kaufman County",
+    "state": "TX",
+    "population": 209235
+   },
+   {
+    "fips": "48397",
+    "name": "Rockwall County",
+    "state": "TX",
+    "population": 140738
+   },
+   {
+    "fips": "48251",
+    "name": "Johnson County",
+    "state": "TX",
+    "population": 218048
+   },
+   {
+    "fips": "48367",
+    "name": "Parker County",
+    "state": "TX",
+    "population": 184767
+   },
+   {
+    "fips": "48439",
+    "name": "Tarrant County",
+    "state": "TX",
+    "population": 2248466
+   },
+   {
+    "fips": "48497",
+    "name": "Wise County",
+    "state": "TX",
+    "population": 83778
+   }
+  ],
+  "population": 8477157,
+  "utilities": [
+   44372,
+   5078,
+   40051,
+   19159,
+   19490,
+   6182,
+   7559,
+   18976,
+   6958,
+   5063,
+   8620,
+   20948,
+   13332,
+   4262,
+   7634,
+   20230,
+   6173,
+   2210,
+   6203,
+   16647
+  ]
+ },
+ {
+  "cbsa": "26420",
+  "name": "Houston-Pasadena-The Woodlands, TX",
+  "counties": [
+   {
+    "fips": "48015",
+    "name": "Austin County",
+    "state": "TX",
+    "population": 33625
+   },
+   {
+    "fips": "48039",
+    "name": "Brazoria County",
+    "state": "TX",
+    "population": 419080
+   },
+   {
+    "fips": "48071",
+    "name": "Chambers County",
+    "state": "TX",
+    "population": 57594
+   },
+   {
+    "fips": "48157",
+    "name": "Fort Bend County",
+    "state": "TX",
+    "population": 975191
+   },
+   {
+    "fips": "48167",
+    "name": "Galveston County",
+    "state": "TX",
+    "population": 372207
+   },
+   {
+    "fips": "48201",
+    "name": "Harris County",
+    "state": "TX",
+    "population": 5045026
+   },
+   {
+    "fips": "48291",
+    "name": "Liberty County",
+    "state": "TX",
+    "population": 121364
+   },
+   {
+    "fips": "48339",
+    "name": "Montgomery County",
+    "state": "TX",
+    "population": 781194
+   },
+   {
+    "fips": "48407",
+    "name": "San Jacinto County",
+    "state": "TX",
+    "population": 29488
+   },
+   {
+    "fips": "48473",
+    "name": "Waller County",
+    "state": "TX",
+    "population": 69858
+   }
+  ],
+  "population": 7904627,
+  "utilities": [
+   8901,
+   55937,
+   40051,
+   1892,
+   16613,
+   12452,
+   16638,
+   9590,
+   6183,
+   1519,
+   8435,
+   10982
+  ]
+ },
+ {
+  "cbsa": "12060",
+  "name": "Atlanta-Sandy Springs-Roswell, GA",
+  "counties": [
+   {
+    "fips": "13013",
+    "name": "Barrow County",
+    "state": "GA",
+    "population": 99773
+   },
+   {
+    "fips": "13035",
+    "name": "Butts County",
+    "state": "GA",
+    "population": 27218
+   },
+   {
+    "fips": "13045",
+    "name": "Carroll County",
+    "state": "GA",
+    "population": 131036
+   },
+   {
+    "fips": "13063",
+    "name": "Clayton County",
+    "state": "GA",
+    "population": 297471
+   },
+   {
+    "fips": "13077",
+    "name": "Coweta County",
+    "state": "GA",
+    "population": 160240
+   },
+   {
+    "fips": "13085",
+    "name": "Dawson County",
+    "state": "GA",
+    "population": 35365
+   },
+   {
+    "fips": "13089",
+    "name": "DeKalb County",
+    "state": "GA",
+    "population": 774394
+   },
+   {
+    "fips": "13097",
+    "name": "Douglas County",
+    "state": "GA",
+    "population": 154293
+   },
+   {
+    "fips": "13113",
+    "name": "Fayette County",
+    "state": "GA",
+    "population": 125156
+   },
+   {
+    "fips": "13117",
+    "name": "Forsyth County",
+    "state": "GA",
+    "population": 282805
+   },
+   {
+    "fips": "13121",
+    "name": "Fulton County",
+    "state": "GA",
+    "population": 1098791
+   },
+   {
+    "fips": "13135",
+    "name": "Gwinnett County",
+    "state": "GA",
+    "population": 1018099
+   },
+   {
+    "fips": "13149",
+    "name": "Heard County",
+    "state": "GA",
+    "population": 12149
+   },
+   {
+    "fips": "13151",
+    "name": "Henry County",
+    "state": "GA",
+    "population": 264922
+   },
+   {
+    "fips": "13159",
+    "name": "Jasper County",
+    "state": "GA",
+    "population": 17632
+   },
+   {
+    "fips": "13187",
+    "name": "Lumpkin County",
+    "state": "GA",
+    "population": 36178
+   },
+   {
+    "fips": "13199",
+    "name": "Meriwether County",
+    "state": "GA",
+    "population": 21516
+   },
+   {
+    "fips": "13211",
+    "name": "Morgan County",
+    "state": "GA",
+    "population": 22095
+   },
+   {
+    "fips": "13217",
+    "name": "Newton County",
+    "state": "GA",
+    "population": 125583
+   },
+   {
+    "fips": "13227",
+    "name": "Pickens County",
+    "state": "GA",
+    "population": 37167
+   },
+   {
+    "fips": "13231",
+    "name": "Pike County",
+    "state": "GA",
+    "population": 20932
+   },
+   {
+    "fips": "13247",
+    "name": "Rockdale County",
+    "state": "GA",
+    "population": 98416
+   },
+   {
+    "fips": "13255",
+    "name": "Spalding County",
+    "state": "GA",
+    "population": 70775
+   },
+   {
+    "fips": "13297",
+    "name": "Walton County",
+    "state": "GA",
+    "population": 112696
+   },
+   {
+    "fips": "13015",
+    "name": "Bartow County",
+    "state": "GA",
+    "population": 120800
+   },
+   {
+    "fips": "13057",
+    "name": "Cherokee County",
+    "state": "GA",
+    "population": 299273
+   },
+   {
+    "fips": "13067",
+    "name": "Cobb County",
+    "state": "GA",
+    "population": 793345
+   },
+   {
+    "fips": "13143",
+    "name": "Haralson County",
+    "state": "GA",
+    "population": 33066
+   },
+   {
+    "fips": "13223",
+    "name": "Paulding County",
+    "state": "GA",
+    "population": 190996
+   }
+  ],
+  "population": 6482182,
+  "utilities": [
+   7140,
+   9601,
+   3916,
+   16865,
+   7090,
+   20065,
+   17832,
+   4432,
+   3248,
+   562,
+   3081,
+   11646,
+   19219,
+   7887,
+   18956,
+   10624,
+   15700,
+   5582,
+   10800,
+   7679,
+   4433,
+   13547,
+   3108,
+   3939,
+   2487,
+   308,
+   6130,
+   7515,
+   8022,
+   9573,
+   11587,
+   12800,
+   12851,
+   13646,
+   14396,
+   19581,
+   40369
+  ]
+ },
+ {
+  "cbsa": "47900",
+  "name": "Washington-Arlington-Alexandria, DC-VA-MD-WV",
+  "counties": [
+   {
+    "fips": "51013",
+    "name": "Arlington County",
+    "state": "VA",
+    "population": 243931
+   },
+   {
+    "fips": "51043",
+    "name": "Clarke County",
+    "state": "VA",
+    "population": 15609
+   },
+   {
+    "fips": "51047",
+    "name": "Culpeper County",
+    "state": "VA",
+    "population": 57666
+   },
+   {
+    "fips": "51059",
+    "name": "Fairfax County",
+    "state": "VA",
+    "population": 1167873
+   },
+   {
+    "fips": "51061",
+    "name": "Fauquier County",
+    "state": "VA",
+    "population": 76503
+   },
+   {
+    "fips": "51107",
+    "name": "Loudoun County",
+    "state": "VA",
+    "population": 449749
+   },
+   {
+    "fips": "51153",
+    "name": "Prince William County",
+    "state": "VA",
+    "population": 502966
+   },
+   {
+    "fips": "51157",
+    "name": "Rappahannock County",
+    "state": "VA",
+    "population": 7439
+   },
+   {
+    "fips": "51177",
+    "name": "Spotsylvania County",
+    "state": "VA",
+    "population": 155388
+   },
+   {
+    "fips": "51179",
+    "name": "Stafford County",
+    "state": "VA",
+    "population": 170803
+   },
+   {
+    "fips": "51187",
+    "name": "Warren County",
+    "state": "VA",
+    "population": 42740
+   },
+   {
+    "fips": "51510",
+    "name": "Alexandria city",
+    "state": "VA",
+    "population": 160662
+   },
+   {
+    "fips": "51600",
+    "name": "Fairfax city",
+    "state": "VA",
+    "population": 26772
+   },
+   {
+    "fips": "51610",
+    "name": "Falls Church city",
+    "state": "VA",
+    "population": 15159
+   },
+   {
+    "fips": "51630",
+    "name": "Fredericksburg city",
+    "state": "VA",
+    "population": 30393
+   },
+   {
+    "fips": "51683",
+    "name": "Manassas city",
+    "state": "VA",
+    "population": 44332
+   },
+   {
+    "fips": "51685",
+    "name": "Manassas Park city",
+    "state": "VA",
+    "population": 16560
+   },
+   {
+    "fips": "54037",
+    "name": "Jefferson County",
+    "state": "WV",
+    "population": 63102
+   },
+   {
+    "fips": "24021",
+    "name": "Frederick County",
+    "state": "MD",
+    "population": 302883
+   },
+   {
+    "fips": "24031",
+    "name": "Montgomery County",
+    "state": "MD",
+    "population": 1074582
+   },
+   {
+    "fips": "11001",
+    "name": "District of Columbia",
+    "state": "DC",
+    "population": 693645
+   },
+   {
+    "fips": "24017",
+    "name": "Charles County",
+    "state": "MD",
+    "population": 176593
+   },
+   {
+    "fips": "24033",
+    "name": "Prince George's County",
+    "state": "MD",
+    "population": 970374
+   }
+  ],
+  "population": 6465724,
+  "utilities": [
+   19876,
+   1167,
+   15270,
+   15263,
+   40228,
+   13640,
+   17637,
+   17066,
+   13762,
+   11560,
+   4619,
+   6803,
+   18901
+  ]
+ },
+ {
+  "cbsa": "33100",
+  "name": "Miami-Fort Lauderdale-West Palm Beach, FL",
+  "counties": [
+   {
+    "fips": "12011",
+    "name": "Broward County",
+    "state": "FL",
+    "population": 2013317
+   },
+   {
+    "fips": "12086",
+    "name": "Miami-Dade County",
+    "state": "FL",
+    "population": 2802029
+   },
+   {
+    "fips": "12099",
+    "name": "Palm Beach County",
+    "state": "FL",
+    "population": 1575726
+   }
+  ],
+  "population": 6391072,
+  "utilities": [
+   6452,
+   10857,
+   10620,
+   8795
+  ]
+ },
+ {
+  "cbsa": "37980",
+  "name": "Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",
+  "counties": [
+   {
+    "fips": "34005",
+    "name": "Burlington County",
+    "state": "NJ",
+    "population": 481439
+   },
+   {
+    "fips": "34007",
+    "name": "Camden County",
+    "state": "NJ",
+    "population": 535799
+   },
+   {
+    "fips": "34015",
+    "name": "Gloucester County",
+    "state": "NJ",
+    "population": 312638
+   },
+   {
+    "fips": "42017",
+    "name": "Bucks County",
+    "state": "PA",
+    "population": 647828
+   },
+   {
+    "fips": "42029",
+    "name": "Chester County",
+    "state": "PA",
+    "population": 557116
+   },
+   {
+    "fips": "42091",
+    "name": "Montgomery County",
+    "state": "PA",
+    "population": 877643
+   },
+   {
+    "fips": "42045",
+    "name": "Delaware County",
+    "state": "PA",
+    "population": 580937
+   },
+   {
+    "fips": "42101",
+    "name": "Philadelphia County",
+    "state": "PA",
+    "population": 1574281
+   },
+   {
+    "fips": "10003",
+    "name": "New Castle County",
+    "state": "DE",
+    "population": 588026
+   },
+   {
+    "fips": "24015",
+    "name": "Cecil County",
+    "state": "MD",
+    "population": 107131
+   },
+   {
+    "fips": "34033",
+    "name": "Salem County",
+    "state": "NJ",
+    "population": 66280
+   }
+  ],
+  "population": 6329118,
+  "utilities": [
+   15477,
+   66101,
+   14940,
+   14715,
+   9726,
+   963,
+   5027,
+   3503,
+   13519,
+   12478,
+   61353,
+   8254,
+   10702,
+   13424,
+   14648,
+   14792,
+   15541,
+   17457
+  ]
+ },
+ {
+  "cbsa": "38060",
+  "name": "Phoenix-Mesa-Chandler, AZ",
+  "counties": [
+   {
+    "fips": "04013",
+    "name": "Maricopa County",
+    "state": "AZ",
+    "population": 4689558
+   },
+   {
+    "fips": "04021",
+    "name": "Pinal County",
+    "state": "AZ",
+    "population": 539380
+   }
+  ],
+  "population": 5228938,
+  "utilities": [
+   803,
+   16572,
+   19189,
+   30518,
+   12351,
+   19604,
+   15048,
+   65261,
+   5729,
+   25866,
+   27000,
+   2469,
+   8139,
+   8700,
+   13961,
+   14543,
+   15049,
+   20618,
+   40355
+  ]
+ },
+ {
+  "cbsa": "14460",
+  "name": "Boston-Cambridge-Newton, MA-NH",
+  "counties": [
+   {
+    "fips": "25021",
+    "name": "Norfolk County",
+    "state": "MA",
+    "population": 739749
+   },
+   {
+    "fips": "25023",
+    "name": "Plymouth County",
+    "state": "MA",
+    "population": 546829
+   },
+   {
+    "fips": "25025",
+    "name": "Suffolk County",
+    "state": "MA",
+    "population": 791891
+   },
+   {
+    "fips": "25009",
+    "name": "Essex County",
+    "state": "MA",
+    "population": 826653
+   },
+   {
+    "fips": "25017",
+    "name": "Middlesex County",
+    "state": "MA",
+    "population": 1669979
+   },
+   {
+    "fips": "33015",
+    "name": "Rockingham County",
+    "state": "NH",
+    "population": 324077
+   },
+   {
+    "fips": "33017",
+    "name": "Strafford County",
+    "state": "NH",
+    "population": 135043
+   }
+  ],
+  "population": 5034221,
+  "utilities": [
+   54913,
+   11804,
+   15472,
+   13441,
+   24590,
+   26510,
+   6374,
+   15748,
+   14605,
+   12473,
+   2144,
+   13839,
+   8973,
+   5480,
+   20310,
+   11085,
+   1523,
+   4147,
+   7130,
+   7715,
+   7723,
+   8796,
+   8797,
+   9442,
+   11624,
+   12296,
+   12477,
+   16377,
+   19979,
+   49848
+  ]
+ },
+ {
+  "cbsa": "40140",
+  "name": "Riverside-San Bernardino-Ontario, CA",
+  "counties": [
+   {
+    "fips": "06065",
+    "name": "Riverside County",
+    "state": "CA",
+    "population": 2544916
+   },
+   {
+    "fips": "06071",
+    "name": "San Bernardino County",
+    "state": "CA",
+    "population": 2224091
+   }
+  ],
+  "population": 4769007,
+  "utilities": [
+   14328,
+   17609,
+   9216,
+   16088,
+   17612,
+   4003,
+   55787,
+   4390,
+   27000,
+   694,
+   1192,
+   3990,
+   13149,
+   55962,
+   56224,
+   58123,
+   58789
+  ]
+ },
+ {
+  "cbsa": "41860",
+  "name": "San Francisco-Oakland-Fremont, CA",
+  "counties": [
+   {
+    "fips": "06001",
+    "name": "Alameda County",
+    "state": "CA",
+    "population": 1636630
+   },
+   {
+    "fips": "06013",
+    "name": "Contra Costa County",
+    "state": "CA",
+    "population": 1170070
+   },
+   {
+    "fips": "06075",
+    "name": "San Francisco County",
+    "state": "CA",
+    "population": 826079
+   },
+   {
+    "fips": "06081",
+    "name": "San Mateo County",
+    "state": "CA",
+    "population": 743568
+   },
+   {
+    "fips": "06041",
+    "name": "Marin County",
+    "state": "CA",
+    "population": 253694
+   }
+  ],
+  "population": 4630041,
+  "utilities": [
+   14328,
+   207,
+   16612,
+   27000,
+   60715
+  ]
+ },
+ {
+  "cbsa": "19820",
+  "name": "Detroit-Warren-Dearborn, MI",
+  "counties": [
+   {
+    "fips": "26163",
+    "name": "Wayne County",
+    "state": "MI",
+    "population": 1769038
+   },
+   {
+    "fips": "26087",
+    "name": "Lapeer County",
+    "state": "MI",
+    "population": 89516
+   },
+   {
+    "fips": "26093",
+    "name": "Livingston County",
+    "state": "MI",
+    "population": 197315
+   },
+   {
+    "fips": "26099",
+    "name": "Macomb County",
+    "state": "MI",
+    "population": 886221
+   },
+   {
+    "fips": "26125",
+    "name": "Oakland County",
+    "state": "MI",
+    "population": 1288337
+   },
+   {
+    "fips": "26147",
+    "name": "St. Clair County",
+    "state": "MI",
+    "population": 160486
+   }
+  ],
+  "population": 4390913,
+  "utilities": [
+   5109,
+   4254,
+   21048
+  ]
+ },
+ {
+  "cbsa": "42660",
+  "name": "Seattle-Tacoma-Bellevue, WA",
+  "counties": [
+   {
+    "fips": "53061",
+    "name": "Snohomish County",
+    "state": "WA",
+    "population": 870656
+   },
+   {
+    "fips": "53033",
+    "name": "King County",
+    "state": "WA",
+    "population": 2344939
+   },
+   {
+    "fips": "53053",
+    "name": "Pierce County",
+    "state": "WA",
+    "population": 946288
+   }
+  ],
+  "population": 4161883,
+  "utilities": [
+   15500,
+   16868,
+   17470,
+   18429,
+   3413,
+   15419,
+   14668,
+   10944,
+   5832,
+   10627,
+   1738,
+   5631,
+   12616,
+   14012,
+   14505,
+   16462,
+   18051,
+   18448
+  ]
+ },
+ {
+  "cbsa": "33460",
+  "name": "Minneapolis-St. Paul-Bloomington, MN-WI",
+  "counties": [
+   {
+    "fips": "27003",
+    "name": "Anoka County",
+    "state": "MN",
+    "population": 381605
+   },
+   {
+    "fips": "27019",
+    "name": "Carver County",
+    "state": "MN",
+    "population": 114379
+   },
+   {
+    "fips": "27025",
+    "name": "Chisago County",
+    "state": "MN",
+    "population": 59142
+   },
+   {
+    "fips": "27037",
+    "name": "Dakota County",
+    "state": "MN",
+    "population": 457710
+   },
+   {
+    "fips": "27053",
+    "name": "Hennepin County",
+    "state": "MN",
+    "population": 1284784
+   },
+   {
+    "fips": "27059",
+    "name": "Isanti County",
+    "state": "MN",
+    "population": 44386
+   },
+   {
+    "fips": "27079",
+    "name": "Le Sueur County",
+    "state": "MN",
+    "population": 29453
+   },
+   {
+    "fips": "27095",
+    "name": "Mille Lacs County",
+    "state": "MN",
+    "population": 27753
+   },
+   {
+    "fips": "27123",
+    "name": "Ramsey County",
+    "state": "MN",
+    "population": 541623
+   },
+   {
+    "fips": "27139",
+    "name": "Scott County",
+    "state": "MN",
+    "population": 159017
+   },
+   {
+    "fips": "27141",
+    "name": "Sherburne County",
+    "state": "MN",
+    "population": 104194
+   },
+   {
+    "fips": "27163",
+    "name": "Washington County",
+    "state": "MN",
+    "population": 286895
+   },
+   {
+    "fips": "27171",
+    "name": "Wright County",
+    "state": "MN",
+    "population": 157559
+   },
+   {
+    "fips": "55093",
+    "name": "Pierce County",
+    "state": "WI",
+    "population": 43519
+   },
+   {
+    "fips": "55109",
+    "name": "St. Croix County",
+    "state": "WI",
+    "population": 98276
+   }
+  ],
+  "population": 3790295,
+  "utilities": [
+   13781,
+   13780,
+   689,
+   25177,
+   5574,
+   20996,
+   12651,
+   15344,
+   16971,
+   1884,
+   12546,
+   5773,
+   691,
+   3400,
+   18047,
+   5417,
+   12227,
+   16082,
+   13481,
+   2485,
+   5015,
+   7460,
+   10037,
+   10814,
+   11910,
+   13480,
+   13730,
+   15034,
+   15387,
+   17868,
+   17900
+  ]
+ },
+ {
+  "cbsa": "45300",
+  "name": "Tampa-St. Petersburg-Clearwater, FL",
+  "counties": [
+   {
+    "fips": "12103",
+    "name": "Pinellas County",
+    "state": "FL",
+    "population": 948563
+   },
+   {
+    "fips": "12053",
+    "name": "Hernando County",
+    "state": "FL",
+    "population": 221701
+   },
+   {
+    "fips": "12057",
+    "name": "Hillsborough County",
+    "state": "FL",
+    "population": 1574115
+   },
+   {
+    "fips": "12101",
+    "name": "Pasco County",
+    "state": "FL",
+    "population": 674516
+   }
+  ],
+  "population": 3418895,
+  "utilities": [
+   6455,
+   18454,
+   18304,
+   20885,
+   14606
+  ]
+ },
+ {
+  "cbsa": "41740",
+  "name": "San Diego-Chula Vista-Carlsbad, CA",
+  "counties": [
+   {
+    "fips": "06073",
+    "name": "San Diego County",
+    "state": "CA",
+    "population": 3282248
+   }
+  ],
+  "population": 3282248,
+  "utilities": [
+   14328,
+   17609,
+   16609,
+   9216,
+   5969
+  ]
+ },
+ {
+  "cbsa": "19740",
+  "name": "Denver-Aurora-Centennial, CO",
+  "counties": [
+   {
+    "fips": "08001",
+    "name": "Adams County",
+    "state": "CO",
+    "population": 554668
+   },
+   {
+    "fips": "08005",
+    "name": "Arapahoe County",
+    "state": "CO",
+    "population": 673820
+   },
+   {
+    "fips": "08014",
+    "name": "Broomfield County",
+    "state": "CO",
+    "population": 79174
+   },
+   {
+    "fips": "08019",
+    "name": "Clear Creek County",
+    "state": "CO",
+    "population": 8994
+   },
+   {
+    "fips": "08031",
+    "name": "Denver County",
+    "state": "CO",
+    "population": 740613
+   },
+   {
+    "fips": "08035",
+    "name": "Douglas County",
+    "state": "CO",
+    "population": 399396
+   },
+   {
+    "fips": "08039",
+    "name": "Elbert County",
+    "state": "CO",
+    "population": 30534
+   },
+   {
+    "fips": "08047",
+    "name": "Gilpin County",
+    "state": "CO",
+    "population": 6073
+   },
+   {
+    "fips": "08059",
+    "name": "Jefferson County",
+    "state": "CO",
+    "population": 580451
+   },
+   {
+    "fips": "08093",
+    "name": "Park County",
+    "state": "CO",
+    "population": 18314
+   }
+  ],
+  "population": 3092037,
+  "utilities": [
+   15466,
+   9336,
+   19499,
+   13058,
+   12860,
+   27000
+  ]
+ },
+ {
+  "cbsa": "36740",
+  "name": "Orlando-Kissimmee-Sanford, FL",
+  "counties": [
+   {
+    "fips": "12069",
+    "name": "Lake County",
+    "state": "FL",
+    "population": 456068
+   },
+   {
+    "fips": "12095",
+    "name": "Orange County",
+    "state": "FL",
+    "population": 1528002
+   },
+   {
+    "fips": "12097",
+    "name": "Osceola County",
+    "state": "FL",
+    "population": 481718
+   },
+   {
+    "fips": "12117",
+    "name": "Seminole County",
+    "state": "FL",
+    "population": 491884
+   }
+  ],
+  "population": 2957672,
+  "utilities": [
+   6452,
+   6455,
+   14610,
+   18304,
+   3757,
+   10376,
+   14606,
+   10868,
+   58124,
+   15776,
+   13033
+  ]
+ },
+ {
+  "cbsa": "16740",
+  "name": "Charlotte-Concord-Gastonia, NC-SC",
+  "counties": [
+   {
+    "fips": "37007",
+    "name": "Anson County",
+    "state": "NC",
+    "population": 21758
+   },
+   {
+    "fips": "37025",
+    "name": "Cabarrus County",
+    "state": "NC",
+    "population": 249725
+   },
+   {
+    "fips": "37071",
+    "name": "Gaston County",
+    "state": "NC",
+    "population": 246558
+   },
+   {
+    "fips": "37097",
+    "name": "Iredell County",
+    "state": "NC",
+    "population": 211798
+   },
+   {
+    "fips": "37109",
+    "name": "Lincoln County",
+    "state": "NC",
+    "population": 98654
+   },
+   {
+    "fips": "37119",
+    "name": "Mecklenburg County",
+    "state": "NC",
+    "population": 1233383
+   },
+   {
+    "fips": "37159",
+    "name": "Rowan County",
+    "state": "NC",
+    "population": 155096
+   },
+   {
+    "fips": "37179",
+    "name": "Union County",
+    "state": "NC",
+    "population": 267674
+   },
+   {
+    "fips": "45023",
+    "name": "Chester County",
+    "state": "SC",
+    "population": 33001
+   },
+   {
+    "fips": "45057",
+    "name": "Lancaster County",
+    "state": "SC",
+    "population": 114296
+   },
+   {
+    "fips": "45091",
+    "name": "York County",
+    "state": "SC",
+    "population": 306887
+   }
+  ],
+  "population": 2938830,
+  "utilities": [
+   5416,
+   19876,
+   3046,
+   21632,
+   19435,
+   16496,
+   21002,
+   16195,
+   5929,
+   4150,
+   7027,
+   2212,
+   11355,
+   14717,
+   18022,
+   12801,
+   9087,
+   11118,
+   3437,
+   4365,
+   4739,
+   10324,
+   10669,
+   11035,
+   15062
+  ]
+ },
+ {
+  "cbsa": "12580",
+  "name": "Baltimore-Columbia-Towson, MD",
+  "counties": [
+   {
+    "fips": "24003",
+    "name": "Anne Arundel County",
+    "state": "MD",
+    "population": 603380
+   },
+   {
+    "fips": "24005",
+    "name": "Baltimore County",
+    "state": "MD",
+    "population": 847650
+   },
+   {
+    "fips": "24013",
+    "name": "Carroll County",
+    "state": "MD",
+    "population": 176677
+   },
+   {
+    "fips": "24025",
+    "name": "Harford County",
+    "state": "MD",
+    "population": 266446
+   },
+   {
+    "fips": "24027",
+    "name": "Howard County",
+    "state": "MD",
+    "population": 339183
+   },
+   {
+    "fips": "24035",
+    "name": "Queen Anne's County",
+    "state": "MD",
+    "population": 54448
+   },
+   {
+    "fips": "24510",
+    "name": "Baltimore city",
+    "state": "MD",
+    "population": 569997
+   }
+  ],
+  "population": 2857781,
+  "utilities": [
+   1167,
+   5027,
+   15263,
+   3503
+  ]
+ },
+ {
+  "cbsa": "41180",
+  "name": "St. Louis, MO-IL",
+  "counties": [
+   {
+    "fips": "17005",
+    "name": "Bond County",
+    "state": "IL",
+    "population": 16959
+   },
+   {
+    "fips": "17013",
+    "name": "Calhoun County",
+    "state": "IL",
+    "population": 4300
+   },
+   {
+    "fips": "17027",
+    "name": "Clinton County",
+    "state": "IL",
+    "population": 37128
+   },
+   {
+    "fips": "17083",
+    "name": "Jersey County",
+    "state": "IL",
+    "population": 21160
+   },
+   {
+    "fips": "17117",
+    "name": "Macoupin County",
+    "state": "IL",
+    "population": 43748
+   },
+   {
+    "fips": "17119",
+    "name": "Madison County",
+    "state": "IL",
+    "population": 263110
+   },
+   {
+    "fips": "17133",
+    "name": "Monroe County",
+    "state": "IL",
+    "population": 34840
+   },
+   {
+    "fips": "17163",
+    "name": "St. Clair County",
+    "state": "IL",
+    "population": 250708
+   },
+   {
+    "fips": "29071",
+    "name": "Franklin County",
+    "state": "MO",
+    "population": 108090
+   },
+   {
+    "fips": "29099",
+    "name": "Jefferson County",
+    "state": "MO",
+    "population": 233132
+   },
+   {
+    "fips": "29113",
+    "name": "Lincoln County",
+    "state": "MO",
+    "population": 66676
+   },
+   {
+    "fips": "29183",
+    "name": "St. Charles County",
+    "state": "MO",
+    "population": 426499
+   },
+   {
+    "fips": "29189",
+    "name": "St. Louis County",
+    "state": "MO",
+    "population": 990911
+   },
+   {
+    "fips": "29219",
+    "name": "Warren County",
+    "state": "MO",
+    "population": 39016
+   },
+   {
+    "fips": "29510",
+    "name": "St. Louis city",
+    "state": "MO",
+    "population": 278144
+   }
+  ],
+  "population": 2814421,
+  "utilities": [
+   19436,
+   56697,
+   4675,
+   3600,
+   17697,
+   16751,
+   4524,
+   18955,
+   5535,
+   4160,
+   10370,
+   4237,
+   2188,
+   3037,
+   3806,
+   6764,
+   8573,
+   8824,
+   9209,
+   11790,
+   12803,
+   16420,
+   18273,
+   20180
+  ]
+ },
+ {
+  "cbsa": "41700",
+  "name": "San Antonio-New Braunfels, TX",
+  "counties": [
+   {
+    "fips": "48013",
+    "name": "Atascosa County",
+    "state": "TX",
+    "population": 53590
+   },
+   {
+    "fips": "48019",
+    "name": "Bandera County",
+    "state": "TX",
+    "population": 22876
+   },
+   {
+    "fips": "48029",
+    "name": "Bexar County",
+    "state": "TX",
+    "population": 2160088
+   },
+   {
+    "fips": "48091",
+    "name": "Comal County",
+    "state": "TX",
+    "population": 209166
+   },
+   {
+    "fips": "48187",
+    "name": "Guadalupe County",
+    "state": "TX",
+    "population": 201111
+   },
+   {
+    "fips": "48259",
+    "name": "Kendall County",
+    "state": "TX",
+    "population": 53289
+   },
+   {
+    "fips": "48325",
+    "name": "Medina County",
+    "state": "TX",
+    "population": 56881
+   },
+   {
+    "fips": "48493",
+    "name": "Wilson County",
+    "state": "TX",
+    "population": 56139
+   }
+  ],
+  "population": 2813140,
+  "utilities": [
+   16604,
+   3278,
+   14626,
+   1892,
+   7752,
+   13418,
+   3282,
+   1175,
+   12268,
+   10009,
+   6427,
+   16900,
+   1913,
+   3168,
+   8801
+  ]
+ },
+ {
+  "cbsa": "12420",
+  "name": "Austin-Round Rock-San Marcos, TX",
+  "counties": [
+   {
+    "fips": "48021",
+    "name": "Bastrop County",
+    "state": "TX",
+    "population": 118908
+   },
+   {
+    "fips": "48055",
+    "name": "Caldwell County",
+    "state": "TX",
+    "population": 55150
+   },
+   {
+    "fips": "48209",
+    "name": "Hays County",
+    "state": "TX",
+    "population": 304390
+   },
+   {
+    "fips": "48453",
+    "name": "Travis County",
+    "state": "TX",
+    "population": 1389670
+   },
+   {
+    "fips": "48491",
+    "name": "Williamson County",
+    "state": "TX",
+    "population": 752827
+   }
+  ],
+  "population": 2620945,
+  "utilities": [
+   44372,
+   3278,
+   1015,
+   14626,
+   1892,
+   7752,
+   7129,
+   28978,
+   6183,
+   1273,
+   1287,
+   1324,
+   11119,
+   11316,
+   17453
+  ]
+ },
+ {
+  "cbsa": "38900",
+  "name": "Portland-Vancouver-Hillsboro, OR-WA",
+  "counties": [
+   {
+    "fips": "41005",
+    "name": "Clackamas County",
+    "state": "OR",
+    "population": 426280
+   },
+   {
+    "fips": "41009",
+    "name": "Columbia County",
+    "state": "OR",
+    "population": 54091
+   },
+   {
+    "fips": "41051",
+    "name": "Multnomah County",
+    "state": "OR",
+    "population": 795391
+   },
+   {
+    "fips": "41067",
+    "name": "Washington County",
+    "state": "OR",
+    "population": 611708
+   },
+   {
+    "fips": "41071",
+    "name": "Yamhill County",
+    "state": "OR",
+    "population": 110024
+   },
+   {
+    "fips": "53011",
+    "name": "Clark County",
+    "state": "WA",
+    "population": 532119
+   },
+   {
+    "fips": "53059",
+    "name": "Skamania County",
+    "state": "WA",
+    "population": 12669
+   }
+  ],
+  "population": 2542282,
+  "utilities": [
+   14354,
+   15248,
+   3660,
+   18917,
+   12187,
+   40438,
+   10393,
+   6582,
+   28541,
+   1738,
+   2955,
+   3136,
+   17279,
+   20385
+  ]
+ },
+ {
+  "cbsa": "40900",
+  "name": "Sacramento-Roseville-Folsom, CA",
+  "counties": [
+   {
+    "fips": "06017",
+    "name": "El Dorado County",
+    "state": "CA",
+    "population": 192323
+   },
+   {
+    "fips": "06061",
+    "name": "Placer County",
+    "state": "CA",
+    "population": 442081
+   },
+   {
+    "fips": "06067",
+    "name": "Sacramento County",
+    "state": "CA",
+    "population": 1618460
+   },
+   {
+    "fips": "06113",
+    "name": "Yolo County",
+    "state": "CA",
+    "population": 224410
+   }
+  ],
+  "population": 2477274,
+  "utilities": [
+   14328,
+   16534,
+   16295,
+   57483,
+   27000,
+   19229
+  ]
+ },
+ {
+  "cbsa": "38300",
+  "name": "Pittsburgh, PA",
+  "counties": [
+   {
+    "fips": "42003",
+    "name": "Allegheny County",
+    "state": "PA",
+    "population": 1225035
+   },
+   {
+    "fips": "42005",
+    "name": "Armstrong County",
+    "state": "PA",
+    "population": 63698
+   },
+   {
+    "fips": "42007",
+    "name": "Beaver County",
+    "state": "PA",
+    "population": 166032
+   },
+   {
+    "fips": "42019",
+    "name": "Butler County",
+    "state": "PA",
+    "population": 200169
+   },
+   {
+    "fips": "42051",
+    "name": "Fayette County",
+    "state": "PA",
+    "population": 123021
+   },
+   {
+    "fips": "42073",
+    "name": "Lawrence County",
+    "state": "PA",
+    "population": 83911
+   },
+   {
+    "fips": "42125",
+    "name": "Washington County",
+    "state": "PA",
+    "population": 210802
+   },
+   {
+    "fips": "42129",
+    "name": "Westmoreland County",
+    "state": "PA",
+    "population": 349324
+   }
+  ],
+  "population": 2421992,
+  "utilities": [
+   66101,
+   5487,
+   40224,
+   40292,
+   40167,
+   5828,
+   13489,
+   15104,
+   18456,
+   20070,
+   21160,
+   40219
+  ]
+ },
+ {
+  "cbsa": "29820",
+  "name": "Las Vegas-Henderson-North Las Vegas, NV",
+  "counties": [
+   {
+    "fips": "32003",
+    "name": "Clark County",
+    "state": "NV",
+    "population": 2407226
+   }
+  ],
+  "population": 2407226,
+  "utilities": [
+   17609,
+   13407,
+   19840,
+   14245,
+   2008,
+   27000,
+   4356,
+   58123
+  ]
+ },
+ {
+  "cbsa": "17140",
+  "name": "Cincinnati, OH-KY-IN",
+  "counties": [
+   {
+    "fips": "18029",
+    "name": "Dearborn County",
+    "state": "IN",
+    "population": 51609
+   },
+   {
+    "fips": "18047",
+    "name": "Franklin County",
+    "state": "IN",
+    "population": 23286
+   },
+   {
+    "fips": "18115",
+    "name": "Ohio County",
+    "state": "IN",
+    "population": 5994
+   },
+   {
+    "fips": "21015",
+    "name": "Boone County",
+    "state": "KY",
+    "population": 145316
+   },
+   {
+    "fips": "21023",
+    "name": "Bracken County",
+    "state": "KY",
+    "population": 8511
+   },
+   {
+    "fips": "21037",
+    "name": "Campbell County",
+    "state": "KY",
+    "population": 95441
+   },
+   {
+    "fips": "21077",
+    "name": "Gallatin County",
+    "state": "KY",
+    "population": 8840
+   },
+   {
+    "fips": "21081",
+    "name": "Grant County",
+    "state": "KY",
+    "population": 26181
+   },
+   {
+    "fips": "21117",
+    "name": "Kenton County",
+    "state": "KY",
+    "population": 175779
+   },
+   {
+    "fips": "21191",
+    "name": "Pendleton County",
+    "state": "KY",
+    "population": 14800
+   },
+   {
+    "fips": "39015",
+    "name": "Brown County",
+    "state": "OH",
+    "population": 44397
+   },
+   {
+    "fips": "39017",
+    "name": "Butler County",
+    "state": "OH",
+    "population": 400128
+   },
+   {
+    "fips": "39025",
+    "name": "Clermont County",
+    "state": "OH",
+    "population": 216977
+   },
+   {
+    "fips": "39061",
+    "name": "Hamilton County",
+    "state": "OH",
+    "population": 838418
+   },
+   {
+    "fips": "39165",
+    "name": "Warren County",
+    "state": "OH",
+    "population": 257181
+   }
+  ],
+  "population": 2312858,
+  "utilities": [
+   15470,
+   3542,
+   10171,
+   4922,
+   19446,
+   18085,
+   14251,
+   1886,
+   14724,
+   7977,
+   17599,
+   6442,
+   17038,
+   20216,
+   2651,
+   10830,
+   4960,
+   118,
+   1650,
+   6178,
+   6907,
+   7131,
+   7973,
+   10798,
+   16062,
+   16068,
+   20731
+  ]
+ },
+ {
+  "cbsa": "28140",
+  "name": "Kansas City, MO-KS",
+  "counties": [
+   {
+    "fips": "20091",
+    "name": "Johnson County",
+    "state": "KS",
+    "population": 636906
+   },
+   {
+    "fips": "20103",
+    "name": "Leavenworth County",
+    "state": "KS",
+    "population": 84590
+   },
+   {
+    "fips": "20107",
+    "name": "Linn County",
+    "state": "KS",
+    "population": 9950
+   },
+   {
+    "fips": "20121",
+    "name": "Miami County",
+    "state": "KS",
+    "population": 36240
+   },
+   {
+    "fips": "20209",
+    "name": "Wyandotte County",
+    "state": "KS",
+    "population": 170597
+   },
+   {
+    "fips": "29013",
+    "name": "Bates County",
+    "state": "MO",
+    "population": 16512
+   },
+   {
+    "fips": "29025",
+    "name": "Caldwell County",
+    "state": "MO",
+    "population": 9012
+   },
+   {
+    "fips": "29037",
+    "name": "Cass County",
+    "state": "MO",
+    "population": 115859
+   },
+   {
+    "fips": "29047",
+    "name": "Clay County",
+    "state": "MO",
+    "population": 265032
+   },
+   {
+    "fips": "29049",
+    "name": "Clinton County",
+    "state": "MO",
+    "population": 21661
+   },
+   {
+    "fips": "29095",
+    "name": "Jackson County",
+    "state": "MO",
+    "population": 732994
+   },
+   {
+    "fips": "29107",
+    "name": "Lafayette County",
+    "state": "MO",
+    "population": 33531
+   },
+   {
+    "fips": "29165",
+    "name": "Platte County",
+    "state": "MO",
+    "population": 114400
+   },
+   {
+    "fips": "29177",
+    "name": "Ray County",
+    "state": "MO",
+    "population": 23398
+   }
+  ],
+  "population": 2270682,
+  "utilities": [
+   19436,
+   10000,
+   22500,
+   12698,
+   10005,
+   9996,
+   9231,
+   15138,
+   10019,
+   14192,
+   20363,
+   6181,
+   1024,
+   1726,
+   2647,
+   2900,
+   6949,
+   8199,
+   8567,
+   13971,
+   14203,
+   15336,
+   16854,
+   22646
+  ]
+ },
+ {
+  "cbsa": "18140",
+  "name": "Columbus, OH",
+  "counties": [
+   {
+    "fips": "39041",
+    "name": "Delaware County",
+    "state": "OH",
+    "population": 242032
+   },
+   {
+    "fips": "39045",
+    "name": "Fairfield County",
+    "state": "OH",
+    "population": 169752
+   },
+   {
+    "fips": "39049",
+    "name": "Franklin County",
+    "state": "OH",
+    "population": 1361536
+   },
+   {
+    "fips": "39073",
+    "name": "Hocking County",
+    "state": "OH",
+    "population": 27512
+   },
+   {
+    "fips": "39089",
+    "name": "Licking County",
+    "state": "OH",
+    "population": 185564
+   },
+   {
+    "fips": "39097",
+    "name": "Madison County",
+    "state": "OH",
+    "population": 46985
+   },
+   {
+    "fips": "39117",
+    "name": "Morrow County",
+    "state": "OH",
+    "population": 36305
+   },
+   {
+    "fips": "39127",
+    "name": "Perry County",
+    "state": "OH",
+    "population": 35918
+   },
+   {
+    "fips": "39129",
+    "name": "Pickaway County",
+    "state": "OH",
+    "population": 62978
+   },
+   {
+    "fips": "39159",
+    "name": "Union County",
+    "state": "OH",
+    "population": 73446
+   }
+  ],
+  "population": 2242028,
+  "utilities": [
+   14006,
+   13998,
+   3542,
+   4922,
+   18085,
+   10668,
+   12990,
+   4065,
+   20477,
+   15054,
+   7891,
+   19501,
+   6804,
+   6914,
+   13950,
+   15432,
+   36189
+  ]
+ },
+ {
+  "cbsa": "26900",
+  "name": "Indianapolis-Carmel-Greenwood, IN",
+  "counties": [
+   {
+    "fips": "18011",
+    "name": "Boone County",
+    "state": "IN",
+    "population": 80689
+   },
+   {
+    "fips": "18013",
+    "name": "Brown County",
+    "state": "IN",
+    "population": 15777
+   },
+   {
+    "fips": "18057",
+    "name": "Hamilton County",
+    "state": "IN",
+    "population": 387036
+   },
+   {
+    "fips": "18059",
+    "name": "Hancock County",
+    "state": "IN",
+    "population": 90969
+   },
+   {
+    "fips": "18063",
+    "name": "Hendricks County",
+    "state": "IN",
+    "population": 193510
+   },
+   {
+    "fips": "18081",
+    "name": "Johnson County",
+    "state": "IN",
+    "population": 174262
+   },
+   {
+    "fips": "18095",
+    "name": "Madison County",
+    "state": "IN",
+    "population": 135088
+   },
+   {
+    "fips": "18097",
+    "name": "Marion County",
+    "state": "IN",
+    "population": 992196
+   },
+   {
+    "fips": "18109",
+    "name": "Morgan County",
+    "state": "IN",
+    "population": 74967
+   },
+   {
+    "fips": "18145",
+    "name": "Shelby County",
+    "state": "IN",
+    "population": 45882
+   },
+   {
+    "fips": "18159",
+    "name": "Tipton County",
+    "state": "IN",
+    "population": 15319
+   }
+  ],
+  "population": 2205695,
+  "utilities": [
+   15470,
+   9324,
+   9273,
+   8447,
+   12929,
+   636,
+   9778,
+   18940,
+   9576,
+   8000,
+   24753,
+   17038,
+   7627,
+   9613,
+   6707,
+   157,
+   1208,
+   2289,
+   3815,
+   5655,
+   6735,
+   8466,
+   9646,
+   14659,
+   15116,
+   18887,
+   18942
+  ]
+ },
+ {
+  "cbsa": "34980",
+  "name": "Nashville-Davidson--Murfreesboro--Franklin, TN",
+  "counties": [
+   {
+    "fips": "47015",
+    "name": "Cannon County",
+    "state": "TN",
+    "population": 15296
+   },
+   {
+    "fips": "47021",
+    "name": "Cheatham County",
+    "state": "TN",
+    "population": 42778
+   },
+   {
+    "fips": "47037",
+    "name": "Davidson County",
+    "state": "TN",
+    "population": 745904
+   },
+   {
+    "fips": "47043",
+    "name": "Dickson County",
+    "state": "TN",
+    "population": 58662
+   },
+   {
+    "fips": "47081",
+    "name": "Hickman County",
+    "state": "TN",
+    "population": 26219
+   },
+   {
+    "fips": "47111",
+    "name": "Macon County",
+    "state": "TN",
+    "population": 27663
+   },
+   {
+    "fips": "47119",
+    "name": "Maury County",
+    "state": "TN",
+    "population": 118131
+   },
+   {
+    "fips": "47147",
+    "name": "Robertson County",
+    "state": "TN",
+    "population": 80175
+   },
+   {
+    "fips": "47149",
+    "name": "Rutherford County",
+    "state": "TN",
+    "population": 386352
+   },
+   {
+    "fips": "47159",
+    "name": "Smith County",
+    "state": "TN",
+    "population": 20981
+   },
+   {
+    "fips": "47165",
+    "name": "Sumner County",
+    "state": "TN",
+    "population": 215538
+   },
+   {
+    "fips": "47169",
+    "name": "Trousdale County",
+    "state": "TN",
+    "population": 12623
+   },
+   {
+    "fips": "47187",
+    "name": "Williamson County",
+    "state": "TN",
+    "population": 272061
+   },
+   {
+    "fips": "47189",
+    "name": "Wilson County",
+    "state": "TN",
+    "population": 175033
+   }
+  ],
+  "population": 2197416,
+  "utilities": [
+   13216,
+   12470,
+   4624,
+   5399,
+   19162,
+   19574,
+   5148,
+   3855,
+   12330,
+   2960,
+   6923,
+   17829,
+   13039
+  ]
+ },
+ {
+  "cbsa": "17410",
+  "name": "Cleveland, OH",
+  "counties": [
+   {
+    "fips": "39007",
+    "name": "Ashtabula County",
+    "state": "OH",
+    "population": 96713
+   },
+   {
+    "fips": "39035",
+    "name": "Cuyahoga County",
+    "state": "OH",
+    "population": 1232925
+   },
+   {
+    "fips": "39055",
+    "name": "Geauga County",
+    "state": "OH",
+    "population": 95676
+   },
+   {
+    "fips": "39085",
+    "name": "Lake County",
+    "state": "OH",
+    "population": 232217
+   },
+   {
+    "fips": "39093",
+    "name": "Lorain County",
+    "state": "OH",
+    "population": 323219
+   },
+   {
+    "fips": "39103",
+    "name": "Medina County",
+    "state": "OH",
+    "population": 185025
+   }
+  ],
+  "population": 2165775,
+  "utilities": [
+   13998,
+   3755,
+   3762,
+   11200,
+   19951,
+   14381,
+   560,
+   6335,
+   7445,
+   11126,
+   13949,
+   16951,
+   20313
+  ]
+ },
+ {
+  "cbsa": "41940",
+  "name": "San Jose-Sunnyvale-Santa Clara, CA",
+  "counties": [
+   {
+    "fips": "06069",
+    "name": "San Benito County",
+    "state": "CA",
+    "population": 70082
+   },
+   {
+    "fips": "06085",
+    "name": "Santa Clara County",
+    "state": "CA",
+    "population": 1914391
+   }
+  ],
+  "population": 1984473,
+  "utilities": [
+   14328,
+   16655,
+   14401,
+   27000,
+   61432
+  ]
+ },
+ {
+  "cbsa": "47260",
+  "name": "Virginia Beach-Chesapeake-Norfolk, VA-NC",
+  "counties": [
+   {
+    "fips": "37029",
+    "name": "Camden County",
+    "state": "NC",
+    "population": 11315
+   },
+   {
+    "fips": "37053",
+    "name": "Currituck County",
+    "state": "NC",
+    "population": 33158
+   },
+   {
+    "fips": "37073",
+    "name": "Gates County",
+    "state": "NC",
+    "population": 10234
+   },
+   {
+    "fips": "51073",
+    "name": "Gloucester County",
+    "state": "VA",
+    "population": 40097
+   },
+   {
+    "fips": "51093",
+    "name": "Isle of Wight County",
+    "state": "VA",
+    "population": 41321
+   },
+   {
+    "fips": "51095",
+    "name": "James City County",
+    "state": "VA",
+    "population": 83326
+   },
+   {
+    "fips": "51115",
+    "name": "Mathews County",
+    "state": "VA",
+    "population": 8529
+   },
+   {
+    "fips": "51181",
+    "name": "Surry County",
+    "state": "VA",
+    "population": 6603
+   },
+   {
+    "fips": "51199",
+    "name": "York County",
+    "state": "VA",
+    "population": 71374
+   },
+   {
+    "fips": "51550",
+    "name": "Chesapeake city",
+    "state": "VA",
+    "population": 255332
+   },
+   {
+    "fips": "51650",
+    "name": "Hampton city",
+    "state": "VA",
+    "population": 137315
+   },
+   {
+    "fips": "51700",
+    "name": "Newport News city",
+    "state": "VA",
+    "population": 183230
+   },
+   {
+    "fips": "51710",
+    "name": "Norfolk city",
+    "state": "VA",
+    "population": 231013
+   },
+   {
+    "fips": "51735",
+    "name": "Poquoson city",
+    "state": "VA",
+    "population": 13292
+   },
+   {
+    "fips": "51740",
+    "name": "Portsmouth city",
+    "state": "VA",
+    "population": 96777
+   },
+   {
+    "fips": "51800",
+    "name": "Suffolk city",
+    "state": "VA",
+    "population": 104699
+   },
+   {
+    "fips": "51810",
+    "name": "Virginia Beach city",
+    "state": "VA",
+    "population": 453737
+   },
+   {
+    "fips": "51830",
+    "name": "Williamsburg city",
+    "state": "VA",
+    "population": 15861
+   }
+  ],
+  "population": 1797213,
+  "utilities": [
+   19876,
+   16101,
+   240,
+   15410,
+   4117,
+   6715
+  ]
+ },
+ {
+  "cbsa": "27260",
+  "name": "Jacksonville, FL",
+  "counties": [
+   {
+    "fips": "12003",
+    "name": "Baker County",
+    "state": "FL",
+    "population": 29737
+   },
+   {
+    "fips": "12019",
+    "name": "Clay County",
+    "state": "FL",
+    "population": 239593
+   },
+   {
+    "fips": "12031",
+    "name": "Duval County",
+    "state": "FL",
+    "population": 1062963
+   },
+   {
+    "fips": "12089",
+    "name": "Nassau County",
+    "state": "FL",
+    "population": 106879
+   },
+   {
+    "fips": "12109",
+    "name": "St. Johns County",
+    "state": "FL",
+    "population": 346328
+   }
+  ],
+  "population": 1785500,
+  "utilities": [
+   6452,
+   9617,
+   3757,
+   31833,
+   9616,
+   6457,
+   7593
+  ]
+ },
+ {
+  "cbsa": "39300",
+  "name": "Providence-Warwick, RI-MA",
+  "counties": [
+   {
+    "fips": "25005",
+    "name": "Bristol County",
+    "state": "MA",
+    "population": 593640
+   },
+   {
+    "fips": "44001",
+    "name": "Bristol County",
+    "state": "RI",
+    "population": 50001
+   },
+   {
+    "fips": "44003",
+    "name": "Kent County",
+    "state": "RI",
+    "population": 173495
+   },
+   {
+    "fips": "44005",
+    "name": "Newport County",
+    "state": "RI",
+    "population": 83051
+   },
+   {
+    "fips": "44007",
+    "name": "Providence County",
+    "state": "RI",
+    "population": 678179
+   },
+   {
+    "fips": "44009",
+    "name": "Washington County",
+    "state": "RI",
+    "population": 129795
+   }
+  ],
+  "population": 1708161,
+  "utilities": [
+   54913,
+   11804,
+   13214,
+   18488,
+   13679,
+   11586,
+   14537,
+   1857
+  ]
+ },
+ {
+  "cbsa": "39580",
+  "name": "Raleigh-Cary, NC",
+  "counties": [
+   {
+    "fips": "37069",
+    "name": "Franklin County",
+    "state": "NC",
+    "population": 82037
+   },
+   {
+    "fips": "37101",
+    "name": "Johnston County",
+    "state": "NC",
+    "population": 256448
+   },
+   {
+    "fips": "37183",
+    "name": "Wake County",
+    "state": "NC",
+    "population": 1257235
+   }
+  ],
+  "population": 1595720,
+  "utilities": [
+   5416,
+   3046,
+   19981,
+   17572,
+   20785,
+   719,
+   18957,
+   1571,
+   3731,
+   11228,
+   13687,
+   16914,
+   17451,
+   19974
+  ]
+ },
+ {
+  "cbsa": "33340",
+  "name": "Milwaukee-Waukesha, WI",
+  "counties": [
+   {
+    "fips": "55079",
+    "name": "Milwaukee County",
+    "state": "WI",
+    "population": 924216
+   },
+   {
+    "fips": "55089",
+    "name": "Ozaukee County",
+    "state": "WI",
+    "population": 94346
+   },
+   {
+    "fips": "55131",
+    "name": "Washington County",
+    "state": "WI",
+    "population": 139238
+   },
+   {
+    "fips": "55133",
+    "name": "Waukesha County",
+    "state": "WI",
+    "population": 417210
+   }
+  ],
+  "population": 1575010,
+  "utilities": [
+   20847,
+   13963,
+   8212,
+   3208,
+   17324
+  ]
+ },
+ {
+  "cbsa": "36420",
+  "name": "Oklahoma City, OK",
+  "counties": [
+   {
+    "fips": "40017",
+    "name": "Canadian County",
+    "state": "OK",
+    "population": 187189
+   },
+   {
+    "fips": "40027",
+    "name": "Cleveland County",
+    "state": "OK",
+    "population": 303973
+   },
+   {
+    "fips": "40051",
+    "name": "Grady County",
+    "state": "OK",
+    "population": 59128
+   },
+   {
+    "fips": "40081",
+    "name": "Lincoln County",
+    "state": "OK",
+    "population": 35278
+   },
+   {
+    "fips": "40083",
+    "name": "Logan County",
+    "state": "OK",
+    "population": 55473
+   },
+   {
+    "fips": "40087",
+    "name": "McClain County",
+    "state": "OK",
+    "population": 49647
+   },
+   {
+    "fips": "40109",
+    "name": "Oklahoma County",
+    "state": "OK",
+    "population": 822125
+   }
+  ],
+  "population": 1512813,
+  "utilities": [
+   14063,
+   15474,
+   14062,
+   5661,
+   5598,
+   60482,
+   2911,
+   3226,
+   4401,
+   14775,
+   3478,
+   16382,
+   10970,
+   11691,
+   14176,
+   15311,
+   15515,
+   18224
+  ]
+ },
+ {
+  "cbsa": "31140",
+  "name": "Louisville/Jefferson County, KY-IN",
+  "counties": [
+   {
+    "fips": "18019",
+    "name": "Clark County",
+    "state": "IN",
+    "population": 130451
+   },
+   {
+    "fips": "18043",
+    "name": "Floyd County",
+    "state": "IN",
+    "population": 82153
+   },
+   {
+    "fips": "18061",
+    "name": "Harrison County",
+    "state": "IN",
+    "population": 40437
+   },
+   {
+    "fips": "18175",
+    "name": "Washington County",
+    "state": "IN",
+    "population": 28383
+   },
+   {
+    "fips": "21029",
+    "name": "Bullitt County",
+    "state": "KY",
+    "population": 86454
+   },
+   {
+    "fips": "21103",
+    "name": "Henry County",
+    "state": "KY",
+    "population": 16447
+   },
+   {
+    "fips": "21111",
+    "name": "Jefferson County",
+    "state": "KY",
+    "population": 795222
+   },
+   {
+    "fips": "21163",
+    "name": "Meade County",
+    "state": "KY",
+    "population": 30699
+   },
+   {
+    "fips": "21179",
+    "name": "Nelson County",
+    "state": "KY",
+    "population": 49036
+   },
+   {
+    "fips": "21185",
+    "name": "Oldham County",
+    "state": "KY",
+    "population": 70986
+   },
+   {
+    "fips": "21211",
+    "name": "Shelby County",
+    "state": "KY",
+    "population": 51243
+   },
+   {
+    "fips": "21215",
+    "name": "Spencer County",
+    "state": "KY",
+    "population": 20998
+   }
+  ],
+  "population": 1402509,
+  "utilities": [
+   15470,
+   10171,
+   11249,
+   1886,
+   16587,
+   13651,
+   12243,
+   22822,
+   9292,
+   9576,
+   8179,
+   6708,
+   17044,
+   690,
+   14160
+  ]
+ },
+ {
+  "cbsa": "40060",
+  "name": "Richmond, VA",
+  "counties": [
+   {
+    "fips": "51007",
+    "name": "Amelia County",
+    "state": "VA",
+    "population": 13632
+   },
+   {
+    "fips": "51036",
+    "name": "Charles City County",
+    "state": "VA",
+    "population": 6623
+   },
+   {
+    "fips": "51041",
+    "name": "Chesterfield County",
+    "state": "VA",
+    "population": 397148
+   },
+   {
+    "fips": "51053",
+    "name": "Dinwiddie County",
+    "state": "VA",
+    "population": 28896
+   },
+   {
+    "fips": "51075",
+    "name": "Goochland County",
+    "state": "VA",
+    "population": 29187
+   },
+   {
+    "fips": "51085",
+    "name": "Hanover County",
+    "state": "VA",
+    "population": 116423
+   },
+   {
+    "fips": "51087",
+    "name": "Henrico County",
+    "state": "VA",
+    "population": 342775
+   },
+   {
+    "fips": "51097",
+    "name": "King and Queen County",
+    "state": "VA",
+    "population": 6743
+   },
+   {
+    "fips": "51101",
+    "name": "King William County",
+    "state": "VA",
+    "population": 19617
+   },
+   {
+    "fips": "51127",
+    "name": "New Kent County",
+    "state": "VA",
+    "population": 28022
+   },
+   {
+    "fips": "51145",
+    "name": "Powhatan County",
+    "state": "VA",
+    "population": 32591
+   },
+   {
+    "fips": "51149",
+    "name": "Prince George County",
+    "state": "VA",
+    "population": 43936
+   },
+   {
+    "fips": "51183",
+    "name": "Sussex County",
+    "state": "VA",
+    "population": 10755
+   },
+   {
+    "fips": "51570",
+    "name": "Colonial Heights city",
+    "state": "VA",
+    "population": 18738
+   },
+   {
+    "fips": "51670",
+    "name": "Hopewell city",
+    "state": "VA",
+    "population": 23261
+   },
+   {
+    "fips": "51730",
+    "name": "Petersburg city",
+    "state": "VA",
+    "population": 33734
+   },
+   {
+    "fips": "51760",
+    "name": "Richmond city",
+    "state": "VA",
+    "population": 237257
+   }
+  ],
+  "population": 1389338,
+  "utilities": [
+   19876,
+   40228,
+   21244,
+   3291,
+   12260,
+   15410,
+   4117,
+   19978
+  ]
+ },
+ {
+  "cbsa": "32820",
+  "name": "Memphis, TN-MS-AR",
+  "counties": [
+   {
+    "fips": "05035",
+    "name": "Crittenden County",
+    "state": "AR",
+    "population": 46210
+   },
+   {
+    "fips": "28009",
+    "name": "Benton County",
+    "state": "MS",
+    "population": 7502
+   },
+   {
+    "fips": "28033",
+    "name": "DeSoto County",
+    "state": "MS",
+    "population": 197918
+   },
+   {
+    "fips": "28093",
+    "name": "Marshall County",
+    "state": "MS",
+    "population": 34654
+   },
+   {
+    "fips": "28137",
+    "name": "Tate County",
+    "state": "MS",
+    "population": 28725
+   },
+   {
+    "fips": "28143",
+    "name": "Tunica County",
+    "state": "MS",
+    "population": 8819
+   },
+   {
+    "fips": "47047",
+    "name": "Fayette County",
+    "state": "TN",
+    "population": 45071
+   },
+   {
+    "fips": "47157",
+    "name": "Shelby County",
+    "state": "TN",
+    "population": 910226
+   },
+   {
+    "fips": "47167",
+    "name": "Tipton County",
+    "state": "TN",
+    "population": 62287
+   }
+  ],
+  "population": 1341412,
+  "utilities": [
+   814,
+   12685,
+   12293,
+   17694,
+   2849,
+   13735,
+   4509,
+   40302,
+   18447,
+   40166,
+   8748,
+   20382,
+   1936,
+   13412,
+   4437,
+   3839
+  ]
+ },
+ {
+  "cbsa": "41620",
+  "name": "Salt Lake City-Murray, UT",
+  "counties": [
+   {
+    "fips": "49035",
+    "name": "Salt Lake County",
+    "state": "UT",
+    "population": 1220916
+   },
+   {
+    "fips": "49045",
+    "name": "Tooele County",
+    "state": "UT",
+    "population": 87461
+   }
+  ],
+  "population": 1308377,
+  "utilities": [
+   14354,
+   13137,
+   13073,
+   20332,
+   27000
+  ]
+ },
+ {
+  "cbsa": "23420",
+  "name": "Fresno, CA",
+  "counties": [
+   {
+    "fips": "06019",
+    "name": "Fresno County",
+    "state": "CA",
+    "population": 1035456
+   },
+   {
+    "fips": "06039",
+    "name": "Madera County",
+    "state": "CA",
+    "population": 167927
+   }
+  ],
+  "population": 1203383,
+  "utilities": [
+   14328,
+   17609,
+   27000,
+   10325
+  ]
+ },
+ {
+  "cbsa": "13820",
+  "name": "Birmingham, AL",
+  "counties": [
+   {
+    "fips": "01007",
+    "name": "Bibb County",
+    "state": "AL",
+    "population": 22262
+   },
+   {
+    "fips": "01009",
+    "name": "Blount County",
+    "state": "AL",
+    "population": 60156
+   },
+   {
+    "fips": "01021",
+    "name": "Chilton County",
+    "state": "AL",
+    "population": 47708
+   },
+   {
+    "fips": "01073",
+    "name": "Jefferson County",
+    "state": "AL",
+    "population": 665742
+   },
+   {
+    "fips": "01115",
+    "name": "St. Clair County",
+    "state": "AL",
+    "population": 98206
+   },
+   {
+    "fips": "01117",
+    "name": "Shelby County",
+    "state": "AL",
+    "population": 238552
+   },
+   {
+    "fips": "01127",
+    "name": "Walker County",
+    "state": "AL",
+    "population": 65140
+   }
+  ],
+  "population": 1197766,
+  "utilities": [
+   195,
+   3222,
+   4327,
+   1640,
+   18472
+  ]
+ },
+ {
+  "cbsa": "24340",
+  "name": "Grand Rapids-Wyoming-Kentwood, MI",
+  "counties": [
+   {
+    "fips": "26015",
+    "name": "Barry County",
+    "state": "MI",
+    "population": 63991
+   },
+   {
+    "fips": "26067",
+    "name": "Ionia County",
+    "state": "MI",
+    "population": 66557
+   },
+   {
+    "fips": "26081",
+    "name": "Kent County",
+    "state": "MI",
+    "population": 675232
+   },
+   {
+    "fips": "26117",
+    "name": "Montcalm County",
+    "state": "MI",
+    "population": 69406
+   },
+   {
+    "fips": "26139",
+    "name": "Ottawa County",
+    "state": "MI",
+    "population": 308459
+   }
+  ],
+  "population": 1183645,
+  "utilities": [
+   5109,
+   4254,
+   38084,
+   8723,
+   19396,
+   7483,
+   21158,
+   11268,
+   15246,
+   20910
+  ]
+ },
+ {
+  "cbsa": "25540",
+  "name": "Hartford-West Hartford-East Hartford, CT",
+  "counties": [
+   {
+    "fips": "09110",
+    "name": "Capitol Planning Region",
+    "state": "CT",
+    "population": 994115
+   },
+   {
+    "fips": "09130",
+    "name": "Lower Connecticut River Valley Planning Region",
+    "state": "CT",
+    "population": 177311
+   }
+  ],
+  "population": 1171426,
+  "utilities": [
+   4176,
+   6207
+  ]
+ },
+ {
+  "cbsa": "15380",
+  "name": "Buffalo-Cheektowaga, NY",
+  "counties": [
+   {
+    "fips": "36029",
+    "name": "Erie County",
+    "state": "NY",
+    "population": 946741
+   },
+   {
+    "fips": "36063",
+    "name": "Niagara County",
+    "state": "NY",
+    "population": 208912
+   }
+  ],
+  "population": 1155653,
+  "utilities": [
+   13573,
+   13511,
+   122,
+   183,
+   17846
+  ]
+ },
+ {
+  "cbsa": "46060",
+  "name": "Tucson, AZ",
+  "counties": [
+   {
+    "fips": "04019",
+    "name": "Pima County",
+    "state": "AZ",
+    "population": 1074685
+   }
+  ],
+  "population": 1074685,
+  "utilities": [
+   803,
+   24211,
+   19189,
+   18280,
+   19604,
+   176,
+   27000,
+   14543
+  ]
+ },
+ {
+  "cbsa": "46140",
+  "name": "Tulsa, OK",
+  "counties": [
+   {
+    "fips": "40037",
+    "name": "Creek County",
+    "state": "OK",
+    "population": 74967
+   },
+   {
+    "fips": "40111",
+    "name": "Okmulgee County",
+    "state": "OK",
+    "population": 37241
+   },
+   {
+    "fips": "40113",
+    "name": "Osage County",
+    "state": "OK",
+    "population": 46794
+   },
+   {
+    "fips": "40117",
+    "name": "Pawnee County",
+    "state": "OK",
+    "population": 16029
+   },
+   {
+    "fips": "40131",
+    "name": "Rogers County",
+    "state": "OK",
+    "population": 102197
+   },
+   {
+    "fips": "40143",
+    "name": "Tulsa County",
+    "state": "OK",
+    "population": 698782
+   },
+   {
+    "fips": "40145",
+    "name": "Wagoner County",
+    "state": "OK",
+    "population": 93263
+   }
+  ],
+  "population": 1069273,
+  "utilities": [
+   14063,
+   15474,
+   13734,
+   19785,
+   5598,
+   2911,
+   10599,
+   3226,
+   9246,
+   15202,
+   3647,
+   10012,
+   3986,
+   8799,
+   11578,
+   14582,
+   14583,
+   17286,
+   20163
+  ]
+ },
+ {
+  "cbsa": "40380",
+  "name": "Rochester, NY",
+  "counties": [
+   {
+    "fips": "36051",
+    "name": "Livingston County",
+    "state": "NY",
+    "population": 61438
+   },
+   {
+    "fips": "36055",
+    "name": "Monroe County",
+    "state": "NY",
+    "population": 750506
+   },
+   {
+    "fips": "36069",
+    "name": "Ontario County",
+    "state": "NY",
+    "population": 113130
+   },
+   {
+    "fips": "36073",
+    "name": "Orleans County",
+    "state": "NY",
+    "population": 39825
+   },
+   {
+    "fips": "36117",
+    "name": "Wayne County",
+    "state": "NY",
+    "population": 91250
+   }
+  ],
+  "population": 1056149,
+  "utilities": [
+   13573,
+   13511,
+   16183,
+   5930,
+   3525,
+   8733,
+   17789
+  ]
+ },
+ {
+  "cbsa": "24860",
+  "name": "Greenville-Anderson-Greer, SC",
+  "counties": [
+   {
+    "fips": "45007",
+    "name": "Anderson County",
+    "state": "SC",
+    "population": 219930
+   },
+   {
+    "fips": "45045",
+    "name": "Greenville County",
+    "state": "SC",
+    "population": 583125
+   },
+   {
+    "fips": "45059",
+    "name": "Laurens County",
+    "state": "SC",
+    "population": 71848
+   },
+   {
+    "fips": "45077",
+    "name": "Pickens County",
+    "state": "SC",
+    "population": 139198
+   }
+  ],
+  "population": 1014101,
+  "utilities": [
+   5416,
+   1890,
+   10768,
+   7654,
+   6709,
+   13524,
+   3804,
+   11019,
+   21526
+  ]
+ },
+ {
+  "cbsa": "36540",
+  "name": "Omaha, NE-IA",
+  "counties": [
+   {
+    "fips": "19085",
+    "name": "Harrison County",
+    "state": "IA",
+    "population": 14623
+   },
+   {
+    "fips": "19129",
+    "name": "Mills County",
+    "state": "IA",
+    "population": 14793
+   },
+   {
+    "fips": "19155",
+    "name": "Pottawattamie County",
+    "state": "IA",
+    "population": 92996
+   },
+   {
+    "fips": "31025",
+    "name": "Cass County",
+    "state": "NE",
+    "population": 27657
+   },
+   {
+    "fips": "31055",
+    "name": "Douglas County",
+    "state": "NE",
+    "population": 606460
+   },
+   {
+    "fips": "31153",
+    "name": "Sarpy County",
+    "state": "NE",
+    "population": 208303
+   },
+   {
+    "fips": "31155",
+    "name": "Saunders County",
+    "state": "NE",
+    "population": 23702
+   },
+   {
+    "fips": "31177",
+    "name": "Washington County",
+    "state": "NE",
+    "population": 21302
+   }
+  ],
+  "population": 1009836,
+  "utilities": [
+   12341,
+   14127,
+   13337,
+   2643,
+   27000,
+   965,
+   2599,
+   7650,
+   8283,
+   13382,
+   13675,
+   15352,
+   17046,
+   19437,
+   19968,
+   20214,
+   20949,
+   49986
+  ]
+ },
+ {
+  "cbsa": "46520",
+  "name": "Urban Honolulu, HI",
+  "counties": [
+   {
+    "fips": "15003",
+    "name": "Honolulu County",
+    "state": "HI",
+    "population": 988703
+   }
+  ],
+  "population": 988703,
+  "utilities": [
+   19547
+  ]
+ },
+ {
+  "cbsa": "14860",
+  "name": "Bridgeport-Stamford-Danbury, CT",
+  "counties": [
+   {
+    "fips": "09120",
+    "name": "Greater Bridgeport Planning Region",
+    "state": "CT",
+    "population": 337697
+   },
+   {
+    "fips": "09190",
+    "name": "Western Connecticut Planning Region",
+    "state": "CT",
+    "population": 640482
+   }
+  ],
+  "population": 978179,
+  "utilities": [
+   4176,
+   19497,
+   13825,
+   17569
+  ]
+ },
+ {
+  "cbsa": "35380",
+  "name": "New Orleans-Metairie, LA",
+  "counties": [
+   {
+    "fips": "22051",
+    "name": "Jefferson Parish",
+    "state": "LA",
+    "population": 431398
+   },
+   {
+    "fips": "22071",
+    "name": "Orleans Parish",
+    "state": "LA",
+    "population": 362154
+   },
+   {
+    "fips": "22075",
+    "name": "Plaquemines Parish",
+    "state": "LA",
+    "population": 22256
+   },
+   {
+    "fips": "22087",
+    "name": "St. Bernard Parish",
+    "state": "LA",
+    "population": 45642
+   },
+   {
+    "fips": "22089",
+    "name": "St. Charles Parish",
+    "state": "LA",
+    "population": 50586
+   },
+   {
+    "fips": "22093",
+    "name": "St. James Parish",
+    "state": "LA",
+    "population": 18938
+   },
+   {
+    "fips": "22095",
+    "name": "St. John the Baptist Parish",
+    "state": "LA",
+    "population": 39875
+   }
+  ],
+  "population": 970849,
+  "utilities": [
+   11241,
+   13478
+  ]
+ },
+ {
+  "cbsa": "28940",
+  "name": "Knoxville, TN",
+  "counties": [
+   {
+    "fips": "47001",
+    "name": "Anderson County",
+    "state": "TN",
+    "population": 82066
+   },
+   {
+    "fips": "47009",
+    "name": "Blount County",
+    "state": "TN",
+    "population": 143820
+   },
+   {
+    "fips": "47013",
+    "name": "Campbell County",
+    "state": "TN",
+    "population": 40290
+   },
+   {
+    "fips": "47057",
+    "name": "Grainger County",
+    "state": "TN",
+    "population": 25739
+   },
+   {
+    "fips": "47093",
+    "name": "Knox County",
+    "state": "TN",
+    "population": 511453
+   },
+   {
+    "fips": "47105",
+    "name": "Loudon County",
+    "state": "TN",
+    "population": 63764
+   },
+   {
+    "fips": "47129",
+    "name": "Morgan County",
+    "state": "TN",
+    "population": 22160
+   },
+   {
+    "fips": "47145",
+    "name": "Roane County",
+    "state": "TN",
+    "population": 57395
+   },
+   {
+    "fips": "47173",
+    "name": "Union County",
+    "state": "TN",
+    "population": 21450
+   }
+  ],
+  "population": 968137,
+  "utilities": [
+   10421,
+   19898,
+   10906,
+   16949,
+   727,
+   6608,
+   15293,
+   577,
+   3812,
+   4622,
+   10579,
+   11789,
+   15141,
+   13933,
+   16223,
+   11222,
+   8147,
+   9697
+  ]
+ },
+ {
+  "cbsa": "35840",
+  "name": "North Port-Bradenton-Sarasota, FL",
+  "counties": [
+   {
+    "fips": "12081",
+    "name": "Manatee County",
+    "state": "FL",
+    "population": 468200
+   },
+   {
+    "fips": "12115",
+    "name": "Sarasota County",
+    "state": "FL",
+    "population": 479958
+   }
+  ],
+  "population": 948158,
+  "utilities": [
+   6452,
+   14606
+  ]
+ },
+ {
+  "cbsa": "12540",
+  "name": "Bakersfield-Delano, CA",
+  "counties": [
+   {
+    "fips": "06029",
+    "name": "Kern County",
+    "state": "CA",
+    "population": 927068
+   }
+  ],
+  "population": 927068,
+  "utilities": [
+   14328,
+   17609
+  ]
+ },
+ {
+  "cbsa": "10740",
+  "name": "Albuquerque, NM",
+  "counties": [
+   {
+    "fips": "35001",
+    "name": "Bernalillo County",
+    "state": "NM",
+    "population": 667601
+   },
+   {
+    "fips": "35043",
+    "name": "Sandoval County",
+    "state": "NM",
+    "population": 159565
+   },
+   {
+    "fips": "35057",
+    "name": "Torrance County",
+    "state": "NM",
+    "population": 16100
+   },
+   {
+    "fips": "35061",
+    "name": "Valencia County",
+    "state": "NM",
+    "population": 82013
+   }
+  ],
+  "population": 925279,
+  "utilities": [
+   15473,
+   9699,
+   4265,
+   3273,
+   17492
+  ]
+ },
+ {
+  "cbsa": "32580",
+  "name": "McAllen-Edinburg-Mission, TX",
+  "counties": [
+   {
+    "fips": "48215",
+    "name": "Hidalgo County",
+    "state": "TX",
+    "population": 921549
+   }
+  ],
+  "population": 921549,
+  "utilities": [
+   44372,
+   3278,
+   11501
+  ]
+ },
+ {
+  "cbsa": "10580",
+  "name": "Albany-Schenectady-Troy, NY",
+  "counties": [
+   {
+    "fips": "36001",
+    "name": "Albany County",
+    "state": "NY",
+    "population": 321225
+   },
+   {
+    "fips": "36083",
+    "name": "Rensselaer County",
+    "state": "NY",
+    "population": 160510
+   },
+   {
+    "fips": "36091",
+    "name": "Saratoga County",
+    "state": "NY",
+    "population": 241343
+   },
+   {
+    "fips": "36093",
+    "name": "Schenectady County",
+    "state": "NY",
+    "population": 162581
+   },
+   {
+    "fips": "36095",
+    "name": "Schoharie County",
+    "state": "NY",
+    "population": 30176
+   }
+  ],
+  "population": 915835,
+  "utilities": [
+   13573,
+   13511,
+   3249,
+   5021,
+   7600,
+   15991
+  ]
+ },
+ {
+  "cbsa": "16700",
+  "name": "Charleston-North Charleston, SC",
+  "counties": [
+   {
+    "fips": "45015",
+    "name": "Berkeley County",
+    "state": "SC",
+    "population": 274666
+   },
+   {
+    "fips": "45019",
+    "name": "Charleston County",
+    "state": "SC",
+    "population": 436200
+   },
+   {
+    "fips": "45035",
+    "name": "Dorchester County",
+    "state": "SC",
+    "population": 178397
+   }
+  ],
+  "population": 889263,
+  "utilities": [
+   17539,
+   17543,
+   1613,
+   5644,
+   3844
+  ]
+ },
+ {
+  "cbsa": "12940",
+  "name": "Baton Rouge, LA",
+  "counties": [
+   {
+    "fips": "22005",
+    "name": "Ascension Parish",
+    "state": "LA",
+    "population": 135105
+   },
+   {
+    "fips": "22007",
+    "name": "Assumption Parish",
+    "state": "LA",
+    "population": 19720
+   },
+   {
+    "fips": "22033",
+    "name": "East Baton Rouge Parish",
+    "state": "LA",
+    "population": 456180
+   },
+   {
+    "fips": "22037",
+    "name": "East Feliciana Parish",
+    "state": "LA",
+    "population": 18911
+   },
+   {
+    "fips": "22047",
+    "name": "Iberville Parish",
+    "state": "LA",
+    "population": 29579
+   },
+   {
+    "fips": "22063",
+    "name": "Livingston Parish",
+    "state": "LA",
+    "population": 155036
+   },
+   {
+    "fips": "22077",
+    "name": "Pointe Coupee Parish",
+    "state": "LA",
+    "population": 19520
+   },
+   {
+    "fips": "22091",
+    "name": "St. Helena Parish",
+    "state": "LA",
+    "population": 10758
+   },
+   {
+    "fips": "22121",
+    "name": "West Baton Rouge Parish",
+    "state": "LA",
+    "population": 28756
+   },
+   {
+    "fips": "22125",
+    "name": "West Feliciana Parish",
+    "state": "LA",
+    "population": 15134
+   }
+  ],
+  "population": 888699,
+  "utilities": [
+   11241,
+   3265,
+   5202,
+   17565,
+   15175,
+   13483,
+   15137
+  ]
+ },
+ {
+  "cbsa": "49340",
+  "name": "Worcester, MA",
+  "counties": [
+   {
+    "fips": "25027",
+    "name": "Worcester County",
+    "state": "MA",
+    "population": 888502
+   }
+  ],
+  "population": 888502,
+  "utilities": [
+   11804,
+   6374,
+   17127,
+   902,
+   2086,
+   8715,
+   14585,
+   15371,
+   18087,
+   18546,
+   20326
+  ]
+ },
+ {
+  "cbsa": "10900",
+  "name": "Allentown-Bethlehem-Easton, PA-NJ",
+  "counties": [
+   {
+    "fips": "34041",
+    "name": "Warren County",
+    "state": "NJ",
+    "population": 112953
+   },
+   {
+    "fips": "42025",
+    "name": "Carbon County",
+    "state": "PA",
+    "population": 65868
+   },
+   {
+    "fips": "42077",
+    "name": "Lehigh County",
+    "state": "PA",
+    "population": 384383
+   },
+   {
+    "fips": "42095",
+    "name": "Northampton County",
+    "state": "PA",
+    "population": 324411
+   }
+  ],
+  "population": 887615,
+  "utilities": [
+   66101,
+   14715,
+   9726,
+   10882,
+   20232
+  ]
+ },
+ {
+  "cbsa": "21340",
+  "name": "El Paso, TX",
+  "counties": [
+   {
+    "fips": "48141",
+    "name": "El Paso County",
+    "state": "TX",
+    "population": 877858
+   },
+   {
+    "fips": "48229",
+    "name": "Hudspeth County",
+    "state": "TX",
+    "population": 3433
+   }
+  ],
+  "population": 881291,
+  "utilities": [
+   5701,
+   16057
+  ]
+ },
+ {
+  "cbsa": "17900",
+  "name": "Columbia, SC",
+  "counties": [
+   {
+    "fips": "45017",
+    "name": "Calhoun County",
+    "state": "SC",
+    "population": 14188
+   },
+   {
+    "fips": "45039",
+    "name": "Fairfield County",
+    "state": "SC",
+    "population": 20340
+   },
+   {
+    "fips": "45055",
+    "name": "Kershaw County",
+    "state": "SC",
+    "population": 73166
+   },
+   {
+    "fips": "45063",
+    "name": "Lexington County",
+    "state": "SC",
+    "population": 317588
+   },
+   {
+    "fips": "45079",
+    "name": "Richland County",
+    "state": "SC",
+    "population": 434956
+   },
+   {
+    "fips": "45081",
+    "name": "Saluda County",
+    "state": "SC",
+    "population": 19680
+   }
+  ],
+  "population": 879918,
+  "utilities": [
+   5416,
+   3046,
+   17539,
+   12462,
+   162,
+   1763,
+   5929,
+   11355,
+   14175,
+   13524,
+   2890,
+   20826
+  ]
+ },
+ {
+  "cbsa": "15980",
+  "name": "Cape Coral-Fort Myers, FL",
+  "counties": [
+   {
+    "fips": "12071",
+    "name": "Lee County",
+    "state": "FL",
+    "population": 875607
+   }
+  ],
+  "population": 875607,
+  "utilities": [
+   6452,
+   10857
+  ]
+ },
+ {
+  "cbsa": "29460",
+  "name": "Lakeland-Winter Haven, FL",
+  "counties": [
+   {
+    "fips": "12105",
+    "name": "Polk County",
+    "state": "FL",
+    "population": 874790
+   }
+  ],
+  "population": 874790,
+  "utilities": [
+   6455,
+   18454,
+   20885,
+   10623,
+   14606,
+   1300,
+   6609
+  ]
+ },
+ {
+  "cbsa": "14260",
+  "name": "Boise City, ID",
+  "counties": [
+   {
+    "fips": "16001",
+    "name": "Ada County",
+    "state": "ID",
+    "population": 546141
+   },
+   {
+    "fips": "16015",
+    "name": "Boise County",
+    "state": "ID",
+    "population": 8545
+   },
+   {
+    "fips": "16027",
+    "name": "Canyon County",
+    "state": "ID",
+    "population": 275123
+   },
+   {
+    "fips": "16045",
+    "name": "Gem County",
+    "state": "ID",
+    "population": 21773
+   },
+   {
+    "fips": "16073",
+    "name": "Owyhee County",
+    "state": "ID",
+    "population": 12661
+   }
+  ],
+  "population": 864243,
+  "utilities": [
+   9191,
+   22814,
+   1738
+  ]
+ },
+ {
+  "cbsa": "37100",
+  "name": "Oxnard-Thousand Oaks-Ventura, CA",
+  "counties": [
+   {
+    "fips": "06111",
+    "name": "Ventura County",
+    "state": "CA",
+    "population": 830851
+   }
+  ],
+  "population": 830851,
+  "utilities": [
+   17609
+  ]
+ },
+ {
+  "cbsa": "19430",
+  "name": "Dayton-Kettering-Beavercreek, OH",
+  "counties": [
+   {
+    "fips": "39057",
+    "name": "Greene County",
+    "state": "OH",
+    "population": 174322
+   },
+   {
+    "fips": "39109",
+    "name": "Miami County",
+    "state": "OH",
+    "population": 112634
+   },
+   {
+    "fips": "39113",
+    "name": "Montgomery County",
+    "state": "OH",
+    "population": 539598
+   }
+  ],
+  "population": 826554,
+  "utilities": [
+   13998,
+   3542,
+   4922,
+   15054,
+   2651,
+   15095,
+   18941,
+   21101
+  ]
+ },
+ {
+  "cbsa": "44700",
+  "name": "Stockton-Lodi, CA",
+  "counties": [
+   {
+    "fips": "06077",
+    "name": "San Joaquin County",
+    "state": "CA",
+    "population": 823815
+   }
+  ],
+  "population": 823815,
+  "utilities": [
+   14328,
+   12745,
+   11124,
+   27000,
+   60502,
+   62779
+  ]
+ },
+ {
+  "cbsa": "24660",
+  "name": "Greensboro-High Point, NC",
+  "counties": [
+   {
+    "fips": "37081",
+    "name": "Guilford County",
+    "state": "NC",
+    "population": 562234
+   },
+   {
+    "fips": "37151",
+    "name": "Randolph County",
+    "state": "NC",
+    "population": 149516
+   },
+   {
+    "fips": "37157",
+    "name": "Rockingham County",
+    "state": "NC",
+    "population": 94195
+   }
+  ],
+  "population": 805945,
+  "utilities": [
+   5416,
+   3046,
+   21632,
+   8571,
+   15671,
+   3250
+  ]
+ },
+ {
+  "cbsa": "17820",
+  "name": "Colorado Springs, CO",
+  "counties": [
+   {
+    "fips": "08041",
+    "name": "El Paso County",
+    "state": "CO",
+    "population": 757040
+   },
+   {
+    "fips": "08119",
+    "name": "Teller County",
+    "state": "CO",
+    "population": 24756
+   }
+  ],
+  "population": 781796,
+  "utilities": [
+   15466,
+   3989,
+   9336,
+   56146,
+   13058,
+   6638,
+   17592,
+   27000
+  ]
+ },
+ {
+  "cbsa": "30780",
+  "name": "Little Rock-North Little Rock-Conway, AR",
+  "counties": [
+   {
+    "fips": "05045",
+    "name": "Faulkner County",
+    "state": "AR",
+    "population": 133979
+   },
+   {
+    "fips": "05053",
+    "name": "Grant County",
+    "state": "AR",
+    "population": 18756
+   },
+   {
+    "fips": "05085",
+    "name": "Lonoke County",
+    "state": "AR",
+    "population": 76664
+   },
+   {
+    "fips": "05105",
+    "name": "Perry County",
+    "state": "AR",
+    "population": 10309
+   },
+   {
+    "fips": "05119",
+    "name": "Pulaski County",
+    "state": "AR",
+    "population": 404611
+   },
+   {
+    "fips": "05125",
+    "name": "Saline County",
+    "state": "AR",
+    "population": 133288
+   }
+  ],
+  "population": 777607,
+  "utilities": [
+   814,
+   6342,
+   13718,
+   4280,
+   2678,
+   14864,
+   1581
+  ]
+ },
+ {
+  "cbsa": "39340",
+  "name": "Provo-Orem-Lehi, UT",
+  "counties": [
+   {
+    "fips": "49023",
+    "name": "Juab County",
+    "state": "UT",
+    "population": 13567
+   },
+   {
+    "fips": "49049",
+    "name": "Utah County",
+    "state": "UT",
+    "population": 759859
+   }
+  ],
+  "population": 773426,
+  "utilities": [
+   14354,
+   15444,
+   10879,
+   17732,
+   17845,
+   13073,
+   18206,
+   10978,
+   13388,
+   14600,
+   16557
+  ]
+ },
+ {
+  "cbsa": "19780",
+  "name": "Des Moines-West Des Moines, IA",
+  "counties": [
+   {
+    "fips": "19049",
+    "name": "Dallas County",
+    "state": "IA",
+    "population": 118457
+   },
+   {
+    "fips": "19077",
+    "name": "Guthrie County",
+    "state": "IA",
+    "population": 10782
+   },
+   {
+    "fips": "19099",
+    "name": "Jasper County",
+    "state": "IA",
+    "population": 38153
+   },
+   {
+    "fips": "19121",
+    "name": "Madison County",
+    "state": "IA",
+    "population": 17270
+   },
+   {
+    "fips": "19153",
+    "name": "Polk County",
+    "state": "IA",
+    "population": 516546
+   },
+   {
+    "fips": "19181",
+    "name": "Warren County",
+    "state": "IA",
+    "population": 57331
+   }
+  ],
+  "population": 758539,
+  "utilities": [
+   12341,
+   9417,
+   12450,
+   11788,
+   4305,
+   3029,
+   3722,
+   6112,
+   7303,
+   7750,
+   9275,
+   14433,
+   18231,
+   20214,
+   20835,
+   26765
+  ]
+ },
+ {
+  "cbsa": "19660",
+  "name": "Deltona-Daytona Beach-Ormond Beach, FL",
+  "counties": [
+   {
+    "fips": "12035",
+    "name": "Flagler County",
+    "state": "FL",
+    "population": 140360
+   },
+   {
+    "fips": "12127",
+    "name": "Volusia County",
+    "state": "FL",
+    "population": 606573
+   }
+  ],
+  "population": 746933,
+  "utilities": [
+   6452,
+   6455,
+   3757,
+   13485
+  ]
+ },
+ {
+  "cbsa": "28880",
+  "name": "Kiryas Joel-Poughkeepsie-Newburgh, NY",
+  "counties": [
+   {
+    "fips": "36027",
+    "name": "Dutchess County",
+    "state": "NY",
+    "population": 300708
+   },
+   {
+    "fips": "36071",
+    "name": "Orange County",
+    "state": "NY",
+    "population": 417669
+   }
+  ],
+  "population": 718377,
+  "utilities": [
+   13511,
+   3249,
+   14154
+  ]
+ },
+ {
+  "cbsa": "49180",
+  "name": "Winston-Salem, NC",
+  "counties": [
+   {
+    "fips": "37057",
+    "name": "Davidson County",
+    "state": "NC",
+    "population": 180182
+   },
+   {
+    "fips": "37059",
+    "name": "Davie County",
+    "state": "NC",
+    "population": 45855
+   },
+   {
+    "fips": "37067",
+    "name": "Forsyth County",
+    "state": "NC",
+    "population": 401718
+   },
+   {
+    "fips": "37169",
+    "name": "Stokes County",
+    "state": "NC",
+    "population": 46126
+   },
+   {
+    "fips": "37197",
+    "name": "Yadkin County",
+    "state": "NC",
+    "population": 38325
+   }
+  ],
+  "population": 712206,
+  "utilities": [
+   5416,
+   21632,
+   8571,
+   18339,
+   10966
+  ]
+ },
+ {
+  "cbsa": "31540",
+  "name": "Madison, WI",
+  "counties": [
+   {
+    "fips": "55021",
+    "name": "Columbia County",
+    "state": "WI",
+    "population": 58132
+   },
+   {
+    "fips": "55025",
+    "name": "Dane County",
+    "state": "WI",
+    "population": 590375
+   },
+   {
+    "fips": "55045",
+    "name": "Green County",
+    "state": "WI",
+    "population": 37227
+   },
+   {
+    "fips": "55049",
+    "name": "Iowa County",
+    "state": "WI",
+    "population": 23951
+   }
+  ],
+  "population": 709685,
+  "utilities": [
+   20847,
+   20856,
+   11479,
+   108,
+   18312,
+   16196,
+   16740,
+   18181,
+   20211,
+   13036,
+   6043,
+   4073,
+   2273,
+   11125,
+   13438,
+   13145,
+   1765,
+   11895,
+   14451,
+   20844
+  ]
+ },
+ {
+  "cbsa": "10420",
+  "name": "Akron, OH",
+  "counties": [
+   {
+    "fips": "39133",
+    "name": "Portage County",
+    "state": "OH",
+    "population": 163404
+   },
+   {
+    "fips": "39153",
+    "name": "Summit County",
+    "state": "OH",
+    "population": 538376
+   }
+  ],
+  "population": 701780,
+  "utilities": [
+   14006,
+   13998,
+   3755,
+   4683,
+   19951,
+   8972
+  ]
+ },
+ {
+  "cbsa": "36260",
+  "name": "Ogden, UT",
+  "counties": [
+   {
+    "fips": "49011",
+    "name": "Davis County",
+    "state": "UT",
+    "population": 381227
+   },
+   {
+    "fips": "49029",
+    "name": "Morgan County",
+    "state": "UT",
+    "population": 13383
+   },
+   {
+    "fips": "49057",
+    "name": "Weber County",
+    "state": "UT",
+    "population": 278174
+   }
+  ],
+  "population": 672784,
+  "utilities": [
+   14354,
+   2010,
+   10063,
+   12928
+  ]
+ },
+ {
+  "cbsa": "37340",
+  "name": "Palm Bay-Melbourne-Titusville, FL",
+  "counties": [
+   {
+    "fips": "12009",
+    "name": "Brevard County",
+    "state": "FL",
+    "population": 663982
+   }
+  ],
+  "population": 663982,
+  "utilities": [
+   6452,
+   6455,
+   14606
+  ]
+ },
+ {
+  "cbsa": "48620",
+  "name": "Wichita, KS",
+  "counties": [
+   {
+    "fips": "20015",
+    "name": "Butler County",
+    "state": "KS",
+    "population": 69484
+   },
+   {
+    "fips": "20079",
+    "name": "Harvey County",
+    "state": "KS",
+    "population": 33580
+   },
+   {
+    "fips": "20173",
+    "name": "Sedgwick County",
+    "state": "KS",
+    "population": 538433
+   },
+   {
+    "fips": "20191",
+    "name": "Sumner County",
+    "state": "KS",
+    "population": 22312
+   }
+  ],
+  "population": 663809,
+  "utilities": [
+   22500,
+   10005,
+   998,
+   2641,
+   2961,
+   6431,
+   13035,
+   13095,
+   14276,
+   16920,
+   18316,
+   20315,
+   40208
+  ]
+ },
+ {
+  "cbsa": "45060",
+  "name": "Syracuse, NY",
+  "counties": [
+   {
+    "fips": "36053",
+    "name": "Madison County",
+    "state": "NY",
+    "population": 67120
+   },
+   {
+    "fips": "36067",
+    "name": "Onondaga County",
+    "state": "NY",
+    "population": 466584
+   },
+   {
+    "fips": "36075",
+    "name": "Oswego County",
+    "state": "NY",
+    "population": 118569
+   }
+  ],
+  "population": 652273,
+  "utilities": [
+   13573,
+   13511,
+   17512,
+   7995,
+   14125,
+   14267,
+   17085,
+   17280
+  ]
+ },
+ {
+  "cbsa": "12260",
+  "name": "Augusta-Richmond County, GA-SC",
+  "counties": [
+   {
+    "fips": "13033",
+    "name": "Burke County",
+    "state": "GA",
+    "population": 24408
+   },
+   {
+    "fips": "13073",
+    "name": "Columbia County",
+    "state": "GA",
+    "population": 169189
+   },
+   {
+    "fips": "13181",
+    "name": "Lincoln County",
+    "state": "GA",
+    "population": 8112
+   },
+   {
+    "fips": "13189",
+    "name": "McDuffie County",
+    "state": "GA",
+    "population": 21640
+   },
+   {
+    "fips": "13245",
+    "name": "Richmond County",
+    "state": "GA",
+    "population": 206559
+   },
+   {
+    "fips": "45003",
+    "name": "Aiken County",
+    "state": "SC",
+    "population": 181515
+   },
+   {
+    "fips": "45037",
+    "name": "Edgefield County",
+    "state": "SC",
+    "population": 29808
+   }
+  ],
+  "population": 641231,
+  "utilities": [
+   5416,
+   7140,
+   17539,
+   12462,
+   162,
+   9689,
+   15700,
+   14649,
+   18397
+  ]
+ },
+ {
+  "cbsa": "20500",
+  "name": "Durham-Chapel Hill, NC",
+  "counties": [
+   {
+    "fips": "37037",
+    "name": "Chatham County",
+    "state": "NC",
+    "population": 85111
+   },
+   {
+    "fips": "37063",
+    "name": "Durham County",
+    "state": "NC",
+    "population": 347240
+   },
+   {
+    "fips": "37135",
+    "name": "Orange County",
+    "state": "NC",
+    "population": 152498
+   },
+   {
+    "fips": "37145",
+    "name": "Person County",
+    "state": "NC",
+    "population": 40636
+   }
+  ],
+  "population": 625485,
+  "utilities": [
+   5416,
+   19876,
+   3046,
+   19981,
+   15023,
+   15671,
+   12260,
+   3250
+  ]
+ },
+ {
+  "cbsa": "22220",
+  "name": "Fayetteville-Springdale-Rogers, AR",
+  "counties": [
+   {
+    "fips": "05007",
+    "name": "Benton County",
+    "state": "AR",
+    "population": 332554
+   },
+   {
+    "fips": "05087",
+    "name": "Madison County",
+    "state": "AR",
+    "population": 18410
+   },
+   {
+    "fips": "05143",
+    "name": "Washington County",
+    "state": "AR",
+    "population": 271213
+   }
+  ],
+  "population": 622177,
+  "utilities": [
+   14063,
+   17698,
+   5860,
+   3093,
+   14289,
+   817,
+   1586,
+   17184
+  ]
+ },
+ {
+  "cbsa": "25420",
+  "name": "Harrisburg-Carlisle, PA",
+  "counties": [
+   {
+    "fips": "42041",
+    "name": "Cumberland County",
+    "state": "PA",
+    "population": 277270
+   },
+   {
+    "fips": "42043",
+    "name": "Dauphin County",
+    "state": "PA",
+    "population": 293351
+   },
+   {
+    "fips": "42099",
+    "name": "Perry County",
+    "state": "PA",
+    "population": 46806
+   }
+  ],
+  "population": 617427,
+  "utilities": [
+   66101,
+   14715,
+   40220,
+   5442,
+   12474,
+   16375
+  ]
+ },
+ {
+  "cbsa": "27140",
+  "name": "Jackson, MS",
+  "counties": [
+   {
+    "fips": "28029",
+    "name": "Copiah County",
+    "state": "MS",
+    "population": 27497
+   },
+   {
+    "fips": "28049",
+    "name": "Hinds County",
+    "state": "MS",
+    "population": 211888
+   },
+   {
+    "fips": "28051",
+    "name": "Holmes County",
+    "state": "MS",
+    "population": 15465
+   },
+   {
+    "fips": "28089",
+    "name": "Madison County",
+    "state": "MS",
+    "population": 116298
+   },
+   {
+    "fips": "28121",
+    "name": "Rankin County",
+    "state": "MS",
+    "population": 162181
+   },
+   {
+    "fips": "28123",
+    "name": "Scott County",
+    "state": "MS",
+    "population": 28073
+   },
+   {
+    "fips": "28127",
+    "name": "Simpson County",
+    "state": "MS",
+    "population": 25498
+   },
+   {
+    "fips": "28163",
+    "name": "Yazoo County",
+    "state": "MS",
+    "population": 22947
+   }
+  ],
+  "population": 609847,
+  "utilities": [
+   12685,
+   12686,
+   17647,
+   2849,
+   22815,
+   17683,
+   21114,
+   2974,
+   5479,
+   21095
+  ]
+ },
+ {
+  "cbsa": "44060",
+  "name": "Spokane-Spokane Valley, WA",
+  "counties": [
+   {
+    "fips": "53063",
+    "name": "Spokane County",
+    "state": "WA",
+    "population": 558344
+   },
+   {
+    "fips": "53065",
+    "name": "Stevens County",
+    "state": "WA",
+    "population": 49668
+   }
+  ],
+  "population": 608012,
+  "utilities": [
+   20169,
+   8699,
+   10454,
+   19784,
+   12744,
+   1738,
+   3420,
+   3459
+  ]
+ },
+ {
+  "cbsa": "45780",
+  "name": "Toledo, OH",
+  "counties": [
+   {
+    "fips": "39051",
+    "name": "Fulton County",
+    "state": "OH",
+    "population": 41853
+   },
+   {
+    "fips": "39095",
+    "name": "Lucas County",
+    "state": "OH",
+    "population": 423347
+   },
+   {
+    "fips": "39173",
+    "name": "Wood County",
+    "state": "OH",
+    "population": 134176
+   }
+  ],
+  "population": 599376,
+  "utilities": [
+   14006,
+   18997,
+   12377,
+   2054,
+   8034,
+   13693,
+   1677,
+   2128,
+   4685,
+   4725,
+   5096,
+   8240,
+   13209,
+   14650,
+   18944,
+   19176
+  ]
+ },
+ {
+  "cbsa": "16860",
+  "name": "Chattanooga, TN-GA",
+  "counties": [
+   {
+    "fips": "13047",
+    "name": "Catoosa County",
+    "state": "GA",
+    "population": 69628
+   },
+   {
+    "fips": "13083",
+    "name": "Dade County",
+    "state": "GA",
+    "population": 16154
+   },
+   {
+    "fips": "13295",
+    "name": "Walker County",
+    "state": "GA",
+    "population": 70250
+   },
+   {
+    "fips": "47065",
+    "name": "Hamilton County",
+    "state": "TN",
+    "population": 390833
+   },
+   {
+    "fips": "47115",
+    "name": "Marion County",
+    "state": "TN",
+    "population": 29804
+   },
+   {
+    "fips": "47153",
+    "name": "Sequatchie County",
+    "state": "TN",
+    "population": 17861
+   }
+  ],
+  "population": 594530,
+  "utilities": [
+   7140,
+   3408,
+   19898,
+   13716,
+   5399,
+   16930,
+   3475,
+   18642,
+   10571
+  ]
+ },
+ {
+  "cbsa": "35300",
+  "name": "New Haven, CT",
+  "counties": [
+   {
+    "fips": "09170",
+    "name": "South Central Connecticut Planning Region",
+    "state": "CT",
+    "population": 578741
+   }
+  ],
+  "population": 578741,
+  "utilities": [
+   4176,
+   19497,
+   20038
+  ]
+ },
+ {
+  "cbsa": "39900",
+  "name": "Reno, NV",
+  "counties": [
+   {
+    "fips": "32019",
+    "name": "Lyon County",
+    "state": "NV",
+    "population": 65088
+   },
+   {
+    "fips": "32029",
+    "name": "Storey County",
+    "state": "NV",
+    "population": 4260
+   },
+   {
+    "fips": "32031",
+    "name": "Washoe County",
+    "state": "NV",
+    "population": 509386
+   }
+  ],
+  "population": 578734,
+  "utilities": [
+   17166,
+   18260,
+   15308
+  ]
+ },
+ {
+  "cbsa": "38860",
+  "name": "Portland-South Portland, ME",
+  "counties": [
+   {
+    "fips": "23005",
+    "name": "Cumberland County",
+    "state": "ME",
+    "population": 317222
+   },
+   {
+    "fips": "23023",
+    "name": "Sagadahoc County",
+    "state": "ME",
+    "population": 37979
+   },
+   {
+    "fips": "23031",
+    "name": "York County",
+    "state": "ME",
+    "population": 222434
+   }
+  ],
+  "population": 577635,
+  "utilities": [
+   3266,
+   10144
+  ]
+ },
+ {
+  "cbsa": "42540",
+  "name": "Scranton--Wilkes-Barre, PA",
+  "counties": [
+   {
+    "fips": "42069",
+    "name": "Lackawanna County",
+    "state": "PA",
+    "population": 216502
+   },
+   {
+    "fips": "42079",
+    "name": "Luzerne County",
+    "state": "PA",
+    "population": 332126
+   },
+   {
+    "fips": "42131",
+    "name": "Wyoming County",
+    "state": "PA",
+    "population": 25790
+   }
+  ],
+  "population": 574418,
+  "utilities": [
+   66101,
+   14715,
+   19390,
+   40289,
+   1823,
+   14124
+  ]
+ },
+ {
+  "cbsa": "38940",
+  "name": "Port St. Lucie, FL",
+  "counties": [
+   {
+    "fips": "12085",
+    "name": "Martin County",
+    "state": "FL",
+    "population": 166272
+   },
+   {
+    "fips": "12111",
+    "name": "St. Lucie County",
+    "state": "FL",
+    "population": 402449
+   }
+  ],
+  "population": 568721,
+  "utilities": [
+   6452,
+   6616
+  ]
+ },
+ {
+  "cbsa": "29540",
+  "name": "Lancaster, PA",
+  "counties": [
+   {
+    "fips": "42071",
+    "name": "Lancaster County",
+    "state": "PA",
+    "population": 563159
+   }
+  ],
+  "population": 563159,
+  "utilities": [
+   66101,
+   14715,
+   5935
+  ]
+ },
+ {
+  "cbsa": "33700",
+  "name": "Modesto, CA",
+  "counties": [
+   {
+    "fips": "06099",
+    "name": "Stanislaus County",
+    "state": "CA",
+    "population": 557719
+   }
+  ],
+  "population": 557719,
+  "utilities": [
+   14328,
+   12745,
+   19281,
+   27000
+  ]
+ },
+ {
+  "cbsa": "26620",
+  "name": "Huntsville, AL",
+  "counties": [
+   {
+    "fips": "01083",
+    "name": "Limestone County",
+    "state": "AL",
+    "population": 122928
+   },
+   {
+    "fips": "01089",
+    "name": "Madison County",
+    "state": "AL",
+    "population": 433516
+   }
+  ],
+  "population": 556444,
+  "utilities": [
+   9094,
+   944
+  ]
+ },
+ {
+  "cbsa": "37860",
+  "name": "Pensacola-Ferry Pass-Brent, FL",
+  "counties": [
+   {
+    "fips": "12033",
+    "name": "Escambia County",
+    "state": "FL",
+    "population": 333834
+   },
+   {
+    "fips": "12113",
+    "name": "Santa Rosa County",
+    "state": "FL",
+    "population": 211115
+   }
+  ],
+  "population": 544949,
+  "utilities": [
+   6452,
+   3502,
+   5964
+  ]
+ },
+ {
+  "cbsa": "30460",
+  "name": "Lexington-Fayette, KY",
+  "counties": [
+   {
+    "fips": "21017",
+    "name": "Bourbon County",
+    "state": "KY",
+    "population": 20243
+   },
+   {
+    "fips": "21049",
+    "name": "Clark County",
+    "state": "KY",
+    "population": 37888
+   },
+   {
+    "fips": "21067",
+    "name": "Fayette County",
+    "state": "KY",
+    "population": 329751
+   },
+   {
+    "fips": "21113",
+    "name": "Jessamine County",
+    "state": "KY",
+    "population": 57147
+   },
+   {
+    "fips": "21209",
+    "name": "Scott County",
+    "state": "KY",
+    "population": 62262
+   },
+   {
+    "fips": "21239",
+    "name": "Woodford County",
+    "state": "KY",
+    "population": 27883
+   }
+  ],
+  "population": 535174,
+  "utilities": [
+   10171,
+   14251,
+   1886,
+   3687,
+   6708,
+   13577,
+   14459
+  ]
+ },
+ {
+  "cbsa": "28660",
+  "name": "Killeen-Temple, TX",
+  "counties": [
+   {
+    "fips": "48027",
+    "name": "Bell County",
+    "state": "TX",
+    "population": 402248
+   },
+   {
+    "fips": "48099",
+    "name": "Coryell County",
+    "state": "TX",
+    "population": 85592
+   },
+   {
+    "fips": "48281",
+    "name": "Lampasas County",
+    "state": "TX",
+    "population": 23657
+   }
+  ],
+  "population": 511497,
+  "utilities": [
+   44372,
+   14626,
+   40051,
+   19490,
+   55982,
+   7979,
+   1273,
+   1287,
+   10656
+  ]
+ },
+ {
+  "cbsa": "44180",
+  "name": "Springfield, MO",
+  "counties": [
+   {
+    "fips": "29043",
+    "name": "Christian County",
+    "state": "MO",
+    "population": 96725
+   },
+   {
+    "fips": "29059",
+    "name": "Dallas County",
+    "state": "MO",
+    "population": 18025
+   },
+   {
+    "fips": "29077",
+    "name": "Greene County",
+    "state": "MO",
+    "population": 309286
+   },
+   {
+    "fips": "29167",
+    "name": "Polk County",
+    "state": "MO",
+    "population": 33604
+   },
+   {
+    "fips": "29225",
+    "name": "Webster County",
+    "state": "MO",
+    "population": 43054
+   }
+  ],
+  "population": 500694,
+  "utilities": [
+   5860,
+   17833,
+   20574,
+   27238,
+   10603,
+   14288,
+   20318,
+   3634,
+   16511,
+   16851,
+   16959
+  ]
+ },
+ {
+  "cbsa": "48900",
+  "name": "Wilmington, NC",
+  "counties": [
+   {
+    "fips": "37019",
+    "name": "Brunswick County",
+    "state": "NC",
+    "population": 174702
+   },
+   {
+    "fips": "37129",
+    "name": "New Hanover County",
+    "state": "NC",
+    "population": 245959
+   },
+   {
+    "fips": "37141",
+    "name": "Pender County",
+    "state": "NC",
+    "population": 72111
+   }
+  ],
+  "population": 492772,
+  "utilities": [
+   19876,
+   3046,
+   24889,
+   9837,
+   6640,
+   17668
+  ]
+ },
+ {
+  "cbsa": "42220",
+  "name": "Santa Rosa-Petaluma, CA",
+  "counties": [
+   {
+    "fips": "06097",
+    "name": "Sonoma County",
+    "state": "CA",
+    "population": 486444
+   }
+  ],
+  "population": 486444,
+  "utilities": [
+   14328,
+   27000,
+   8348
+  ]
+ },
+ {
+  "cbsa": "47300",
+  "name": "Visalia, CA",
+  "counties": [
+   {
+    "fips": "06107",
+    "name": "Tulare County",
+    "state": "CA",
+    "population": 485146
+   }
+  ],
+  "population": 485146,
+  "utilities": [
+   14328,
+   17609
+  ]
+ },
+ {
+  "cbsa": "29620",
+  "name": "Lansing-East Lansing, MI",
+  "counties": [
+   {
+    "fips": "26037",
+    "name": "Clinton County",
+    "state": "MI",
+    "population": 80432
+   },
+   {
+    "fips": "26045",
+    "name": "Eaton County",
+    "state": "MI",
+    "population": 109581
+   },
+   {
+    "fips": "26065",
+    "name": "Ingham County",
+    "state": "MI",
+    "population": 289709
+   }
+  ],
+  "population": 479722,
+  "utilities": [
+   5109,
+   4254,
+   10704,
+   19396,
+   5630,
+   20910
+  ]
+ },
+ {
+  "cbsa": "49620",
+  "name": "York-Hanover, PA",
+  "counties": [
+   {
+    "fips": "42133",
+    "name": "York County",
+    "state": "PA",
+    "population": 473197
+   }
+  ],
+  "population": 473197,
+  "utilities": [
+   66101,
+   14940,
+   14715,
+   40220,
+   7359,
+   10959
+  ]
+ },
+ {
+  "cbsa": "23060",
+  "name": "Fort Wayne, IN",
+  "counties": [
+   {
+    "fips": "18003",
+    "name": "Allen County",
+    "state": "IN",
+    "population": 402329
+   },
+   {
+    "fips": "18179",
+    "name": "Wells County",
+    "state": "IN",
+    "population": 28883
+   },
+   {
+    "fips": "18183",
+    "name": "Whitley County",
+    "state": "IN",
+    "population": 35046
+   }
+  ],
+  "population": 466258,
+  "utilities": [
+   15470,
+   9324,
+   20603,
+   10448,
+   59505,
+   14599,
+   13647,
+   1896,
+   4007,
+   9666,
+   17589
+  ]
+ },
+ {
+  "cbsa": "44140",
+  "name": "Springfield, MA",
+  "counties": [
+   {
+    "fips": "25013",
+    "name": "Hampden County",
+    "state": "MA",
+    "population": 464338
+   }
+  ],
+  "population": 464338,
+  "utilities": [
+   54913,
+   11804,
+   3477,
+   20481,
+   8774,
+   3447,
+   16438
+  ]
+ },
+ {
+  "cbsa": "47930",
+  "name": "Waterbury-Shelton, CT",
+  "counties": [
+   {
+    "fips": "09140",
+    "name": "Naugatuck Valley Planning Region",
+    "state": "CT",
+    "population": 463349
+   }
+  ],
+  "population": 463349,
+  "utilities": [
+   4176,
+   19497,
+   20038
+  ]
+ },
+ {
+  "cbsa": "46700",
+  "name": "Vallejo, CA",
+  "counties": [
+   {
+    "fips": "06095",
+    "name": "Solano County",
+    "state": "CA",
+    "population": 455376
+   }
+  ],
+  "population": 455376,
+  "utilities": [
+   14328,
+   27000,
+   58126
+  ]
+ },
+ {
+  "cbsa": "18580",
+  "name": "Corpus Christi, TX",
+  "counties": [
+   {
+    "fips": "48007",
+    "name": "Aransas County",
+    "state": "TX",
+    "population": 26146
+   },
+   {
+    "fips": "48355",
+    "name": "Nueces County",
+    "state": "TX",
+    "population": 352992
+   },
+   {
+    "fips": "48409",
+    "name": "San Patricio County",
+    "state": "TX",
+    "population": 72053
+   }
+  ],
+  "population": 451191,
+  "utilities": [
+   3278,
+   13830,
+   16627,
+   16175
+  ]
+ },
+ {
+  "cbsa": "41420",
+  "name": "Salem, OR",
+  "counties": [
+   {
+    "fips": "41047",
+    "name": "Marion County",
+    "state": "OR",
+    "population": 355777
+   },
+   {
+    "fips": "41053",
+    "name": "Polk County",
+    "state": "OR",
+    "population": 90037
+   }
+  ],
+  "population": 445814,
+  "utilities": [
+   14354,
+   15248,
+   4743,
+   16555,
+   1738,
+   12789
+  ]
+ },
+ {
+  "cbsa": "36100",
+  "name": "Ocala, FL",
+  "counties": [
+   {
+    "fips": "12083",
+    "name": "Marion County",
+    "state": "FL",
+    "population": 442660
+   }
+  ],
+  "population": 442660,
+  "utilities": [
+   6455,
+   18304,
+   3757,
+   13955,
+   3245
+  ]
+ },
+ {
+  "cbsa": "42200",
+  "name": "Santa Maria-Santa Barbara, CA",
+  "counties": [
+   {
+    "fips": "06083",
+    "name": "Santa Barbara County",
+    "state": "CA",
+    "population": 442065
+   }
+  ],
+  "population": 442065,
+  "utilities": [
+   14328,
+   17609,
+   11148,
+   61432
+  ]
+ },
+ {
+  "cbsa": "39740",
+  "name": "Reading, PA",
+  "counties": [
+   {
+    "fips": "42011",
+    "name": "Berks County",
+    "state": "PA",
+    "population": 440072
+   }
+  ],
+  "population": 440072,
+  "utilities": [
+   66101,
+   14715,
+   10494
+  ]
+ },
+ {
+  "cbsa": "42340",
+  "name": "Savannah, GA",
+  "counties": [
+   {
+    "fips": "13029",
+    "name": "Bryan County",
+    "state": "GA",
+    "population": 52062
+   },
+   {
+    "fips": "13051",
+    "name": "Chatham County",
+    "state": "GA",
+    "population": 311855
+   },
+   {
+    "fips": "13103",
+    "name": "Effingham County",
+    "state": "GA",
+    "population": 74397
+   }
+  ],
+  "population": 438314,
+  "utilities": [
+   7140,
+   2903,
+   5905,
+   3843,
+   14649
+  ]
+ },
+ {
+  "cbsa": "15180",
+  "name": "Brownsville-Harlingen, TX",
+  "counties": [
+   {
+    "fips": "48061",
+    "name": "Cameron County",
+    "state": "TX",
+    "population": 433946
+   }
+  ],
+  "population": 433946,
+  "utilities": [
+   3278,
+   11501,
+   2409
+  ]
+ },
+ {
+  "cbsa": "41500",
+  "name": "Salinas, CA",
+  "counties": [
+   {
+    "fips": "06053",
+    "name": "Monterey County",
+    "state": "CA",
+    "population": 433729
+   }
+  ],
+  "population": 433729,
+  "utilities": [
+   14328,
+   61432
+  ]
+ },
+ {
+  "cbsa": "31700",
+  "name": "Manchester-Nashua, NH",
+  "counties": [
+   {
+    "fips": "33011",
+    "name": "Hillsborough County",
+    "state": "NH",
+    "population": 433415
+   }
+  ],
+  "population": 433415,
+  "utilities": [
+   15472,
+   26510
+  ]
+ },
+ {
+  "cbsa": "25060",
+  "name": "Gulfport-Biloxi, MS",
+  "counties": [
+   {
+    "fips": "28045",
+    "name": "Hancock County",
+    "state": "MS",
+    "population": 46873
+   },
+   {
+    "fips": "28047",
+    "name": "Harrison County",
+    "state": "MS",
+    "population": 217136
+   },
+   {
+    "fips": "28059",
+    "name": "Jackson County",
+    "state": "MS",
+    "population": 147666
+   },
+   {
+    "fips": "28131",
+    "name": "Stone County",
+    "state": "MS",
+    "population": 19654
+   }
+  ],
+  "population": 431329,
+  "utilities": [
+   12686,
+   3841,
+   17252,
+   14563
+  ]
+ },
+ {
+  "cbsa": "34820",
+  "name": "Myrtle Beach-Conway-North Myrtle Beach, SC",
+  "counties": [
+   {
+    "fips": "45051",
+    "name": "Horry County",
+    "state": "SC",
+    "population": 427551
+   }
+  ],
+  "population": 427551,
+  "utilities": [
+   3046,
+   17543,
+   8786
+  ]
+ },
+ {
+  "cbsa": "29180",
+  "name": "Lafayette, LA",
+  "counties": [
+   {
+    "fips": "22001",
+    "name": "Acadia Parish",
+    "state": "LA",
+    "population": 57032
+   },
+   {
+    "fips": "22055",
+    "name": "Lafayette Parish",
+    "state": "LA",
+    "population": 257949
+   },
+   {
+    "fips": "22099",
+    "name": "St. Martin Parish",
+    "state": "LA",
+    "population": 51106
+   },
+   {
+    "fips": "22113",
+    "name": "Vermilion Parish",
+    "state": "LA",
+    "population": 57671
+   }
+  ],
+  "population": 423758,
+  "utilities": [
+   11241,
+   3265,
+   17684,
+   9096,
+   17565,
+   9682,
+   59,
+   5945,
+   7760,
+   10025,
+   15728,
+   17889
+  ]
+ },
+ {
+  "cbsa": "49660",
+  "name": "Youngstown-Warren, OH",
+  "counties": [
+   {
+    "fips": "39099",
+    "name": "Mahoning County",
+    "state": "OH",
+    "population": 224706
+   },
+   {
+    "fips": "39155",
+    "name": "Trumbull County",
+    "state": "OH",
+    "population": 198972
+   }
+  ],
+  "population": 423678,
+  "utilities": [
+   13998,
+   3755,
+   13602,
+   4061,
+   8949,
+   13563
+  ]
+ },
+ {
+  "cbsa": "11700",
+  "name": "Asheville, NC",
+  "counties": [
+   {
+    "fips": "37021",
+    "name": "Buncombe County",
+    "state": "NC",
+    "population": 277417
+   },
+   {
+    "fips": "37089",
+    "name": "Henderson County",
+    "state": "NC",
+    "population": 122375
+   },
+   {
+    "fips": "37115",
+    "name": "Madison County",
+    "state": "NC",
+    "population": 22553
+   }
+  ],
+  "population": 422345,
+  "utilities": [
+   5416,
+   3046,
+   6784,
+   8333
+  ]
+ },
+ {
+  "cbsa": "34940",
+  "name": "Naples-Marco Island, FL",
+  "counties": [
+   {
+    "fips": "12021",
+    "name": "Collier County",
+    "state": "FL",
+    "population": 417131
+   }
+  ],
+  "population": 417131,
+  "utilities": [
+   6452,
+   10857
+  ]
+ },
+ {
+  "cbsa": "33660",
+  "name": "Mobile, AL",
+  "counties": [
+   {
+    "fips": "01097",
+    "name": "Mobile County",
+    "state": "AL",
+    "population": 411658
+   }
+  ],
+  "population": 411658,
+  "utilities": [
+   195,
+   17252
+  ]
+ },
+ {
+  "cbsa": "43900",
+  "name": "Spartanburg, SC",
+  "counties": [
+   {
+    "fips": "45083",
+    "name": "Spartanburg County",
+    "state": "SC",
+    "population": 380857
+   },
+   {
+    "fips": "45087",
+    "name": "Union County",
+    "state": "SC",
+    "population": 26799
+   }
+  ],
+  "population": 407656,
+  "utilities": [
+   5416,
+   17539,
+   1890,
+   10768,
+   7654,
+   2212,
+   11118,
+   19431
+  ]
+ },
+ {
+  "cbsa": "11260",
+  "name": "Anchorage, AK",
+  "counties": [
+   {
+    "fips": "02020",
+    "name": "Anchorage Municipality",
+    "state": "AK",
+    "population": 287155
+   },
+   {
+    "fips": "02170",
+    "name": "Matanuska-Susitna Borough",
+    "state": "AK",
+    "population": 118666
+   }
+  ],
+  "population": 405821,
+  "utilities": [
+   3522,
+   11824
+  ]
+ },
+ {
+  "cbsa": "22420",
+  "name": "Flint, MI",
+  "counties": [
+   {
+    "fips": "26049",
+    "name": "Genesee County",
+    "state": "MI",
+    "population": 401093
+   }
+  ],
+  "population": 401093,
+  "utilities": [
+   5109,
+   4254
+  ]
+ },
+ {
+  "cbsa": "15940",
+  "name": "Canton-Massillon, OH",
+  "counties": [
+   {
+    "fips": "39019",
+    "name": "Carroll County",
+    "state": "OH",
+    "population": 26475
+   },
+   {
+    "fips": "39151",
+    "name": "Stark County",
+    "state": "OH",
+    "population": 373771
+   }
+  ],
+  "population": 400246,
+  "utilities": [
+   14006,
+   13998,
+   18085,
+   8761,
+   14194,
+   1386,
+   2205,
+   3076
+  ]
+ },
+ {
+  "cbsa": "13140",
+  "name": "Beaumont-Port Arthur, TX",
+  "counties": [
+   {
+    "fips": "48199",
+    "name": "Hardin County",
+    "state": "TX",
+    "population": 58723
+   },
+   {
+    "fips": "48245",
+    "name": "Jefferson County",
+    "state": "TX",
+    "population": 254321
+   },
+   {
+    "fips": "48361",
+    "name": "Orange County",
+    "state": "TX",
+    "population": 86266
+   }
+  ],
+  "population": 399310,
+  "utilities": [
+   55937,
+   16613,
+   9668
+  ]
+ },
+ {
+  "cbsa": "45940",
+  "name": "Trenton-Princeton, NJ",
+  "counties": [
+   {
+    "fips": "34021",
+    "name": "Mercer County",
+    "state": "NJ",
+    "population": 399289
+   }
+  ],
+  "population": 399289,
+  "utilities": [
+   15477,
+   9726
+  ]
+ },
+ {
+  "cbsa": "45220",
+  "name": "Tallahassee, FL",
+  "counties": [
+   {
+    "fips": "12039",
+    "name": "Gadsden County",
+    "state": "FL",
+    "population": 44298
+   },
+   {
+    "fips": "12065",
+    "name": "Jefferson County",
+    "state": "FL",
+    "population": 16007
+   },
+   {
+    "fips": "12073",
+    "name": "Leon County",
+    "state": "FL",
+    "population": 299048
+   },
+   {
+    "fips": "12129",
+    "name": "Wakulla County",
+    "state": "FL",
+    "population": 38089
+   }
+  ],
+  "population": 397442,
+  "utilities": [
+   6455,
+   18445,
+   18449,
+   19161,
+   3406,
+   8276,
+   15566
+  ]
+ },
+ {
+  "cbsa": "22180",
+  "name": "Fayetteville, NC",
+  "counties": [
+   {
+    "fips": "37051",
+    "name": "Cumberland County",
+    "state": "NC",
+    "population": 338473
+   },
+   {
+    "fips": "37093",
+    "name": "Hoke County",
+    "state": "NC",
+    "population": 56939
+   }
+  ],
+  "population": 395412,
+  "utilities": [
+   19876,
+   3046,
+   6235,
+   11291,
+   17572
+  ]
+ },
+ {
+  "cbsa": "33860",
+  "name": "Montgomery, AL",
+  "counties": [
+   {
+    "fips": "01001",
+    "name": "Autauga County",
+    "state": "AL",
+    "population": 61920
+   },
+   {
+    "fips": "01051",
+    "name": "Elmore County",
+    "state": "AL",
+    "population": 91577
+   },
+   {
+    "fips": "01085",
+    "name": "Lowndes County",
+    "state": "AL",
+    "population": 9359
+   },
+   {
+    "fips": "01101",
+    "name": "Montgomery County",
+    "state": "AL",
+    "population": 225891
+   }
+  ],
+  "population": 388747,
+  "utilities": [
+   195,
+   3222,
+   5204,
+   17534,
+   30517
+  ]
+ },
+ {
+  "cbsa": "43340",
+  "name": "Shreveport-Bossier City, LA",
+  "counties": [
+   {
+    "fips": "22015",
+    "name": "Bossier Parish",
+    "state": "LA",
+    "population": 131867
+   },
+   {
+    "fips": "22017",
+    "name": "Caddo Parish",
+    "state": "LA",
+    "population": 224226
+   },
+   {
+    "fips": "22031",
+    "name": "De Soto Parish",
+    "state": "LA",
+    "population": 27381
+   }
+  ],
+  "population": 383474,
+  "utilities": [
+   11241,
+   17698,
+   3265,
+   14424
+  ]
+ },
+ {
+  "cbsa": "21660",
+  "name": "Eugene-Springfield, OR",
+  "counties": [
+   {
+    "fips": "41039",
+    "name": "Lane County",
+    "state": "OR",
+    "population": 381584
+   }
+  ],
+  "population": 381584,
+  "utilities": [
+   14354,
+   6022,
+   3264,
+   17839,
+   4743,
+   40437,
+   12439,
+   10681,
+   1738,
+   1736,
+   5327
+  ]
+ },
+ {
+  "cbsa": "19340",
+  "name": "Davenport-Moline-Rock Island, IA-IL",
+  "counties": [
+   {
+    "fips": "17073",
+    "name": "Henry County",
+    "state": "IL",
+    "population": 48095
+   },
+   {
+    "fips": "17131",
+    "name": "Mercer County",
+    "state": "IL",
+    "population": 15229
+   },
+   {
+    "fips": "17161",
+    "name": "Rock Island County",
+    "state": "IL",
+    "population": 141869
+   },
+   {
+    "fips": "19163",
+    "name": "Scott County",
+    "state": "IA",
+    "population": 175259
+   }
+  ],
+  "population": 380452,
+  "utilities": [
+   56697,
+   12341,
+   9417,
+   4362,
+   5605,
+   9750,
+   5529,
+   5742,
+   7095,
+   11141,
+   40390
+  ]
+ },
+ {
+  "cbsa": "24540",
+  "name": "Greeley, CO",
+  "counties": [
+   {
+    "fips": "08123",
+    "name": "Weld County",
+    "state": "CO",
+    "population": 378426
+   }
+  ],
+  "population": 378426,
+  "utilities": [
+   15466,
+   19499,
+   15257,
+   11187,
+   27058,
+   8570,
+   12860,
+   27000
+  ]
+ },
+ {
+  "cbsa": "22660",
+  "name": "Fort Collins-Loveland, CO",
+  "counties": [
+   {
+    "fips": "08069",
+    "name": "Larimer County",
+    "state": "CO",
+    "population": 377292
+   }
+  ],
+  "population": 377292,
+  "utilities": [
+   15466,
+   6604,
+   15257,
+   11256,
+   13050,
+   27058,
+   27000,
+   5997
+  ]
+ },
+ {
+  "cbsa": "25860",
+  "name": "Hickory-Lenoir-Morganton, NC",
+  "counties": [
+   {
+    "fips": "37003",
+    "name": "Alexander County",
+    "state": "NC",
+    "population": 36958
+   },
+   {
+    "fips": "37023",
+    "name": "Burke County",
+    "state": "NC",
+    "population": 88655
+   },
+   {
+    "fips": "37027",
+    "name": "Caldwell County",
+    "state": "NC",
+    "population": 81105
+   },
+   {
+    "fips": "37035",
+    "name": "Catawba County",
+    "state": "NC",
+    "population": 170172
+   }
+  ],
+  "population": 376890,
+  "utilities": [
+   5416,
+   21632,
+   1889,
+   16496,
+   13027,
+   12944,
+   5372,
+   7496,
+   11515,
+   13561
+  ]
+ },
+ {
+  "cbsa": "12100",
+  "name": "Atlantic City-Hammonton, NJ",
+  "counties": [
+   {
+    "fips": "34001",
+    "name": "Atlantic County",
+    "state": "NJ",
+    "population": 278657
+   },
+   {
+    "fips": "34009",
+    "name": "Cape May County",
+    "state": "NJ",
+    "population": 93390
+   }
+  ],
+  "population": 372047,
+  "utilities": [
+   963
+  ]
+ },
+ {
+  "cbsa": "11460",
+  "name": "Ann Arbor, MI",
+  "counties": [
+   {
+    "fips": "26161",
+    "name": "Washtenaw County",
+    "state": "MI",
+    "population": 370214
+   }
+  ],
+  "population": 370214,
+  "utilities": [
+   5109,
+   4254,
+   3415,
+   3813
+  ]
+ },
+ {
+  "cbsa": "31180",
+  "name": "Lubbock, TX",
+  "counties": [
+   {
+    "fips": "48079",
+    "name": "Cochran County",
+    "state": "TX",
+    "population": 2546
+   },
+   {
+    "fips": "48107",
+    "name": "Crosby County",
+    "state": "TX",
+    "population": 4852
+   },
+   {
+    "fips": "48169",
+    "name": "Garza County",
+    "state": "TX",
+    "population": 4510
+   },
+   {
+    "fips": "48219",
+    "name": "Hockley County",
+    "state": "TX",
+    "population": 21600
+   },
+   {
+    "fips": "48303",
+    "name": "Lubbock County",
+    "state": "TX",
+    "population": 328906
+   },
+   {
+    "fips": "48305",
+    "name": "Lynn County",
+    "state": "TX",
+    "population": 6017
+   }
+  ],
+  "population": 368431,
+  "utilities": [
+   44372,
+   17718,
+   11292,
+   17561,
+   11364,
+   10817,
+   1591,
+   10625,
+   11014,
+   1169
+  ]
+ },
+ {
+  "cbsa": "26580",
+  "name": "Huntington-Ashland, WV-KY-OH",
+  "counties": [
+   {
+    "fips": "21019",
+    "name": "Boyd County",
+    "state": "KY",
+    "population": 47751
+   },
+   {
+    "fips": "21043",
+    "name": "Carter County",
+    "state": "KY",
+    "population": 26149
+   },
+   {
+    "fips": "21089",
+    "name": "Greenup County",
+    "state": "KY",
+    "population": 35213
+   },
+   {
+    "fips": "21127",
+    "name": "Lawrence County",
+    "state": "KY",
+    "population": 15765
+   },
+   {
+    "fips": "39087",
+    "name": "Lawrence County",
+    "state": "OH",
+    "population": 55710
+   },
+   {
+    "fips": "54011",
+    "name": "Cabell County",
+    "state": "WV",
+    "population": 91183
+   },
+   {
+    "fips": "54079",
+    "name": "Putnam County",
+    "state": "WV",
+    "population": 56885
+   },
+   {
+    "fips": "54099",
+    "name": "Wayne County",
+    "state": "WV",
+    "population": 37309
+   }
+  ],
+  "population": 365965,
+  "utilities": [
+   14006,
+   733,
+   22053,
+   2502,
+   7558,
+   1708,
+   14103
+  ]
+ },
+ {
+  "cbsa": "37900",
+  "name": "Peoria, IL",
+  "counties": [
+   {
+    "fips": "17123",
+    "name": "Marshall County",
+    "state": "IL",
+    "population": 11473
+   },
+   {
+    "fips": "17143",
+    "name": "Peoria County",
+    "state": "IL",
+    "population": 178553
+   },
+   {
+    "fips": "17175",
+    "name": "Stark County",
+    "state": "IL",
+    "population": 5319
+   },
+   {
+    "fips": "17179",
+    "name": "Tazewell County",
+    "state": "IL",
+    "population": 130049
+   },
+   {
+    "fips": "17203",
+    "name": "Woodford County",
+    "state": "IL",
+    "population": 38111
+   }
+  ],
+  "population": 363505,
+  "utilities": [
+   4110,
+   56697,
+   4362,
+   12395,
+   17838
+  ]
+ },
+ {
+  "cbsa": "23540",
+  "name": "Gainesville, FL",
+  "counties": [
+   {
+    "fips": "12001",
+    "name": "Alachua County",
+    "state": "FL",
+    "population": 290028
+   },
+   {
+    "fips": "12041",
+    "name": "Gilchrist County",
+    "state": "FL",
+    "population": 20488
+   },
+   {
+    "fips": "12075",
+    "name": "Levy County",
+    "state": "FL",
+    "population": 48520
+   }
+  ],
+  "population": 359036,
+  "utilities": [
+   6452,
+   6455,
+   18304,
+   3757,
+   6909,
+   3245,
+   201,
+   13521,
+   20735
+  ]
+ },
+ {
+  "cbsa": "30700",
+  "name": "Lincoln, NE",
+  "counties": [
+   {
+    "fips": "31109",
+    "name": "Lancaster County",
+    "state": "NE",
+    "population": 334049
+   },
+   {
+    "fips": "31159",
+    "name": "Seward County",
+    "state": "NE",
+    "population": 18032
+   }
+  ],
+  "population": 352081,
+  "utilities": [
+   14127,
+   11018,
+   13337,
+   13664,
+   21111,
+   13334,
+   16953
+  ]
+ },
+ {
+  "cbsa": "17300",
+  "name": "Clarksville, TN-KY",
+  "counties": [
+   {
+    "fips": "21047",
+    "name": "Christian County",
+    "state": "KY",
+    "population": 70115
+   },
+   {
+    "fips": "21221",
+    "name": "Trigg County",
+    "state": "KY",
+    "population": 14512
+   },
+   {
+    "fips": "47125",
+    "name": "Montgomery County",
+    "state": "TN",
+    "population": 249935
+   },
+   {
+    "fips": "47161",
+    "name": "Stewart County",
+    "state": "TN",
+    "population": 14439
+   }
+  ],
+  "population": 349001,
+  "utilities": [
+   10171,
+   4624,
+   3704,
+   14724,
+   5148,
+   8846
+  ]
+ },
+ {
+  "cbsa": "40420",
+  "name": "Rockford, IL",
+  "counties": [
+   {
+    "fips": "17007",
+    "name": "Boone County",
+    "state": "IL",
+    "population": 53568
+   },
+   {
+    "fips": "17201",
+    "name": "Winnebago County",
+    "state": "IL",
+    "population": 283674
+   }
+  ],
+  "population": 337242,
+  "utilities": [
+   4110,
+   16196
+  ]
+ },
+ {
+  "cbsa": "24580",
+  "name": "Green Bay, WI",
+  "counties": [
+   {
+    "fips": "55009",
+    "name": "Brown County",
+    "state": "WI",
+    "population": 275803
+   },
+   {
+    "fips": "55061",
+    "name": "Kewaunee County",
+    "state": "WI",
+    "population": 20758
+   },
+   {
+    "fips": "55083",
+    "name": "Oconto County",
+    "state": "WI",
+    "population": 40195
+   }
+  ],
+  "population": 336756,
+  "utilities": [
+   20847,
+   20856,
+   20860,
+   307,
+   13965,
+   13964
+  ]
+ },
+ {
+  "cbsa": "14500",
+  "name": "Boulder, CO",
+  "counties": [
+   {
+    "fips": "08013",
+    "name": "Boulder County",
+    "state": "CO",
+    "population": 328560
+   }
+  ],
+  "population": 328560,
+  "utilities": [
+   15466,
+   19499,
+   15257,
+   11187,
+   27000,
+   5997,
+   11376
+  ]
+ },
+ {
+  "cbsa": "17980",
+  "name": "Columbus, GA-AL",
+  "counties": [
+   {
+    "fips": "01113",
+    "name": "Russell County",
+    "state": "AL",
+    "population": 58898
+   },
+   {
+    "fips": "13053",
+    "name": "Chattahoochee County",
+    "state": "GA",
+    "population": 8465
+   },
+   {
+    "fips": "13145",
+    "name": "Harris County",
+    "state": "GA",
+    "population": 37280
+   },
+   {
+    "fips": "13197",
+    "name": "Marion County",
+    "state": "GA",
+    "population": 7676
+   },
+   {
+    "fips": "13215",
+    "name": "Muscogee County",
+    "state": "GA",
+    "population": 202171
+   },
+   {
+    "fips": "13259",
+    "name": "Stewart County",
+    "state": "GA",
+    "population": 4631
+   },
+   {
+    "fips": "13263",
+    "name": "Talbot County",
+    "state": "GA",
+    "population": 5709
+   }
+  ],
+  "population": 324830,
+  "utilities": [
+   7140,
+   195,
+   6411,
+   19219,
+   18203,
+   18305,
+   19581,
+   20393
+  ]
+ },
+ {
+  "cbsa": "43780",
+  "name": "South Bend-Mishawaka, IN-MI",
+  "counties": [
+   {
+    "fips": "18141",
+    "name": "St. Joseph County",
+    "state": "IN",
+    "population": 272861
+   },
+   {
+    "fips": "26027",
+    "name": "Cass County",
+    "state": "MI",
+    "population": 51677
+   }
+  ],
+  "population": 324538,
+  "utilities": [
+   9324,
+   13756,
+   12377,
+   12674,
+   9999,
+   5343,
+   11767,
+   13423,
+   20021,
+   20910
+  ]
+ },
+ {
+  "cbsa": "28420",
+  "name": "Kennewick-Richland, WA",
+  "counties": [
+   {
+    "fips": "53005",
+    "name": "Benton County",
+    "state": "WA",
+    "population": 221722
+   },
+   {
+    "fips": "53021",
+    "name": "Franklin County",
+    "state": "WA",
+    "population": 102612
+   }
+  ],
+  "population": 324334,
+  "utilities": [
+   14354,
+   1579,
+   8699,
+   6716,
+   15979,
+   1625,
+   10393,
+   1723,
+   1738
+  ]
+ },
+ {
+  "cbsa": "40220",
+  "name": "Roanoke, VA",
+  "counties": [
+   {
+    "fips": "51023",
+    "name": "Botetourt County",
+    "state": "VA",
+    "population": 34144
+   },
+   {
+    "fips": "51045",
+    "name": "Craig County",
+    "state": "VA",
+    "population": 4800
+   },
+   {
+    "fips": "51067",
+    "name": "Franklin County",
+    "state": "VA",
+    "population": 55526
+   },
+   {
+    "fips": "51161",
+    "name": "Roanoke County",
+    "state": "VA",
+    "population": 97150
+   },
+   {
+    "fips": "51770",
+    "name": "Roanoke city",
+    "state": "VA",
+    "population": 99111
+   },
+   {
+    "fips": "51775",
+    "name": "Salem city",
+    "state": "VA",
+    "population": 25816
+   }
+  ],
+  "population": 316547,
+  "utilities": [
+   19876,
+   733,
+   16558,
+   4471
+  ]
+ },
+ {
+  "cbsa": "25180",
+  "name": "Hagerstown-Martinsburg, MD-WV",
+  "counties": [
+   {
+    "fips": "24043",
+    "name": "Washington County",
+    "state": "MD",
+    "population": 157731
+   },
+   {
+    "fips": "54003",
+    "name": "Berkeley County",
+    "state": "WV",
+    "population": 139522
+   },
+   {
+    "fips": "54065",
+    "name": "Morgan County",
+    "state": "WV",
+    "population": 18027
+   }
+  ],
+  "population": 315280,
+  "utilities": [
+   15263,
+   7908,
+   20729
+  ]
+ },
+ {
+  "cbsa": "18880",
+  "name": "Crestview-Fort Walton Beach-Destin, FL",
+  "counties": [
+   {
+    "fips": "12091",
+    "name": "Okaloosa County",
+    "state": "FL",
+    "population": 221810
+   },
+   {
+    "fips": "12131",
+    "name": "Walton County",
+    "state": "FL",
+    "population": 93288
+   }
+  ],
+  "population": 315098,
+  "utilities": [
+   6452,
+   3502,
+   7785
+  ]
+ },
+ {
+  "cbsa": "28700",
+  "name": "Kingsport-Bristol, TN-VA",
+  "counties": [
+   {
+    "fips": "47073",
+    "name": "Hawkins County",
+    "state": "TN",
+    "population": 59559
+   },
+   {
+    "fips": "47163",
+    "name": "Sullivan County",
+    "state": "TN",
+    "population": 163759
+   },
+   {
+    "fips": "51169",
+    "name": "Scott County",
+    "state": "VA",
+    "population": 21200
+   },
+   {
+    "fips": "51191",
+    "name": "Washington County",
+    "state": "VA",
+    "population": 53898
+   },
+   {
+    "fips": "51520",
+    "name": "Bristol city",
+    "state": "VA",
+    "population": 16418
+   }
+  ],
+  "population": 314834,
+  "utilities": [
+   19876,
+   733,
+   10171,
+   9777,
+   10331,
+   15293,
+   2247,
+   8764,
+   5763,
+   2248
+  ]
+ },
+ {
+  "cbsa": "43620",
+  "name": "Sioux Falls, SD-MN",
+  "counties": [
+   {
+    "fips": "27133",
+    "name": "Rock County",
+    "state": "MN",
+    "population": 9524
+   },
+   {
+    "fips": "46083",
+    "name": "Lincoln County",
+    "state": "SD",
+    "population": 77145
+   },
+   {
+    "fips": "46087",
+    "name": "McCook County",
+    "state": "SD",
+    "population": 5964
+   },
+   {
+    "fips": "46099",
+    "name": "Minnehaha County",
+    "state": "SD",
+    "population": 212691
+   },
+   {
+    "fips": "46125",
+    "name": "Turner County",
+    "state": "SD",
+    "population": 9314
+   }
+  ],
+  "population": 314638,
+  "utilities": [
+   13781,
+   12341,
+   13809,
+   17267,
+   19293,
+   27000,
+   1601,
+   3716,
+   11332,
+   13684,
+   14489,
+   17265
+  ]
+ },
+ {
+  "cbsa": "47380",
+  "name": "Waco, TX",
+  "counties": [
+   {
+    "fips": "48035",
+    "name": "Bosque County",
+    "state": "TX",
+    "population": 18918
+   },
+   {
+    "fips": "48145",
+    "name": "Falls County",
+    "state": "TX",
+    "population": 17869
+   },
+   {
+    "fips": "48309",
+    "name": "McLennan County",
+    "state": "TX",
+    "population": 272020
+   }
+  ],
+  "population": 308807,
+  "utilities": [
+   44372,
+   55937,
+   40051,
+   19490,
+   8620,
+   55982,
+   16146
+  ]
+ },
+ {
+  "cbsa": "36500",
+  "name": "Olympia-Lacey-Tumwater, WA",
+  "counties": [
+   {
+    "fips": "53067",
+    "name": "Thurston County",
+    "state": "WA",
+    "population": 304261
+   }
+  ],
+  "population": 304261,
+  "utilities": [
+   15500,
+   7548,
+   10944,
+   3295,
+   1738,
+   18448
+  ]
+ },
+ {
+  "cbsa": "30980",
+  "name": "Longview, TX",
+  "counties": [
+   {
+    "fips": "48183",
+    "name": "Gregg County",
+    "state": "TX",
+    "population": 126095
+   },
+   {
+    "fips": "48203",
+    "name": "Harrison County",
+    "state": "TX",
+    "population": 71956
+   },
+   {
+    "fips": "48401",
+    "name": "Rusk County",
+    "state": "TX",
+    "population": 54854
+   },
+   {
+    "fips": "48459",
+    "name": "Upshur County",
+    "state": "TX",
+    "population": 44410
+   }
+  ],
+  "population": 297315,
+  "utilities": [
+   44372,
+   17698,
+   19579,
+   4975,
+   20927,
+   3470,
+   16461,
+   14424
+  ]
+ },
+ {
+  "cbsa": "32900",
+  "name": "Merced, CA",
+  "counties": [
+   {
+    "fips": "06047",
+    "name": "Merced County",
+    "state": "CA",
+    "population": 297260
+   }
+  ],
+  "population": 297260,
+  "utilities": [
+   14328,
+   19281,
+   12312,
+   27000
+  ]
+ },
+ {
+  "cbsa": "17780",
+  "name": "College Station-Bryan, TX",
+  "counties": [
+   {
+    "fips": "48041",
+    "name": "Brazos County",
+    "state": "TX",
+    "population": 249088
+   },
+   {
+    "fips": "48051",
+    "name": "Burleson County",
+    "state": "TX",
+    "population": 20549
+   },
+   {
+    "fips": "48395",
+    "name": "Robertson County",
+    "state": "TX",
+    "population": 17839
+   }
+  ],
+  "population": 287476,
+  "utilities": [
+   55937,
+   40051,
+   1892,
+   2442,
+   3940,
+   12452,
+   16146,
+   1273,
+   2800,
+   8359,
+   58113
+  ]
+ },
+ {
+  "cbsa": "46540",
+  "name": "Utica-Rome, NY",
+  "counties": [
+   {
+    "fips": "36043",
+    "name": "Herkimer County",
+    "state": "NY",
+    "population": 59219
+   },
+   {
+    "fips": "36065",
+    "name": "Oneida County",
+    "state": "NY",
+    "population": 226392
+   }
+  ],
+  "population": 285611,
+  "utilities": [
+   13573,
+   13511,
+   1970,
+   6711,
+   9200,
+   12759,
+   14125,
+   14267,
+   17085
+  ]
+ },
+ {
+  "cbsa": "35980",
+  "name": "Norwich-New London-Willimantic, CT",
+  "counties": [
+   {
+    "fips": "09180",
+    "name": "Southeastern Connecticut Planning Region",
+    "state": "CT",
+    "population": 284015
+   }
+  ],
+  "population": 284015,
+  "utilities": [
+   4176,
+   13831,
+   7716,
+   2089,
+   9734,
+   49826
+  ]
+ },
+ {
+  "cbsa": "14740",
+  "name": "Bremerton-Silverdale-Port Orchard, WA",
+  "counties": [
+   {
+    "fips": "53035",
+    "name": "Kitsap County",
+    "state": "WA",
+    "population": 283374
+   }
+  ],
+  "population": 283374,
+  "utilities": [
+   15500,
+   15419,
+   14668,
+   1738
+  ]
+ },
+ {
+  "cbsa": "42020",
+  "name": "San Luis Obispo-Paso Robles, CA",
+  "counties": [
+   {
+    "fips": "06079",
+    "name": "San Luis Obispo County",
+    "state": "CA",
+    "population": 282367
+   }
+  ],
+  "population": 282367,
+  "utilities": [
+   14328,
+   61432
+  ]
+ },
+ {
+  "cbsa": "46220",
+  "name": "Tuscaloosa, AL",
+  "counties": [
+   {
+    "fips": "01063",
+    "name": "Greene County",
+    "state": "AL",
+    "population": 7067
+   },
+   {
+    "fips": "01065",
+    "name": "Hale County",
+    "state": "AL",
+    "population": 15194
+   },
+   {
+    "fips": "01107",
+    "name": "Pickens County",
+    "state": "AL",
+    "population": 18221
+   },
+   {
+    "fips": "01125",
+    "name": "Tuscaloosa County",
+    "state": "AL",
+    "population": 241368
+   }
+  ],
+  "population": 281850,
+  "utilities": [
+   195,
+   1780
+  ]
+ },
+ {
+  "cbsa": "29700",
+  "name": "Laredo, TX",
+  "counties": [
+   {
+    "fips": "48479",
+    "name": "Webb County",
+    "state": "TX",
+    "population": 281224
+   }
+  ],
+  "population": 281224,
+  "utilities": [
+   3278,
+   12268,
+   16057
+  ]
+ },
+ {
+  "cbsa": "20260",
+  "name": "Duluth, MN-WI",
+  "counties": [
+   {
+    "fips": "27017",
+    "name": "Carlton County",
+    "state": "MN",
+    "population": 36711
+   },
+   {
+    "fips": "27137",
+    "name": "St. Louis County",
+    "state": "MN",
+    "population": 200518
+   },
+   {
+    "fips": "55031",
+    "name": "Douglas County",
+    "state": "WI",
+    "population": 43990
+   }
+  ],
+  "population": 281219,
+  "utilities": [
+   12647,
+   5574,
+   10697,
+   18336,
+   4715,
+   1367,
+   1753,
+   2491,
+   4346,
+   5841,
+   7194,
+   8543,
+   12897,
+   13044,
+   13731,
+   15460,
+   19883
+  ]
+ },
+ {
+  "cbsa": "16300",
+  "name": "Cedar Rapids, IA",
+  "counties": [
+   {
+    "fips": "19011",
+    "name": "Benton County",
+    "state": "IA",
+    "population": 26004
+   },
+   {
+    "fips": "19105",
+    "name": "Jones County",
+    "state": "IA",
+    "population": 21253
+   },
+   {
+    "fips": "19113",
+    "name": "Linn County",
+    "state": "IA",
+    "population": 232028
+   }
+  ],
+  "population": 279285,
+  "utilities": [
+   9417,
+   11053,
+   5605,
+   12642,
+   5588,
+   3137,
+   3900,
+   18446,
+   19062,
+   19865
+  ]
+ },
+ {
+  "cbsa": "43640",
+  "name": "Slidell-Mandeville-Covington, LA",
+  "counties": [
+   {
+    "fips": "22103",
+    "name": "St. Tammany Parish",
+    "state": "LA",
+    "population": 279108
+   }
+  ],
+  "population": 279108,
+  "utilities": [
+   11241,
+   3265,
+   21567
+  ]
+ },
+ {
+  "cbsa": "11100",
+  "name": "Amarillo, TX",
+  "counties": [
+   {
+    "fips": "48011",
+    "name": "Armstrong County",
+    "state": "TX",
+    "population": 1843
+   },
+   {
+    "fips": "48065",
+    "name": "Carson County",
+    "state": "TX",
+    "population": 5805
+   },
+   {
+    "fips": "48359",
+    "name": "Oldham County",
+    "state": "TX",
+    "population": 1783
+   },
+   {
+    "fips": "48375",
+    "name": "Potter County",
+    "state": "TX",
+    "population": 114453
+   },
+   {
+    "fips": "48381",
+    "name": "Randall County",
+    "state": "TX",
+    "population": 152351
+   }
+  ],
+  "population": 276235,
+  "utilities": [
+   17718,
+   6198,
+   7561,
+   4939,
+   16063,
+   18199
+  ]
+ },
+ {
+  "cbsa": "21780",
+  "name": "Evansville, IN",
+  "counties": [
+   {
+    "fips": "18129",
+    "name": "Posey County",
+    "state": "IN",
+    "population": 24988
+   },
+   {
+    "fips": "18163",
+    "name": "Vanderburgh County",
+    "state": "IN",
+    "population": 181995
+   },
+   {
+    "fips": "18173",
+    "name": "Warrick County",
+    "state": "IN",
+    "population": 66803
+   }
+  ],
+  "population": 273786,
+  "utilities": [
+   15470,
+   17633,
+   25295,
+   19445,
+   261
+  ]
+ },
+ {
+  "cbsa": "22020",
+  "name": "Fargo, ND-MN",
+  "counties": [
+   {
+    "fips": "27027",
+    "name": "Clay County",
+    "state": "MN",
+    "population": 67734
+   },
+   {
+    "fips": "38017",
+    "name": "Cass County",
+    "state": "ND",
+    "population": 201794
+   }
+  ],
+  "population": 269528,
+  "utilities": [
+   13781,
+   14232,
+   24949,
+   10618,
+   12301,
+   12894,
+   20639,
+   27000,
+   1233,
+   8307,
+   26939
+  ]
+ },
+ {
+  "cbsa": "31340",
+  "name": "Lynchburg, VA",
+  "counties": [
+   {
+    "fips": "51009",
+    "name": "Amherst County",
+    "state": "VA",
+    "population": 31962
+   },
+   {
+    "fips": "51011",
+    "name": "Appomattox County",
+    "state": "VA",
+    "population": 17172
+   },
+   {
+    "fips": "51019",
+    "name": "Bedford County",
+    "state": "VA",
+    "population": 83059
+   },
+   {
+    "fips": "51031",
+    "name": "Campbell County",
+    "state": "VA",
+    "population": 55629
+   },
+   {
+    "fips": "51680",
+    "name": "Lynchburg city",
+    "state": "VA",
+    "population": 81347
+   }
+  ],
+  "population": 269169,
+  "utilities": [
+   19876,
+   733,
+   21244,
+   3291,
+   1456
+  ]
+ },
+ {
+  "cbsa": "19300",
+  "name": "Daphne-Fairhope-Foley, AL",
+  "counties": [
+   {
+    "fips": "01003",
+    "name": "Baldwin County",
+    "state": "AL",
+    "population": 267761
+   }
+  ],
+  "population": 267761,
+  "utilities": [
+   195,
+   1149,
+   6491,
+   17646,
+   6145,
+   16140
+  ]
+ },
+ {
+  "cbsa": "13460",
+  "name": "Bend, OR",
+  "counties": [
+   {
+    "fips": "41013",
+    "name": "Crook County",
+    "state": "OR",
+    "population": 27564
+   },
+   {
+    "fips": "41017",
+    "name": "Deschutes County",
+    "state": "OR",
+    "population": 213072
+   },
+   {
+    "fips": "41031",
+    "name": "Jefferson County",
+    "state": "OR",
+    "population": 25740
+   }
+  ],
+  "population": 266376,
+  "utilities": [
+   14354,
+   3240,
+   12439,
+   1738,
+   11589,
+   20138
+  ]
+ },
+ {
+  "cbsa": "21500",
+  "name": "Erie, PA",
+  "counties": [
+   {
+    "fips": "42049",
+    "name": "Erie County",
+    "state": "PA",
+    "population": 265832
+   }
+  ],
+  "population": 265832,
+  "utilities": [
+   66101,
+   40293,
+   7256,
+   40223
+  ]
+ },
+ {
+  "cbsa": "28020",
+  "name": "Kalamazoo-Portage, MI",
+  "counties": [
+   {
+    "fips": "26077",
+    "name": "Kalamazoo County",
+    "state": "MI",
+    "population": 263795
+   }
+  ],
+  "population": 263795,
+  "utilities": [
+   4254,
+   9324,
+   12377,
+   20910
+  ]
+ },
+ {
+  "cbsa": "49420",
+  "name": "Yakima, WA",
+  "counties": [
+   {
+    "fips": "53077",
+    "name": "Yakima County",
+    "state": "WA",
+    "population": 259185
+   }
+  ],
+  "population": 259185,
+  "utilities": [
+   14354,
+   1625,
+   10393,
+   1738,
+   56621
+  ]
+ },
+ {
+  "cbsa": "42100",
+  "name": "Santa Cruz-Watsonville, CA",
+  "counties": [
+   {
+    "fips": "06087",
+    "name": "Santa Cruz County",
+    "state": "CA",
+    "population": 258852
+   }
+  ],
+  "population": 258852,
+  "utilities": [
+   14328,
+   61432
+  ]
+ },
+ {
+  "cbsa": "39150",
+  "name": "Prescott Valley-Prescott, AZ",
+  "counties": [
+   {
+    "fips": "04025",
+    "name": "Yavapai County",
+    "state": "AZ",
+    "population": 252552
+   }
+  ],
+  "population": 252552,
+  "utilities": [
+   803,
+   21538,
+   27000
+  ]
+ },
+ {
+  "cbsa": "46340",
+  "name": "Tyler, TX",
+  "counties": [
+   {
+    "fips": "48423",
+    "name": "Smith County",
+    "state": "TX",
+    "population": 252549
+   }
+  ],
+  "population": 252549,
+  "utilities": [
+   44372,
+   17698,
+   19579,
+   20927,
+   3470
+  ]
+ }
+]

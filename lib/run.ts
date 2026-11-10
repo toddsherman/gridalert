@@ -7,6 +7,7 @@ import { eastern, num } from './format.ts';
 import { collect, type LastGoodMap } from './collector.ts';
 import { type HealthDoc, hugeFeedsOut, ISSUE_POLLS, platformReadings, platformWrong } from './health.ts';
 import { customersOf, sources, watched } from './registry.ts';
+import { refreshReports } from './reports.ts';
 import { findSimultaneous } from './simultaneous.ts';
 import { PATHS, readDoc, swapDoc, writeDoc } from './store.ts';
 import { type AlertEvent, type Blackout, DEFAULT_SETTINGS, EMPTY_ENGINE, type EngineState, type Settings, type SimultaneousOutage, type Snapshot } from './types.ts';
@@ -49,7 +50,7 @@ const PROBES = 'probes';
 const HUGE_FEED = 'huge-feed';
 const platformIssue = (method: string) => `platform:${method}`;
 
-const URGENT_KINDS: ReadonlySet<string> = new Set(['unexplained', 'simultaneous', 'deliberate']);
+const URGENT_KINDS: ReadonlySet<string> = new Set(['unexplained', 'simultaneous', 'deliberate', 'reported']);
 
 interface OutboxItem {
   event: AlertEvent;
@@ -415,6 +416,12 @@ export async function runOnce(now = new Date()): Promise<RunResult> {
     const probes = trackIssue(issues, PROBES, now.getTime() - Date.parse(probedAt) > PROBE_LATE_MS, 1);
     if (probes) raised.push(systemEvent(`system:${PROBES}`, probes, 'Hourly checks', probes === 'opened' ? `GridAlert's hourly check of its outside services last ran at ${eastern(probedAt)} ET, so a broken one could go unnoticed.` : 'The hourly checks are running again.', at));
   }
+  // Areas no feed could see this poll are watched through the news. It never holds up a real alert.
+  const reported = await refreshReports(snapshot.metros, now).catch((err): AlertEvent[] => {
+    console.error('news backstop failed:', (err as Error).message);
+    return [];
+  });
+  raised.push(...reported);
   sending = [...sending, ...raised.map((event) => ({ event, attempts: 0 }))];
 
   const sent = await sendOutbox(sending, blackouts, settings, now, deliveryDeadline);

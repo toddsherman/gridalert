@@ -171,7 +171,7 @@ export interface EngineState {
 
 export const EMPTY_ENGINE: EngineState = { pending: {}, open: {} };
 
-export type AlertKind = 'opened' | 'escalated' | 'resolved' | 'unexplained' | 'explained' | 'deliberate' | 'simultaneous' | 'simultaneous-explained';
+export type AlertKind = 'opened' | 'escalated' | 'resolved' | 'unexplained' | 'explained' | 'deliberate' | 'simultaneous' | 'simultaneous-explained' | 'reported';
 
 export interface AlertEvent {
   id: string;

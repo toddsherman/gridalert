@@ -740,3 +740,31 @@ runs real polls against fake storage and feeds.
 node scripts/backtest-causes.ts   # about 10 minutes the first time; downloads are cached in .cache/
 node scripts/check-causes.ts      # run the checks on live state without writing anything
 ```
+
+## The news backstop
+
+Some metros can't be seen at all. A few never have a readable feed, and ODIN, the only view of
+Houston, stops rebuilding its data for hours on most days. With ODIN stopped, about 30 of the
+196 metros, home to 35 million people, have a live feed for under half their customers.
+
+For those metros only, `lib/reports.ts` watches the same GDELT stories. A story counts when its
+headline names the metro or one of its counties and puts the outage at 20,000 or more. The
+usual cause checks then run for the metro's counties, looking back 6 hours from the first story.
+If nothing ordinary explains it, the owner gets one notice, marked as reported and not measured.
+It never goes to subscribers, and never opens a blackout record.
+
+`scripts/backtest-reports.ts` replayed it against the 25 real alerts, as if each metro were unseen:
+
+| Rule | Caught | Median delay | Counted by chance, per metro per 12 hours |
+|---|---|---|---|
+| Names the place, 20,000+, one outlet (used) | 8 of 25 | 4.3 hours | 0.23% |
+| Same, needing a second outlet | 4 of 25 | 7.0 hours | 0.02% |
+| Placed nearby by GDELT, 20,000+, one outlet | 14 of 25 | 5.3 hours | 1.87% |
+
+- **It's weak.** It misses two in three, and what it catches comes hours late. It's kept because
+  for these metros the alternative is nothing.
+- **Noise.** At 0.23%, 30 unseen metros would count about one story a week before the cause
+  checks, which remove the storms. The chance rate was measured in windows around real alerts,
+  so it may run high.
+- **Not tested:** the cause checks on these reports, since the replay has only headlines.
+

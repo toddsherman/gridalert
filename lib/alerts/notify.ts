@@ -49,6 +49,8 @@ export function formatEvent(e: AlertEvent): Message {
       return { title: `Reported as deliberate: ${e.label}`, body: e.detail, url, urgent: true, search };
     case 'simultaneous':
       return { title: `Simultaneous blackouts: ${e.label}`, body: `About ${e.peakPeople.toLocaleString('en-US')} people (${customers} customers) at peak. ${e.detail}`, url, urgent: true, search };
+    case 'reported':
+      return { title: `Reported blackout, not measured: ${e.label}`, body: e.detail, url, urgent: true, search };
     case 'simultaneous-explained':
       return { title: `Simultaneous alert stood down: ${e.label}`, body: e.detail, url };
     case 'resolved':

@@ -60,5 +60,6 @@ export const PATHS = {
   health: 'state/health.json',
   settings: 'state/settings.json',
   push: 'state/push-subscriptions.json',
+  reports: 'state/reports.json',
   sample: (at: Date) => `archive/${at.toISOString().slice(0, 10)}/${at.toISOString().slice(11, 16).replace(':', '')}.json`,
 } as const;

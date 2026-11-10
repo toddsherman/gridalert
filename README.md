@@ -102,6 +102,7 @@ node scripts/backtest-news.ts                     # test the news matching again
 node scripts/backtest-demand.ts                   # why grid demand isn't used as a check
 node scripts/backtest-internet.ts                 # test internet reachability against the same alerts
 node scripts/backtest-statements.ts               # test who-said-what reading, which spends API credits
+node scripts/backtest-reports.ts                  # test the news backstop for metros no feed can see
 node scripts/backfill-blackouts.ts --write        # add records for alerts the list missed
 zsh scripts/deploy.sh                             # types, lint and tests, then deploy, then check the live site
 node scripts/smoke.ts                             # check the live site on its own

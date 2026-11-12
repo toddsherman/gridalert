@@ -2,7 +2,7 @@
  * Checks the live site after a deploy: node scripts/smoke.ts [url]
  * These are the things that have broken the page or the alert sign-up before without failing a test.
  */
-import { BASE_PATH, PUBLIC_URL } from '../lib/site.ts';
+import { BASE_PATH, PUBLIC_URL, SOURCE_URL } from '../lib/site.ts';
 
 const base = (process.argv[2] ?? PUBLIC_URL).replace(/\/$/, '');
 const failures: string[] = [];
@@ -16,6 +16,7 @@ const html = await page.text();
 check(page.status === 200, `the page loads (${page.status})`);
 check(html.includes('role="switch"'), 'the alert switch is on the page');
 check(html.includes('Get notified of large unexplained blackouts'), 'the headline is on the page');
+check(html.includes(SOURCE_URL), 'the page links to the source code');
 
 // The worker has to be allowed the page's own path as its scope, or signing up waits forever.
 const worker = await fetch(`${base}/sw.js`);

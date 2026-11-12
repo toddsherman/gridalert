@@ -6,3 +6,6 @@ export const BASE_PATH = '/gridalert';
 
 /** Where people reach it, for links in alerts. */
 export const PUBLIC_URL = `https://www.todd.sh${BASE_PATH}`;
+
+/** The code, which is public. */
+export const SOURCE_URL = 'https://github.com/toddsherman/gridalert';

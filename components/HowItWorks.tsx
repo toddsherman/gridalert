@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { LARGE_CUSTOMERS } from '@/lib/causes/rules';
 import { num } from '@/lib/format';
 import { metros, sources } from '@/lib/registry';
+import { SOURCE_URL } from '@/lib/site';
 import type { Settings, Snapshot } from '@/lib/types';
 import { SystemDiagram } from './SystemDiagram';
 
@@ -144,6 +145,12 @@ export function HowItWorks({ snapshot, settings }: { snapshot: Snapshot | null; 
               : {about}
             </li>
           ))}
+          <li>
+            <a href={SOURCE_URL} target="_blank" rel="noreferrer" className="font-medium text-ink underline">
+              Source code
+            </a>
+            : every rule, test and data source, open on GitHub
+          </li>
         </ul>
       </Section>
     </section>

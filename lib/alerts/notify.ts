@@ -21,6 +21,8 @@ export function siteUrl(): string {
 
 /** The alert key for several large feeds stopping at once. */
 export const FEEDS_KEY = 'system:feeds';
+/** The monthly drill's result. */
+export const DRILL_KEY = 'system:drill';
 
 export function formatEvent(e: AlertEvent): Message {
   const people = e.people.toLocaleString('en-US');
@@ -32,6 +34,10 @@ export function formatEvent(e: AlertEvent): Message {
   // Monitoring notices have no people to count.
   if (e.key === FEEDS_KEY) {
     return e.kind === 'resolved' ? { title: 'Feeds updating again', body: e.detail, url } : { title: 'Large feeds stopped updating', body: e.detail, url, urgent: true };
+  }
+  // A drill comes at a real alert's priority, since that's the route it's testing.
+  if (e.key === DRILL_KEY) {
+    return { title: e.kind === 'resolved' ? 'Drill passed: this is a test, nothing is out' : 'Drill FAILED: alerts may not fire', body: e.detail, url, urgent: true };
   }
   if (e.key.startsWith('system:')) {
     return { title: `${e.label} ${e.kind === 'resolved' ? 'recovered' : 'degraded'}`, body: e.detail, url, ...(e.urgent && e.kind !== 'resolved' && { urgent: true }) };

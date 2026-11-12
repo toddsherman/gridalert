@@ -123,6 +123,8 @@ beforeEach(async () => {
     '12060': { name: 'Atlanta, GA', county: { fips: '13121', name: 'Fulton' }, customers: 0 },
   };
   await store.writeDoc(store.PATHS.settings, { webhookUrl: 'https://ntfy.sh/test-topic' });
+  // This month's drill has been and gone, so it stays out of every other test.
+  await store.writeDoc(store.PATHS.engine, { drilled: '2026-11' });
 });
 
 const poll = (minute: number) => runOnce(new Date(T0 + minute * MINUTE));
@@ -800,5 +802,37 @@ describe('blackouts that should stay quiet', () => {
     await poll(5);
     failWrites.clear();
     assert.equal((await alertLog())[0].kind, 'opened');
+  });
+});
+
+describe('the monthly drill', () => {
+  const DECEMBER = (Date.UTC(2026, 11, 1, 17) - T0) / MINUTE;
+
+  it('goes to the owner once, at high priority, and never to the public', async () => {
+    await poll(DECEMBER - 5);
+    assert.equal(sent.length, 0);
+    await poll(DECEMBER);
+    await poll(DECEMBER + 5);
+    assert.deepEqual(sent.map((m) => m.title), ['Drill passed: this is a test, nothing is out']);
+    assert.equal(sent[0].priority, 'high');
+    assert.deepEqual(pushed, []);
+    assert.equal(engineDoc().drilled, '2026-12');
+    assert.equal((await alertLog())[0].key, 'system:drill');
+  });
+
+  it('is sent late when it could not be delivered', async () => {
+    webhookDown = true;
+    await poll(DECEMBER);
+    assert.equal(sent.length, 0);
+    webhookDown = false;
+    await poll(DECEMBER + 5);
+    assert.equal(sent.length, 1);
+    assert.match(sent[0].title, /^Drill passed/);
+  });
+
+  it('leaves no blackout behind on the site', async () => {
+    await poll(DECEMBER);
+    assert.deepEqual((await store.readDoc(store.PATHS.blackouts))?.value ?? [], []);
+    assert.deepEqual(engineDoc().engine.open, {});
   });
 });

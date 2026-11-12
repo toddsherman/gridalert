@@ -127,6 +127,12 @@ sends an alert if under 60% of customers have a live feed. `/api/cron/probes` re
 outside service hourly, and `/coverage` shows the results. `docs/CAUSE_CHECKS.md` lists what
 happens when each one breaks.
 
+On the 1st of each month, at noon or 1pm Eastern, the poll runs a drill (`lib/drill.ts`). It puts
+a made-up blackout through the real alert rules, then sends the owner the result through the real
+outbox at a real alert's priority, titled "Drill passed" or "Drill FAILED". Nothing is stored or
+shown as an outage, and browser subscribers never get it. A month with no drill message means
+delivery is broken.
+
 ## Security
 
 - **Feeds are untrusted.** Responses stop at 16 MB, however they're compressed. A count can't

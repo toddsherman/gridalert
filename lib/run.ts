@@ -3,6 +3,7 @@ import { evaluate } from './alerts/engine.ts';
 import { checkIn, deliver, FEEDS_KEY, formatEvent } from './alerts/notify.ts';
 import { sendToSubscribers } from './alerts/push.ts';
 import { refreshBlackouts, refreshStatements, stormCheckFailed, takeNotices, trimBlackouts, withCause } from './blackouts.ts';
+import { drillMonth, runDrill } from './drill.ts';
 import { eastern, num } from './format.ts';
 import { collect, type LastGoodMap } from './collector.ts';
 import { type HealthDoc, hugeFeedsOut, ISSUE_POLLS, platformReadings, platformWrong } from './health.ts';
@@ -81,6 +82,8 @@ interface RunState {
   /** Polls in a row each problem has lasted. */
   issues?: Record<string, number>;
   historyAt?: number;
+  /** The month of the last drill, as 2026-11. */
+  drilled?: string;
   /** Another run started before this time is still going. */
   leaseUntil?: number;
 }
@@ -364,7 +367,7 @@ export async function runOnce(now = new Date()): Promise<RunResult> {
 
   const historyDue = now.getTime() - (saved.historyAt ?? 0) >= HISTORY_STEP_MS - 60_000;
   const outbox: OutboxItem[] = [...waiting, ...events.map((event) => ({ event, attempts: 0 }))];
-  const next: RunState = { engine, lastGood, outbox, degraded, feedsStuck, checkedInAt: saved.checkedInAt, checkInFails: saved.checkInFails, runs: saved.runs + 1, settings, issues, historyAt: historyDue ? now.getTime() : saved.historyAt, leaseUntil };
+  const next: RunState = { engine, lastGood, outbox, degraded, feedsStuck, checkedInAt: saved.checkedInAt, checkInFails: saved.checkInFails, runs: saved.runs + 1, settings, issues, historyAt: historyDue ? now.getTime() : saved.historyAt, drilled: saved.drilled, leaseUntil };
   snapshot.impaired = impairments(next, now.getTime());
 
   // Saved before anything is sent, so a crash from here on resends rather than loses.
@@ -422,6 +425,10 @@ export async function runOnce(now = new Date()): Promise<RunResult> {
     return [];
   });
   raised.push(...reported);
+  // Once a month the rules and the route to the owner are tried with a made-up blackout.
+  const month = drillMonth(now);
+  const drillDue = month !== undefined && saved.drilled !== month;
+  if (drillDue) raised.push(runDrill(settings, now));
   sending = [...sending, ...raised.map((event) => ({ event, attempts: 0 }))];
 
   const sent = await sendOutbox(sending, blackouts, settings, now, deliveryDeadline);
@@ -446,7 +453,7 @@ export async function runOnce(now = new Date()): Promise<RunResult> {
     await deliver(formatEvent(back), settings).catch((err) => console.error('delivery failed:', back.key, (err as Error).message));
   }
   // If this loses a race the outbox survives, and a resend beats a lost alert.
-  await swapDoc(PATHS.engine, { ...next, issues, outbox: remaining, checkedInAt: checkedIn ? now.getTime() : saved.checkedInAt, checkInFails, leaseUntil: undefined }, etag).catch((err) => console.error('outbox update failed:', err));
+  await swapDoc(PATHS.engine, { ...next, issues, outbox: remaining, checkedInAt: checkedIn ? now.getTime() : saved.checkedInAt, checkInFails, drilled: drillDue ? month : saved.drilled, leaseUntil: undefined }, etag).catch((err) => console.error('outbox update failed:', err));
 
   if (Date.now() - started < STATEMENT_CUTOFF_MS) await refreshStatements(now).catch((err) => console.error('statement reading failed:', err));
 

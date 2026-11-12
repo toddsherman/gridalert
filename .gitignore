@@ -48,3 +48,6 @@ data/sources/*.verify.json
 
 # Large research downloads, kept locally only
 /datasets/
+
+# Open items, kept on this machine only
+/TODO.md

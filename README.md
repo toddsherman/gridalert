@@ -158,3 +158,7 @@ Vercel Firewall rate limit if traffic ever becomes a problem.
 | `RESEND_API_KEY`, `ALERT_EMAIL_FROM` | Optional email alerts |
 
 Source data and rebuild steps are in `docs/DATA.md`.
+
+## License
+
+The code is under the [MIT License](LICENSE). The outage data belongs to the utilities and agencies that publish it; `docs/DATA.md` lists each source.

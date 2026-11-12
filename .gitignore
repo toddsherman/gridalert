@@ -51,3 +51,6 @@ data/sources/*.verify.json
 
 # Open items, kept on this machine only
 /TODO.md
+
+# Local tool settings
+/.claude/

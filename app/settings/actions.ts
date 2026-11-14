@@ -48,6 +48,7 @@ export async function saveSettingsAction(_: FormState, form: FormData): Promise<
     escalateFactor: clamp(form.get('escalateFactor'), 1.25, 10, DEFAULT_SETTINGS.escalateFactor),
     // A blank value would read as 0, which would silently turn this alert off.
     unexplainedCustomers: form.get('unexplainedCustomers') ? Math.round(clamp(form.get('unexplainedCustomers'), 0, 10_000_000, DEFAULT_SETTINGS.unexplainedCustomers)) : current.unexplainedCustomers,
+    watchCustomers: form.get('watchCustomers') ? Math.round(clamp(form.get('watchCustomers'), 0, 10_000_000, DEFAULT_SETTINGS.watchCustomers)) : current.watchCustomers,
     simultaneousAreas: form.get('simultaneousAreas') ? Math.round(clamp(form.get('simultaneousAreas'), 0, 20, DEFAULT_SETTINGS.simultaneousAreas)) : current.simultaneousAreas,
     simultaneousCustomers: form.get('simultaneousCustomers') ? Math.round(clamp(form.get('simultaneousCustomers'), 1_000, 10_000_000, DEFAULT_SETTINGS.simultaneousCustomers)) : current.simultaneousCustomers,
     states,

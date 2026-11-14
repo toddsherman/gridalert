@@ -45,6 +45,9 @@ its feed has no county detail and it serves several metros.
 - **Isn't sent.** About 12 outages a day reach the level, so these only appear on the site and
   in the alert history. Only the high-priority alerts below, their follow-ups and notices
   about GridAlert itself are sent.
+- **Watches under the alert level.** A sudden jump of 25,000 or more customers with no cause
+  found, too small for a high-priority alert, sends one normal-priority notice to the owner and
+  nothing to the public. It's there to show whether the alert level is set right.
 - **Never reports restored on blind data.** If feeds for 10% or more of an area's customers are
   failing, a low number isn't trusted, so the alert stays open. After 12 hours with no complete
   reading it closes as unknown, so a dead feed can't hide the next outage.

@@ -114,7 +114,7 @@ export function HowItWorks({ snapshot, settings }: { snapshot: Snapshot | null; 
             <Term name="Simultaneous blackouts">{settings.simultaneousAreas} or more unrelated areas of {num(settings.simultaneousCustomers)} or more customers starting within 30 minutes, with nothing ordinary found in any of them.</Term>
             <Term name="Reported as deliberate">a headline points to a deliberate act, and a major outlet, two separate outlets or a federal agency reports it. It&apos;s marked unconfirmed and doesn&apos;t change the cause.</Term>
           </dl>
-          <p>The first two wait up to an hour for the count to move, because a count stuck on one number is often a bad reading. A follow-up says when a cause turns up or the power comes back. Smaller outages, about a dozen a day, are tracked but never sent.</p>
+          <p>The first two wait up to an hour for the count to move, because a count stuck on one number is often a bad reading. A follow-up says when a cause turns up or the power comes back. Smaller outages, about a dozen a day, are tracked but never sent.{settings.watchCustomers > 0 && settings.unexplainedCustomers > 0 && ` A sudden one of ${num(settings.watchCustomers)} or more customers with nothing found goes to GridAlert's owner alone, to check the alert level is set right.`}</p>
         </Section>
 
         <Section title="Reading an alert">

@@ -232,6 +232,37 @@ describe('a large blackout with no known cause', () => {
   });
 });
 
+describe('a sudden outage under the alert level', () => {
+  it('tells the owner once at normal priority, and never the public', async () => {
+    await poll(0);
+    setOut(41_000);
+    await poll(5);
+    await moving(10);
+    await poll(15);
+    assert.deepEqual(titles(), ['Watch, under the alert level']);
+    assert.notEqual(sent[0].priority, 'high');
+    assert.match(sent[0].body, /under the alert level of 50,000 customers, so this went only to you/);
+    assert.deepEqual(pushed, []);
+
+    await moving(20);
+    await poll(25);
+    assert.equal(sent.length, 1, 'must not repeat');
+    assert.ok((await blackout()).watchNoticeAt);
+    assert.equal((await blackout()).unexplainedNoticeAt, undefined);
+    assert.ok((await alertLog()).some((e: { kind: string; channels?: string[] }) => e.kind === 'watch' && e.channels?.length));
+  });
+
+  it('says nothing for one that a storm explains', async () => {
+    world = { ...quiet(), weather: [{ id: 'w', event: 'Severe Thunderstorm Warning', start: T0, end: T0 + 60 * MINUTE, fips: [HARRIS] }] };
+    await poll(0);
+    setOut(41_000);
+    await poll(5);
+    await moving(10);
+    await poll(15);
+    assert.deepEqual(titles(), []);
+  });
+});
+
 describe('the dead-man\'s switch', () => {
   it('checks in on the first poll, then every 15 minutes', async () => {
     for (const minute of [0, 5, 10, 15, 20, 25, 30]) await poll(minute);

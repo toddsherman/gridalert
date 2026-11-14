@@ -66,6 +66,9 @@ export function SettingsForm({ settings, emailReady }: { settings: Settings; ema
             <Field label="Sudden jump that alerts, in customers" hint={`Sends a high-priority alert when this many customers go out within 30 minutes and nothing explains it, or three times this at any speed. 0 turns it off.`}>
               <input name="unexplainedCustomers" type="number" min={0} step={1000} defaultValue={settings.unexplainedCustomers} className={input} />
             </Field>
+            <Field label="Watch level, in customers" hint="The same jump at a lower level tells only you, at normal priority, so near misses get looked at. Keep it under the alert level. 0 turns it off.">
+              <input name="watchCustomers" type="number" min={0} step={1000} defaultValue={settings.watchCustomers} className={input} />
+            </Field>
             <Field label="Simultaneous outage, unrelated areas" hint="High-priority alert when this many areas start within 30 minutes with no ordinary cause. 0 turns it off.">
               <input name="simultaneousAreas" type="number" min={0} max={20} defaultValue={settings.simultaneousAreas} className={input} />
             </Field>

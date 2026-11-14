@@ -8,7 +8,7 @@ export const revalidate = 60;
 export const metadata: Metadata = { title: 'Alerts | GridAlert' };
 
 const KIND = { opened: 'Opened', escalated: 'Grew', resolved: 'Resolved', unexplained: 'Unexplained', explained: 'Explained',
-  deliberate: 'Reported deliberate', simultaneous: 'Simultaneous', 'simultaneous-explained': 'Stood down', reported: 'Reported, not measured' } as const;
+  deliberate: 'Reported deliberate', simultaneous: 'Simultaneous', 'simultaneous-explained': 'Stood down', reported: 'Reported, not measured', watch: 'Watch, owner only' } as const;
 
 export default async function AlertsPage() {
   const [open, log, settings] = await Promise.all([getOpenAlerts(), getAlertLog(), getCachedSettings()]);

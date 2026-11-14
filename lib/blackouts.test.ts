@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import { applyChecks, areaCounties, causeLine, causesHere, causeStatus, needsCheck, operatorsToRead, statementsDue, stormCheckFailed, syncBlackouts, takeNotices, trimBlackouts, withCause, withNews, withRead, withStatements } from './blackouts.ts';
+import { formatEvent } from './alerts/notify.ts';
 import type { World } from './causes/feeds.ts';
 import { sources } from './registry.ts';
 import { DEFAULT_SETTINGS, EMPTY_ENGINE, type AlertEvent, type Blackout, type EngineState, type OpenAlert, type Snapshot } from './types.ts';
@@ -519,8 +520,58 @@ describe('takeNotices', () => {
 
   });
 
-  it('stays quiet below the level, including a small unknown', () => {
-    assert.deepEqual(take(large({ peakCustomers: 49_999, jumpCustomers: 49_999 })).events, []);
+  it('stays quiet below the watch level, including a small unknown', () => {
+    assert.deepEqual(take(large({ peakCustomers: 24_999, jumpCustomers: 24_999, people: 62_000 })).events, []);
+  });
+
+  describe('the watch level', () => {
+    const near = (over: Partial<Blackout> = {}) => large({ peakCustomers: 41_291, jumpCustomers: 41_142, people: 100_000, link: '/metros/26420', ...over });
+
+    it('tells the owner once about a sudden jump under the alert level', () => {
+      const { list, events } = take(near());
+      assert.equal(events.length, 1);
+      assert.equal(events[0].kind, 'watch');
+      assert.equal(events[0].link, '/metros/26420');
+      assert.equal(list[0].watchNoticeAt, AT);
+      assert.equal(list[0].unexplainedNoticeAt, undefined);
+      assert.match(events[0].detail, /About 41,142 customers went out within 30 minutes/);
+      assert.match(events[0].detail, /under the alert level of 50,000 customers, so this went only to you\.$/);
+      assert.deepEqual(take(list[0]).events, []);
+    });
+
+    it('is not urgent, and carries a search link', () => {
+      const m = formatEvent(take(near()).events[0]);
+      assert.match(m.title, /^Watch, under the alert level: /);
+      assert.equal(m.urgent, undefined);
+      assert.ok(m.search);
+    });
+
+    it('follows the same conditions as the alert', () => {
+      assert.deepEqual(take(near({ cause: 'checking' })).events, []);
+      assert.deepEqual(take(near({ cause: 'explained' })).events, []);
+      assert.deepEqual(take(near({ resolvedAt: AT })).events, []);
+      // Mostly back already.
+      assert.deepEqual(take(near({ people: 20_000 })).events, []);
+      // A count that hasn't moved since it jumped is held, as a likely bad reading.
+      assert.deepEqual(take(near({ reading: { at: AT, parts: { a: 41_142 }, before: 100 } })).events, []);
+    });
+
+    it('leaves a slow climb alone, and anything at the alert level to the alert', () => {
+      assert.deepEqual(take(near({ jumpCustomers: 12_000, peakCustomers: 120_000, people: 300_000 })).events, []);
+      assert.deepEqual(take(large()).events.map((e) => e.kind), ['unexplained']);
+      // Held at the alert level, which is the alert's to wait out.
+      assert.deepEqual(take(large({ reading: { at: AT, parts: { a: 60_000 }, before: 100 } })).events, []);
+    });
+
+    it('can be turned off, and is off when alerts are', () => {
+      assert.deepEqual(take(near(), { ...DEFAULT_SETTINGS, watchCustomers: 0 }).events, []);
+      assert.deepEqual(take(near(), { ...DEFAULT_SETTINGS, unexplainedCustomers: 0 }).events, []);
+    });
+
+    it('still lets the alert go out if the outage grows', () => {
+      const watched = take(near()).list[0];
+      assert.deepEqual(take({ ...watched, peakCustomers: 70_000, jumpCustomers: 55_000, people: 170_000 }).events.map((e) => e.kind), ['unexplained']);
+    });
   });
 
   it('stays quiet while still checking or once explained', () => {

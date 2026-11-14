@@ -436,6 +436,15 @@ export function takeNotices(list: Blackout[], settings: Settings, at: string): {
       events.push(second ? { ...event, id: `${event.id}:official` } : event);
       return { ...b, deliberateNoticeAt: b.deliberateNoticeAt ?? at, deliberateOfficialAt: report.official ? at : undefined };
     }
+    // A smaller sudden jump, for the owner alone. One at the alert level is the alert's to send or hold, and a
+    // slow climb is what a storm looks like.
+    const level = settings.unexplainedCustomers;
+    const watch = level > 0 && bar === 0 && settings.watchCustomers > 0 && (b.jumpCustomers ?? 0) >= settings.watchCustomers ? settings.watchCustomers : 0;
+    const watchOut = b.people / settings.peoplePerCustomer >= settings.watchCustomers * STILL_OUT_SHARE;
+    if (watch > 0 && !b.watchNoticeAt && !b.unexplainedNoticeAt && !b.resolvedAt && b.cause === 'unknown' && watchOut && (b.blindSince || !heldBack(b.reading, watch, Date.parse(at)))) {
+      events.push({ ...notice('watch', b, `${unexplainedDetail(b, watch)} It's under the alert level of ${num(level)} customers, so this went only to you.`, at), link: b.link || '/alerts' });
+      return { ...b, watchNoticeAt: at };
+    }
     return b;
   });
   return { list: next, events };

@@ -57,6 +57,8 @@ export function formatEvent(e: AlertEvent): Message {
       return { title: `Simultaneous blackouts: ${e.label}`, body: `About ${e.peakPeople.toLocaleString('en-US')} people (${customers} customers) at peak. ${e.detail}`, url, urgent: true, search };
     case 'reported':
       return { title: `Reported blackout, not measured: ${e.label}`, body: e.detail, url, urgent: true, search };
+    case 'watch':
+      return { title: `Watch, under the alert level: ${e.label}`, body: `Peaked near ${e.peakPeople.toLocaleString('en-US')} people (${customers} customers). ${e.detail}`, url, search };
     case 'simultaneous-explained':
       return { title: `Simultaneous alert stood down: ${e.label}`, body: e.detail, url };
     case 'resolved':

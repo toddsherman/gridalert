@@ -15,6 +15,8 @@ export interface Settings {
   immediateFactor: number;
   /** Customers lost within 30 minutes, with no known cause, that sends the high-priority alert. 0 turns it off. */
   unexplainedCustomers: number;
+  /** The same jump at a lower level, which tells only the owner, so near misses get looked at. 0 turns it off. */
+  watchCustomers: number;
   /** Unrelated areas starting together that count as simultaneous. 0 turns it off. */
   simultaneousAreas: number;
   /** Customers each of those areas must reach. */
@@ -36,6 +38,7 @@ export const DEFAULT_SETTINGS: Settings = {
   escalateFactor: 2,
   immediateFactor: 5,
   unexplainedCustomers: 50_000,
+  watchCustomers: 25_000,
   simultaneousAreas: 3,
   simultaneousCustomers: 10_000,
   states: [],
@@ -171,7 +174,7 @@ export interface EngineState {
 
 export const EMPTY_ENGINE: EngineState = { pending: {}, open: {} };
 
-export type AlertKind = 'opened' | 'escalated' | 'resolved' | 'unexplained' | 'explained' | 'deliberate' | 'simultaneous' | 'simultaneous-explained' | 'reported';
+export type AlertKind = 'opened' | 'escalated' | 'resolved' | 'unexplained' | 'explained' | 'deliberate' | 'simultaneous' | 'simultaneous-explained' | 'reported' | 'watch';
 
 export interface AlertEvent {
   id: string;
@@ -328,6 +331,8 @@ export interface Blackout {
   utilityCheckedAt?: string;
   /** When the high-priority alert went out, so it only ever goes out once. */
   unexplainedNoticeAt?: string;
+  /** When the owner was told about it as one under the alert level, so that only goes out once. */
+  watchNoticeAt?: string;
   /** When that alert was withdrawn because a cause turned up. */
   explainedNoticeAt?: string;
   /** When a report of a deliberate cause went out, so it only ever goes out once. */

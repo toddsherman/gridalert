@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import { type AlertArea, type AlertCard, AlertList } from '@/components/AlertList';
 import { HowItWorks } from '@/components/HowItWorks';
 import { SignUp } from '@/components/SignUp';
+import { TrackRecord } from '@/components/TrackRecord';
 import { causesKnown, shareExplained } from '@/lib/causes/utility';
 import { getBlackouts, getCachedSettings, getSimultaneous, getSnapshot } from '@/lib/data';
 import { eastern, num, threadsSearch, xSearch } from '@/lib/format';
+import { trackRecord } from '@/lib/record';
 import { metros, sources } from '@/lib/registry';
 import { PUBLIC_URL } from '@/lib/site';
 import type { Blackout, SimultaneousOutage } from '@/lib/types';
@@ -147,6 +149,8 @@ export default async function HomePage() {
           <AlertList cards={cards} />
         </section>
       )}
+
+      <TrackRecord record={trackRecord(blackouts, outages, settings)} level={settings.unexplainedCustomers} />
 
       <HowItWorks snapshot={snapshot} settings={settings} />
     </div>

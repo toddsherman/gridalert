@@ -29,6 +29,7 @@ Every 5 minutes, Vercel Cron calls `/gridalert/api/cron/collect`, which:
 | `lib/alerts/push.ts` | The public's browser alerts, from the sign-up on the home page |
 | `lib/blackouts.ts` | The blackout list: one record per alert, with its cause status |
 | `lib/simultaneous.ts` | Spots unrelated blackouts that began together |
+| `lib/record.ts` | The track record on the home page: outages tracked, those near the alert level, and what was found for each |
 | `lib/causes/` | Ordinary-cause checks: `feeds.ts` reads them, `assess.ts` matches them, `rules.ts` holds the rules |
 | `lib/run.ts` | One poll, end to end |
 | `data/sources/*.json` | Feed configs by region, merged into `data/sources.json` |

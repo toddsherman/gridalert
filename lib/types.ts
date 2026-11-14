@@ -323,6 +323,8 @@ export interface Blackout {
   checked: CauseCheck[];
   utilityCauses: UtilityCause[];
   checkedAt?: string;
+  /** When a check first found the cause, while it stays explained. */
+  explainedAt?: string;
   utilityCheckedAt?: string;
   /** When the high-priority alert went out, so it only ever goes out once. */
   unexplainedNoticeAt?: string;

@@ -124,7 +124,7 @@ export function syncBlackouts(prev: Blackout[], engine: EngineState, snapshot: S
     const reopened = existing?.cause === 'explained' && (surge?.surgeCustomers ?? 0) >= LARGE_CUSTOMERS && existing.checkFrom !== surge?.surgeAt;
     byId.set(id, {
       ...(existing ?? { id, key: a.key, scope: a.scope, startedAt: a.startedAt ?? a.openedAt, openedAt: a.openedAt, cause: 'checking' as CauseStatus, evidence: [], checked: [], utilityCauses: [] }),
-      ...(reopened && { cause: 'checking' as CauseStatus, evidence: [], checked: [], checkReads: {}, checkFrom: surge?.surgeAt, unexplainedNoticeAt: undefined, explainedNoticeAt: undefined }),
+      ...(reopened && { cause: 'checking' as CauseStatus, evidence: [], checked: [], checkReads: {}, checkFrom: surge?.surgeAt, explainedAt: undefined, unexplainedNoticeAt: undefined, explainedNoticeAt: undefined }),
       // An overlapping run could have closed this while the alert was open.
       resolvedAt: undefined,
       blindSince: a.blindSince,
@@ -213,7 +213,8 @@ export function applyChecks(b: Blackout, world: World, utilityCauses: UtilityCau
       utilityCheckedAt: at,
     }),
   };
-  return { ...next, cause: causeStatus(next, now.getTime()) };
+  const cause = causeStatus(next, now.getTime());
+  return { ...next, cause, explainedAt: cause === 'explained' ? (b.explainedAt ?? at) : undefined };
 }
 
 /**

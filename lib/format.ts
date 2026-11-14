@@ -62,6 +62,9 @@ export function threadsSearch(area: string): string {
 
 export const plural = (n: number, word: string) => `${num(n)} ${word}${Math.round(n) === 1 ? '' : 's'}`;
 
+/** The day alone, in Eastern time. */
+export const easternDay = (iso: string) => new Date(iso).toLocaleDateString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric', year: 'numeric' });
+
 export const eastern = (iso: string) => new Date(iso).toLocaleString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
 
 /** How long ago, in words: "34 minutes ago", "3 hours ago". */

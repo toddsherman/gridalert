@@ -1,14 +1,19 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { AlertGlyph } from '@/components/Status';
+import { DRILL_KEY } from '@/lib/alerts/notify';
 import { getAlertLog, getCachedSettings, getOpenAlerts } from '@/lib/data';
 import { eastern, num } from '@/lib/format';
+import type { AlertEvent } from '@/lib/types';
 
 export const revalidate = 60;
 export const metadata: Metadata = { title: 'Alerts | GridAlert' };
 
 const KIND = { opened: 'Opened', escalated: 'Grew', resolved: 'Resolved', unexplained: 'Unexplained', explained: 'Explained',
   deliberate: 'Reported deliberate', simultaneous: 'Simultaneous', 'simultaneous-explained': 'Stood down', reported: 'Reported, not measured', watch: 'Watch, owner only' } as const;
+
+/** A drill is stored as resolved for a pass and opened for a failure, which would read as a real outage here. */
+const kindOf = (e: AlertEvent) => (e.key === DRILL_KEY ? (e.kind === 'resolved' ? 'Drill passed' : 'Drill failed') : KIND[e.kind]);
 
 export default async function AlertsPage() {
   const [open, log, settings] = await Promise.all([getOpenAlerts(), getAlertLog(), getCachedSettings()]);
@@ -61,7 +66,7 @@ export default async function AlertsPage() {
                 {log.slice(0, 200).map((e) => (
                   <tr key={e.id} className="border-t border-line">
                     <td className="tabular whitespace-nowrap px-4 py-2 text-ink-2">{eastern(e.at)}</td>
-                    <td className="px-4 py-2">{KIND[e.kind]}</td>
+                    <td className="px-4 py-2">{kindOf(e)}</td>
                     <td className="px-4 py-2">{e.label}</td>
                     <td className="tabular px-4 py-2 text-right">{e.key.startsWith('system:') ? e.detail : num(e.people)}</td>
                     <td className="px-4 py-2 text-ink-2">{e.dropped ? 'Could not be sent' : e.siteOnly ? 'Site only' : (e.channels?.join(', ') ?? '')}</td>

@@ -77,6 +77,23 @@ export async function sendToOne(sub: webpush.PushSubscription, m: Message): Prom
 }
 
 /**
+ * A test the reader asked for, sent to their browser alone. It goes back on the list first, so a
+ * device that had fallen off is signed up again by testing. 'gone' means its push service says
+ * the subscription no longer works, which only signing up again can fix.
+ */
+export async function sendTest(sub: webpush.PushSubscription, m: Message): Promise<'sent' | 'gone' | 'full'> {
+  if (!(await addSubscriber(sub))) return 'full';
+  try {
+    await sendToOne(sub, m);
+    return 'sent';
+  } catch (err) {
+    if (!DEAD.has((err as { statusCode?: number }).statusCode ?? 0)) throw err;
+    await removeSubscriber(sub.endpoint).catch((e) => console.error('removing a dead subscription failed:', e));
+    return 'gone';
+  }
+}
+
+/**
  * Send to everyone signed up and say how many it reached. Throws only when every one failed
  * for a reason that might pass, so the caller can try again without sending anyone it twice.
  */

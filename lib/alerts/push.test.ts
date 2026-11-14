@@ -90,6 +90,37 @@ describe('who can sign up', () => {
   });
 });
 
+describe('a test the reader asks for', () => {
+  const message = { title: 'GridAlert test', body: 'x', url: 'https://example.com' };
+
+  it('goes to that browser alone', async () => {
+    await push.addSubscriber(sub(1));
+    await push.addSubscriber(sub(2));
+    assert.equal(await push.sendTest(sub(2), message), 'sent');
+    assert.equal(payloads.length, 1);
+    assert.equal((doc!.value as unknown[]).length, 2);
+  });
+
+  it('signs a browser up again if it had fallen off the list', async () => {
+    assert.equal(await push.sendTest(sub(1), message), 'sent');
+    assert.deepEqual(doc!.value, [sub(1)]);
+  });
+
+  it('drops a browser whose push service says it is gone, and says so', async () => {
+    await push.addSubscriber(sub(1));
+    answers[sub(1).endpoint] = 410;
+    assert.equal(await push.sendTest(sub(1), message), 'gone');
+    assert.deepEqual(doc!.value, []);
+  });
+
+  it('keeps the browser and reports a failure that might pass', async () => {
+    await push.addSubscriber(sub(1));
+    answers[sub(1).endpoint] = 503;
+    await assert.rejects(push.sendTest(sub(1), message), /HTTP 503/);
+    assert.deepEqual(doc!.value, [sub(1)]);
+  });
+});
+
 describe('sending an alert', () => {
   it('counts who it reached and drops browsers that are gone for good', async () => {
     doc = { value: [sub(1), sub(2), sub(3)], etag: '0' };

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useId, useState } from 'react';
-import { leaveAction, signUpAction } from '@/app/actions';
+import { leaveAction, signUpAction, testAction } from '@/app/actions';
 import { BASE_PATH } from '@/lib/site';
 
 function keyBytes(base64: string): Uint8Array<ArrayBuffer> {
@@ -25,6 +25,8 @@ const onHomeScreen = () => window.matchMedia('(display-mode: standalone)').match
 const SCOPE = BASE_PATH;
 /** Past this, something is stuck, and saying so beats a button that never changes. */
 const SIGN_UP_MS = 20_000;
+/** How long the test button rests after a test, so a few taps can't send a burst. */
+const TEST_REST_MS = 15_000;
 
 /** This page's own registration, once its worker is running. */
 async function registration(): Promise<ServiceWorkerRegistration> {
@@ -69,6 +71,7 @@ export function SignUp({ vapidKey }: { vapidKey?: string }) {
   // Where the switch is heading while it turns on or off.
   const [busy, setBusy] = useState<'on' | 'off' | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [test, setTest] = useState<'sending' | 'sent' | null>(null);
   const switchId = useId();
   const noteId = useId();
 
@@ -118,6 +121,7 @@ export function SignUp({ vapidKey }: { vapidKey?: string }) {
   const turnOff = async () => {
     setBusy('off');
     setError(null);
+    setTest(null);
     try {
       const sub = await (await inTime(registration())).pushManager.getSubscription();
       if (sub) {
@@ -129,6 +133,34 @@ export function SignUp({ vapidKey }: { vapidKey?: string }) {
       setError((err as Error).message);
     } finally {
       setBusy(null);
+    }
+  };
+
+  const sendTest = async () => {
+    setTest('sending');
+    setError(null);
+    try {
+      const sub = await (await inTime(registration())).pushManager.getSubscription();
+      if (!sub) {
+        setStatus('off');
+        setTest(null);
+        return;
+      }
+      const result = await inTime(testAction(JSON.parse(JSON.stringify(sub))));
+      if ('error' in result) {
+        if (result.gone) {
+          await sub.unsubscribe().catch(() => {});
+          setStatus('off');
+        }
+        setError(result.error);
+        setTest(null);
+        return;
+      }
+      setTest('sent');
+      setTimeout(() => setTest(null), TEST_REST_MS);
+    } catch (err) {
+      setError((err as Error).message);
+      setTest(null);
     }
   };
 
@@ -166,7 +198,15 @@ export function SignUp({ vapidKey }: { vapidKey?: string }) {
         {busy === 'off' && <p>Turning off…</p>}
         {!busy && status === 'loading' && <p>Checking this device…</p>}
         {!busy && status === 'off' && <p>No account or phone number. You can turn it off any time.</p>}
-        {!busy && status === 'on' && <p>Alerts are on for this device. You can turn them off any time.</p>}
+        {!busy && status === 'on' && (
+          <p>
+            Alerts are on for this device. You can turn them off any time.{' '}
+            <button type="button" onClick={sendTest} disabled={test !== null} className="-my-2 py-2 font-medium text-ink-2 underline enabled:hover:text-accent disabled:no-underline">
+              {test === 'sending' ? 'Sending a test…' : test === 'sent' ? 'Test sent.' : 'Send a test alert'}
+            </button>
+          </p>
+        )}
+        {!busy && status === 'on' && test === 'sent' && <p>It should appear within a few seconds. If it doesn&apos;t, check that notifications are allowed for GridAlert, or for your browser, in this device&apos;s settings.</p>}
         {status === 'install' && (
           <>
             <p>On iPhone and iPad, alerts work once GridAlert is on your Home Screen.</p>
